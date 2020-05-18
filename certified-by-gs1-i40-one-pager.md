@@ -1,9 +1,18 @@
-# Certified by GS1
+# Certified by GS1 im Industrie 4.0 IoT
+
+## Setting und Problemstellung
+
+![Anwendungszenario WWF aus [1]](pics/anwendungszenario-wff.png "Anwendungszenario WWF aus [1]")
+
+In der industriellen Produktion 4.0 wird die moderne Fabrik von vielfältigen Maschinen (Robotern, Werkzeuge, Fördertechnik, etc.) bevölkert, die im *Internet of Things (IoT)* miteinander Kommunizieren. 
+Die Maschinen selbst sind dynamisch in ihren Fähigkeiten, z.B. können Roboter und Werkzeuge umkonfiguriert werden um verschiedene Aufgaben auszuführen. Vor allem aber kommen verschiedene Maschinen verschiedener Hersteller gemeinsam in einer Fertigung zum Einsatz und müssen sich möglichst direkt untereinander abstimmen, um den aktuellen Auftrag zu fertigen.
+
+Eine essentielle Voraussetzung hierfür ist, dass die Maschinen sich untereinander individuell identifizieren und Daten austauschen können, wie in der folgenden Grafik des VDMA dargestellt:
 
 
-![Werkzeugkaste Industrie 4.0 aus [2,3]](pics/werkzeugkaste-i40-vdma-part.png)
+![Abgeleitet von: Werkzeugkaste Industrie 4.0 aus [2,3]](pics/werkzeugkaste-i40-vdma-part.png "Abgeleitet von: Werkzeugkaste Industrie 4.0 aus [2,3]")
 
-![Anwendungszenario WWF aus [1]](pics/anwendungszenario-wff.png)
+Ein Standard für diese Prozesse ist unabdingbar um die abhängigkeit von einem Zentralen Plattformanbieter zu vermeiden. Zudem sind Sicherheitsfragen äußerst relevant um zu verhindern, dass unautorisierte Maschinen in die Fertigung eingebaut werden, gefälschte Daten eingeschleust werden oder gar ein unautorisierter zugriff über das Internet erfolgen kann.
 
 
 
