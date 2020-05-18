@@ -1,4 +1,4 @@
-# Certified by GS1 im Industrie 4.0 IoT
+# Certified by GS1 im Industrie 4.0 IoT Kontext
 
 ## Setting und Problemstellung
 
@@ -11,8 +11,27 @@ Eine essentielle Voraussetzung hierfür ist, dass die Maschinen sich untereinand
 
 
 ![Abgeleitet von: Werkzeugkaste Industrie 4.0 aus [2,3]](pics/werkzeugkaste-i40-vdma-part.png "Abgeleitet von: Werkzeugkaste Industrie 4.0 aus [2,3]")
+Hervorgehoben sind die Identifikation, einbindung und der Datenaustausch als notwendige Voraussetzung für die Industrie 4.0.
 
-Ein Standard für diese Prozesse ist unabdingbar um die abhängigkeit von einem Zentralen Plattformanbieter zu vermeiden. Zudem sind Sicherheitsfragen äußerst relevant um zu verhindern, dass unautorisierte Maschinen in die Fertigung eingebaut werden, gefälschte Daten eingeschleust werden oder gar ein unautorisierter zugriff über das Internet erfolgen kann.
+Ein Standard für die automatische Identifikation und Authentifizierung ist unabdingbar um die Abhängigkeit von einem zentralen Plattformanbieter zu vermeiden. Zudem sind Sicherheitsfragen, insbesondere Vertrauensfragen, äußerst relevant um zu verhindern, dass unautorisierte Maschinen in die Fertigungsstraße eingebracht werden, gefälschte Daten eingeschleust werden oder gar ein unautorisierter zugriff über das Internet erfolgen kann.
+
+
+## Certified by GS1
+
+Im Rahmen des Certified by GS1 Projektes entwickelt GS1 Germany gemeinsam mit Partnern **[TODO: spezifizieren!?]** eine lösung für das Problem der eindeutigen und authentifizierten Identifikation von Dingen im IoT, basierend auf den etablierten GS1 Standards und Identen.
+
+### IDs
+
+GS1 vergibt bereits heute weltweit eindeutige und Idente nach einem anerkannten Standard.
+**[TODO: Zahlen]**
+
+
+### Zertifikate
+
+Im Certified by GS1 Projekt wird aktuell ein System entwickelt, dass es Firmen ermöglicht nicht nur weltweit eindeutige IDs für Ihre Produkte zu erzeugen, sondern gleichzeitig auch Zertifikate zu erstellen, welche die Echtheit der IDs beglaubigen.
+Mit hilfe dieser Zertifikate können IoT Geräte sich untereinander eindeutig und sicher identifizieren und sichere Kommunikationskanäle aufbauen oder z.B. Messdaten signieren, um eine spätere fälschung zu verhindern.
+![Zertifikatskette](pics/Certificate-Chain.png "Zertifikatskette")
+
 
 
 
