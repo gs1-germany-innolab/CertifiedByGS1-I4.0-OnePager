@@ -1,6 +1,6 @@
 # Certified by GS1: I4.0 One-Pager
 
-Unter https://github.com/Echsecutor/CertifiedByGS1-I4.0-OnePager/blob/master/certified-by-gs1-i40-one-pager.md wird iene Zusammenfassung der Certified by GS1 Project Ziele im I4.0 Kontext entwickelt.
+Unter https://github.com/Echsecutor/CertifiedByGS1-I4.0-OnePager/blob/master/certified-by-gs1-i40-one-pager.md wird eine Zusammenfassung der Certified by GS1 Project Ziele im I4.0 Kontext entwickelt.
 
 
 
