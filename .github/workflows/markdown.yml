@@ -12,10 +12,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: HTML compile
-      run: |
-        apt install markdown
-        markdown certified-by-gs1-i40-one-pager.md > index.html
+    - name: Compile HTML
+      run: markdown certified-by-gs1-i40-one-pager.md > certified-by-gs1-i40-one-pager.html
+    
+    - name: Save HTML
+      uses: actions/upload-artifact@v1
+      with:
+        name: certified-by-gs1-i40-one-pager.html
+        path: certified-by-gs1-i40-one-pager.html
 
   compile_pdf:
     runs-on: ubuntu-latest
@@ -25,7 +29,13 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v1.4.2
 
-    - name: PDF compile
+    - name: Compile PDF
       run: |
         npm install -g markdown-pdf
         markdown-pdf certified-by-gs1-i40-one-pager.md
+
+    - name: Save PDF
+      uses: actions/upload-artifact@v1
+      with:
+        name: certified-by-gs1-i40-one-pager.pdf
+        path: certified-by-gs1-i40-one-pager.pdf
