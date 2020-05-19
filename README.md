@@ -1,7 +1,8 @@
 # Certified by GS1: I4.0 One-Pager
 
-Unter https://github.com/Echsecutor/CertifiedByGS1-I4.0-OnePager/blob/master/certified-by-gs1-i40-one-pager.md wird eine Zusammenfassung der Certified by GS1 Project Ziele im I4.0 Kontext entwickelt.
+[![markdown-compile](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/workflows/markdown-compile/badge.svg) (see latest run for latest pdf/html versions)](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/actions?query=workflow%3Amarkdown-compile)
 
+[Hier](https://github.com/Echsecutor/CertifiedByGS1-I4.0-OnePager/blob/master/certified-by-gs1-i40-one-pager.md) wird eine Zusammenfassung der Certified by GS1 Project Ziele im I4.0 Kontext entwickelt.
 
 
 ## License
