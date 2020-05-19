@@ -13,7 +13,9 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Compile HTML
-      run: markdown certified-by-gs1-i40-one-pager.md > certified-by-gs1-i40-one-pager.html
+      run: |
+        sudo apt-get update && sudo apt-get install -y markdown
+        markdown certified-by-gs1-i40-one-pager.md > certified-by-gs1-i40-one-pager.html
     
     - name: Save HTML
       uses: actions/upload-artifact@v1
