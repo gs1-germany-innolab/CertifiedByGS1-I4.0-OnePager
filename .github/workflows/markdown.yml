@@ -1,0 +1,31 @@
+name: markdown-compile
+
+on:
+  push:
+    branches: [ master ]
+
+
+jobs:
+  compile_html:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: HTML compile
+      run: |
+        apt install markdown
+        markdown certified-by-gs1-i40-one-pager.md > index.html
+
+  compile_pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v1.4.2
+
+    - name: PDF compile
+      run: |
+        npm install -g markdown-pdf
+        markdown-pdf certified-by-gs1-i40-one-pager.md
