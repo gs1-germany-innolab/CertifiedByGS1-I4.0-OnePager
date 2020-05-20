@@ -18,6 +18,7 @@ Die Maschinen selbst sind dynamisch in ihren Fähigkeiten, z.B. können Roboter 
 Eine essentielle Voraussetzung hierfür ist, dass die Maschinen sich untereinander individuell identifizieren und Daten austauschen können, wie in der folgenden Grafik (angelehnt an die Veröffentlichung des VDMA [2]) dargestellt:
 
 ![Abgeleitet von: Werkzeugkaste Industrie 4.0 aus [2,3]](pics/werkzeugkaste-i40-vdma-part.png "Abgeleitet von: Werkzeugkaste Industrie 4.0 aus [2,3]")
+
 Hervorgehoben sind die Identifikation und Einbindung von Industrial IoT (IIoT) Devices und der Datenaustausch als notwendige Voraussetzung für die Industrie 4.0.
 
 Ein Standard für die automatische Identifikation und Authentifizierung ist unabdingbar um die Abhängigkeit von einem zentralen Plattformanbieter zu vermeiden. Zudem sind Sicherheitsfragen, insbesondere Vertrauensfragen, äußerst relevant um zu verhindern, dass unautorisierte Maschinen in die Fertigungsstraße eingebracht werden, gefälschte Daten eingeschleust werden oder gar ein unautorisierter zugriff über das Internet erfolgen kann.
