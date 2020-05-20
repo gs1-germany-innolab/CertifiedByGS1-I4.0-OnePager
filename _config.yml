@@ -1,1 +1,7 @@
-permalink: /
+defaults:
+  -
+    scope:
+      path: "certified-by-gs1-i40-one-pager*"
+    values:
+      permalink: /
+
