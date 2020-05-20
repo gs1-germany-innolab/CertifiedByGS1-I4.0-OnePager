@@ -1,7 +1,3 @@
----
-permalink: /
----
-
 # Certified by GS1 im Industrie 4.0 IoT Kontext
 
 ## Setting und Problemstellung
