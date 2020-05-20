@@ -6,23 +6,6 @@ on:
 
 
 jobs:
-  compile_html:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Compile HTML
-      run: |
-        sudo apt-get update && sudo apt-get install -y markdown
-        markdown certified-by-gs1-i40-one-pager.md > certified-by-gs1-i40-one-pager.html
-    
-    - name: Save HTML
-      uses: actions/upload-artifact@v1
-      with:
-        name: certified-by-gs1-i40-one-pager.html
-        path: certified-by-gs1-i40-one-pager.html
-
   compile_pdf:
     runs-on: ubuntu-latest
 
