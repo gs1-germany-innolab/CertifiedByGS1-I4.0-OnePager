@@ -1,11 +1,18 @@
-# Certified by GS1 im Industrie 4.0 IoT Kontext
 
-## Setting und Problemstellung
+![Logo](pics/Certified_by_GS1_Logo.png#logo)
+
+# Sichere Idente für die Industrie 4.0 Certified by GS1
+
+Sicherheitsfragen können in industriellen Anwendungen Missionskritisch werden, das gilt insbesondere wenn das Industrial Internet of Things (IIOT) Maschinen miteinander vernetzt und deren Steuerung und Konfiguration zunehmend über Netzwerkschnittstellen erfolgt. Eine gesicherte automatische Identifizierung und Authentifizierung ist für die Lösung dieser Fragen absolut notwendig.
+
+**Wollen Sie mit uns an der Lösung der Sicherheitsfrage Arbeiten?**
+
+## Use Case: Wandlungsfähige Fabrik
+
+Im Anwendungsszenario "Wandlungsfähige Fabrik" der Plattform Industrie 4.0 wird die moderne Fabrik von vielfältigen Maschinen (Robotern, Werkzeuge, Fördertechnik, etc.) bevölkert, die im *Internet of Things (IoT)* miteinander Kommunizieren.
+Die Maschinen selbst sind dynamisch in ihren Fähigkeiten, z.B. können Roboter und Werkzeuge umkonfiguriert werden um verschiedene Aufgaben auszuführen. Vor allem aber kommen verschiedene Maschinen verschiedener Hersteller gemeinsam in einer Fertigung zum Einsatz und müssen sich möglichst direkt untereinander abstimmen, um den aktuellen Auftrag zu fertigen. Hierdurch wird ein modularer und dadurch wandlungsfähiger Aufbau der Produktion innerhalb einer Fabrik realisiert. Ähnlich wie heute die Netzwerke in Rechenzentren nicht mehr durch umstecken an großen Patchfeldern konfiguriert werden, wird auch die Fertigung der Zukunft schrittweise "software defined" um sich flexibel an immer kürze Produkt-und Innovationszyklen anzupassen.
 
 ![Anwendungszenario WFF aus [1]](pics/anwendungszenario-wff.png "Anwendungszenario WFF aus [1]")
-
-Im Anwendungsszenario "Wandlungsfähige Fabrik" der industriellen Produktion 4.0 wird die moderne Fabrik von vielfältigen Maschinen (Robotern, Werkzeuge, Fördertechnik, etc.) bevölkert, die im *Internet of Things (IoT)* miteinander Kommunizieren.
-Die Maschinen selbst sind dynamisch in ihren Fähigkeiten, z.B. können Roboter und Werkzeuge umkonfiguriert werden um verschiedene Aufgaben auszuführen. Vor allem aber kommen verschiedene Maschinen verschiedener Hersteller gemeinsam in einer Fertigung zum Einsatz und müssen sich möglichst direkt untereinander abstimmen, um den aktuellen Auftrag zu fertigen. Hierdurch wird ein modularer und dadurch wandlungsfähiger Aufbau der Produktion innerhalb einer Fabrik realisiert. Ähnlich wie heute die Netzwerke in Rechenzentren nicht mehr durch umstecken an großen Patchfeldern konfiguriert werden, wird auch die Fertigung der Zukunft schrittweise "software defined" um sich flexibel an immer kürze Produkt-und Innovationszyklen anzupassen.
 
 
 Eine essentielle Voraussetzung hierfür ist, dass die Maschinen sich untereinander individuell identifizieren und Daten austauschen können, wie in der folgenden Grafik (angelehnt an die Veröffentlichung des VDMA [2]) dargestellt:
@@ -40,10 +47,6 @@ Besonders interessant im Industrie 4.0 kontext ist, dass mit Hilfe der Zertifika
 ![Zertifikatskette](pics/Certificate-Chain.png "Zertifikatskette")
 Durch kryptografische Signatur und Zertifikatsketten kann ein (I)IoT Device, etwa eine neue Maschine in einer Fabrik, sich eindeutig und fälschungssicher ausweisen.
 
-
-# Sichere IoT Idente certified by GS1
-- **Sicherheit ist in (I)IoT Anwendungen Missionskritisch!**
-- **Wollen Sie mit uns an der Lösung der SIcherheitsfrage Arbeiten?**
 
 ## Quellen/Referenzen
 - [1] [Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0](https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html)

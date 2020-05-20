@@ -17,7 +17,7 @@ jobs:
     - name: Compile PDF
       run: |
         npm install -g markdown-pdf
-        markdown-pdf certified-by-gs1-i40-one-pager.md
+        markdown-pdf -f A4 -s assets/css/main.css certified-by-gs1-i40-one-pager.md
 
     - name: Save PDF
       uses: actions/upload-artifact@v1
