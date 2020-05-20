@@ -1,6 +1,3 @@
----
-permalink: /README
----
 # Certified by GS1: I4.0 One-Pager
 
 [![markdown-compile](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/workflows/markdown-compile/badge.svg) (see latest run for latest pdf/html versions)](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/actions?query=workflow%3Amarkdown-compile)
