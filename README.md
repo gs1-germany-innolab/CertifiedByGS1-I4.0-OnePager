@@ -1,6 +1,9 @@
 # Certified by GS1: I4.0 One-Pager
 
-[![markdown-compile](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/workflows/markdown-compile/badge.svg) (see latest run for latest pdf/html versions)](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/actions?query=workflow%3Amarkdown-compile)
+![markdown-compile](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/workflows/markdown-compile/badge.svg)
+
+- [PDF Releases](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/releases)
+- [Aktuelle HTML Version](https://gs1-germany-innolab.github.io/CertifiedByGS1-I4.0-OnePager/)
 
 [Hier](https://github.com/Echsecutor/CertifiedByGS1-I4.0-OnePager/blob/master/certified-by-gs1-i40-one-pager.md) wird eine Zusammenfassung der Certified by GS1 Project Ziele im I4.0 Kontext entwickelt.
 
