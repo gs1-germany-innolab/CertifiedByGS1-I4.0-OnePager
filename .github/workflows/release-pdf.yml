@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: https://uploads.github.com/repos/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/releases/${{ github.ref }}/assets{?name,label}
+          upload_url: https://uploads.github.com/repos/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/releases/${{ github.ref }}/assets
           asset_path: ./certified-by-gs1-i40-one-pager.pdf
           asset_name: certified-by-gs1-i40-one-pager.pdf
           asset_content_type: application/pdf
