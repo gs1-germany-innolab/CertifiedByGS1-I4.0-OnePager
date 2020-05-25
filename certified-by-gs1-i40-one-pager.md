@@ -6,8 +6,6 @@
 Sicherheitsfragen können in industriellen Anwendungen missionskritisch werden, das gilt insbesondere wenn das Industrial Internet of Things (IIOT) Maschinen miteinander vernetzt und deren Steuerung und Konfiguration zunehmend über Netzwerkschnittstellen erfolgt.
 Eine gesicherte automatische Identifizierung und Authentifizierung ist für die Lösung dieser Fragen absolut notwendig.
 
-**Wollen Sie mit uns an der Lösung der Sicherheitsfrage Arbeiten?**
-
 ## Anwendungsbeispiel: I4.0 Szenario Wandlungsfähige Fabrik
 
 Im Anwendungsszenario "Wandlungsfähige Fabrik" der Plattform Industrie 4.0 wird die moderne Fabrik von vielfältigen Maschinen (Robotern, Werkzeuge, Fördertechnik, etc.) bevölkert, die im *Internet of Things (IoT)* miteinander kommunizieren.
