@@ -62,7 +62,9 @@ d.h. eine Produktfälschung wird erheblich erschwert.
 
 Besonders interessant im Kontext Industrie 4.0 ist, dass sich IIoT Geräte mit Hilfe der Zertifikate untereinander eindeutig und sicher identifizieren und sichere Kommunikationskanäle aufbauen oder Messdaten signieren können.
 So wird sichergestellt, dass nur Maschinen die den Anforderungen genügen in die Fertigung eingebaut und Messwerte nicht gefälscht oder manipuliert werden können.
+
 ![Zertifikatskette](pics/Certificate-Chain.png "Zertifikatskette")
+
 Durch kryptografische Signatur und Zertifikatsketten kann sich ein (I)IoT Device, etwa eine neue Maschine in einer Fabrik, eindeutig und fälschungssicher ausweisen.
 
 

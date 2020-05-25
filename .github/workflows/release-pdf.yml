@@ -18,7 +18,7 @@ jobs:
       - name: Compile PDF
         run: |
           npm install -g markdown-pdf
-          markdown-pdf -f A4 -s assets/css/main.css certified-by-gs1-i40-one-pager.md
+          markdown-pdf -f A4 -s assets/css/main.css -m '{"html":true, "breaks":false}' certified-by-gs1-i40-one-pager.md
           ls -lah ./certified-by-gs1-i40-one-pager.pdf
 
       - name: Upload Release Asset

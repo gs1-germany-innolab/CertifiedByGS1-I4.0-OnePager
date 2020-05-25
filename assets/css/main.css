@@ -5,4 +5,5 @@ img[src*='#logo'] {
 
 body {
     font-size: 10px;
+    text-align: justify;
   }
