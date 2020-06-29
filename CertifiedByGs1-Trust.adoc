@@ -1,4 +1,4 @@
-= CertifiedByGS1 – Trust Modell
+= Certified By GS1 – Trust Model
 Sebastian Schmittner <sebastian.schmittner@eecc.de>
 //:toc:
 :toclevels: 4
@@ -47,10 +47,13 @@ in <<classical_id_trust>> in Anlehnung an <<trustoverip>> dargestellt.
 .Vertrauen in IDs certified by GS1
 image::pics/VC-Certified.png[IDs certified by GS1 - Vertrauen]
 
-Das Vertrauen in Machinen oder allgemein IoT Devices, die sich mit Identen
+Das Vertrauen in Maschinen oder allgemein IoT Devices, die sich mit Identen
 certified by GS1 ausweisen, entsteht analog zum klassischen Vertrauen in
 Ausweisdokumente, wie in <<VC_certified>> analog zu <<classical_id_trust>>
-dargestellt. Wichtig ist hierbei, dass lediglich zwischen GS1 und dem Maschinenhersteller ein Vertragsverhältnis existieren muss. Es bedarf prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 oder 
+dargestellt. Wichtig ist hierbei, dass lediglich zwischen GS1 und dem
+Maschinenhersteller ein Vertragsverhältnis existieren muss. Es bedarf
+prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 oder
+
 
 
 
