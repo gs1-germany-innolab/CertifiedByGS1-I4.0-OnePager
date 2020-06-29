@@ -6,6 +6,7 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :figure-caption: Bild
 :table-caption: Tabelle
 :icons: font
+:xrefstyle: short
 ifdef::env-github[]
 :imagesdir: pics/
 :tip-caption: 💡
