@@ -33,10 +33,10 @@ jobs:
           asset_content_type: application/pdf
 
       - name: Trust Model PDF Compilation
-      uses: docker://asciidoctor/docker-asciidoctor:latest
-      with:
-        entrypoint: asciidoctor-pdf
-        args: -a icons=font -a source-highlighter=coderay CertifiedByGs1-Trust-Modell.adoc
+        uses: docker://asciidoctor/docker-asciidoctor:latest
+        with:
+          entrypoint: asciidoctor-pdf
+          args: -a icons=font -a source-highlighter=coderay CertifiedByGs1-Trust-Modell.adoc
 
       - name: Upload Release Asset
         id: upload-release-asset 
