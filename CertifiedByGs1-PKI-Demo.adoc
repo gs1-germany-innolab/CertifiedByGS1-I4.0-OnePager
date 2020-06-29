@@ -7,14 +7,7 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :table-caption: Tabelle
 :icons: font
 :xrefstyle: short
-ifdef::env-github[]
 :imagesdir: pics/
-:tip-caption: 💡
-:note-caption: ℹ️
-:important-caption: ❗
-:caution-caption: 🔥
-:warning-caption: ⚠️
-endif::[]
 
 
 == Certified By GS1 USP
@@ -27,7 +20,7 @@ IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
 
 [[Chain]]
 .Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
-image::pics/Certificate-Chain.png[Zertifikatskette]
+image::Certificate-Chain.png[Zertifikatskette]
 
 Mit dem Unternehmenszertifikat kann die Echtheit der eigenen IDs
 fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B.
@@ -49,7 +42,7 @@ zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt.
 
 [[Certificates]]
 .Vertrauen in IDs certified by GS1 ermöglicht M2M authentifizierung und den Aufbau gesicherter Kommunikationskanäle
-image::pics/Parts-Certified.png[IDs certified by GS1 - Vertrauen]
+image::Parts-Certified.png[IDs certified by GS1 - Vertrauen]
 
 
 Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
