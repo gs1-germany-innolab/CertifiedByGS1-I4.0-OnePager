@@ -7,14 +7,7 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :table-caption: Tabelle
 :icons: font
 :xrefstyle: short
-ifdef::env-github[]
 :imagesdir: pics/
-:tip-caption: 💡
-:note-caption: ℹ️
-:important-caption: ❗
-:caution-caption: 🔥
-:warning-caption: ⚠️
-endif::[]
 
 == Certified by GS1 Trust Model
 
@@ -27,7 +20,7 @@ oder klassische (zentrale) PKI Zertifikatsketten.
 
 [[classical_id_trust]]
 .Vertrauen in klassische Ausweisdokumente
-image::pics/Traditional-ID-Document.png[Personalausweis - Vertrauen]
+image::Traditional-ID-Document.png[Personalausweis - Vertrauen]
 
 Das Vertrauen in die Identität z.B. einer realen Person kommt durch die
 Überprüfung (z.B. Abgleich des Fotos, überprüfung von kopierschutzmaßnahmen im
@@ -45,7 +38,7 @@ in <<classical_id_trust>> in Anlehnung an <<trustoverip>> dargestellt.
 
 [[VC_certified]]
 .Vertrauen in IDs certified by GS1
-image::pics/VC-Certified.png[IDs certified by GS1 - Vertrauen]
+image::VC-Certified.png[IDs certified by GS1 - Vertrauen]
 
 Das Vertrauen in Maschinen oder allgemein IoT Devices, die sich mit Identen
 certified by GS1 ausweisen, entsteht analog zum klassischen Vertrauen in
