@@ -17,7 +17,7 @@ ifdef::env-github[]
 endif::[]
 
 
-== USP
+== Certified By GS1 USP
 
 Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company
 Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs
@@ -58,9 +58,29 @@ Kommunikationskanal aufgebaut werden. So können z.B. Messdaten oder
 Steuerbefehle übertragen werden, ohne dass diese von dritten gefälscht werden
 können.
 
+== Umsetzung
 
+=== Arbeitspakete
 
-=== Interested Partners
+Use Case:
+
+- Angriffszenarios/Mehrwerte klar darstellen
+- Vorteile von certified
+- Vergleich mit existierenden Lösungen
+
+Technisch: 
+
+- X.509 Zertifikatsstruktur (Welche Key/Values genau werden verwendet)
+- GS1 Wurzelzertifikat Prototyp: Handling/Prozesse/Sicherheitsfragen für Demo Phase definieren
+- Prozesse (digital/analog) erarbeiten
+
+Demonstrator:
+
+- Was genau kann innerhalb der Projektlaufzeit fertig gestellt und gezeigt werden?
+- Mock Up von Teilen?
+- Weiterführung zum Prototyp, evtl. sogar MVP?
+
+=== Interessierte Partner
 
 - EKU Power Drives https://www.ekupd.com
 
