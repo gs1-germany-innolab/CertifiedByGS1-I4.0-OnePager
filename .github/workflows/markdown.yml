@@ -26,9 +26,13 @@ jobs:
         path: CertifiedByGs1-I40.pdf
 
   compile_adoc:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         doc: ["CertifiedByGs1-Trust", "CertifiedByGs1-PKI-Demo"]
+        
+    steps:
+    - uses: actions/checkout@v2
 
     - name: Trust Model PDF Compilation
       uses: docker://asciidoctor/docker-asciidoctor:latest
