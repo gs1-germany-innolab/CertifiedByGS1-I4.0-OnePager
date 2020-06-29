@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  compile_pdf:
+  compile_md:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,15 +25,20 @@ jobs:
         name: Certified-by-GS1-Concepts
         path: CertifiedByGs1-I40.pdf
 
+  compile_adoc:
+    strategy:
+      matrix:
+        doc: ["CertifiedByGs1-Trust", "CertifiedByGs1-PKI-Demo"]
+
     - name: Trust Model PDF Compilation
       uses: docker://asciidoctor/docker-asciidoctor:latest
       with:
         entrypoint: asciidoctor-pdf
-        args: -a icons=font -a source-highlighter=coderay CertifiedByGs1-Trust.adoc
+        args: -a icons=font -a source-highlighter=coderay ${{ matrix.doc }}.adoc
 
     - name: Save PDF
       uses: actions/upload-artifact@v1
       with:
         name: Certified-by-GS1-Concepts
-        path: CertifiedByGs1-Trust.pdf
+        path: ${{ matrix.doc }}.pdf
 
