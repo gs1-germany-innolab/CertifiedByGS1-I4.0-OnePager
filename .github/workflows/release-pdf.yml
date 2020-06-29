@@ -3,11 +3,11 @@ on:
     types:
       - created
 
-name: Release PDF
+name: Release PDFs
 
 jobs:
-  build:
-    name: compile and upload pdf
+  buildI40:
+    name: compile and upload I4.0 Concept
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -31,7 +31,13 @@ jobs:
           asset_path: ./CertifiedByGs1-I40.pdf
           asset_name: CertifiedByGs1-I40.pdf
           asset_content_type: application/pdf
-
+  buildTrust:
+    name: compile and upload Trust Model
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
       - name: Trust Model PDF Compilation
         uses: docker://asciidoctor/docker-asciidoctor:latest
         with:
