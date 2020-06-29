@@ -1,4 +1,4 @@
-name: markdown-compile
+name: PDF Compilation
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v1.4.2
 
-    - name: Compile PDF
+    - name: I4.0 Concept PDF Compilation
       run: |
         npm install -g markdown-pdf
         markdown-pdf -f A4 -s assets/css/main.css certified-by-gs1-i40-one-pager.md
@@ -22,5 +22,18 @@ jobs:
     - name: Save PDF
       uses: actions/upload-artifact@v1
       with:
-        name: certified-by-gs1-i40-one-pager.pdf
+        name: Certified-by-GS1-Concepts
         path: certified-by-gs1-i40-one-pager.pdf
+
+    - name: Trust Model PDF Compilation
+      uses: docker://asciidoctor/docker-asciidoctor:latest
+      with:
+        entrypoint: asciidoctor-pdf
+        args: -a icons=font -a source-highlighter=coderay CertifiedByGs1-Trust-Modell.adoc
+
+    - name: Save PDF
+      uses: actions/upload-artifact@v1
+      with:
+        name: Certified-by-GS1-Concepts
+        path: CertifiedByGs1-Trust-Modell.pdf
+

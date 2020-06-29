@@ -15,7 +15,7 @@ jobs:
       
       - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.2
-      - name: Compile PDF
+      - name: Compile I 4.0 Concept PDF
         run: |
           npm install -g markdown-pdf
           markdown-pdf -f A4 -s assets/css/main.css -m '{"html":true, "breaks":false}' certified-by-gs1-i40-one-pager.md
@@ -30,4 +30,21 @@ jobs:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./certified-by-gs1-i40-one-pager.pdf
           asset_name: certified-by-gs1-i40-one-pager.pdf
+          asset_content_type: application/pdf
+
+      - name: Trust Model PDF Compilation
+      uses: docker://asciidoctor/docker-asciidoctor:latest
+      with:
+        entrypoint: asciidoctor-pdf
+        args: -a icons=font -a source-highlighter=coderay CertifiedByGs1-Trust-Modell.adoc
+
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./CertifiedByGs1-Trust-Modell.pdf
+          asset_name: CertifiedByGs1-Trust-Modell.pdf
           asset_content_type: application/pdf
