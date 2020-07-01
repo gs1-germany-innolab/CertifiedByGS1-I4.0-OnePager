@@ -32,8 +32,12 @@ jobs:
           asset_name: CertifiedByGs1-I40.pdf
           asset_content_type: application/pdf
   buildTrust:
-    name: compile and upload Trust Model
+    name: compile and upload adocs
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        doc: ["CertifiedByGs1-Trust", "CertifiedByGs1-PKI-Demo", "CertifiedByGs1-OnePager"]
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -42,7 +46,7 @@ jobs:
         uses: docker://asciidoctor/docker-asciidoctor:latest
         with:
           entrypoint: asciidoctor-pdf
-          args: -a icons=font -a source-highlighter=coderay CertifiedByGs1-Trust.adoc
+          args: -a icons=font -a source-highlighter=coderay ${{ matrix.doc }}.adoc
 
       - name: Upload Release Asset
         id: upload-release-asset 
@@ -51,30 +55,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./CertifiedByGs1-Trust.pdf
-          asset_name: CertifiedByGs1-Trust.pdf
+          asset_path: ./${{ matrix.doc }}.pdf
+          asset_name: ${{ matrix.doc }}.pdf
           asset_content_type: application/pdf
 
-  buildOnePager:
-    name: compile and upload One Pager
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Trust Model PDF Compilation
-        uses: docker://asciidoctor/docker-asciidoctor:latest
-        with:
-          entrypoint: asciidoctor-pdf
-          args: -a icons=font -a source-highlighter=coderay CertifiedByGs1-OnePager.adoc
-
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./CertifiedByGs1-OnePager.pdf
-          asset_name: CertifiedByGs1-OnePager.pdf
-          asset_content_type: application/pdf
