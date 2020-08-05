@@ -1,4 +1,4 @@
-= Certified By GS1 – PKI Demonstration
+= Certified By GS1 – PKI
 Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :toc:
 :toclevels: 4
@@ -58,14 +58,14 @@ können.
 Use Case:
 
 - Angriffszenarios/Mehrwerte klar darstellen
-- Vorteile von certified
+- Vorteile von Certified
 - Vergleich mit existierenden Lösungen
 
 Technisch: 
 
 - X.509 Zertifikatsstruktur (Welche Key/Values genau werden verwendet)
 - GS1 Wurzelzertifikat Prototyp: Handling/Prozesse/Sicherheitsfragen für Demo Phase definieren
-- Prozesse (digital/analog) erarbeiten
+- Prozesse (digital/analog)
 
 Demonstrator:
 
@@ -73,8 +73,17 @@ Demonstrator:
 - Mock Up von Teilen?
 - Weiterführung zum Prototyp, evtl. sogar MVP?
 
-=== Interessierte Partner
+=== Umsetzung mit EKU Power Drives
+- https://www.ekupd.com
 
-- EKU Power Drives https://www.ekupd.com
+
+
+
+[[Certificates]]
+.Concreter EKU PD Use Case
+image::EKU-Demo.png[EKU PD Devices Certified by GS1]
+
+
+
 
 
