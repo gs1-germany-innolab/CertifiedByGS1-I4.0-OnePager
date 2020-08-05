@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        doc: ["CertifiedByGs1-Trust", "CertifiedByGs1-PKI-Demo", "CertifiedByGs1-OnePager"]
+        doc: ["CertifiedByGs1-Trust", "CertifiedByGs1-PKI-Demo", "CertifiedByGs1-OnePager", "white-paper"]
     
     steps:
       - name: Checkout code
