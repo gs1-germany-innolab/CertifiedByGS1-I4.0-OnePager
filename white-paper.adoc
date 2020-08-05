@@ -1,0 +1,50 @@
+= Certified By GS1 – White Paper
+Sebastian Schmittner <sebastian.schmittner@eecc.de>
+:toc:
+:toclevels: 4
+:toc-title: Inhalt
+:figure-caption: Bild
+:table-caption: Tabelle
+:icons: font
+:xrefstyle: short
+:imagesdir: pics/
+:sectnums:
+
+== Kurz-Zusammenfassung
+
+== Einführung
+
+=== Idente, Echtheit und Identitätsdiebstahl
+
+
+=== Digitale Signatur und Zertifikate
+
+=== Vertrauen
+
+=== GS1 als Vertrauenswürdiger Dritter
+
+
+
+== Technische Implementierung
+
+
+=== Public Key Infrastructure (PKI)
+
+
+
+=== Distributed (aka Self Sovereign) Identity (DID / SSI)
+
+
+== Anwendungsfälle 
+
+=== Industrie 4.0 Edge Computing
+
+==== Prototypentwicklung mit EKU PD
+
+=== Supplier Onboarding
+
+==== Certified by GS1 Idente in SSI für Deutschland
+
+
+== Projektergebnisse und Empfehlungen für nächste Schritte
+
