@@ -4,9 +4,8 @@
 
 In diesem Repository werden Konzepte im Rahmen des Certified By GS1 Projektes entwickelt.
 
-- [PDF Releases](https://gs1-germany-innolab.github.io/CertifiedByGS1-Konzepte//releases)
-- [One-Pager HTML Version](https://gs1-germany-innolab.github.io/CertifiedByGS1-Konzepte/)
-
+- [Neuster One-Pager](https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/releases/latest/download/CertifiedByGs1-OnePager.pdf)
+- [Alle PDFs](https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/releases/latest)
 
 
 ## License
