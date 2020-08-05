@@ -1,15 +1,16 @@
 ![PDF Compilation](https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/workflows/PDF%20Compilation/badge.svg)
 
-# Certified by GS1: I4.0 One-Pager
+# Certified by GS1: Konzepte
 
-- Enthalten in [PDF Releases](https://github.com/gs1-germany-innolab/CertifiedByGS1-I4.0-OnePager/releases)
-- [Aktuelle HTML Version](https://gs1-germany-innolab.github.io/CertifiedByGS1-I4.0-OnePager/)
+In diesem Repository werden Konzepte im Rahmen des Certified By GS1 Projektes entwickelt.
 
-[Hier](https://github.com/Echsecutor/CertifiedByGS1-I4.0-OnePager/blob/master/certified-by-gs1-i40-one-pager.md) wird eine Zusammenfassung der Certified by GS1 Project Ziele im I4.0 Kontext entwickelt.
+- [PDF Releases](https://gs1-germany-innolab.github.io/CertifiedByGS1-Konzepte//releases)
+- [One-Pager HTML Version](https://gs1-germany-innolab.github.io/CertifiedByGS1-Konzepte/)
+
 
 
 ## License
 
-Copyright 2020 Sebastian Schmittner <sebastian.schmittner@eecc.de>
+Copyright 2020 GS1 Germany, Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />All material in this repository is shared under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may use and adapt it in any way as long as you share it under the same license and name the "Certified by GS1 (Germany)" project as the original author.
