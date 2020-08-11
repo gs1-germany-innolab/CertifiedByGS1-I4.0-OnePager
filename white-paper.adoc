@@ -11,33 +11,60 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :sectnums:
 
 == Kurz-Zusammenfassung
-- Wer ist unsere Zielgruppe (Intern/ Extern)?
-- Wieviele Seiten?
-- Was ist das Ziel vom diesen White Paper?
+- Wer ist unsere Zielgruppe (Intern/ *Extern*)?
+- Wieviele Seiten? 10 < x <<100
+- Was ist das Ziel vom diesen White Paper? 
+--Grundlage für weitere Schritte/ Partner Extern gewinnen
 
-- Warum machen wir das als GS1?
-- Wie ist der derzeitige Stand von GS1 Standards in diesem Bereich?
-- Warum ist das für GS1 von Interesse?
-- USP von GS1?
-- Was für ein Produkt soll GS1 haben?
-- Was müssen wir dafür machen
+
 
 == Einführung
 
 - Was soll hier beschrieben werden?
 - Technische Beschreibungen?
 - Begriffserklärungen?
-- Bisher können GS1 Idente überwiegend nur für die reine Identifkation genutzt werden, eine Authentifikation (Echtheits-/Urheber-Prüfung) ist derzeitig nicht möglich.
+
 
 === Idente, Echtheit und Identitätsdiebstahl
 
+
+- Wie ist der derzeitige Stand von GS1 Standards in diesem Bereich?
+
+- Bisher können GS1 Idente überwiegend nur für die reine Identifkation genutzt werden, eine Authentifikation (Echtheits-/Urheber-Prüfung) ist derzeitig nicht möglich.
+
 === Digitale Signatur und Zertifikate (HASH?)
 
-=== PKI/ DID / SSI
+- general background
 
-=== Vertrauen
+=== PKI / DID / SSI...
 
-=== GS1 als Vertrauenswürdiger Dritter
+Begriffsklärung
+
+
+=== Vertrauen / GS1 als Vertrauenswürdiger Dritter
+
+Kernidee für Certified by GS1
+
+- Warum machen wir das als GS1?
+
+- Warum ist das für GS1 von Interesse?
+- USP von GS1?
+
+
+
+== Anwendungsfälle 
+
+Ergebnisse aus Prototyping
+
+=== Industrie 4.0 (Edge Computing)
+
+blabla
+
+==== Prototypentwicklung mit EKU PD
+
+=== Supplier Onboarding
+
+==== Certified by GS1 Idente in SSI für Deutschland
 
 
 
@@ -50,19 +77,19 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 
 
-=== Distributed (aka Self Sovereign) Identity (DID / SSI)
+=== Distributed/Self Sovreign Identity
+
+Sovrin
 
 
-== Anwendungsfälle 
-
-=== Industrie 4.0 Edge Computing
-
-==== Prototypentwicklung mit EKU PD
-
-=== Supplier Onboarding
-
-==== Certified by GS1 Idente in SSI für Deutschland
 
 
-== Projektergebnisse und Empfehlungen für nächste Schritte
+== Projektergebnisse / next steps
+
+kritisches review
+
+
+
+- Was für ein Produkt soll GS1 haben?
+- Was müssen wir dafür machen
 
