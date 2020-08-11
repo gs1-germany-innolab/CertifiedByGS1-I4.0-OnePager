@@ -15,7 +15,15 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 - Wieviele Seiten?
 - Was ist das Ziel vom diesen White Paper?
 
+- Warum machen wir das als GS1?
+- Wie ist der derzeitige Stand von GS1 Standards in diesem Bereich?
+- Warum ist das für GS1 von Interesse?
+- USP von GS1?
+- Was für ein Produkt soll GS1 haben?
+- Was müssen wir dafür machen
+
 == Einführung
+
 
 === Idente, Echtheit und Identitätsdiebstahl
 
@@ -30,6 +38,8 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 == Technische Implementierung
 
+- Nur die technische Implementierung von uns beschreiben oder die generellen Beschreibungen der beiden Ansätze?
+- Einleitung zu PKI und DID/ SSI. Muss man sich entscheiden? Unterschiede? Ansätze?
 
 === Public Key Infrastructure (PKI)
 
