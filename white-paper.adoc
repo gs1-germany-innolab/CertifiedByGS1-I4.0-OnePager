@@ -24,11 +24,16 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 == Einführung
 
+- Was soll hier beschrieben werden?
+- Technische Beschreibungen?
+- Begriffserklärungen?
+- Bisher können GS1 Idente überwiegend nur für die reine Identifkation genutzt werden, eine Authentifikation (Echtheits-/Urheber-Prüfung) ist derzeitig nicht möglich.
 
 === Idente, Echtheit und Identitätsdiebstahl
 
+=== Digitale Signatur und Zertifikate (HASH?)
 
-=== Digitale Signatur und Zertifikate
+=== PKI/ DID / SSI
 
 === Vertrauen
 
