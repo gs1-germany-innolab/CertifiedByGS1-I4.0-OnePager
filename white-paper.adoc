@@ -11,6 +11,9 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :sectnums:
 
 == Kurz-Zusammenfassung
+- Wer ist unsere Zielgruppe (Intern/ Extern)?
+- Wieviele Seiten?
+- Was ist das Ziel vom diesen White Paper?
 
 == Einführung
 
