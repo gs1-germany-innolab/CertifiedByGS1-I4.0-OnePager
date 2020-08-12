@@ -10,19 +10,43 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :imagesdir: pics/
 :sectnums:
 
-== Kurz-Zusammenfassung
-- Wer ist unsere Zielgruppe (Intern/ *Extern*)?
-- Wieviele Seiten? 10 < x <<100
-- Was ist das Ziel vom diesen White Paper? 
---Grundlage für weitere Schritte/ Partner Extern gewinnen
 
+.Arbeitsnotiz
+[NOTE]
+===============================
+**Wat soll dä Quatsch?**
+
+- Zielgruppe:
+  **  Primär *Extern*
+  ** Aber auch als Interner Ergebnisbericht
+- Was ist das Ziel vom diesen "White Paper"?
+** Ergebnis des F&E Projektes Dokumentieren
+** Kommunikation der erarbeiteten Konzepte/Use Cases/... GS1 In- und Extern.
+** Grundlage für weitere Schritte
+*** MVP
+*** Produktentwicklung
+** Partner (Extern) für weitere Schritte gewinnen
+- Seitenzahl
+** min 10 
+** deutlich unter 100
+
+===============================
+
+== Kurz-Zusammenfassung
+
+- Abstract/Executive Summary auf 1 Seite
+- Schreiben wir als letztes
 
 
 == Einführung
 
-- Was soll hier beschrieben werden?
-- Technische Beschreibungen?
-- Begriffserklärungen?
+- Worum geht es überhaupt?
+- Problemstellung
+** Kurze Ideen für Use Cases/Angriffsszenarien
+- Hintergrundinformationen
+- GS1 USP für die Lösung
+
+- Begriffserklärungen
 
 
 === Idente, Echtheit und Identitätsdiebstahl
@@ -32,64 +56,92 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 - Bisher können GS1 Idente überwiegend nur für die reine Identifkation genutzt werden, eine Authentifikation (Echtheits-/Urheber-Prüfung) ist derzeitig nicht möglich.
 
-=== Digitale Signatur und Zertifikate (HASH?)
+=== Digitale Signatur und Zertifikate
 
 - general background
 
+-  Hashing, async crypro,... nur aus funktionaler Sicht, keine Algorithmen
+
 === PKI / DID / SSI...
 
-Begriffsklärung
+- Begriffsklärung
+** In diesem Papier verstehen wir unter ... 
+- Abgrenzung
 
+- Einleitung zu PKI und DID/ SSI.
+** Muss man sich entscheiden?
+** Unterschiede?
+** Ansätze?
+
+- Sovrin,... state of the art
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
 
-Kernidee für Certified by GS1
+- Kernidee für Certified by GS1
 
 - Warum machen wir das als GS1?
+** USP von GS1?
 
 - Warum ist das für GS1 von Interesse?
-- USP von GS1?
+
 
 
 
 == Anwendungsfälle 
 
-Ergebnisse aus Prototyping
+
+- Detaillierte Use Cases
+** Sektorweit/Allgemein
+** Konkret
 
 === Industrie 4.0 (Edge Computing)
 
-blabla
+- Allgemeines
+- Referenzen aus Platform I 4.0 Zukunftszenarien
+
 
 ==== Prototypentwicklung mit EKU PD
 
+- Konkreter Anwendungsfall
+
 === Supplier Onboarding
+
+- Sektoren übergreifend
+- Konkret (Automobil,...)
 
 ==== Certified by GS1 Idente in SSI für Deutschland
 
 
+- Rahmen: Förderprojekt
+** Schaufenster Digitale ID
+** SSI Entwicklungen in DE/Weltweit
+** *Hier oder in Einleitung?*
 
-== Technische Implementierung
-
-- Nur die technische Implementierung von uns beschreiben oder die generellen Beschreibungen der beiden Ansätze?
-- Einleitung zu PKI und DID/ SSI. Muss man sich entscheiden? Unterschiede? Ansätze?
-
-=== Public Key Infrastructure (PKI)
+- Konkretes Projekt 
+** Use Cases
 
 
+
+== Umsetzung
+
+- Ergebnisse aus Prototyping
+
+=== Reine Public Key Infrastructure (PKI)
+
+- Für EKU PD
 
 === Distributed/Self Sovreign Identity
 
-Sovrin
-
+- GS1 als Issuer von Verifiable Credentials
 
 
 
 == Projektergebnisse / next steps
 
-kritisches review
+- kritisches review
 
 
-
-- Was für ein Produkt soll GS1 haben?
-- Was müssen wir dafür machen
+- Produkt?
+** next steps?
+** alternative wege
 
