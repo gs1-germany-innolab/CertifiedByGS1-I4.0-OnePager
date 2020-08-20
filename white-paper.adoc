@@ -29,6 +29,7 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 - Seitenzahl
 ** min 10 
 ** deutlich unter 100
+** Ziel 23.42
 
 ===============================
 
@@ -36,6 +37,12 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 - Abstract/Executive Summary auf 1 Seite
 - Schreiben wir als letztes
+
+
+Hier oder Einfürung
+
+- Cyber Security
+- "S" in IoT
 
 
 == Einführung
@@ -136,12 +143,14 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 
 
-== Projektergebnisse / next steps
+== Projektergebnisse
 
-- kritisches review
+=== Lessons Learned
 
 
-- Produkt?
-** next steps?
-** alternative wege
+=== Produktentwicklung/ Next Steps (Intern?)
+
+** Next steps für begonnene Cases
+
+** Alternative wege
 
