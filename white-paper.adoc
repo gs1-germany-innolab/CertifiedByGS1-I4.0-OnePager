@@ -29,23 +29,27 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 - Seitenzahl
 ** min 10 
 ** deutlich unter 100
-** Ziel 23.42
+** Ziel 25
+
+- Deadline (nach Review!) 24.9.
 
 ===============================
 
-== Kurz-Zusammenfassung
+== Kurz-Zusammenfassung [1 Seite]
 
 - Abstract/Executive Summary auf 1 Seite
 - Schreiben wir als letztes
 
 
-Hier oder Einfürung
+Hier oder Einfügung
 
 - Cyber Security
 - "S" in IoT
 
 
-== Einführung
+== Einführung [5 Seiten]
+
+**Mayra**
 
 - Worum geht es überhaupt?
 - Problemstellung
@@ -58,18 +62,27 @@ Hier oder Einfürung
 
 === Idente, Echtheit und Identitätsdiebstahl
 
+**Mayra**
+
+- LEI VS GLN
 
 - Wie ist der derzeitige Stand von GS1 Standards in diesem Bereich?
 
-- Bisher können GS1 Idente überwiegend nur für die reine Identifkation genutzt werden, eine Authentifikation (Echtheits-/Urheber-Prüfung) ist derzeitig nicht möglich.
+- Bisher können GS1 Idente überwiegend nur für die reine Identifikation genutzt werden, eine Authentifikation (Echtheits-/Urheber-Prüfung) ist derzeitig nicht möglich.
 
 === Digitale Signatur und Zertifikate
+
+
+**Roman**
 
 - general background
 
 -  Hashing, async crypro,... nur aus funktionaler Sicht, keine Algorithmen
 
 === PKI / DID / SSI...
+
+
+**Roman**
 
 - Begriffsklärung
 ** In diesem Papier verstehen wir unter ... 
@@ -84,6 +97,9 @@ Hier oder Einfürung
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
 
+
+**Roman**
+
 - Kernidee für Certified by GS1
 
 - Warum machen wir das als GS1?
@@ -94,27 +110,62 @@ Hier oder Einfürung
 
 
 
-== Anwendungsfälle 
+== Anwendungsfälle [8 Seiten]
 
 
 - Detaillierte Use Cases
 ** Sektorweit/Allgemein
 ** Konkret
 
-=== Industrie 4.0 (Edge Computing)
+=== Industrie 4.0 (Edge Computing) 
+**Sebastian**
 
 - Allgemeines
 - Referenzen aus Platform I 4.0 Zukunftszenarien
 
 
+
 ==== Prototypentwicklung mit EKU PD
+**Sebastian**
 
 - Konkreter Anwendungsfall
+
+
+
 
 === Supplier Onboarding
 
 - Sektoren übergreifend
 - Konkret (Automobil,...)
+
+
+=== Lokations Stammdaten
+
+
+
+
+
+== Umsetzung [7 Seiten]
+
+- Ergebnisse aus Prototyping
+
+=== Reine Public Key Infrastructure (PKI)
+
+**Sebastian**
+
+==== EKU PD Demo
+
+**Sebastian**
+
+- Konkreter Anwendungsfall
+- Wenn UI Fertig
+
+
+
+=== Distributed/Self Sovreign Identity
+
+- GS1 als Issuer von Verifiable Credentials
+
 
 ==== Certified by GS1 Idente in SSI für Deutschland
 
@@ -129,21 +180,7 @@ Hier oder Einfürung
 
 
 
-== Umsetzung
-
-- Ergebnisse aus Prototyping
-
-=== Reine Public Key Infrastructure (PKI)
-
-- Für EKU PD
-
-=== Distributed/Self Sovreign Identity
-
-- GS1 als Issuer von Verifiable Credentials
-
-
-
-== Projektergebnisse
+== Projektergebnisse [4 Seiten]
 
 === Lessons Learned
 
