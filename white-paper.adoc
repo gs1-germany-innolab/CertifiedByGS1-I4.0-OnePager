@@ -64,11 +64,13 @@ Hier oder Einfügung
 
 **Mayra**
 
-- LEI VS GLN
-
 - Wie ist der derzeitige Stand von GS1 Standards in diesem Bereich?
 
 - Bisher können GS1 Idente überwiegend nur für die reine Identifikation genutzt werden, eine Authentifikation (Echtheits-/Urheber-Prüfung) ist derzeitig nicht möglich.
+
+==== LEI VS GLN
+
+**Anna**
 
 === Digitale Signatur und Zertifikate
 
@@ -183,6 +185,12 @@ Hier oder Einfügung
 == Projektergebnisse [4 Seiten]
 
 === Lessons Learned
+
+
+=== Business Opportunities (Extern)
+
+**Mayra**
+
 
 
 === Produktentwicklung/ Next Steps (Intern?)
