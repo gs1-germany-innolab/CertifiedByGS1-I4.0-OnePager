@@ -75,27 +75,122 @@ Hier oder Einfügung
 === Digitale Signatur und Zertifikate
 
 
-**Roman**
+==== Symmetrisch
+Kryptografische Systeme werden kann man in zwei unterschiedliche Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie. Die symmetrische Verschlüsselung wird oftmals als Synonym für die symmetrische Kryptographie verwendet. Die asymmetrische Kryptographie hingegen umfasst zwei Themen. Die asymmetrische Verschlüsslung und digitale Signaturen.
 
-- general background
+Die symmetrischen Verschlüsselungsverfahren reichen recht weit in die Menschheitsgeschichte zurück. Alle kryptografischen Algorithmen, begannen als symmetrische Verfahren.
+Schon 600v Chr. setzten hebräische Gelehrte einen einfache Zeichenaustauschalgorithmen mit den Namen: Atbash-Verschlüsselung ein. Die Caesar-Verschlüsslung ist wahrscheinlich die bekannteste symmetrische Verschlüsselung. Diese geht auf den römischen Feldherrn Gaius Julius Caesar zurück. Er benutzte diese geheime Kommunikation für seine militärische Korrespondenz.
 
--  Hashing, async crypro,... nur aus funktionaler Sicht, keine Algorithmen
+Die Funktionsweise der symmetrischen Schlüssel ist recht einfach. Es gibt nur einen Schlüssel, den geheimen Schlüssel. Der wird für die Ver- wie auch für die Entschlüsselung genutzt. Das bedeutet aber auch, dass sowohl der Sender, als auch der Empfänger immer diesen Schlüssel benötigt. Der Versender hat diesen Schlüssel, nur muss dieser auch über einen sicheren Übertragungsweg an den Empfänger gelangen, um z.B. ein Mitlesen der verschlüsselten Nachricht nicht zu ermöglichen. 
+Eine symmetrische Verschlüsselung kann man daher für das Verschlüsseln von Dateien, Verzeichnissen oder Laufwerken nutzen. 
+
+==== Asymmetrisch
+In der Praxis nutzt man heute eher die asymmetrische Verschlüsselung.
+
+Denn bei der asymmetrischen Verschlüsselung benötigt man je einen Schlüssel zum Verschlüsseln der Daten und einen anderen Schlüssel zum Entschlüsseln. Der zur Verschlüsselung verwendete Schlüssel wird in einem asymmetrischen Verfahren als öffentlicher Schlüssel bezeichnet und kann jedem frei mitgeteilt werden. Der für die Entschlüsselung verwendete Schlüssel muss hingegen geheim gehalten werden. 
+
+Erstmals wurde die Idee der asymmetrischen Verschlüsselung im Jahr 1976 von Diffie und Hellman in ihrem Aufsatz "New Directions in Cryptography" veröffentlicht. In diesem Aufsatz, führen die Autoren das Prinzip der asymmetrischen Kryptographie ein. Rivest, Shamir und Adleman stellten 1978 mit RSA das erste asymmetrische Verschlüsselungsverfahren vor. 
+
+Die Funktionsweise einer asymmetrischen Verschlüsselung lässt sich wie folgt erklären:
+Jeder Teilnehmer erzeugt sich ein sogenanntes Schlüsselpaar. Das Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Der private Schlüssel sollte dann nicht, oder nur in einer nicht vertretbaren Zeit, aus dem öffentlichen Schlüssel berechnet werden können. Wenn ein Versender eine geheime Nachricht an einen Empfänger versenden möchte, so benötigt sie den öffentlichen Schlüssel vom Empfänger. Diesen bekommt Sie dann vom Empfänger selber oder aus einem öffentlichen Schlüsselverzeichnis. Der Versender verschlüsselt die Nachricht mit dem öffentlichen Schlüssel und einer Verschlüsselungsfunktion. Die Verschlüsselte Nachricht kann danach an den Empfänger versendet werden. Dieser benutzt die Entschlüsselungsfunktion mit Hilfe seines privaten Schlüssels, um die ursprüngliche Nachricht wiederherzustellen.
+
+==== Hashing
+Durch Hashing oder eine Hashfunktion, wird eine Zeichenkette variabler Länge auf eine Zeichenkette fester Länge abgebildet. Durch eine effiziente mathematische Funktion, wird der Hashwert meist erheblich kürzer als der Text selber. Dadurch wird ein Fingerabdruck (Fingerprint) der Zeichenkette oder Dokument erstellt. Dieser Fingerabdruck dient dann als nahezu eindeutige Kennzeichnung des Dokumentes, sowie ein Fingerabdruck uns auch nahezu eindeutig identifiziert. Durch diesen Hashwert kann man z.B. überprüfen, ob ein Dokument, eine Datei oder ein Udate verändert wurde. 
+
+Beispiel:
+
+==== Signatur
+Wenn man von Signatur redet, muss man zwischen einer elektronischen Signatur und einer digitalen Signatur unterscheiden. Da beide oftmals synonym verwendet werden. Was jedoch nicht ganz richtig ist. 
+
+Bei der elektronischen Signatur (elektronische Unterschrift), spricht man eher von einem rechtlichen oder juristischen Begriff. Diese müssen auch nicht zwangsläufig auf einer digitalen Signatur basieren. Bei der digitalen Signatur hingegen, handelt es sicher eher um ein mathematisches oder technisches Verfahren. 
+
+Bei der digitalen Signatur wird mit dem privaten Schlüssel zu dem originalen Dokument eine „Unterschrift“/Signatur hinzugefügt. Mit dem öffentlichen Schlüssel kann dann später vom Empfänger festgestellt werden, ob die Daten wirklich von demjenigen stammen, der mit seinem privaten Schlüssel signiert hat und ob die Daten verändert worden und noch unverändert sind. Die digitalen Signaturen sind deshalb notwendig, da sich der Absender von Dateien, Dokumenten oder Nachrichten fälschen lässt. Den Absender einer E-Mail lässt sich ganz einfach fälschen. Somit lässt sich die Identität des Unterzeichners zweifelsfrei nachzuweisen und die Integrität der elektronischen Nachricht sicherstellen. 
+Wie funktionert eine digitale Signatur? Aus Performance-Gründen wird als erstes von der Nachricht ein Hashwert berechnet. Dieser Haswert ist dann der Fingerabdruck dieser Nachricht. Für die Signatur wird dann der geheime private Schlüssel verwendet und durch einem Signieralgorithmus ein Wert, die sogenannte digitale Signatur berechnet. Die Nachricht kann dann mit der digitalen Signatur an den Empfänger versendet werden. Der Empfänger kann dann mit dem öffentlichen Schlüssel des Versenders überprüfen, ob die Nachricht wirklich vom versender verschickt wurde und ob diese Nachricht unverändert ist. 
+
+==== Zertifikate
+Ein „normales“ Zertifikat ist im üblichen Sinne eine Bescheinigung oder eine Urkunde zu bestimmten Informationen, zu einem Unternehmen oder zu einer Person.
+Als GS1 vergeben wir in gedruckter Form ein Zertifkat für die erfolgreiche Teilnahme am globalen GS1 System. In diesem Zertifkat wird unter anderem die GLN und die dazugehörige Firma aufgeführt.
+Im Gegensatz zu einem gedruckten Zertifikat, stellt ein digitales Zertifikat im Wesentlichen eine digitale Beglaubigung dar. Mit diesem digitalen Zertifikat kann ich bestimmte Eigenschaften zu einem Objekt oder zu einer Person bestätigen, sowie die Echtheit und die Datenintegrität überprüfen. Durch ein Zertifikat lässt isch ein öffentlicher Schlüssel sicher einem bestimmten Besitzer zuweisen.
+
+Zertifikate werden genutzt, um:
+-	den Datenverkehr im Internet zu verschlüsseln
+-	Software, Updates oder digitale Dokumente zu signieren
+-	E-Mails zu verschlüsseln und zu signieren
+-	Oder dem Aufbau von VPN Verbindungen.
+Die am häufigsten verwendeten Zertifikate sind: 
+-	PGP Zertifikat (siehe Zertifikatsarten in PGP) 
+-	X.509 Zertifikat
 
 === PKI / DID / SSI...
+==== PKI
 
+Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg natürlich auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
+Datenbanken macht eine PKI unabdingbar. Bis zu diesem Zeitpunkt wurden jedoch nur symmetrische Schlüssel eingesetzt, die sowohl für die Ver- als auch die Entschlüsselung denselben Schlüssel verwenden. 
 
-**Roman**
+Die ersten nicht öffentlichen Entwicklungen der PKI fanden beim britischen Geheimdienst am Anfang der 1970er Jahre statt. Wurden jedoch erst in den 1990er Jahren, aufgrund der strengen Geheimhaltungspflicht, im Nachhinein anerkannt. In einer ersten öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie und Martin Hellman vorgeschlagen. 
 
-- Begriffsklärung
-** In diesem Papier verstehen wir unter ... 
-- Abgrenzung
+Der Vorteil einer PKI mit einem asymmetrischen kryptographischen Verfahren liegt darin, dass es nicht nur ein Schlüsselpaar für die Ver- und Entschlüsselung gibt. Neben der Generierung und anschließenden Zertifizierung von Schlüsselpaaren, gehört auch die Verteilung von öffentlichen Schlüsseln. 
 
-- Einleitung zu PKI und DID/ SSI.
-** Muss man sich entscheiden?
-** Unterschiede?
-** Ansätze?
+Eine PKI lässt sich in mehrere Komponenten einteilen. Einer Registrierungsstelle, einer Zertifizierungsstelle und dem Verzeichnisdienst. 
 
-- Sovrin,... state of the art
+Die Registrierungsstelle, erfasst und überprüft die Identität und ggfs. weitere Angaben des Antragstellers. Diese muss davon überzeugt sein, dass die persönlichen Daten und der erhaltene öffentliche Schlüssel auch wirklich zu Ihm gehören, bevor das Zertifikat ausgestellt wird. Nach einer positiven Überprüfung, wird der Zertifikatsantrag durch die Registrierungsstelle genehmigt und die Anfrage an die Zertifizierungsstelle weitergegeben. 
+
+Die Zertifizierungsstelle wiederum integriert den öffentlichen Schlüssel vom Antragssteller in ein Zertifikat, welches er anschließend erhält. Zusätzlich kann die Zertifizierungsstelle zur Veröffentlichung der Zertifikate, diese in einem öffentlichen Verzeichnis ablegen.
+
+Oftmals befindet sich die Registrierungsstelle und die Zertifizierungsstelle in einem Unternehmen und bildet eine Einheit, als TrustCenter.
+
+Der Verzeichnisdienst ist ein durchsuchbares Verzeichnis, das ausgestellte Zertifikate enthält. Sozusagen die Gelben Seiten der Zertifikate. Dadurch können die Zertifikate eines anderen Teilnehmers zum Prüfen einer Signatur abrufen.  
+
+==== Decentralized Identifiers - Grundidee
+Decentralized Identifiers (DIDs) sind neuartige Identifikatoren, die eine verifizierbare und dezentralisierte digitale Identität ermöglichen sollen. Dabei entscheidet mindestens eine sogenannte Kontrollinstanz (DID controller) darüber, welches beliebige Subjekt (DID subject) eine DID identifizieren soll. Dieses Subjekt können u.a. Personen, Organisationen, Dinge, Datenmodelle, abstrakte Entitäten sein.
+
+Die Bezeichner sind derart konzipiert, dass der DID-Controller beweisen kann, dass er die Kontrolle über die DID ausübt. Sie sollen unabhängig von zentralisierten Registrierungsstellen, Identitäts-Providern oder Zertifizierungsstellen in Umlauf gebracht und genutzt werden können.
+
+Technisch betrachtet ist eine DID eine URL, die eine Verbindung zwischen dem DID-Subjekt und den Mechanismen einer vertrauenswürdigen Interaktionen mit diesem Subjekt herstellt. Diese Mechanismen sind als Datensätze in einem sogenannten DID-Dokument (DID document) enthalten und können z.B. Public Keys oder pseudonymisierte Biometriedaten enthalten, mit denen sich das DID-Subjekt authentifizieren und seine Eigentümerschaft an der DID beweisen kann. Darüber hinaus können Service-Endpunkte enthalten sein, die eine gesicherte Interaktionen mit dem DID-Subjekt ermöglichen.
+
+Ist das zu identifizierende Subjekt selbst Teil der DID-Controller-Gruppe, ist damit eine notwendige Bedingung für Selbstsouveränität erfüllt.
+
+==== Identity Layer für das Internet
+DIDs können die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls für den verschlüsselten Netzverkehr hatte.
+
+==== Use Cases
+Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern, Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C) oder der plattformübergreifende Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten.
+
+==== Vergleiche mit anderen Identifiern
+==== Persistenz und Dezentralität
+Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, ist nicht neu. UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122).
+
+==== Persistenz und globale Auflösbarkeit
+Der Bedarf an persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, welche gleichzeitig global auflösbar sind, ist ebensowenig neu. Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert (IETF RFC 2141, RFC 8141).
+
+==== Kryptographische Verifizierbarkeit
+Im Regelfall sind UUIDs jedoch nicht global auflösbar und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösbar sind. Darüber hinaus ist weder UUIDs noch URNs eine weitere notwendige Eigenschaft inhärent: die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren.
+
+Tabelle 1. Eigenschaften von Identifikatoren 
+	DID	UUID	URN	DigitalLink	DOI
+Persistent	[check]	[check]	[check]	[check]	[check]
+Global auflösbar	[check]	[times]	[check]	[check]	[check]
+Kryptographisch verifizierbar	[check]	[times]	[times]	[times]	[times]
+Dezentral	[check]	[check]	[times]	[times]	[times]
+
+==== Selbstsouveräne Identität
+Zur Verwirklichung einer selbstsouveränen Identität (self-sovereign identity, SSI) – definiert als lebenslang gültige, portierbare digitale Identität, welche unabhängig ist von zentralisierten Autoritäten – muss der neue Bezeichner über jede der folgenden Eigenschaften verfügen: Persistenz, globale Auflösbarkeit, kryptographische Verifizierbarkeit und Dezentralität.]
+
+Das Konzept einer selbstsouveränen Identität baut auf drei Hauptkomponenten auf, aus denen sie sich zusammensetzt. Zu diesen zählen neben DIDs noch Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI).
+
+==== Verifiable Credentials
+DIDs bilden lediglich die untere Ebene einer dezentralisierten Identitätsinfrastruktur. Die darüber liegende Ebene, welche den meisten Mehrwert bietet, bilden die sogenannten Verifiable Credentials (VCs). Dieser technische Begriff steht für einen digital signierten elektronischen Berechtigungsnachweis, welcher den von der W3C Verifiable Claims Working Group entwickelten Interoperabilitätsstandards entspricht.
+
+==== Web of Trust
+Die üblichen Identitätsmanagement-Systeme basieren auf zentralisierten Autoritäten wie Verzeichnisdiensten innerhalb eines Unternehmen, Zertifizierungsstellen oder Domain-Name-Registraren. In diesem Kontext spielt auch GS1 die Rolle eines Registrars, indem über die Company-Prefix ein Namensraum zugewiesen (verkauft) wird. Dabei bilden diese Autoritäten jeweils ihre eigene Wurzel der Sicherheitskette. Damit ein Identitätsmanagement jedoch zwischen den genannten Systemen etabliert werden kann, bedarf es eines föderalistischen Identitätsmanagements.
+
+Das Aufkommen von Distributed-Ledger-Technologien (DLTs) und der Blockchain-Technologie vereinfacht technisch völlig dezentralisierte Identitätsmanagement-Systeme. In einem dezentralen Identitätsmanagement-System können die Entitäten (Personen, Organisationen, Dinge, etc.) ihre geteilte Root of Trust frei wählen. Global verteilte Ledger, dezentralisierte P2P-Netzwerke oder andere Systeme mit gleichartigen Fähigkeiten ermöglichen eine Root of Trust ohne eine zentralisierte Autoritätsinstanz oder einen Single Point of Failure. Gemeinsam ermöglichen es DLTs und dezentralisierte Identitätsmanagement-Systeme beliebigen Entitäten ihre eigenen Bezeichner oder eine nicht festgelegte Menge an verteilten Roots of Trust zu erstellen und zu managen.
+
+Entitäten werden mittels DIDs identifiziert und können sich authentisieren, indem sie Nachweise wie z.B. digitale Signaturen oder datenschutzkonforme biometrische Protokolle nutzen.
+
+Dieses Design beseitigt sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für Identifier als auch von zentralisierten Zertifizierungsstellen für Schlüsselverwaltungen – was zurzeit den Standard bei der hierarchischen Public-Key-Infrastruktur (PKI) darstellt. Falls die DID-Registry ein verteilter Ledger ist, kann jede Entität als ihre eigene Root of Trust fungieren. Diese Architektur wird als DPKI (dezentralisierte PKI) bezeichnet.
+
+==== SSI / Self Sovereign Identity
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
 
