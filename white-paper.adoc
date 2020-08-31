@@ -120,7 +120,7 @@ Die am häufigsten verwendeten Zertifikate sind:
 -	PGP Zertifikat (siehe Zertifikatsarten in PGP) 
 -	X.509 Zertifikat
 
-=== PKI / DID / SSI...
+=== PKI / DID / SSI
 ==== PKI
 
 Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg natürlich auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
@@ -140,7 +140,7 @@ Oftmals befindet sich die Registrierungsstelle und die Zertifizierungsstelle in 
 
 Der Verzeichnisdienst ist ein durchsuchbares Verzeichnis, das ausgestellte Zertifikate enthält. Sozusagen die Gelben Seiten der Zertifikate. Dadurch können die Zertifikate eines anderen Teilnehmers zum Prüfen einer Signatur abrufen.  
 
-==== Decentralized Identifiers - Grundidee
+==== Decentralized Identifiers
 Decentralized Identifiers (DIDs) sind neuartige Identifikatoren, die eine verifizierbare und dezentralisierte digitale Identität ermöglichen sollen. Dabei entscheidet mindestens eine sogenannte Kontrollinstanz (DID controller) darüber, welches beliebige Subjekt (DID subject) eine DID identifizieren soll. Dieses Subjekt können u.a. Personen, Organisationen, Dinge, Datenmodelle, abstrakte Entitäten sein.
 
 Die Bezeichner sind derart konzipiert, dass der DID-Controller beweisen kann, dass er die Kontrolle über die DID ausübt. Sie sollen unabhängig von zentralisierten Registrierungsstellen, Identitäts-Providern oder Zertifizierungsstellen in Umlauf gebracht und genutzt werden können.
@@ -234,9 +234,6 @@ Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen das
 
 ==== Technische Realisierung
 Im aktuellen Projekt wird die realisierung der Certified IDs sowohl über klassische X.509 Zertifikatsketten (PKI) als auch über "Verifiable Credentials" im Rahmen einer SSI/DID Infrastruktur erprobt. Beide Ansätze ermöglichen die dezentrale Anwendung der Idente, ohne dass nach der initialen Vergabe der zertifizierten basis GLN eine weitere Interaktion mit GS1 notwendig ist.
-
-
-
 
 
 == Anwendungsfälle [8 Seiten]
