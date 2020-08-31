@@ -149,13 +149,13 @@ Technisch betrachtet ist eine DID eine URL, die eine Verbindung zwischen dem DID
 
 Ist das zu identifizierende Subjekt selbst Teil der DID-Controller-Gruppe, ist damit eine notwendige Bedingung für Selbstsouveränität erfüllt.
 
-Identity Layer für das Internet
+==== Identity Layer für das Internet
 DIDs können die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls für den verschlüsselten Netzverkehr hatte.
 
-Use Cases
+==== Use Cases
 Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern, Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C) oder der plattformübergreifende Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten.
 
-Vergleiche mit anderen Identifiern
+====Vergleiche mit anderen Identifiern
 Persistenz und Dezentralität
 Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, ist nicht neu. UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122).
 
