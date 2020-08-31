@@ -74,7 +74,6 @@ Hier oder Einfügung
 
 === Digitale Signatur und Zertifikate
 
-
 ==== Symmetrisch
 Kryptografische Systeme werden kann man in zwei unterschiedliche Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie. Die symmetrische Verschlüsselung wird oftmals als Synonym für die symmetrische Kryptographie verwendet. Die asymmetrische Kryptographie hingegen umfasst zwei Themen. Die asymmetrische Verschlüsslung und digitale Signaturen.
 
@@ -191,6 +190,19 @@ Entitäten werden mittels DIDs identifiziert und können sich authentisieren, in
 Dieses Design beseitigt sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für Identifier als auch von zentralisierten Zertifizierungsstellen für Schlüsselverwaltungen – was zurzeit den Standard bei der hierarchischen Public-Key-Infrastruktur (PKI) darstellt. Falls die DID-Registry ein verteilter Ledger ist, kann jede Entität als ihre eigene Root of Trust fungieren. Diese Architektur wird als DPKI (dezentralisierte PKI) bezeichnet.
 
 ==== SSI / Self Sovereign Identity
+
+Durch den rasanten Anstieg von Social Media, stiegen neben den digitalen Aktivitäten der Nutzer auch die Anzahl der unterschiedlichsten Plattformen an. Auf jeder Plattform muss für die digitale Identität jeweils ein eigenes Profil erstellt werden. Diese Profile hinterlassen jedes Mal eine digitale Spur im Internet. Bei diesen hinterlegten Daten, handelt es sich überwiegend um sensible und personenbezogene Daten, die für die Plattformen enorm wichtig sind, aber auch eine gewisse Gefahr für einen Datendiebstahl darstellen. 
+
+Für diese sensiblen und wertvollen Verbraucherdaten muss die Plattform auch die Verantwortung übernehmen. Vielen Unternehmen war dieses nicht immer möglich und so war der Schutz der Daten nicht immer ausreichend gewährleistet und öfters gefährdet. Oftmals wurde der Ruf der Verbraucher für die eigen zu verwaltende Identität laut. 
+In den letzten Jahren entwickelte sich die Blockchain- Technologie zu einem neuen Ansatz, der dezentralen Informationssysteme. Bei dieser neuen Technologie, können Daten auf einzigartige Weise registriert und nicht mehr veränderbar über ein Netzwerk verteilt werden. Ein Konsens-Mechanismus zur Validierung der Informationen, ohne eine zentrale Autorität, stellt sicher, , dass alle Teilnehmer eine identische Kopie der verteilten Datenbank besitzen.
+
+Aus diesen beiden scheinbar nicht zusammenhängenden Ideen entwickelte sich das Konzept der selbstsouveränen Identität (Self-Sovereign Identity oder SSI). In der analogen Welt stehen unterschiedliche Verfahren zur Verfügung um unsere Identität nachzuweisen. Neben dem Personalausweis, welcher ein sehr hohes Vertrauen darstellt oder den Fingerabdruck.  
+In der digitalen Welt hingegen, ist es etwas schwieriger. Hier haben wir die Möglichkeit uns über unterschiedliche Verfahren wie z.B. Post-Ident, Video-Ident, WebIdent oder Accounts bei Sozialen Netzwerken unsere Identität nachzuweisen. Jedoch müssen wir uns immer wieder neu Ausweisen und stützen uns dabei immer wieder auf Dritte Dienstleister, welche unsere Identität bestätigen, die Daten speichern und verwalten. Hat aber auch den großen Nachteil, dass wir nicht immer wissen, wer welche Daten hat und welche Daten an andere weitergegeben werden.
+
+Mit Hilfe einer Self-sovereign identity und dem dahinterliegenden System, kann ein Identitätsinhaber seine eigene Identität erstellen und auch komplett kontrollieren, dafür benötigt er keine Erlaubnis einer weiteren Instanz oder einer zentralen Behörde. Zusätzlich kann jeder selber entscheiden, mit wem er seine Daten teilt und wie diese verwendet werden. Das oben beschriebene Konzept der „Public Key Infrastructure“ (PKI) wird dabei nicht verworfen, sondern aus den neuen aufkommenden Herausforderungen angepasst und im Sinne einer „Decentralized PKI“ weiterentwickelt. Anstelle eines Schlüsselverzeichnisses, die für die Speicherung und dem Abruf von öffentlichen Schlüsseln dienen, wird eine Blockchain eingesetzt. Dadurch sind keine zentralen Instanzen mehr notwendig, da der Identitätsinhaber, der seinen privaten Schlüssel kontrolliert, seine Zertifikate ohne einen Servicedienstleister selber ausstellt. Und die Blockchain als Schlüsselverzeichnis dient. Zusätzlich können die Vorteile der Blockchain-Technologie, wie eindeutige Nachweisbarkeit und Unveränderlichkeit von Transaktionen umgesetzt werden. 
+
+Durch die eIDAS Verordnung hat die Europäische Union einen kompatiblen europäischen Rahmen für die selbstsouveräne Identität (European Self-Sovereign Identity Framework / ESSIF) geschaffen. Das ESSIF verwendet dezentrale Kennungen (decentralized identifiers / DIDs) und die European Blockchain Services Infrastructure(EBSI).
+
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
 
