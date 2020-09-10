@@ -354,4 +354,4 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 [bibliography]
 === Quellenangaben
 
-- [[[rfc-2141]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
+- [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
