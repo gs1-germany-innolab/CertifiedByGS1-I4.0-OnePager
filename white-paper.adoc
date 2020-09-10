@@ -186,7 +186,7 @@ Persistenz und Dezentralität
 Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, ist nicht neu. UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122).
 
 Persistenz und globale Auflösbarkeit
-Der Bedarf an persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, welche gleichzeitig global auflösbar sind, ist ebensowenig neu. Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert (IETF RFC 2141, RFC 8141).
+Der Bedarf an persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, welche gleichzeitig global auflösbar sind, ist ebensowenig neu. Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert (<<rfc-2141>>, RFC 8141).
 
 ===== Kryptographische Verifizierbarkeit
 Im Regelfall sind UUIDs jedoch nicht global auflösbar und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösbar sind. Darüber hinaus ist weder UUIDs noch URNs eine weitere notwendige Eigenschaft inhärent: die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren.
@@ -349,3 +349,9 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 ** Alternative wege
 
+
+
+[bibliography]
+=== Quellenangaben
+
+- [[[rfc-2141]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
