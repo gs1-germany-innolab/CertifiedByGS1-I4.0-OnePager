@@ -198,6 +198,13 @@ Zur Verwirklichung einer selbstsouveränen Identität (self-sovereign identity, 
 
 Das Konzept einer selbstsouveränen Identität baut auf drei Hauptkomponenten auf, aus denen sie sich zusammensetzt. Zu diesen zählen neben DIDs noch Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI).
 
+==== DIDs
+
+Abstract from <<did-core>>.
+
+Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. Specifically, while other parties might be used to help enable the discovery of information related to a DID, the design enables the controller of a DID to prove control over it without requiring permission from any other party. DIDs are URLs that associate a DID subject with a DID document allowing trustable interactions associated with that subject. Each DID document can express cryptographic material, verification methods, or service endpoints, which provide a set of mechanisms enabling a DID controller to prove control of the DID. Service endpoints enable trusted interactions associated with the DID subject. A DID document might contain semantics about the subject that it identifies. A DID document might contain the DID subject itself (e.g. a data model). 
+
+
 ===== Verifiable Credentials
 DIDs bilden lediglich die untere Ebene einer dezentralisierten Identitätsinfrastruktur. Die darüber liegende Ebene, welche den meisten Mehrwert bietet, bilden die sogenannten Verifiable Credentials (VCs). Dieser technische Begriff steht für einen digital signierten elektronischen Berechtigungsnachweis, welcher den von der W3C Verifiable Claims Working Group entwickelten Interoperabilitätsstandards entspricht.
 
@@ -332,6 +339,10 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 
 
+
+
+
+
 == Projektergebnisse [4 Seiten]
 
 === Lessons Learned
@@ -354,4 +365,6 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 [bibliography]
 === Quellenangaben
 
+- [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
+- [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/

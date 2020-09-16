@@ -1,0 +1,59 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+actor "did:...:GS1" as GS1
+actor "did:...:RentalInc" as Rent
+actor "did:...:GaugingInc" as TUV
+entity "did:...:Machine" as Machine
+actor User
+
+group Issue Certified Base Number
+...
+GS1 -> Rent: ISSUE
+    note right of GS1
+        <b>VC1: Base Number</b>
+        - Company Details
+    end note
+end
+
+group Issue Certified Base Number
+...
+GS1 -> TUV: ISSUE
+    note right of GS1
+        <b>VC1: Base Number</b>
+        - Company Details
+    end note
+end
+
+
+Rent -> Machine ** : Buy
+
+Rent -> Machine : ISSUE
+note right of Rent
+    <b>VC3: GIAI</b>
+    - Link to Base Number
+end note
+
+Rent -> TUV : Order gauging
+TUV -> Machine:ISSUE
+note right of TUV
+    <b>QA Cert</b>
+    - Usage (e.g. Watt) Meter gauged
+    - Until
+end note
+
+
+Machine -> User : Present <b>SGTIN</b>, <b>GIAI</b>, QA Certs,...
+
+== Machine and Usage Data Trustworthy ==
+
+Machine -> User : Signed Usage Data
+Machine -> Rent : Signed Usage Data
+
+Rent -> User: Invoice for Usage
+
+... <b>Verify</b> ...
+User -> Rent: Pay
+
+
+@enduml
