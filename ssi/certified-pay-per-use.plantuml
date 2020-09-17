@@ -7,6 +7,11 @@ actor "did:...:GaugingInc" as TUV
 entity "did:...:Machine" as Machine
 actor User
 
+note over Machine
+    <b>VC2: SGTIN</b>
+end note
+
+
 group Issue Certified Base Number
 ...
 GS1 -> Rent: ISSUE
@@ -26,7 +31,7 @@ GS1 -> TUV: ISSUE
 end
 
 
-Rent -> Machine ** : Buy
+Rent -> Machine : Buy
 
 Rent -> Machine : ISSUE
 note right of Rent
@@ -47,10 +52,10 @@ Machine -> User : Present <b>SGTIN</b>, <b>GIAI</b>, QA Certs,...
 
 == Machine and Usage Data Trustworthy ==
 
-Machine -> User : Signed Usage Data
-Machine -> Rent : Signed Usage Data
+Machine -> User : Signed Usage Data\nRef.: GIAI
+Machine -> Rent : Signed Usage Data\nRef.: GIAI
 
-Rent -> User: Invoice for Usage
+Rent -> User: Invoice for Usage\nRef.: GIAI
 
 ... <b>Verify</b> ...
 User -> Rent: Pay
