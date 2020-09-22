@@ -93,7 +93,11 @@ Eine GLN muss nicht wie die LEI verlängert werden, sondern verlängert sich aut
 
 Auch vom Aufbau unterscheidet sich die GLN von der LEI, hat sie doch nur 13 Stellen. In der Basisnummer von sieben, acht oder neun Stellen findet man das Länderpräfix, welches die ausstellende GS1 Organisation identifiziert und die eindeutige Kundenkennung. Die darauffolgenden fünf, vier oder drei Nullen dienen dem Unternehmen als Namensraum zur selbstständigen, nicht sprechenden Vergabe der eigenen Idente. Bei der letzten Ziffer handelt es sich um eine Prüfziffer.
 
-** Grafik Aufbau GLN**
+
+[[Chain]]
+.Aufbau einer GLN
+image::https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/blob/master/pics/Example%20GLN.png[Example GLN]
+
 
 Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die GLN-Teilnehmer keine Überprüfung, weder anhand des Handelsregisters noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen registrieren.
 GS1 hält derzeit mehr als 1 Millionen GLNs und ist hier breiter aufgestellt als in der LEI-Vergabe.
@@ -154,7 +158,7 @@ Die am häufigsten verwendeten Zertifikate sind:
 ==== PKI
 
 Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
-Datenbanken wird eine PKI unabdingbar. Bis zu diesem Zeitpunkt wurden jedoch nur symmetrische Schlüssel eingesetzt, die sowohl für die Ver- als auch die Entschlüsselung denselben Schlüssel verwenden. 
+Datenbanken wird eine PKI unabdingbar. Bis zu diesem Zeitpunkt wurden jedoch nur symmetrische Schlüssel eingesetzt, die sowohl für die Ver- als auch die Entschlüsselung den selben Schlüssel verwenden. 
 
 Die ersten nicht öffentlichen Entwicklungen der PKI fanden beim britischen Geheimdienst zu Anfang der 1970er Jahre statt. Wurden jedoch erst in den 1990er Jahren, aufgrund der strengen Geheimhaltungspflicht, im Nachhinein anerkannt. In einer ersten öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie und Martin Hellman vorgeschlagen. 
 
@@ -183,7 +187,7 @@ Ist das zu identifizierende Subjekt selbst Teil der DID-Controller-Gruppe, ist d
 DIDs können die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls für den verschlüsselten Netzverkehr hatte.
 
 ===== Use Cases
-Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifende Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen. 
+Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifenden Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen. 
 
 ===== Vergleiche mit anderen Identifiern
 Persistenz und Dezentralität
@@ -201,6 +205,8 @@ Tabelle 1. Eigenschaften von Identifikatoren
 Zur Verwirklichung einer selbstsouveränen Identität (self-sovereign identity, SSI) – definiert als lebenslang gültige, portierbare digitale Identität, welche unabhängig ist von zentralisierten Autoritäten – muss der neue Bezeichner über jede der folgenden Eigenschaften verfügen: Persistenz, globale Auflösbarkeit, kryptographische Verifizierbarkeit und Dezentralität.]
 
 Das Konzept einer selbstsouveränen Identität baut auf drei Hauptkomponenten auf, aus denen sie sich zusammensetzt. Zu diesen zählen neben DIDs noch Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI).
+
+**-> unverständlicher Abschnitt**
 
 ==== DIDs
 
@@ -223,10 +229,10 @@ Dieses Design beseitigt sowohl die Abhängigkeit von zentralisierten Registrieru
 
 ==== SSI / Self Sovereign Identity
 
-Durch den rasanten Anstieg von Social Media, stiegen neben den digitalen Aktivitäten der Nutzer auch die Anzahl der unterschiedlichsten Plattformen an. Auf jeder Plattform muss für die digitale Identität jeweils ein eigenes Profil erstellt werden. Diese Profile hinterlassen jedes Mal eine digitale Spur im Internet. Bei diesen hinterlegten Daten, handelt es sich überwiegend um sensible und personenbezogene Daten, die für die Plattformen enorm wichtig sind, aber auch eine gewisse Gefahr für einen Datendiebstahl darstellen. 
+Durch den rasanten Anstieg von Social Media, stiegen neben den digitalen Aktivitäten der Nutzer auch die Anzahl der unterschiedlichsten Plattformen an. Auf jeder Plattform muss für die digitale Identität jeweils ein eigenes Profil erstellt werden. Diese Profile hinterlassen stets eine digitale Spur im Internet. Bei diesen hinterlegten Daten, handelt es sich überwiegend um sensible und personenbezogene Daten, die für die Plattformen enorm wichtig sind, aber auch eine gewisse Gefahr für einen Datendiebstahl darstellen. 
 
-Für diese sensiblen und wertvollen Verbraucherdaten muss die Plattform auch die Verantwortung übernehmen. Vielen Unternehmen war dieses nicht konsistent und so war der Schutz der Daten nicht immer ausreichend gewährleistet und dadurch gefährdet. Oftmals wurde der Ruf der Verbraucher für die eigen zu verwaltende Identität laut. 
-In den letzten Jahren entwickelte sich die Blockchain- Technologie zu einem neuen Ansatz, der dezentralen Informationssysteme. Bei dieser neuen Technologie, können Daten auf einzigartige Weise registriert und nicht mehr veränderbar über ein Netzwerk verteilt werden. Ein Konsens-Mechanismus zur Validierung der Informationen, ohne eine zentrale Autorität, stellt sicher, dass alle Teilnehmer eine identische Kopie der verteilten Datenbank besitzen.
+Für diese sensiblen und wertvollen Verbraucherdaten muss die Plattform auch die Verantwortung übernehmen. Vielen Unternehmen war dieses nicht bewusst und so war der Schutz der Daten nicht immer ausreichend gewährleistet und dadurch gefährdet. Oftmals wurde der Ruf der Verbraucher für die eigen zu verwaltende Identität laut. 
+In den letzten Jahren entwickelte sich die Blockchain- Technologie zu einem neuen Ansatz, der dezentralen Informationssysteme. [**Unverständlich**] Bei dieser neuen Technologie, können Daten auf einzigartige Weise registriert und nicht mehr veränderbar über ein Netzwerk verteilt werden. Ein Konsens-Mechanismus zur Validierung der Informationen, ohne eine zentrale Autorität, stellt sicher, dass alle Teilnehmer eine identische Kopie der verteilten Datenbank besitzen.
 
 Aus diesen beiden scheinbar nicht zusammenhängenden Ideen entwickelte sich das Konzept der selbstsouveränen Identität (Self-Sovereign Identity oder SSI). In der analogen Welt stehen unterschiedliche Verfahren zur Verfügung, um unsere Identität nachzuweisen: u.a. der Personalausweis, welcher ein sehr hohes Vertrauen darstellt oder der Fingerabdruck.  
 In der digitalen Welt hingegen ist es etwas schwieriger. Hier haben wir die Möglichkeit über unterschiedliche Verfahren wie z.B. Post-Ident, Video-Ident, WebIdent oder Accounts bei Sozialen Netzwerken unsere Identität nachzuweisen. Jedoch müssen wir uns immer wieder neu ausweisen und stützen uns dabei stets auf dritte Dienstleister, welche unsere Identität bestätigen, die Daten speichern und verwalten. Dies hat auch den großen Nachteil, dass wir nicht immer wissen, wer welche Daten besitzt und welche Daten an andere weitergegeben werden.
@@ -250,7 +256,7 @@ Das Vertrauen in die Identität z.B. einer realen Person kommt durch die Überpr
  
 Abbildung 2: Vertrauen in IDs certified by GS1
 
-Das Vertrauen in Maschinen oder allgemein IoT Devices, die sich mit Identen certified by GS1 ausweisen, entsteht analog zum klassischen Vertrauen in Ausweisdokumente, wie in Bild 2 analog zu Bild 1 dargestellt. Wichtig ist hierbei, dass lediglich zwischen GS1 und dem Maschinenhersteller ein Vertragsverhältnis existieren muss. Es bedarf prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 oder [oder????]
+Das Vertrauen in Maschinen oder allgemein IoT Devices, die sich mit Identen certified by GS1 ausweisen, entsteht analog zum klassischen Vertrauen in Ausweisdokumente, wie in Bild 2 analog zu Bild 1 dargestellt. Wichtig ist hierbei, dass lediglich zwischen GS1 und dem Maschinenhersteller ein Vertragsverhältnis existieren muss. Es bedarf prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 oder [oder????] -> geht beides, Stichwort GIAI
 
 ==== Produkt: Certified IDs
 
