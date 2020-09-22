@@ -77,9 +77,9 @@ Der LEI wurde nach der Finanzkrise durch den G20 Gipfel eingeführt um mehr Sich
 Aufgebaut wird dieser Code nach dem ISO-Standard 17442. Dabei stellen die ersten vier Ziffern das LOU-Präfix dar, also den Code der jeweiligen Vergabestelle, gefolgt von den 16 Zeichen, die nicht sprechend von der Vergabestelle dem Unternehmen zugeordnet werden. Davon sollten Zeichen 5 und 6 auf null gesetzt sein. Der Code schließt ab mit der sogenannten Verifizierung-ID, also einem Prüfziffernpaar.
 
 
-[[Chain]]
+[[LEI]]
 .Aufbau einer LEI
-image::https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/blob/master/pics/Example%20LEI.png[Example Lei]
+image::Example%20LEI.png[Example Lei]
 
 
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle (Local Operating Unit, LOU) für den GLEIF (Global Legal Entity Identifier Foundation). GS1 Germany ist hier nur Vertriebspartner von GS1 Global, ein sogenannter Registration Agent (RA) und agiert als Dienstleister um LEIs zu vergeben.
@@ -96,7 +96,7 @@ Auch vom Aufbau unterscheidet sich die GLN von der LEI, hat sie doch nur 13 Stel
 
 [[Chain]]
 .Aufbau einer GLN
-image::https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/blob/master/pics/Example%20GLN.png[Example GLN]
+image::Example%20GLN.png[Example GLN]
 
 
 Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die GLN-Teilnehmer keine Überprüfung, weder anhand des Handelsregisters noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen registrieren.
