@@ -5,9 +5,10 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :toc-title: Inhalt
 :figure-caption: Bild
 :table-caption: Tabelle
+:section-refsig: Abschnitt
 :icons: font
 :xrefstyle: short
-:imagesdir: pics/
+:imagesdir: ./pics/
 :sectnums:
 
 
@@ -35,6 +36,8 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 ===============================
 
+
+[[executive-summary]]
 == Kurz-Zusammenfassung [1 Seite]
 
 - Abstract/Executive Summary auf 1 Seite
@@ -46,8 +49,8 @@ Hier oder Einfügung
 - Cyber Security
 - "S" in IoT
 
-
-== Einführung [5 Seiten]
+[[Intro]]
+== Einführung
 
 **Mayra**
 
@@ -79,7 +82,7 @@ Aufgebaut wird dieser Code nach dem ISO-Standard 17442. Dabei stellen die ersten
 
 [[LEI]]
 .Aufbau einer LEI
-image::Example%20LEI.png[Example Lei]
+image::example-lei.png[Example Lei]
 
 
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle (Local Operating Unit, LOU) für den GLEIF (Global Legal Entity Identifier Foundation). GS1 Germany ist hier nur Vertriebspartner von GS1 Global, ein sogenannter Registration Agent (RA) und agiert als Dienstleister um LEIs zu vergeben.
@@ -94,9 +97,9 @@ Eine GLN muss nicht wie die LEI verlängert werden, sondern verlängert sich aut
 Auch vom Aufbau unterscheidet sich die GLN von der LEI, hat sie doch nur 13 Stellen. In der Basisnummer von sieben, acht oder neun Stellen findet man das Länderpräfix, welches die ausstellende GS1 Organisation identifiziert und die eindeutige Kundenkennung. Die darauffolgenden fünf, vier oder drei Nullen dienen dem Unternehmen als Namensraum zur selbstständigen, nicht sprechenden Vergabe der eigenen Idente. Bei der letzten Ziffer handelt es sich um eine Prüfziffer.
 
 
-[[Chain]]
+[[GLN_Aufbau]]
 .Aufbau einer GLN
-image::Example%20GLN.png[Example GLN]
+image::example-gln.png[Example GLN]
 
 
 Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die GLN-Teilnehmer keine Überprüfung, weder anhand des Handelsregisters noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen registrieren.
@@ -279,36 +282,335 @@ Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen das
 Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassische X.509 Zertifikatsketten (PKI) als auch über "Verifiable Credentials" im Rahmen einer SSI/DID Infrastruktur erprobt. Beide Ansätze ermöglichen die dezentrale Anwendung der Idente, ohne dass nach der initialen Vergabe der zertifizierten Basis GLN eine weitere Interaktion mit GS1 notwendig ist.
 
 
-== Anwendungsfälle [8 Seiten]
 
 
-- Detaillierte Use Cases
-** Sektorweit/Allgemein
-** Konkret
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-=== Industrie 4.0 (Edge Computing) 
-**Sebastian**
-
-- Allgemeines
-- Referenzen aus Platform I 4.0 Zukunftszenarien
+== Anwendungsbeispiele: Verified by GS1
 
 
 
-==== Prototypentwicklung mit EKU PD
-**Sebastian**
-
-- Konkreter Anwendungsfall
-
-
-
-
-=== Supplier Onboarding
+== Anwendungsbeispiele: Unternehmensstammdaten
 
 - Sektoren übergreifend
+
+=== Supplier Onboarding
 - Konkret (Automobil,...)
 
 
 === Lokations Stammdaten
+
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+== Anwendungsbeispiele: Industrie 4.0
+
+
+Sicherheitsfragen können in industriellen Anwendungen missionskritisch werden,
+das gilt insbesondere wenn das **Industrial Internet of Things (IIoT)**
+Maschinen miteinander vernetzt und deren Steuerung und Konfiguration zunehmend
+autonom und vernetzt erfolgt. Eine gesicherte automatische Identifizierung und
+Authentifizierung ist hier absolut notwendig.
+
+=== Szenario Wandlungsfähige Fabrik
+
+Im Anwendungsszenario "Wandlungsfähige Fabrik" der Plattform Industrie 4.0 wird
+die moderne Fabrik von vielfältigen Maschinen (Robotern, Werkzeuge,
+Fördertechnik, etc.) bevölkert, die im IIoT miteinander kommunizieren. Die
+Maschinen selbst sind dynamisch in ihren Fähigkeiten, z.B. können Roboter und
+Werkzeuge umkonfiguriert werden um verschiedene Aufgaben auszuführen. Vor allem
+aber kommen verschiedene Maschinen verschiedener Hersteller gemeinsam in einer
+Fertigung zum Einsatz und müssen sich möglichst direkt untereinander abstimmen,
+um den aktuellen Auftrag zu fertigen. Hierdurch wird ein modularer und dadurch
+wandlungsfähiger Aufbau der Produktion innerhalb einer Fabrik realisiert.
+
+[[WFF]]
+.Anwendungszenario WFF aus <<szenarien-i40>>
+image::anwendungszenario-wff.png[Anwendungszenario WFF]
+
+
+Eine essentielle Voraussetzung hierfür ist, dass die Maschinen sich
+untereinander individuell identifizieren und Daten austauschen können, wie in
+der folgenden Grafik (angelehnt an die Veröffentlichung des VDMA <<vdma-i40>>)
+dargestellt:
+
+[[Werkzeugkasten]]
+.Abgeleitet von: Werkzeugkaste Industrie 4.0 aus <<vdma-i40>>, <<acatech>>
+image::werkzeugkaste-i40-vdma-part.png[Werkzeugkaste Industrie 4.0]
+
+Hervorgehoben sind die Identifikation und Einbindung von Industrial IoT (IIoT)
+Devices und der Datenaustausch als notwendige Voraussetzung für die Industrie
+4.0.
+
+Ein Standard für die automatische Identifikation und Authentifizierung ist
+unabdingbar, um die Abhängigkeit von einem zentralen Plattformanbieter zu
+vermeiden. Zudem sind Sicherheitsfragen, insbesondere Vertrauensfragen, äußerst
+relevant, um zu verhindern, dass unautorisierte Maschinen in die
+Fertigungsstraße eingebracht, gefälschte Daten eingeschleust werden oder gar ein
+unautorisierter Zugriff über das Internet erfolgen kann.
+
+
+
+
+==== Certified By GS1
+
+
+.ToDo
+[NOTE]
+===============================
+- Diesen Abschnitt mit <<Intro>> abgleichen
+- ggF Inhalte dorthin verschieben
+===============================
+
+Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company
+Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs
+vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit
+Basisnummer Certified By GS1 dem Unternehmen selbst Zertifikate für die eigenen
+IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
+
+[[Chain]]
+.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
+image::Certificate-Chain.png[Zertifikatskette]
+
+Mit dem Unternehmenszertifikat kann die Echtheit der eigenen IDs
+fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B.
+überprüft werden, dass eine SGTIN tatsächlich von dem Unternehmen erzeugt wurde,
+dem die zugehörige Basisnummer gehört, ohne das ein online Lookup in einer
+entsprechenden Datenbank nötig wäre. Auch Eigenschaften des mit der ID
+gekennzeichneten Assets können z.B. über die GS1 Standards in z.B. einen 2d Code
+wie die Datamatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert
+werden.
+
+
+Abgeleitete ID-spezifische Zertifikate sind besonders im IoT Kontext
+interessant, da Maschinen sich mit einer solchen ID Certified By GS1 selbst
+ausweisen können. Mittels etablierter kryptografischer Verfahren können
+Maschinen sich basierend auf dem Certified by GS1 System gegenseitig überprüfen
+und so eine gesicherte Verbindung untereinander oder auch über das Internet z.B.
+zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt.
+
+
+[[Certificates]]
+.Vertrauen in IDs certified by GS1 ermöglicht M2M authentifizierung und den Aufbau gesicherter Kommunikationskanäle
+image::Parts-Certified.png[IDs certified by GS1 - Vertrauen]
+
+
+Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
+gängigen Verschlüsselung der Kommunikation über das Internet, ein gesicherter
+Kommunikationskanal aufgebaut werden. So können z.B. Messdaten oder
+Steuerbefehle übertragen werden, ohne dass diese von dritten gefälscht werden
+können.
+
+
+
+
+=== Konkreter Anwendungsfall von EKU Power Drives
+
+EKU entwickelt gemeinsam mit seinen Kunden intelligente
+Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse
+effizienter gestaltet werden können, indem die eingesetzten Ressourcen gezielt
+für den eigentlichen Prozess eingesetzt werden und der Ressourceneinsatz für
+nicht prozessrelevante Vorgänge weitestgehend eliminiert wird. Hierbei
+konzentriert sich EKU vorwiegend auf ortsveränderliche bzw. mobile Anlagen. Also
+Systeme die nicht an einem festen Ort installiert arbeiten, sondern bei denen
+regelmäßige Standortwechsel und Rekonfiguration zum normalen Betrieb gehören.
+Mit dem Engine Standby Controller (ESC) bietet EKU ein Start-Stopp-System an,
+das den Leerlaufbetrieb von mobil eingesetzte Großmotoren (Leistungsklasse ca. 1
+- 3 MW) auf nahezu Null bringen und somit neben der Einsparung von Kraftstoff
+und Emissionen auch deutliche Einsparungseffekte durch Reduzierung der
+Betriebsstunden der eingesetzten Motoren erzielt. Dadurch ergeben sich
+verringerte Kosten durch Wartung und Ausfälle, sowie eine längere Lebensdauer
+der Aggregate. Das ESC System wird als Nachrüstlösung für bestehende Anlagen
+angeboten. Eine der wesentlichen Herausforderungen in diesen Systemen ist die
+ständige Anpassung an veränderte Umgebungsbedingungen. Zeitintensive, manuelle
+Konfigurationsarbeit muss hierbei durch den konsequenten Einsatz von
+intelligenter, vernetzter Automatisierungstechnik vermeiden werden, um die
+Akzeptanz und Praxistauglichkeit der Systeme nicht zu gefährden. Während das ESC
+System sich bisher im Wesentlichen auf die Optimierung einer einzelnen mobilen
+Einheit beschränkt, steckt in der Anlagenübergreifenden Optimierung des
+Energieeinsatzes im Gesamtprozess nochmal deutliches Potenzial, das mit einer
+verteilten Lastregelung ausgeschöpft werden soll.
+
+
+Mit der SOPHIA Plattform entwickelt und betreibt EKU daher eine eigene iIoT
+Cloud Lösung, welche - dezentral organisiert - im Feld direkt an den Anlagen
+Daten erfasst, vor Ort verarbeitet und die Weiterleitung von Events und Auszügen
+aus den Messdaten an andere Knoten im Netzwerk verwaltet. Die mobilen Anlagen
+wechseln regelmäßig ihren Standort, dabei kann es auch vorkommen, dass sie
+längere Zeit keine Datenverbindung zur Außenwelt aufbauen können, wenn sie - wie
+z.B. im Fall von Baumaschinen zur Erschließung von Öl- und Gasquellen - in dünn
+besiedelten Regionen eingesetzt werden. Alle Funktionen des SOPHIA Systems
+müssen also darauf ausgelegt sein ständig rekonfiguriert zu werden auch längere
+Zeit ohne Datenverbindung zur Außenwelt alle wesentlichen Funktionen
+bereitstellen zu können Die SOPHIA Platform dient als Basis für diverse
+Anwendungen, die EKU individuell auf den Anwendungsfall des Kunden zuschneidet.
+Hierzu gehören z.B. Monitoring-Systeme, die während des Betriebs der Anlagen im
+Feld Daten sammeln, die zur Bereitstellung von Leistungsindikatoren für das
+Management bzw. die strategische Planung der Anlageneinsätze beitragen.
+
+
+==== Einsatz im Feld
+
+Bei den energieintensiven Prozessen der Kunden von EKU PD aus der Öl- und
+Gasindustrie kann schon durch kleine Optimierungen des Energieeinsatzes ein
+deutlich spürbarer Effekt auf Kosten und Emissionen erzielt werden. Da konkret
+etwa bisher eingesetzten Dieselaggregate jeweils nur eine einzelne hydraulische
+Pumpe in einer größeren Anlage antreiben, werden die Motoren oft außerhalb ihrer
+optimalen Betriebspunkte gefahren. Durch die Trennung von Energieerzeugung und
+-Verbrauch und die gleichzeitige Kopplung der Anlagen auf einem elektrischen
+Netz können effizientere Motoren für die Energieversorgung eingesetzt werden und
+die Last dynamisch auf mehrere elektrisch betriebene Pumpen verteilt werden. EKU
+arbeitet hierzu am Aufbau eines lokalen Insel- Energieversorgungsnetzes
+(Microgrid), sodass mobile Anlagen nach und nach hybridisiert, also einzelne am
+Prozess beteiligte Systeme teilweise oder komplett elektrisch betrieben werden
+werden können. Über das Microgrid kann die für den Prozess benötigte Leistung
+dynamisch zwischen Generatoren und Motoren verteilt und somit der Energiebedarf
+des Gesamtsystems reduziert werden.
+
+Der Betrieb eines solchen Microgrids bringt allerdings einige Herausforderungen
+mit sich. Da die Zahl der daran angebundenen Anlagen im Vergleich zum
+öffentlichen Stromnetz überschaubar ist, haben Laständerungen einzelner
+Teilsysteme einen deutlich stärkeren EInfluss auf die Stabilität des
+Gesamtsystems. Um Ausfälle oder gar Schäden an den beteiligten Komponenten zu
+vermeiden, müssen alle Stromerzeuger und Verbraucher ihre Leistungsregelung auf
+einen stabilen Zustand des Microgrids auslegen. Dafür wird ein mehrstufiges
+Reglerkonzept eingesetzt.
+
+
+
+==== Regelung
+
+===== Primärregelung
+
+Als primäre Regelgröße dienen durch alle Anlagen direkt messbare Größen des Netzes, die dessen Stabilität
+beschrieben. Bei Drehstromnetzen wird die Netzfrequenz als primäre Regelgröße genutzt. Wird die zuvor
+vereinbarte Netzfrequenz unterschritten, liegt eine Überlastung des Netzes vor, es muss mehr Leistung eingespeist
+oder weniger Leistung entnommen werden. Generatoren können dementsprechend ihre Motorleistung erhöhen,
+Verbraucher ihre Leistungsentnahme reduzieren um das Netz zu stabilisieren. Analog dazu zeigt die Überschreitung
+der Nennfrequenz eine zu hohe Einspeiseleistung an, Generatoren müssen ihre Leistung drosseln, Verbraucher
+können mehr Leistung entnehmen. Analog zur Frequenz in Drehstromnetzen wird in Gleichstromnetzen (DC
+Microgrid) auf die Netzspannung geregelt. Die Primärregelung muss eine Reaktion auf Veränderungen innerhalb
+weniger als einer Sekunde sicherstellen.
+
+===== Sekundärregelung
+
+Wenn die beteiligten Anlagen außer der Information über Netzfrequenz und ihre eigenen Leistungsreserveren keine
+Daten über die im Netz verfügbare Leistungskapazität haben, wird sich das Netz innerhalb kurzer Zeit
+aufschwingen und es wäre nicht sinnvoll nutzbar. Außerdem soll das Netz den technischen Prozess unterstützen,
+der schwankende Leistungsanforderungen hat. Daher wird eine sekundäre Regelung im Netz eingeführt, welche es
+den beteiligten Anlagen ermöglicht, sich über ihre jeweils verfügbaren Leistungsreserven und -Anforderungen
+abzustimmen, sodass Eingriffe in die Leistungseinspeisung und -Entnahme auch den Zustand der anderen am Netz
+beteiligten Aggregate berücksichtigt. Die Sekundärregelung hat weniger kritische Anforderungen an die
+Reaktionszeiten und arbeitet im Bereich von wenigen Sekunden.
+
+===== Tertiärregelung / Strategie
+
+Die hier als primäre und sekundäre Regelungsebene bezeichneten Systeme beziehen
+sich nur auf die am Microgrid angeschlossenen Anlagen. In einem hybrid
+angetriebenen Prozess können aber genauso auch nicht-elektrifizierte Pumpen an
+der Bereitstellung von Pumpleistung beteiligt sein. Um das System im Gesamten zu
+optimieren, macht es Sinn, auch die Parameter der nicht ans Microgrid
+angeschlossenen mobilen Pumpen mit in die Regelung mit einzubeziehen. Wir
+bezeichnen die strategische Entscheidung, wie die Last zwischen elektrisch und
+direkt mit Diesel angetriebenen Anlagen verteilt wird, hier als tertiäre
+Regelung.
+
+
+==== Kommunikation
+
+Für die Realisierung einer solchen mehrstufigen Regelstrategie müssen die am Prozess beteiligten Anlagen neben
+der elektrischen Vernetzung auch informationstechnisch vernetzt werden. Dies ist eine der Aufgaben des SOPHIA
+Systems. Es liefert die Infrastruktur für den Datenaustausch zwischen den Stromerzeugern und Verbrauchern im
+Netz.
+Solange alle Teilnehmer des Microgrids von einem einzigen Hersteller geliefert werden, ergeben sich wenig
+Probleme im Aufbau einer Kommunikationsinfrastruktur. Da es aber absehbar ist, dass die Einsatzmöglichkeiten
+für mobile, "smarte" Microgrids in Zukunft durch die Möglichkeit, erneuerbare Energien und Speicherlösungen
+einzubinden, immer vielfältiger werden, würde es sich anbieten, hier von vorne herein auf offene Standards zur
+Vernetzung der Anlagen untereinander zu setzen.
+Durch die Entwicklungen im Industrie 4.0 Umfeld existieren mittlerweile mehrere offene
+Kommunikationsprotokolle, die eine herstellerunabhängige Vernetzung von Industrieanlagen versprechen. Auch
+die dynamische Integration und Lokalisierung von Komponenten in ein Anlagennetzwerk kann in Netzwerken auf
+Basis von DDS oder OPC/UA abgebildet werden.
+In unserem Microgrid-Anwendungsfall ergeben sich zwei wesentliche Anwendungsfälle für die Kommunikation von
+Anlagen untereinander, also Machine-to-Machine oder M2M Kommunikation:
+
+
+===== Statische Informationen
+
+Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage
+charakterisieren. Dies können z.B. sein
+
+- Hersteller
+- Modell
+- Nennleistung
+- zulässiger Leistungsbereich
+- Nennspannung
+- zulässiger Spannungsbereich
+- Nennfrequenz
+- zulässiger Drehzahl- / Frequenzbereich
+- Wirkungsgrad- Kennfeld
+- vorgeschriebene Wartungsintervalle
+- ...
+
+Alle diese Eigenschaften werden vom Hersteller der Anlage angegeben. Sie werden sich über ihre Lebensdauer
+hinweg nicht verändern (und wenn, dann ist diese Veränderung ebenso vorhersehbar). Üblicherweise werden
+derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. Werden diese Informationen also über
+ein digitales Kommunikationsprotokoll übertragen, könnte man von einem digitalen Typenschild sprechen.
+
+
+===== Dynamische Informationen
+
+Neben den statischen Informationen über die Anlage entstehen während ihres Betriebs weitere Daten, die für
+andere Teilnehmer im Netzwerk interessant sein können. So z.B.
+
+- aktuelle Leistungsaufnahme / -Abgabe
+- ggf. vorhergesehene Leistungsaufnahme im nächsten Zeitschritt
+- Verschleißanzeige
+- Fehlerzustände
+- Zeit bis zur nächsten Wartung
+- ...
+
+Diese Informationen entstehen erst während des Betriebs und verändern sich - abhängig von der jeweiligen
+Anwendung - z.B. im Bereich von einigen 10ms.
+
+
+==== Verschiedene Dienstleister und Hersteller, Rekonfiguration
+
+Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier
+arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel je nach Einsatzplan von
+unterschiedlichen Unternehmen bereitgestellt, die wiederum auch eine bunte Mischung unterschiedlichster
+Anlagentypen mehrere Hersteller unterhalten. Hinzu kommt, dass die Anlagen nach einem Einsatz von z.B. 14
+Tagen wieder abgebaut und in einer komplett anderen Konfiguration an einer anderen Baustelle wieder aufgebaut
+und vernetzt werden sollen.
+Da hier kosteneffizient unter hohem Zeitdruck gearbeitet werden muss und das Personal ständig wechselt, müssen
+alle Konfigurationsvorgänge soweit möglich automatisiert ablaufen um Zeit einzusparen und die Anfälligkeit für
+Fehler zu minimieren.
+
+
+
+==== Certified by GS1
+
+=====  Typenschild
+
+das digitale Typenschild, das alle für die Anlage technisch relevanten Informationen enthält, kann vom Hersteller
+mittels einer elektronischen Signatur beglaubigt werden. Es kann nicht verändert werden, ohne Kenntnis des
+privaten Schlüssels des Herstellers. Analog zum SSL Zertifikat im WWW, das die Echtheit einer besuchten Webseite
+z.B. für online-banking bestätigt, kann das elektronische Typenschild technisch relevante Informationen vor
+Veränderung schützen. Durch geeignete Mittel (z.B. dynamische oder challenge/response Inhalte) kann das digitale
+Typenschild (in Verbindung mit entsprechend gesicherter Elektronik) außerdem als Schutz gegen Plagiate
+eingesetzt werden.
+
+===== Dynamische Daten
+
+um das Einschleusen von unerwünschter / schädlicher Informationen in die verteilten Regelsysteme zu vermeiden,
+kann ein am Prozess beteiligtes Steuergerät seine komplette Kommunikation elektronisch signieren. Somit kann
+die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufende Sequenznummern innerhalb
+der signierten Daten vereiteln außerdem Replay-Attacken.
+
 
 
 
@@ -373,8 +675,11 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 
 [bibliography]
-=== Quellenangaben
+=== Literaturverzeichnis/Quellenangaben
 
 - [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
 - [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
+- [[[szenarien-i40]]] Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0 https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
+- [[[vdma-i40]]] Leitfaden Industrie 4.0 (VDMA - Forum Industrie 4.0) https://industrie40.vdma.org/viewer/-/v2article/render/15540546
+- [[[acatech]]] Wandlungsfähige, menschzentrierte Strukturen in Fabriken und Netzwerken der Industrie 4.0 (acatech Studie), München: Herbert Utz Verlage 2018. https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/hm-2018-fb-wandlung.html
