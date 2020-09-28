@@ -36,7 +36,6 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 
 ===============================
 
-
 [[executive-summary]]
 == Kurz-Zusammenfassung [1 Seite]
 
@@ -288,7 +287,61 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 == Anwendungsbeispiele: Verified by GS1
 
+=== Problem
 
+Die Fälschung von GS1 Identen an sich ist u.A. für Marktplätze wie
+Amazon ein Problem. Hier wird die GTIN als Ident genutzt um
+verschiedene Angebote zu gleichen Artikeln zu aggregieren und die
+echtheit der angebotenen Produkte sicherzustellen. Eine rein
+syntaktische Prüfung der Nummern auf z.B. korrekte Länge oder gültige
+Prüfziffer kann jedoch einfach umgangen werden und es tauchen
+regelmäßig regelmäßig Angebotsduplikate unter gefälschten
+Artikelnummern auf.
+
+=== Existierende Lösungsansätze
+
+Ein Abgleich mit bei GS1 registrierten Artikel Stammdaten über die
+online Services von GS1 Germany, wie Gepir <<gepir>> bzw. den GTIN
+Manager <<gtin-manager>> oder auch die Artikelstammdaten-Datenbank von
+GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>>
+Service, kann hier Abhilfe schaffen. Eine solche online Abfrage stellt
+zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1
+Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung
+mit den Hinterlegten Stammdaten in Einklang steht.
+
+=== Verbesserungspotential durch Certified
+
+Nachteile an der aktuellen Lösung sind zum einen die Veröffentlichung
+der Idente und Stammdaten über eine Zentrale Datenbank. Hier gibt der
+Idente Inhaber die Datenhoheit aus der Hand und es gibt einen
+Zentralen Angriffspunkt bzw. Single Point of Failure.  Weiterhin kann
+eine Überprüfung der Idente nur online und, je nach Service, nur durch
+entsprechend berechtigte/bezahlende Kunden erfolgen. Konkret steht
+etwa Verified by GS1 nur den GS1 Germany Kunden zur Verfügung.
+Schließlich wird die Korrektheit der Daten nur über das Vertrauen in
+die Transportverschlüsselung (TLS) bei der Abfrage und die Identität
+des Servers, der die Daten bereit stellt, gesichert. Die Daten selbst
+sind in den aktuellen Konzepten nicht authentifiziert und es gibt
+keinen direkten Link zum Herausgeber.
+
+
+Certified by GS1 versetzt den Basisnummer-Inhaber in die Lage selbst
+Zertifikate für die von ihm Erstellten Idente und Masterdaten zu
+signieren. Diese können über beliebige Kanäle weitergegeben werden,
+insbesondere wie bisher über zentrale Repositories, aber auch direkt
+an die relevanten Partner ohne dass dritte Einsicht erhalten oder ein
+Zentraler Angriffspunkt entsteht.  Die Gültigkeit der
+Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von
+GS1, kann uneingeschränkt und offline überprüft werden.
+
+Vor allem wird durch die digitale Signatur und die entsprechenden
+Zertifikate die Integrität der Daten unabhängig vom Übertragungskanal
+sichergestellt. Der Überprüfer kann so sicher sein, dass ein Ident in
+der Tat vom authorisierten Basisnummern-Inhaber vergeben wurde und
+damit ein legitimes GS1 Ident ist. Eine direkte Signatur der
+Masterdaten durch den legitimen Herausgeber bietet bestmöglichen
+Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten
+auf dem Weg zum Empfänger.
 
 == Anwendungsbeispiele: Unternehmensstammdaten
 
@@ -675,11 +728,18 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 
 
 [bibliography]
-=== Literaturverzeichnis/Quellenangaben
+== Literaturverzeichnis/Quellenangaben
 
+- [[[acatech]]] Wandlungsfähige, menschzentrierte Strukturen in Fabriken und Netzwerken der Industrie 4.0 (acatech Studie), München: Herbert Utz Verlage 2018. https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/hm-2018-fb-wandlung.html
 - [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
-- [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
 - [[[szenarien-i40]]] Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0 https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
+- [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
 - [[[vdma-i40]]] Leitfaden Industrie 4.0 (VDMA - Forum Industrie 4.0) https://industrie40.vdma.org/viewer/-/v2article/render/15540546
-- [[[acatech]]] Wandlungsfähige, menschzentrierte Strukturen in Fabriken und Netzwerken der Industrie 4.0 (acatech Studie), München: Herbert Utz Verlage 2018. https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/hm-2018-fb-wandlung.html
+
+
+Online Ressourcen (Stand September 2020):
+
+- [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
+- [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
+- [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
