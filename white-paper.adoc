@@ -52,6 +52,7 @@ Hier oder Einfügung
 == Einführung
 
 - Worum geht es überhaupt?
+
 In diesem White Paper werden verschiedene Konzepte rund um digitale Signaturen und Zertifikate erläutert, was sie in der Welt der GS1-Standards bedeuten und warum dies die Zukunft unserer Idente ist.
 
 Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, haben Sie bitte keine Angst, wir haben dieses White Paper geschrieben, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Ihnen in diese spannende Welt einzuführen.
@@ -65,19 +66,21 @@ Wir hoffen, dass Sie beim Lesen genauso viel Zeit haben, wie wir beim Schreiben 
 Das Certified by GS1 Team
 
 - Problemstellung
-** Kurze Ideen für Use Cases/Angriffsszenarien
+Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem der vertrautesten - und vielleicht am meisten gehypten - Begriffe in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ist wie ein wilder Dschungel voller Lösungen unterschiedlicher Preise, Kosten und Qualität, bei denen Verbraucher und Nutzer völlig verloren gehen. Die Vielfalt ist unglaublich, und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
 
+Laut Gartner Research wird es bis 2020 rund 20 Milliarden Dinge geben, die mit dem Internet verbunden sind. Bei diesen "Dingen" handelt es sich nicht um Allzweckgeräte wie Smartphones und PCs, sondern um Objekte mit speziellen Funktionen wie Verkaufsautomaten, Düsentriebwerke, vernetzte Autos und unzählige andere Beispiele.
 
+Es gibt keinen eindeutigen Anbieter, der sich als DER IoT-Anbieter etabliert hat, jede Branche hat ihre Favoriten, aber es gibt noch keine Marktführer. Sicher ist, dass das Internet der Dinge (IoT) einen großen Einfluss auf die Wirtschaft haben wird, indem es viele Unternehmen in digitale Geschäfte verwandelt, neue Geschäftsmodelle ermöglicht und die Effizienz verbessert.
 
-- Hintergrundinformationen
+Bei diesem Rennen um die Nummer 1 haben die Anbieter vergessen, sich um einen sehr wichtigen Faktor zu kümmern: die Cybersicherheit. Der Schutz von Daten und Privatsphäre ist für Verbraucher und Unternehmen weltweit sehr wichtig, nichtsdestotrotz erfüllen viele IoT-Produkte nicht die grundlegenden Sicherheitsstandards und gefährden ihre Nutzer. Wer hat nicht schon von dem Casino in Las Vegas gehört, das durch das IoT-Thermometer im Fischtank gehackt wurde, oder von den vielen Hackerangriffen über Baby Monitoren, die letztlich die Familien entsetzt zurückließen? Es ist wichtig, dieses Problem anzugehen und die Verbraucher auf die Bedeutung der IoT-Sicherheit aufmerksam zu machen. 
 
+Seit das Internet weltweit eingesetzt wird, besteht die Schwierigkeit darin, alle Aktionen, die online stattfinden, zu identifizieren und zu authentifizieren. Wenn Sie z.B. eine Banktransaktion online durchführen, wollen Sie sicherstellen, dass Sie sich auf der Website Ihrer Bank anmelden und nicht auf einer gefälschten Website (die genau gleich aussehen könnte). Auch wenn Sie vertrauliche Dateien an einen Geschäftspartner senden, wollen Sie sicherstellen, dass die gewünschte Person die Daten erhält und nicht irgendein "Mittelsmann". Diese Probleme wurden bisher von den zuständigen Stellen angesprochen und gelöst.
+
+Nichtsdestotrotz sieht die IoT-Landschaft bisher ziemlich unreguliert aus und stellt ein größeres Sicherheitsrisiko dar, weil das Internet der Dinge und die zusätzlichen Ding-zu- Ding Kommunikationsfunktionen immer mehr an Bedeutung gewinnen. Weiß Ihr Home Assistant wirklich, ob er mit Ihrem Staubsauger-Roboter kommuniziert? Spricht der Roboterarm in der Fabrik wirklich mit dem Bediener, der in der Zentrale des Unternehmens sitzt? Diese Probleme sind im Großen und Ganzen noch nicht wirklich gelöst. Daher ist es dringend notwendig, jede einzelne Person, Firma oder "Ding", die mit dem Internet verbunden ist, zu authentifizieren. 
 
 
 - GS1 USP für die Lösung
-Why GS1 you  may ask?
-
-
-
+Als not-for-profit Standarisierungsorganisation, hat GS1 die Aufgabe globale Geschäftstandards zu entwickleln und pflegen. GS1 ist eine neutrale und vertrauenswürdige Organisation und eine etablierte issuing agency von Geschäfts- und Produktidente, als auch von nicht-digitale Zertifikate. Wenn nicht wir, wer noch? (noch nicht fertig)
 
 - Begriffserklärungen
 === Idente, Echtheit und Identitätsdiebstahl
