@@ -290,7 +290,7 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 === Problem
 
 Die Fälschung von GS1 Identen an sich ist u.A. für Marktplätze wie
-Amazon ein Problem. Hier wird die GTIN als Ident genutzt um
+Amazon ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt um
 verschiedene Angebote zu gleichen Artikeln zu aggregieren und die
 echtheit der angebotenen Produkte sicherzustellen. Eine rein
 syntaktische Prüfung der Nummern auf z.B. korrekte Länge oder gültige
@@ -300,14 +300,15 @@ Artikelnummern auf.
 
 === Existierende Lösungsansätze
 
-Ein Abgleich mit bei GS1 registrierten Artikel Stammdaten über die
-online Services von GS1 Germany, wie Gepir <<gepir>> bzw. den GTIN
-Manager <<gtin-manager>> oder auch die Artikelstammdaten-Datenbank von
-GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>>
-Service, kann hier Abhilfe schaffen. Eine solche online Abfrage stellt
-zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1
-Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung
-mit den Hinterlegten Stammdaten in Einklang steht.
+Ein Abgleich mit bei GS1 registrierten Artikel Stammdaten über die online
+Services von GS1 Germany, wie Gepir <<gepir>> bzw. den GTIN Manager
+<<gtin-manager>> oder auch die Artikelstammdaten-Datenbank von GS1 Global (GS1
+Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier
+Abhilfe schaffen. Eine solche online Abfrage stellt zum einen sicher, dass das
+Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen,
+dass die Artikelbeschreibung mit den Hinterlegten Stammdaten in Einklang steht.
+Diese Überprüfung ist aktuell, je nach Service, manuell per Web-UI und/oder
+automatisiert per API möglich.
 
 === Verbesserungspotential durch Certified
 
@@ -338,10 +339,10 @@ Vor allem wird durch die digitale Signatur und die entsprechenden
 Zertifikate die Integrität der Daten unabhängig vom Übertragungskanal
 sichergestellt. Der Überprüfer kann so sicher sein, dass ein Ident in
 der Tat vom authorisierten Basisnummern-Inhaber vergeben wurde und
-damit ein legitimes GS1 Ident ist. Eine direkte Signatur der
+damit ein legitimes GS1 Ident ist, allein basierend auf den signierten Daten. Eine direkte Signatur der
 Masterdaten durch den legitimen Herausgeber bietet bestmöglichen
 Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten
-auf dem Weg zum Empfänger.
+auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
 == Anwendungsbeispiele: Unternehmensstammdaten
 
@@ -688,7 +689,13 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 
 === Distributed/Self Sovreign Identity
 
-- GS1 als Issuer von Verifiable Credentials
+
+
+[[GS1SSI]]
+.Aufbau einer LEI
+image::.png[Example Lei]
+
+
 
 
 ==== Certified by GS1 Idente in SSI für Deutschland
