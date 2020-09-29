@@ -51,8 +51,6 @@ Hier oder Einfügung
 [[Intro]]
 == Einführung
 
-- Worum geht es überhaupt?
-
 In diesem White Paper werden verschiedene Konzepte rund um digitale Signaturen und Zertifikate erläutert, was sie in der Welt der GS1-Standards bedeuten und warum dies die Zukunft unserer Idente ist.
 
 Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, haben Sie bitte keine Angst, wir haben dieses White Paper geschrieben, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Ihnen in diese spannende Welt einzuführen.
@@ -65,7 +63,9 @@ Wir hoffen, dass Sie beim Lesen genauso viel Zeit haben, wie wir beim Schreiben 
 
 Das Certified by GS1 Team
 
-- Problemstellung
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+== Problemstellung
 Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem der vertrautesten - und vielleicht am meisten gehypten - Begriffe in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ist wie ein wilder Dschungel voller Lösungen unterschiedlicher Preise, Kosten und Qualität, bei denen Verbraucher und Nutzer völlig verloren gehen. Die Vielfalt ist unglaublich, und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
 
 Laut Gartner Research wird es bis 2020 rund 20 Milliarden Dinge geben, die mit dem Internet verbunden sind. Bei diesen "Dingen" handelt es sich nicht um Allzweckgeräte wie Smartphones und PCs, sondern um Objekte mit speziellen Funktionen wie Verkaufsautomaten, Düsentriebwerke, vernetzte Autos und unzählige andere Beispiele.
@@ -79,10 +79,12 @@ Seit das Internet weltweit eingesetzt wird, besteht die Schwierigkeit darin, all
 Nichtsdestotrotz sieht die IoT-Landschaft bisher ziemlich unreguliert aus und stellt ein größeres Sicherheitsrisiko dar, weil das Internet der Dinge und die zusätzlichen Ding-zu- Ding Kommunikationsfunktionen immer mehr an Bedeutung gewinnen. Weiß Ihr Home Assistant wirklich, ob er mit Ihrem Staubsauger-Roboter kommuniziert? Spricht der Roboterarm in der Fabrik wirklich mit dem Bediener, der in der Zentrale des Unternehmens sitzt? Diese Probleme sind im Großen und Ganzen noch nicht wirklich gelöst. Daher ist es dringend notwendig, jede einzelne Person, Firma oder "Ding", die mit dem Internet verbunden ist, zu authentifizieren. 
 
 
-- GS1 USP für die Lösung
+==  GS1 USP für die Lösung
 Als not-for-profit Standarisierungsorganisation, hat GS1 die Aufgabe globale Geschäftstandards zu entwickleln und pflegen. GS1 ist eine neutrale und vertrauenswürdige Organisation und eine etablierte issuing agency von Geschäfts- und Produktidente, als auch von nicht-digitale Zertifikate. Wenn nicht wir, wer noch? (noch nicht fertig)
 
-- Begriffserklärungen
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+==  Begriffserklärungen
 === Idente, Echtheit und Identitätsdiebstahl
 
 Das Kernprodukt der GS1 Germany ist GS1 Complete. Hier handelt es sich um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird, in welchem dieser GTINs und andere Idente vergeben kann. Es beinhaltet zusätzlich noch weitere Services und Publikationen zur Optimierung der Geschäftsprozesse. 
@@ -92,8 +94,7 @@ Elementar ist der bereits erwähnte Nummernkreis. Im Detail wird dem Kunden eine
 Eine Authentifikation durch GS1 ist bisher nicht gegeben. Eine Identitätsprüfung der Antragsteller für eine GS1 GLN erfolgt nicht. Dem Kunden wird bei Bestellung geglaubt, dass er derjenige ist für den er sich ausgibt. Trotz der fehlenden Kontrolle sind GS1 Germany bisher keine Identitätsdiebstähle bekannt. Ein Missbrauch der Idente erfolgt in einigen Fällen in der Nutzung gefälschter GTINs. Unternehmen, die keine GS1 Kunden sind, nutzen Nummernkombinationen entsprechend dem GS1 Nummernsystem, um Produkte online anbieten zu können. 
 Dieser GTIN-Missbrauch wird GS1-intern durch Mitarbeiter verfolgt und unterbunden. Eine teil-automatisierte Lösung die in diesem Bereich wächst ist der Service „Verified by GS1“. Hier können Online-Portale und Händler GTINs auf ihre Echtheit und Herkunft überprüfen, die im Vorfeld durch die Hersteller in die GS1 Registry eingepflegt wurden.
 
-
-==== LEI VS GLN
+=== LEI VS GLN
 
 Der Legal Entity Identifier, LEI, ist ein 20-stelliger Code, der Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich um juristische Personen handeln, Einzelpersonen können keine LEI erhalten.
 Der LEI wurde nach der Finanzkrise durch den G20 Gipfel eingeführt um mehr Sicherheit und Transparenz bei Finanzgeschäften zu bieten und gilt weltweit. Der LEI ist verpflichtend und ermöglicht es hinterlegte Referenzdaten im Online-Datenpool der GLEIF abzufragen. Diese Referenzdaten sind mindestens der offizielle Name laut Registrierung des Rechtsträgers, Anschrift des Unternehmens, Land der Gründung, Codes für Darstellung der Ländernamen, sowie das Datum der ersten LEI-Zuweisung und der letzten Aktualisierung, je nachdem auch das Ablaufdatum. Denn eine LEI muss jährlich verlängert werden.
