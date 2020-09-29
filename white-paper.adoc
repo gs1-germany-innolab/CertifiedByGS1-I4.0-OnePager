@@ -32,7 +32,7 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 ** deutlich unter 100
 ** Ziel 25
 
-- Deadline (nach Review!) 24.9.
+- Deadline (nach Review!) 26.10.
 
 ===============================
 
@@ -51,17 +51,35 @@ Hier oder Einfügung
 [[Intro]]
 == Einführung
 
-**Mayra**
-
 - Worum geht es überhaupt?
+In diesem White Paper werden verschiedene Konzepte rund um digitale Signaturen und Zertifikate erläutert, was sie in der Welt der GS1-Standards bedeuten und warum dies die Zukunft unserer Idente ist.
+
+Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, haben Sie bitte keine Angst, wir haben dieses White Paper geschrieben, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Ihnen in diese spannende Welt einzuführen.
+
+In diesem Paper erhalten Sie einen Überblick über wichtige theoretische Konzepte für das weitere Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des Projekts entwickelt haben. In der zweiten Hälfte dieses Dokuments erhalten Sie wichtige Einblicke in die technische Umsetzung interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme mit der Verwendung der GS1-Standards.
+
+Es war eine aufregende und herausfordernde Reise, bei der wir alle gelernt, neue Dinge ausprobiert und unsere Komfortzone verlassen haben.
+
+Wir hoffen, dass Sie beim Lesen genauso viel Zeit haben, wie wir beim Schreiben hatten!
+
+Das Certified by GS1 Team
+
 - Problemstellung
 ** Kurze Ideen für Use Cases/Angriffsszenarien
+
+
+
 - Hintergrundinformationen
+
+
+
 - GS1 USP für die Lösung
+Why GS1 you  may ask?
+
+
+
 
 - Begriffserklärungen
-
-
 === Idente, Echtheit und Identitätsdiebstahl
 
 Das Kernprodukt der GS1 Germany ist GS1 Complete. Hier handelt es sich um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird, in welchem dieser GTINs und andere Idente vergeben kann. Es beinhaltet zusätzlich noch weitere Services und Publikationen zur Optimierung der Geschäftsprozesse. 
@@ -82,7 +100,6 @@ Aufgebaut wird dieser Code nach dem ISO-Standard 17442. Dabei stellen die ersten
 [[LEI]]
 .Aufbau einer LEI
 image::example-lei.png[Example Lei]
-
 
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle (Local Operating Unit, LOU) für den GLEIF (Global Legal Entity Identifier Foundation). GS1 Germany ist hier nur Vertriebspartner von GS1 Global, ein sogenannter Registration Agent (RA) und agiert als Dienstleister um LEIs zu vergeben.
 
