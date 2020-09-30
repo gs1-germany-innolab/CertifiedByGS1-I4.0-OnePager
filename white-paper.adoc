@@ -757,9 +757,16 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 
 ==== Interaktive Demonstration
 
-**Sebastian**
+Eine interaktive online demonstration des Use Cases wurde entwickelt
+<<online-demo>>.
 
 
+
+.ToDo
+[NOTE]
+===============================
+- Bilder einfügen
+===============================
 
 
 
@@ -892,3 +899,5 @@ Online Ressourcen (Stand September 2020):
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
+
+- [[[online-demo]]] https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
