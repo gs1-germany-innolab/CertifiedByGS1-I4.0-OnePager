@@ -63,7 +63,15 @@ Wir hoffen, dass Sie beim Lesen genauso viel Zeit haben, wie wir beim Schreiben 
 
 Das Certified by GS1 Team
 
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 === Problemstellung
 Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem der vertrautesten - und vielleicht am meisten gehypten - Begriffe in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ist wie ein wilder Dschungel voller Lösungen unterschiedlicher Preise, Kosten und Qualität, bei denen Verbraucher und Nutzer völlig verloren gehen. Die Vielfalt ist unglaublich, und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
@@ -82,7 +90,12 @@ Nichtsdestotrotz sieht die IoT-Landschaft bisher ziemlich unreguliert aus und st
 ===  GS1 USP für die Lösung
 Als not-for-profit Standarisierungsorganisation, hat GS1 die Aufgabe globale Geschäftstandards zu entwickleln und pflegen. GS1 ist eine neutrale und vertrauenswürdige Organisation und eine etablierte issuing agency von Geschäfts- und Produktidente, als auch von nicht-digitale Zertifikate. Wenn nicht wir, wer noch? (noch nicht fertig)
 
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 ===  Begriffserklärungen
 ==== Idente, Echtheit und Identitätsdiebstahl
@@ -321,7 +334,7 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 
 
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 == Anwendungfälle
 
@@ -384,6 +397,7 @@ Masterdaten durch den legitimen Herausgeber bietet bestmöglichen
 Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten
 auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
+
 === Unternehmensstammdaten
 
 - Sektoren übergreifend
@@ -398,7 +412,6 @@ auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikat
 
 
 
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 === Industrie 4.0 Szenario Wandlungsfähige Fabrik
