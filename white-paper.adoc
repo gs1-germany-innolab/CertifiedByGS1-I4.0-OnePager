@@ -156,7 +156,10 @@ Die am häufigsten verwendeten Zertifikate sind:
 -	PGP Zertifikat (siehe Zertifikatsarten in PGP) 
 -	X.509 Zertifikat
 
+
+[[sec_PKI_SSI]]
 === PKI / DID / SSI
+
 ==== PKI
 
 Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
@@ -669,7 +672,6 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 
 
 
-
 == Umsetzung [7 Seiten]
 
 - Ergebnisse aus Prototyping
@@ -687,18 +689,75 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 
 
 
-=== Distributed/Self Sovreign Identity
+
+== Verteilte Zertifikate Infrastruktur - Self Sovreign Identity (SSI)
+
+Im Rahmen des Certified by GS1 Projektes wurde ein Prototypisches
+Konzept zur Zertifizierung von GS1 Identen und assoziierten
+Masterdaten mittels SSI Technologie entwickelt. Dieses Konzept stellt
+eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
+Organisationen und mit den Partnern dar.
+
+Die in diesem Abschnitt verwendete grundlegenden
+Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
+<<sec_PKI_SSI>> eingeführt erläutert.
+
+.ToDo
+[NOTE]
+===============================
+- Sicherstellen, dass dort alles erklärt wird
+===============================
+
+=== DiDs
+
+In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
+Firmen, insbesondere GS1, eine eigene DiD. Konkreten Dingen,
+etwa serialisierte Handelswaren oder IoT Devices, und auch abstrakten
+Konzepten wie einer Klasse von Waren oder Geräten können gemäß <<did-core>> DiDs
+zugeordnet werden.
+Indem eine Klasse von Gegenständen, etwa alle Sensoren einer
+bestimmten Baureihe eines bestimmten Herstellers, eine eigene DiD
+erhalten können dieser Klasse Eigenschaften als Verifiable Credentials (VC)
+attestiert werden. Insbesondere kann der Hersteller die GTIN der
+Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
+Gewicht, Leistungsaufnahme, etc. als Verifiable Credentials
+veröffentlichen.
+
+=== Verifiable Credentials
+
+Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein
+Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company
+Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1
+Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis
+(beginnend mit der GCP) zu
+vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC
+stellt sicher, dass die GTIN *echt* d.h. nach den <<Regeln>> von GS1
+korrekt vergeben wurde. Die Vertrauenswürdigkeit und Integrität
+der direkt vom Hersteller beglaubigten
+Produkteigenschaften sind als Verifiable Credentials überprüfbar.
+
+.ToDo
+[NOTE]
+===============================
+- "Regeln" ersetzen -> Verweis auf ISO
+===============================
+
+Der DiD einer konkreten Produktinstanz kann nun eine SGTIN als
+serialisiertes Ident in Form eines VC zugewiesen werden. Wie in
+<<GS1SSI>> dargestellt wird die DiD der zugehörigen GTIN als Issuer
+verwendet, sodass die Kette der Idente von der GCP der Company über
+die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
+entsprechend als Kette von Verifiable Credentials die sich die DiDs
+ausstellen abgebildet wird.
 
 
 
 [[GS1SSI]]
-.Aufbau einer LEI
-image::.png[Example Lei]
+.Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DiDs
+image::certified-gs1-ids.png[Certified VC issueing]
 
 
-
-
-==== Certified by GS1 Idente in SSI für Deutschland
+=== Certified by GS1 Idente in SSI für Deutschland
 
 
 - Rahmen: Förderprojekt
@@ -708,6 +767,7 @@ image::.png[Example Lei]
 
 - Konkretes Projekt 
 ** Use Cases
+
 
 
 

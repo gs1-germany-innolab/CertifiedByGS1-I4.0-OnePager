@@ -1,8 +1,6 @@
 @startuml Certified GS1 IDs
 skinparam responseMessageBelowArrow true
 
-title Certified GS1 IDs and Master Data via Verifiable Credentilas
-
 actor "did:...:GS1" as GS1
 actor "did:...:Manufacturer" as Manufacturer
 entity "did:...:ItemClass" as gtin
@@ -10,14 +8,14 @@ entity "did:...:Machine" as Machine
 actor User
 
 group Issue Certified Base Number
-    Manufacturer -> GS1 : Request base number\nPresent company details
-    GS1 -> GS1 : Verify request\nand details
+    Manufacturer -> GS1 : Request GCP\nPresent company details
+    GS1 -> GS1 : Verify request and details
     GS1 -> Manufacturer : ISSUE
     note right of GS1
         <b>GCP Credential</b>
         gcp: 4047111
     end note
-    GS1 -> Manufacturer : ISSUE
+    Manufacturer -> Manufacturer : ISSUE
     note right of GS1
         <b>PGLN Credential</b>
         epc: urn:epc:id:pgln:4047111.00000
@@ -29,8 +27,7 @@ group Issue Certified Base Number
         name: European EPC Competence Center,
         legal_form: GmbH,
         trade_register_number: Köln HBR 61026,
-        . . .
-        (use existing schema if possible)
+        . . . (use existing schema if possible)
     end note
 end
 
@@ -46,9 +43,7 @@ group Issue GTIN + Masterdata
     note right of Manufacturer
         <b>Item Class Data Credential</b>
         E.g. digital type label
-        Common schema?
-        Verified by gs1 core attributes?
-        eClass?
+        Common schema? Verified by gs1 core attributes? eClass?
     end note
 
 end
@@ -70,26 +65,20 @@ group Issue SGTIN
 end
 
 User -> Machine : Get ID + masterdata
-Machine -> User : Present <b>SGTIN</b>
-Machine -> User : Present <b>ILMD</b>
+Machine -> User : Present <b>SGTIN</b>, <b>ILMD</b>
 
 User -> gtin: Get SGTIN issuer's id + masterdata
-gtin -> User: Present <b>GTIN</b>
-gtin -> User: Present <b>Item Class Data</b>\ne.g. digital type label
+gtin -> User: Present <b>GTIN</b>, <b>Item Class Data</b> e.g. digital type label
 
 
 
-group Likely Cached/Checked only once
-    User --> Manufacturer: Check SGTIN issuer's id
-    Manufacturer --> User: Present <b>PGLN</b>
-    Manufacturer --> User: Present <b>Company Details</b>
-    Manufacturer --> User: Present <b>GCP</b>
-end
+User --> Manufacturer: Check SGTIN issuer's id
+Manufacturer --> User: Present <b>PGLN</b>, <b>Company Details</b>, <b>GCP</b>
 
-== DTL Verified - Machine and Specifications Trust Worthy==
+== IDs Certified, Machine, Manufacturer authenticated, Master Data Trustworthy ==
 
 
-Machine -> User : Signed Dynamic Data\nstatus, measurements, etc.
+Machine -> User : Signed Dynamic Data
 
 
 @enduml
