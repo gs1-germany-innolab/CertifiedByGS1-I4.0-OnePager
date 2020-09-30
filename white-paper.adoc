@@ -65,7 +65,7 @@ Das Certified by GS1 Team
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-== Problemstellung
+=== Problemstellung
 Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem der vertrautesten - und vielleicht am meisten gehypten - Begriffe in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ist wie ein wilder Dschungel voller Lösungen unterschiedlicher Preise, Kosten und Qualität, bei denen Verbraucher und Nutzer völlig verloren gehen. Die Vielfalt ist unglaublich, und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
 
 Laut Gartner Research wird es bis 2020 rund 20 Milliarden Dinge geben, die mit dem Internet verbunden sind. Bei diesen "Dingen" handelt es sich nicht um Allzweckgeräte wie Smartphones und PCs, sondern um Objekte mit speziellen Funktionen wie Verkaufsautomaten, Düsentriebwerke, vernetzte Autos und unzählige andere Beispiele.
@@ -79,13 +79,13 @@ Seit das Internet weltweit eingesetzt wird, besteht die Schwierigkeit darin, all
 Nichtsdestotrotz sieht die IoT-Landschaft bisher ziemlich unreguliert aus und stellt ein größeres Sicherheitsrisiko dar, weil das Internet der Dinge und die zusätzlichen Ding-zu- Ding Kommunikationsfunktionen immer mehr an Bedeutung gewinnen. Weiß Ihr Home Assistant wirklich, ob er mit Ihrem Staubsauger-Roboter kommuniziert? Spricht der Roboterarm in der Fabrik wirklich mit dem Bediener, der in der Zentrale des Unternehmens sitzt? Diese Probleme sind im Großen und Ganzen noch nicht wirklich gelöst. Daher ist es dringend notwendig, jede einzelne Person, Firma oder "Ding", die mit dem Internet verbunden ist, zu authentifizieren. 
 
 
-==  GS1 USP für die Lösung
+===  GS1 USP für die Lösung
 Als not-for-profit Standarisierungsorganisation, hat GS1 die Aufgabe globale Geschäftstandards zu entwickleln und pflegen. GS1 ist eine neutrale und vertrauenswürdige Organisation und eine etablierte issuing agency von Geschäfts- und Produktidente, als auch von nicht-digitale Zertifikate. Wenn nicht wir, wer noch? (noch nicht fertig)
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-==  Begriffserklärungen
-=== Idente, Echtheit und Identitätsdiebstahl
+===  Begriffserklärungen
+==== Idente, Echtheit und Identitätsdiebstahl
 
 Das Kernprodukt der GS1 Germany ist GS1 Complete. Hier handelt es sich um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird, in welchem dieser GTINs und andere Idente vergeben kann. Es beinhaltet zusätzlich noch weitere Services und Publikationen zur Optimierung der Geschäftsprozesse. 
 
@@ -94,7 +94,7 @@ Elementar ist der bereits erwähnte Nummernkreis. Im Detail wird dem Kunden eine
 Eine Authentifikation durch GS1 ist bisher nicht gegeben. Eine Identitätsprüfung der Antragsteller für eine GS1 GLN erfolgt nicht. Dem Kunden wird bei Bestellung geglaubt, dass er derjenige ist für den er sich ausgibt. Trotz der fehlenden Kontrolle sind GS1 Germany bisher keine Identitätsdiebstähle bekannt. Ein Missbrauch der Idente erfolgt in einigen Fällen in der Nutzung gefälschter GTINs. Unternehmen, die keine GS1 Kunden sind, nutzen Nummernkombinationen entsprechend dem GS1 Nummernsystem, um Produkte online anbieten zu können. 
 Dieser GTIN-Missbrauch wird GS1-intern durch Mitarbeiter verfolgt und unterbunden. Eine teil-automatisierte Lösung die in diesem Bereich wächst ist der Service „Verified by GS1“. Hier können Online-Portale und Händler GTINs auf ihre Echtheit und Herkunft überprüfen, die im Vorfeld durch die Hersteller in die GS1 Registry eingepflegt wurden.
 
-=== LEI VS GLN
+==== LEI VS GLN
 
 Der Legal Entity Identifier, LEI, ist ein 20-stelliger Code, der Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich um juristische Personen handeln, Einzelpersonen können keine LEI erhalten.
 Der LEI wurde nach der Finanzkrise durch den G20 Gipfel eingeführt um mehr Sicherheit und Transparenz bei Finanzgeschäften zu bieten und gilt weltweit. Der LEI ist verpflichtend und ermöglicht es hinterlegte Referenzdaten im Online-Datenpool der GLEIF abzufragen. Diese Referenzdaten sind mindestens der offizielle Name laut Registrierung des Rechtsträgers, Anschrift des Unternehmens, Land der Gründung, Codes für Darstellung der Ländernamen, sowie das Datum der ersten LEI-Zuweisung und der letzten Aktualisierung, je nachdem auch das Ablaufdatum. Denn eine LEI muss jährlich verlängert werden.
@@ -128,9 +128,9 @@ GS1 hält derzeit mehr als 1 Millionen GLNs und ist hier breiter aufgestellt als
 Gemeinsam sind den beiden beschriebenen Identen demnach die Eindeutigkeit und weltweite Überschneidungsfreiheit. Zudem können die Referenzdaten der LEI und auch der GLN durch das Unternehmen verwaltet werden. Man findet die Daten der beiden Idente dann in den jeweiligen Datenbanken. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und vermindert Identitätsmissbrauch.
 
 
-=== Digitale Signatur und Zertifikate
 
-==== Symmetrisch
+==== Symmetrische Verschlüsselung
+
 Kryptografische Systeme kann man in zwei unterschiedliche Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie. Die symmetrische Verschlüsselung wird oftmals als Synonym für die symmetrische Kryptographie verwendet. Die asymmetrische Kryptographie hingegen umfasst zwei Themen: Die asymmetrische Verschlüsslung und digitale Signaturen.
 
 Die symmetrischen Verschlüsselungsverfahren reichen recht weit in die Menschheitsgeschichte zurück. Alle kryptografischen Algorithmen, begannen als symmetrische Verfahren.
@@ -139,7 +139,8 @@ Schon 600v Chr. setzten hebräische Gelehrte einen einfachen Zeichenaustauschalg
 Die Funktionsweise der symmetrischen Schlüssel ist recht einfach. Es gibt nur einen Schlüssel, den geheimen Schlüssel. Der wird für die Ver- wie auch für die Entschlüsselung genutzt. Das bedeutet aber auch, dass sowohl der Sender, als auch der Empfänger immer diesen Schlüssel benötigen. Der Versender hat diesen Schlüssel, nur muss dieser auch über einen sicheren Übertragungsweg an den Empfänger gelangen, um z.B. ein Mitlesen der verschlüsselten Nachricht nicht zu ermöglichen. 
 Eine symmetrische Verschlüsselung kann man daher für das Verschlüsseln von Dateien, Verzeichnissen oder Laufwerken nutzen. 
 
-==== Asymmetrisch
+==== Asymmetrische Verschlüsselung
+
 In der Praxis nutzt man heute eher die asymmetrische Verschlüsselung.
 
 Denn bei der asymmetrischen Verschlüsselung benötigt man je einen Schlüssel zum Verschlüsseln der Daten und einen anderen Schlüssel zum Entschlüsseln. Der zur Verschlüsselung verwendete Schlüssel wird in einem asymmetrischen Verfahren als öffentlicher Schlüssel bezeichnet und kann jedem frei mitgeteilt werden. Der für die Entschlüsselung verwendete Schlüssel muss hingegen geheim gehalten werden. 
@@ -150,11 +151,13 @@ Die Funktionsweise einer asymmetrischen Verschlüsselung lässt sich wie folgt e
 Jeder Teilnehmer erzeugt sich ein sogenanntes Schlüsselpaar. Das Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Der private Schlüssel sollte dann nicht, oder nur in einer nicht vertretbaren Zeit, aus dem öffentlichen Schlüssel berechnet werden können. Wenn ein Versender eine geheime Nachricht an einen Empfänger versenden möchte, so benötigt er den öffentlichen Schlüssel vom Empfänger. Diesen bekommt er vom Empfänger selbst oder aus einem öffentlichen Schlüsselverzeichnis. Der Versender verschlüsselt die Nachricht mit dem öffentlichen Schlüssel und einer Verschlüsselungsfunktion. Die verschlüsselte Nachricht kann danach an den Empfänger versendet werden. Dieser benutzt die Entschlüsselungsfunktion mit Hilfe seines privaten Schlüssels, um die ursprüngliche Nachricht wiederherzustellen.
 
 ==== Hashing
+
 Durch Hashing oder eine Hashfunktion, wird eine Zeichenkette variabler Länge auf eine Zeichenkette fester Länge abgebildet. Durch eine effiziente mathematische Funktion, wird der Hashwert meist erheblich kürzer als der Text selber. Dadurch wird ein Fingerabdruck (Fingerprint) der Zeichenkette oder Dokument erstellt. Dieser Fingerabdruck dient dann als nahezu eindeutige Kennzeichnung des Dokumentes. Ähnlich dem menschlichen Fingerabdruck, der uns nahezu eindeutig identifiziert. Durch diesen Hashwert kann man z.B. überprüfen, ob ein Dokument, eine Datei oder ein Update verändert wurden. 
 
 Beispiel:
 
-==== Signatur
+==== Digitale Signatur
+
 Wenn man von Signatur redet, muss man zwischen einer elektronischen Signatur und einer digitalen Signatur unterscheiden. Beide werden oftmals synonym verwendet, was jedoch nicht ganz richtig ist. 
 
 Bei der elektronischen Signatur (elektronische Unterschrift), spricht man eher von einem rechtlichen oder juristischen Begriff und basiert nicht zwangsläufig auf einer digitalen Signatur. Bei der digitalen Signatur hingegen, handelt es sicher eher um ein mathematisches oder technisches Verfahren. 
@@ -162,7 +165,9 @@ Bei der elektronischen Signatur (elektronische Unterschrift), spricht man eher v
 Bei der digitalen Signatur wird mit dem privaten Schlüssel zu dem originalen Dokument eine „Unterschrift“/Signatur hinzugefügt. Mit dem öffentlichen Schlüssel kann dann später vom Empfänger festgestellt werden, ob die Daten wirklich von demjenigen stammen, der mit seinem privaten Schlüssel signiert hat und ob die Daten verändert worden und noch unverändert sind. Die digitalen Signaturen sind deshalb notwendig, da sich der Absender von Dateien, Dokumenten oder Nachrichten fälschen lässt. Beispielweise kann man den Absender einer E-Mail sehr einfach fälschen. Somit lässt sich die Identität des Unterzeichners zweifelsfrei nachweisen und die Integrität der elektronischen Nachricht sicherstellen. 
 Wie funktionert eine digitale Signatur? Aus Performance-Gründen wird als erstes von der Nachricht ein Hashwert berechnet. Dieser Haswert ist dann der Fingerabdruck dieser Nachricht. Für die Signatur wird der geheime private Schlüssel verwendet und durch einen Signieralgorithmus ein Wert, die sogenannte digitale Signatur, berechnet. Die Nachricht kann dann mit der digitalen Signatur an den Empfänger versendet werden. Der Empfänger kann mit dem öffentlichen Schlüssel des Versenders überprüfen, ob die Nachricht wirklich vom tatsächlichen Versender verschickt wurde und ob diese Nachricht unverändert ist. 
 
-==== Zertifikate
+
+==== Digitale Zertifikate
+
 Ein „normales“ Zertifikat ist im üblichen Sinne eine Bescheinigung oder eine Urkunde zu bestimmten Informationen, zu einem Unternehmen oder zu einer Person.
 GS1 vergibt in gedruckter Form ein Zertifkat für die erfolgreiche Teilnahme am globalen GS1 System. In diesem Zertifkat wird unter anderem die GLN und die dazugehörige Firma aufgeführt.
 Im Gegensatz zu einem gedruckten Zertifikat, stellt ein digitales Zertifikat im Wesentlichen eine digitale Beglaubigung dar. Mit diesem digitalen Zertifikat kann man bestimmte Eigenschaften zu einem Objekt oder zu einer Person bestätigen, sowie die Echtheit und die Datenintegrität überprüfen. Durch ein Zertifikat lässt sich ein öffentlicher Schlüssel sicher einem bestimmten Besitzer zuweisen.
@@ -178,10 +183,8 @@ Die am häufigsten verwendeten Zertifikate sind:
 -	X.509 Zertifikat
 
 
-[[sec_PKI_SSI]]
-=== PKI / DID / SSI
 
-==== PKI
+=== Zentrale Zertifikate und Schlüssel Infrastruktur
 
 Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
 Datenbanken wird eine PKI unabdingbar. Bis zu diesem Zeitpunkt wurden jedoch nur symmetrische Schlüssel eingesetzt, die sowohl für die Ver- als auch die Entschlüsselung den selben Schlüssel verwenden. 
@@ -200,7 +203,13 @@ Oftmals befindet sich die Registrierungsstelle und die Zertifizierungsstelle in 
 
 Der Verzeichnisdienst ist ein durchsuchbares Verzeichnis, das ausgestellte Zertifikate enthält. Sozusagen die Gelben Seiten der Zertifikate. Dadurch können die Zertifikate eines anderen Teilnehmers zum Prüfen einer Signatur abrufen.  ** (Unverständlich) **
 
-==== Decentralized Identifiers
+
+[[sec_PKI_SSI]]
+=== Dezentrale Zertifikate und Schlüssel Infrastruktur
+
+
+==== Decentralized Identifiers (DiDs)
+
 Decentralized Identifiers (DIDs) sind neuartige Identifikatoren, die eine verifizierbare und dezentralisierte digitale Identität ermöglichen sollen. Dabei entscheidet mindestens eine sogenannte Kontrollinstanz (DID controller) darüber, welches beliebige Subjekt (DID subject) eine DID identifizieren soll. Dieses Subjekt können u.a. Personen, Organisationen, Dinge, Datenmodelle, abstrakte Entitäten sein.
 
 Die Bezeichner sind derart konzipiert, dass der DID-Controller beweisen kann, dass er die Kontrolle über die DID ausübt. Sie [**WER?**] sollen unabhängig von zentralisierten Registrierungsstellen, Identitäts-Providern oder Zertifizierungsstellen in Umlauf gebracht und genutzt werden können.
@@ -209,42 +218,47 @@ Technisch betrachtet ist eine DID eine URL, die eine Verbindung zwischen dem DID
 
 Ist das zu identifizierende Subjekt selbst Teil der DID-Controller-Gruppe, ist damit eine notwendige Bedingung für Selbstsouveränität erfüllt.
 
-===== Identity Layer für das Internet
-DIDs können die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls für den verschlüsselten Netzverkehr hatte.
-
-===== Use Cases
-Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifenden Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen. 
-
-===== Vergleiche mit anderen Identifiern
-Persistenz und Dezentralität
-Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, ist nicht neu. UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122).
-
-Persistenz und globale Auflösbarkeit
-Der Bedarf an persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, welche gleichzeitig global auflösbar sind, ist ebensowenig neu. Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert (<<rfc-2141>>, RFC 8141).
-
-===== Kryptographische Verifizierbarkeit
-Im Regelfall sind UUIDs jedoch nicht global auflösbar und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösbar sind. Darüber hinaus ist weder UUIDs noch URNs eine weitere notwendige Eigenschaft inhärent: die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren.
-
-Tabelle 1. Eigenschaften von Identifikatoren 
-
-===== Selbstsouveräne Identität
-Zur Verwirklichung einer selbstsouveränen Identität (self-sovereign identity, SSI) – definiert als lebenslang gültige, portierbare digitale Identität, welche unabhängig ist von zentralisierten Autoritäten – muss der neue Bezeichner über jede der folgenden Eigenschaften verfügen: Persistenz, globale Auflösbarkeit, kryptographische Verifizierbarkeit und Dezentralität.]
-
-Das Konzept einer selbstsouveränen Identität baut auf drei Hauptkomponenten auf, aus denen sie sich zusammensetzt. Zu diesen zählen neben DIDs noch Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI).
-
-**-> unverständlicher Abschnitt**
-
-==== DIDs
 
 Abstract from <<did-core>>.
 
 Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. Specifically, while other parties might be used to help enable the discovery of information related to a DID, the design enables the controller of a DID to prove control over it without requiring permission from any other party. DIDs are URLs that associate a DID subject with a DID document allowing trustable interactions associated with that subject. Each DID document can express cryptographic material, verification methods, or service endpoints, which provide a set of mechanisms enabling a DID controller to prove control of the DID. Service endpoints enable trusted interactions associated with the DID subject. A DID document might contain semantics about the subject that it identifies. A DID document might contain the DID subject itself (e.g. a data model). 
 
 
-===== Verifiable Credentials
+
+
+==== Identity Layer für das Internet
+DIDs können die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls für den verschlüsselten Netzverkehr hatte.
+
+==== Use Cases
+Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifenden Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen. 
+
+==== Vergleiche mit anderen Identifiern
+Persistenz und Dezentralität
+Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, ist nicht neu. UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122).
+
+Persistenz und globale Auflösbarkeit
+Der Bedarf an persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, welche gleichzeitig global auflösbar sind, ist ebensowenig neu. Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert (<<rfc-2141>>, RFC 8141).
+
+==== Kryptographische Verifizierbarkeit
+Im Regelfall sind UUIDs jedoch nicht global auflösbar und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösbar sind. Darüber hinaus ist weder UUIDs noch URNs eine weitere notwendige Eigenschaft inhärent: die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren.
+
+Tabelle 1. Eigenschaften von Identifikatoren 
+
+==== Selbstsouveräne Identität
+Zur Verwirklichung einer selbstsouveränen Identität (self-sovereign identity, SSI) – definiert als lebenslang gültige, portierbare digitale Identität, welche unabhängig ist von zentralisierten Autoritäten – muss der neue Bezeichner über jede der folgenden Eigenschaften verfügen: Persistenz, globale Auflösbarkeit, kryptographische Verifizierbarkeit und Dezentralität.]
+
+Das Konzept einer selbstsouveränen Identität baut auf drei Hauptkomponenten auf, aus denen sie sich zusammensetzt. Zu diesen zählen neben DIDs noch Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI).
+
+**-> unverständlicher Abschnitt**
+
+
+==== Verifiable Credentials
+
 DIDs bilden lediglich die untere Ebene einer dezentralisierten Identitätsinfrastruktur. Die darüber liegende Ebene, welche den meisten Mehrwert bietet, bilden die sogenannten Verifiable Credentials (VCs). Dieser technische Begriff steht für einen digital signierten elektronischen Berechtigungsnachweis, welcher den von der W3C Verifiable Claims Working Group entwickelten Interoperabilitätsstandards entspricht.
 
-===== Web of Trust
+
+==== Web of Trust
+
 Die üblichen Identitätsmanagement-Systeme basieren auf zentralisierten Autoritäten wie Verzeichnisdiensten innerhalb eines Unternehmen, Zertifizierungsstellen oder Domain-Name-Registraren. In diesem Kontext spielt auch GS1 die Rolle eines Registrars, indem über die Company-Prefix ein Namensraum zugewiesen (verkauft) wird. Dabei bilden diese Autoritäten jeweils ihre eigene Wurzel der Sicherheitskette. Damit ein Identitätsmanagement jedoch zwischen den genannten Systemen etabliert werden kann, bedarf es eines föderalistischen Identitätsmanagements.
 
 Das Aufkommen von Distributed-Ledger-Technologien (DLTs) und der Blockchain-Technologie vereinfacht technisch völlig dezentralisierte Identitätsmanagement-Systeme. In einem dezentralen Identitätsmanagement-System können die Entitäten (Personen, Organisationen, Dinge, etc.) ihre geteilte Root of Trust frei wählen. Global verteilte Ledger, dezentralisierte P2P-Netzwerke oder andere Systeme mit gleichartigen Fähigkeiten ermöglichen eine Root of Trust ohne eine zentralisierte Autoritätsinstanz oder einen Single Point of Failure. Gemeinsam ermöglichen es DLTs und dezentralisierte Identitätsmanagement-Systeme beliebigen Entitäten ihre eigenen Bezeichner oder eine nicht festgelegte Menge an verteilten Roots of Trust zu erstellen und zu managen.
@@ -253,7 +267,7 @@ Entitäten werden mittels DIDs identifiziert und können sich authentisieren, in
 
 Dieses Design beseitigt sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für Identifier als auch von zentralisierten Zertifizierungsstellen für Schlüsselverwaltungen – was zurzeit den Standard bei der hierarchischen Public-Key-Infrastruktur (PKI) darstellt. Falls die DID-Registry ein verteilter Ledger ist, kann jede Entität als ihre eigene Root of Trust fungieren. Diese Architektur wird als DPKI (dezentralisierte PKI) bezeichnet.
 
-==== SSI / Self Sovereign Identity
+=== Self Sovereign Identity (SSI)
 
 Durch den rasanten Anstieg von Social Media, stiegen neben den digitalen Aktivitäten der Nutzer auch die Anzahl der unterschiedlichsten Plattformen an. Auf jeder Plattform muss für die digitale Identität jeweils ein eigenes Profil erstellt werden. Diese Profile hinterlassen stets eine digitale Spur im Internet. Bei diesen hinterlegten Daten, handelt es sich überwiegend um sensible und personenbezogene Daten, die für die Plattformen enorm wichtig sind, aber auch eine gewisse Gefahr für einen Datendiebstahl darstellen. 
 
@@ -309,9 +323,11 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-== Anwendungsbeispiele: Verified by GS1
+== Anwendungfälle
 
-=== Problem
+=== Verified by GS1
+
+==== Problem
 
 Die Fälschung von GS1 Identen an sich ist u.A. für Marktplätze wie
 Amazon ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt um
@@ -322,7 +338,7 @@ Prüfziffer kann jedoch einfach umgangen werden und es tauchen
 regelmäßig regelmäßig Angebotsduplikate unter gefälschten
 Artikelnummern auf.
 
-=== Existierende Lösungsansätze
+==== Existierende Lösungsansätze
 
 Ein Abgleich mit bei GS1 registrierten Artikel Stammdaten über die online
 Services von GS1 Germany, wie Gepir <<gepir>> bzw. den GTIN Manager
@@ -334,7 +350,7 @@ dass die Artikelbeschreibung mit den Hinterlegten Stammdaten in Einklang steht.
 Diese Überprüfung ist aktuell, je nach Service, manuell per Web-UI und/oder
 automatisiert per API möglich.
 
-=== Verbesserungspotential durch Certified
+==== Verbesserungspotential durch Certified
 
 Nachteile an der aktuellen Lösung sind zum einen die Veröffentlichung
 der Idente und Stammdaten über eine Zentrale Datenbank. Hier gibt der
@@ -368,11 +384,11 @@ Masterdaten durch den legitimen Herausgeber bietet bestmöglichen
 Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten
 auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
-== Anwendungsbeispiele: Unternehmensstammdaten
+=== Unternehmensstammdaten
 
 - Sektoren übergreifend
 
-=== Supplier Onboarding
+==== Supplier Onboarding
 - Konkret (Automobil,...)
 
 
@@ -385,7 +401,7 @@ auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikat
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-== Anwendungsbeispiele: Industrie 4.0
+=== Industrie 4.0 Szenario Wandlungsfähige Fabrik
 
 
 Sicherheitsfragen können in industriellen Anwendungen missionskritisch werden,
@@ -394,7 +410,6 @@ Maschinen miteinander vernetzt und deren Steuerung und Konfiguration zunehmend
 autonom und vernetzt erfolgt. Eine gesicherte automatische Identifizierung und
 Authentifizierung ist hier absolut notwendig.
 
-=== Szenario Wandlungsfähige Fabrik
 
 Im Anwendungsszenario "Wandlungsfähige Fabrik" der Plattform Industrie 4.0 wird
 die moderne Fabrik von vielfältigen Maschinen (Robotern, Werkzeuge,
@@ -486,7 +501,7 @@ können.
 
 
 
-=== Konkreter Anwendungsfall von EKU Power Drives
+=== Dynamische Microgrids von EKU Power Drives
 
 EKU entwickelt gemeinsam mit seinen Kunden intelligente
 Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse
@@ -690,28 +705,24 @@ die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufe
 der signierten Daten vereiteln außerdem Replay-Attacken.
 
 
-
-
-
-== Umsetzung [7 Seiten]
-
-- Ergebnisse aus Prototyping
-
-=== Reine Public Key Infrastructure (PKI)
+==== Interaktive Demonstration
 
 **Sebastian**
 
-==== EKU PD Demo
+
+
+
+
+
+== Umsetzung
+
+=== Zertifikatsketten 
 
 **Sebastian**
 
-- Konkreter Anwendungsfall
-- Wenn UI Fertig
 
 
-
-
-== Verteilte Zertifikate Infrastruktur - Self Sovreign Identity (SSI)
+=== Verteilte Zertifikate Infrastruktur - Self Sovreign Identity (SSI)
 
 Im Rahmen des Certified by GS1 Projektes wurde ein Prototypisches
 Konzept zur Zertifizierung von GS1 Identen und assoziierten
@@ -729,7 +740,7 @@ Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
 - Sicherstellen, dass dort alles erklärt wird
 ===============================
 
-=== DiDs
+==== DiDs
 
 In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
 Firmen, insbesondere GS1, eine eigene DiD. Konkreten Dingen,
@@ -744,7 +755,7 @@ Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
 Gewicht, Leistungsaufnahme, etc. als Verifiable Credentials
 veröffentlichen.
 
-=== Verifiable Credentials
+==== Verifiable Credentials
 
 Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein
 Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company
@@ -778,7 +789,7 @@ ausstellen abgebildet wird.
 image::certified-gs1-ids.png[Certified VC issueing]
 
 
-=== Certified by GS1 Idente in SSI für Deutschland
+==== Certified by GS1 Idente in SSI für Deutschland
 
 
 - Rahmen: Förderprojekt
@@ -796,7 +807,7 @@ image::certified-gs1-ids.png[Certified VC issueing]
 
 
 
-== Projektergebnisse [4 Seiten]
+== Zusammenfassung der Projektergebnisse [4 Seiten]
 
 === Lessons Learned
 
