@@ -398,16 +398,53 @@ Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten
 auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
 
+
+
+
+
 === Unternehmensstammdaten
 
-- Sektoren übergreifend
+Vertrauenswürdige Daten zu Unternehmen sind für digitale
+Handelsbeziehungen ebenso wichtig, wie die vertrauenswürdige
+authentifizierung realer Personen und ihrer Daten im online Handel,
+oder allgemeiner bei digitalen Vertragsabschlüssen. Entsprechend einem
+digitalen Ident mit ähnlicher vertrauenswürdigkeit wie dem
+Personalausweis benötiget ein Unternehmen möglicherweise einen digital
+beglaubigten Handelsregisterauszug um sich zu authentifizieren und die
+Legitimität eines Rechtsgeschäfts zu beweisen.
+
+Bei der Vergabe einer GS1 Company Prefix (GCP) und damit eines
+Nummernkreises an ein Unternehmen vergibt die GS1 normalerweise auch
+eine (Party) GLN zur Identifikation des Unternehmens selbst und
+erfasst daten zum Unternehmen, wie Name, Rechtsform, Hauptsitz, u.A.
+
+Basierend auf einer kritischen Überprüfung der vom Unternehmen
+angegebenen Daten, wie diese z.B. bei der LEI vergabe durch GS1
+Germany aktuell bereits stattfindet, kann GS1 die echt heit solcher
+Unternehmensstammdaten zertifizieren.
+Die Vorlage vertrauenswürdig zertifizierter Daten erspart den
+Vertragspartnern dieses Unternehmens künftig, diese Überprüfung selbst
+durchführen zu müssen und ermöglicht so shcneller und einfacher mit
+dem Unternehmen in eine Rechtsbeziehung zu treten.
+
 
 ==== Supplier Onboarding
-- Konkret (Automobil,...)
 
+Ein Konkreter Use Case basierend auf Unternehmensstammdaten ist das
+Supplier Onboarding. WIll ein Hersteller einen Zulieferer neu
+aufnehmen, so ist dies je nach Industriezweig typischerweise mit
+erheblichem Aufwand verbunden, worunter die flexibilität der
+Handelsbeziehungen leidet.
+Wärend bestimmte Hersteller spezifische Audits möglicherweise
+unumgänglich und gewünscht sind ließe sich ein erheblicher Teil der
+papierbasierten Prüfung von Unternehmensdaten, Zulassungen und
+klassischen standardisierten Zertifizierungen, auf der Basis einer
+Vertrauensinfrastruktur digitalisieren und automatisieren.
 
-=== Lokations Stammdaten
-
+Vertrauenswürdige Unternehmenidente Certified by GS1 und ein
+Grundstock an unternehmensstammdaten, der von GS1 Überprüft und
+zertifiziert wird, haben das Potential die Grundlage einer solchen
+Vertrauensinfrastruktur zu bilden.
 
 
 
