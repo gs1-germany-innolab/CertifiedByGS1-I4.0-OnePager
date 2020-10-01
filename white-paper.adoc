@@ -164,8 +164,14 @@ Jeder Teilnehmer erzeugt sich ein sogenanntes Schlüsselpaar. Das Schlüsselpaar
 
 Durch Hashing oder eine Hashfunktion, wird eine Zeichenkette variabler Länge auf eine Zeichenkette fester Länge abgebildet. Durch eine effiziente mathematische Funktion, wird der Hashwert meist erheblich kürzer als der Text selber. Dadurch wird ein Fingerabdruck (Fingerprint) der Zeichenkette oder Dokument erstellt. Dieser Fingerabdruck dient dann als nahezu eindeutige Kennzeichnung des Dokumentes. Ähnlich dem menschlichen Fingerabdruck, der uns nahezu eindeutig identifiziert. Durch diesen Hashwert kann man z.B. überprüfen, ob ein Dokument, eine Datei oder ein Update verändert wurden. 
 
-Beispiel:
 
+.ToDo
+[IMPORTANT}
+--
+Beispiel:
+--
+
+[[sec_digi_sig]]
 ==== Digitale Signatur
 
 Wenn man von Signatur redet, muss man zwischen einer elektronischen Signatur und einer digitalen Signatur unterscheiden. Beide werden oftmals synonym verwendet, was jedoch nicht ganz richtig ist. 
@@ -194,6 +200,7 @@ Die am häufigsten verwendeten Zertifikate sind:
 
 
 
+[[sec_pki]]
 === Zentrale Zertifikate und Schlüssel Infrastruktur
 
 Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
@@ -214,7 +221,7 @@ Oftmals befindet sich die Registrierungsstelle und die Zertifizierungsstelle in 
 Der Verzeichnisdienst ist ein durchsuchbares Verzeichnis, das ausgestellte Zertifikate enthält. Sozusagen die Gelben Seiten der Zertifikate. Dadurch können die Zertifikate eines anderen Teilnehmers zum Prüfen einer Signatur abrufen.  ** (Unverständlich) **
 
 
-[[sec_PKI_SSI]]
+[[sec_ssi]]
 === Dezentrale Zertifikate und Schlüssel Infrastruktur
 
 
@@ -237,7 +244,14 @@ Decentralized identifiers (DIDs) are a new type of identifier that enables verif
 
 
 ==== Identity Layer für das Internet
-DIDs können die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls für den verschlüsselten Netzverkehr hatte.
+DIDs können die Kernkomponente einer gänzlich neuen Ebene von
+dezentralisierter digitaler Identität und der Public Key
+Infrastructure für das Internet bilden. Diese könnte in Gestalt einer
+dezentralisierten Public Key Infrastructure (DPKI) ebenso große
+Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen
+Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls <<tls>>
+für den
+verschlüsselten Netzverkehr hatte.
 
 ==== Use Cases
 Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifenden Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen. 
@@ -370,7 +384,7 @@ eine Überprüfung der Idente nur online und, je nach Service, nur durch
 entsprechend berechtigte/bezahlende Kunden erfolgen. Konkret steht
 etwa "Verified by GS1" nur den GS1 Germany Kunden zur Verfügung.
 Außerdem wird die Korrektheit der Daten nur über das Vertrauen in
-die Transportverschlüsselung (TLS) bei der Abfrage und die Identität
+die Transportverschlüsselung <<tls>> bei der Abfrage und die Identität
 des Servers, der die Daten bereit stellt, gesichert. Die Daten selbst
 sind in den aktuellen Konzepten nicht authentifiziert und es gibt
 keinen direkten Link zum Herausgeber.
@@ -840,9 +854,81 @@ image::demo-screenshots/8-pay-per-use.png[]
 
 == Umsetzung
 
-=== Zertifikatsketten 
+Im Rahmen des Certified by GS1 Projektes wurden verschiedene
+Möglichkeiten der technischen Umsetzung authentifizierbarer Idente
+entwickelt und untersucht. Die Grundlage bildet die kryptografische
+digitale Signatur (siehe <<sec_digi_sig>>). 
+Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab
+dem Zeitpunkt der Signatur
+unverändert sind und vom angegebenen Urheber Stammen, *vorausgesetzt*
+es gibt eine vertrauenswürdige Infrastruktur, mit deren Hilfe die
+öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und
+diese sind in der Lage ihre privaten Schlüssel geheim zu halten.
 
-**Sebastian**
+.ToDo
+[IMPORTANT]
+--
+In Einleitung verschieben?
+--
+
+Wie in <<sec_pki>> und <<sec_ssi>> beschrieben kann ein
+vertrauenswürdiger Teilnehmer, d.h. z.B. eine Firma wie GS1, anderen
+Teilnehmern Zertifikate ausstellen. Hierbei handelt es sich immer um
+unterschriebene Dokumente, in denen eine Zuordnung eines öffentlichen
+Schlüssels zu einem anderen Teilnehmer bescheinigt wird. Je nach
+konkretem Format können auch weitere Details im Zertifikat eingetragen
+und damit beglaubigt werden.
+
+
+
+=== Zertifikatsketten und Nummernkreise
+
+Wie in <<Chain>> dargestellt kann prinzipiell jeder vertrauenswürdige
+Teilnehmer den Kreis der vertrauenswürdigen Teilnehmer an der
+vertrauensinfrastruktur erweitern, in dem der bereits
+vertrauenswürdige dem neuen Teilnehmer ein entsprechendes Zertifikat
+ausstellt.
+
+Bei der klassischen, d.h. weitgehend zentralen, 
+Schlüssel- und Zertifikate Infrastruktur, die
+z.B. bei der Absicherung der Kommunikation über das Internet mittels
+Transportverschlüßelung <<tls>> zum Einsatz kommt, stellen eine oder einige
+wenige zentrale Autoritäten, denen initial vertraut wird, Zertifikate
+an zwischengeschaltete Autoritäten aus. So ergeben sich, wie in
+<<sec_pki>> näher erläutert, baumartige Vertrauensstrukturen.
+
+.TODO
+[IMPORTANT]
+--
+In Einleitung verschieben/mergen?
+--
+
+Das Nummernsystem der GS1 besteht im wesentlichen aus einer ähnlichen
+Baumartigen Struktur. Ausgehend von der Gesamtheit der GS1
+Organisationen und GS1 global erhalten die einzelnen
+Mitgliedsorganisationen (MOs) Nummernkreise, indem eine betimmte
+Präfix einer MO zugeordnet wird. Z.B. gehören alle GS1 Idente deren
+erste 3 Ziffern im Bereich 400 bis 440 liegen zu GS1 Germany
+<<gs1-prefix>>.
+Innerhalb des eigenen Nummernkreises (d.h. beginnend mit der eigenen
+GS1 Präfix) vergeben die MOs eine GS1 Company Prefix (GCP) und damit
+den Kreis der Nummern beginnend mit der GCP an Firmen, z.B. gehören
+alle GS1 Idente beginnend mit 4047111 zum Nummernkreis des EECC. Die
+Firmen können nun innerhalb der Regeln für GS1 Idente selbst
+z.B. Idente für Warenkategorien oder individuelle Waren, aber auch für
+Standorte, Warensendungen, Coupons, uvm. <<gen-spec>>
+vergeben. Z.B. bezeichnet die GLN 4047111000006 den
+Unternehmenshauptsitz des EECC, wobei streng genommen die Art des
+Idents mit dem entsprechenden Code, z.B. 414 für die GLN, mit
+angegeben werden sollte. (414) 4047111000006 (254) 01 wäre ein
+Beispiel für eine SGLN mit der das EECC einen spezifischeren Ort, etwa
+den Posteingang des Hauptsitzes, bezeichnen könnte.
+
+[[Chain-EECC]]
+.Die vergabe von Zertifikaten im Rahmen von Certified by GS1 folgt der Logik bei der Vergabe der GS1 Idente
+image::Certificate-Chain-EECC.png[]
+
+
 
 
 
@@ -856,7 +942,7 @@ Organisationen und mit den Partnern dar.
 
 Die in diesem Abschnitt verwendete grundlegenden
 Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
-<<sec_PKI_SSI>> eingeführt erläutert.
+<<sec_ssi>> eingeführt erläutert.
 
 .ToDo
 [IMPORTANT]
@@ -965,8 +1051,13 @@ image::certified-gs1-ids.png[]
 
 Online Ressourcen (Stand September 2020):
 
+- [[[gen-spec]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
-- [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
-
 - [[[online-demo]]] https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
+- [[[tls]]] https://de.wikipedia.org/wiki/Transport_Layer_Security
+- [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
+- [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
+
+
+
