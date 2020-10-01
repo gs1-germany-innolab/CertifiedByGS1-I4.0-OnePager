@@ -115,7 +115,7 @@ Aufgebaut wird dieser Code nach dem ISO-Standard 17442. Dabei stellen die ersten
 
 [[LEI]]
 .Aufbau einer LEI
-image::example-lei.png[Example Lei]
+image::example-lei.png[]
 
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle (Local Operating Unit, LOU) für den GLEIF (Global Legal Entity Identifier Foundation). GS1 Germany ist hier nur Vertriebspartner von GS1 Global, ein sogenannter Registration Agent (RA) und agiert als Dienstleister um LEIs zu vergeben.
 
@@ -131,7 +131,7 @@ Auch vom Aufbau unterscheidet sich die GLN von der LEI, hat sie doch nur 13 Stel
 
 [[GLN_Aufbau]]
 .Aufbau einer GLN
-image::example-gln.png[Example GLN]
+image::example-gln.png[]
 
 
 Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die GLN-Teilnehmer keine Überprüfung, weder anhand des Handelsregisters noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen registrieren.
@@ -471,7 +471,7 @@ wandlungsfähiger Aufbau der Produktion innerhalb einer Fabrik realisiert.
 
 [[WFF]]
 .Anwendungszenario WFF aus <<szenarien-i40>>
-image::anwendungszenario-wff.png[Anwendungszenario WFF]
+image::anwendungszenario-wff.png[]
 
 
 Eine essentielle Voraussetzung hierfür ist, dass die Maschinen sich
@@ -481,7 +481,7 @@ dargestellt:
 
 [[Werkzeugkasten]]
 .Abgeleitet von: Werkzeugkaste Industrie 4.0 aus <<vdma-i40>>, <<acatech>>
-image::werkzeugkaste-i40-vdma-part.png[Werkzeugkaste Industrie 4.0]
+image::werkzeugkaste-i40-vdma-part.png[]
 
 Hervorgehoben sind die Identifikation und Einbindung von Industrial IoT (IIoT)
 Devices und der Datenaustausch als notwendige Voraussetzung für die Industrie
@@ -501,7 +501,7 @@ unautorisierter Zugriff über das Internet erfolgen kann.
 
 
 .ToDo
-[NOTE]
+[IMPORTANT]
 ===============================
 - Diesen Abschnitt mit <<Intro>> abgleichen
 - ggF Inhalte dorthin verschieben
@@ -515,7 +515,7 @@ IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
 
 [[Chain]]
 .Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
-image::Certificate-Chain.png[Zertifikatskette]
+image::Certificate-Chain.png[]
 
 Mit dem Unternehmenszertifikat kann die Echtheit der eigenen IDs
 fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B.
@@ -537,7 +537,7 @@ zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt.
 
 [[Certificates]]
 .Vertrauen in IDs certified by GS1 ermöglicht M2M authentifizierung und den Aufbau gesicherter Kommunikationskanäle
-image::Parts-Certified.png[IDs certified by GS1 - Vertrauen]
+image::Parts-Certified.png[]
 
 
 Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
@@ -548,8 +548,29 @@ können.
 
 
 
-
+[[EKU-PD]]
 === Dynamische Microgrids von EKU Power Drives
+
+.ToDo
+[IMPORTANT]
+===============================
+- <<EKU-PD>> ist größtenteils noch roh zusammen kopiert -> Lesen und schleifen.
+===============================
+
+
+=== Interaktive Demonstration
+
+Eine interaktive online Demonstration des Use Cases wurde entwickelt
+um den in diesem Abschnitt vorgestellten Use Case anschaulich und
+leicht verständlich darzustellen.  Die Demonstration ist unter
+<<online-demo>> öffentlich zugänglich.
+
+[[eku-init]]
+.Einführungstext der interaktiven Demonstration des Use Case
+image::demo-screenshots/1-intro.png[]
+
+
+=== EKU Power Drives
 
 EKU entwickelt gemeinsam mit seinen Kunden intelligente
 Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse
@@ -702,6 +723,10 @@ hinweg nicht verändern (und wenn, dann ist diese Veränderung ebenso vorhersehb
 derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. Werden diese Informationen also über
 ein digitales Kommunikationsprotokoll übertragen, könnte man von einem digitalen Typenschild sprechen.
 
+[[eku-static]]
+.In der Demo wird die Nutzung statischer Daten, konkret eines digitalen Typenschildes, so wie der Problemfall manipulierter Daten dargestellt
+image::demo-screenshots/1-intro.png[]
+
 
 ===== Dynamische Informationen
 
@@ -753,20 +778,6 @@ die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufe
 der signierten Daten vereiteln außerdem Replay-Attacken.
 
 
-==== Interaktive Demonstration
-
-Eine interaktive online demonstration des Use Cases wurde entwickelt
-<<online-demo>>.
-
-
-
-.ToDo
-[NOTE]
-===============================
-- Bilder einfügen
-===============================
-
-
 
 
 == Umsetzung
@@ -790,7 +801,7 @@ Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
 <<sec_PKI_SSI>> eingeführt erläutert.
 
 .ToDo
-[NOTE]
+[IMPORTANT]
 ===============================
 - Sicherstellen, dass dort alles erklärt wird
 ===============================
@@ -824,7 +835,7 @@ der direkt vom Hersteller beglaubigten
 Produkteigenschaften sind als Verifiable Credentials überprüfbar.
 
 .ToDo
-[NOTE]
+[IMPORTANT]
 ===============================
 - "Regeln" ersetzen -> Verweis auf ISO
 ===============================
@@ -841,7 +852,7 @@ ausstellen abgebildet wird.
 
 [[GS1SSI]]
 .Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DiDs
-image::certified-gs1-ids.png[Certified VC issueing]
+image::certified-gs1-ids.png[]
 
 
 ==== Certified by GS1 Idente in SSI für Deutschland
