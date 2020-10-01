@@ -1005,6 +1005,10 @@ image::certified-gs1-ids.png[]
 
 === Lessons Learned
 
+*Anna* -> Umfrage -> IIoT
+
+
+
 
 === Business Opportunities (Extern)
 
@@ -1022,7 +1026,8 @@ image::certified-gs1-ids.png[]
 
 ==== Umsetzung von Certified by GS1 in aktuellen SSI Netzwerken/Projekten
 
-In der aktuellen Ausschreibung des BMWi mit dem Titel
+In der aktuellen Ausschreibung des Bundesministeriums für Wirtschaft
+und Energie (BMWi) mit dem Titel
 https://www.digitale-technologien.de/DT/Navigation/DE/ProgrammeProjekte/AktuelleTechnologieprogramme/Sichere_Digitale_Identitaeten/sichere_digitale_ident.html[Schaufenster Sichere Digitale Identitäten]
 werden sich GS1 und das EECC voraussichtlich mit 2 Konsortien als
 Konsortailpartner um Förderung bewerben, um die in diesem Bericht
@@ -1032,17 +1037,30 @@ by GS1 Identen mittels SSI Technologie wie in
 
 Das 
 https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_ssi.html[Self Sovereign Identity für Deutschland]
-Konsortium hat neben Personen- auch Firmen-Idente und DInge im
+Konsortium hat neben Personen- auch Firmen-Idente und Dinge im
 Blick. Während viele SSI Umsetzungen allein auf Personen fokussieren
 liegt gerade in der Anwendung der Technologie zur sicheren
 Identifizierung und Authentifizierung von juristischen Personen und
 Dingen, insbesondere im IoT Kontext, eine große Chance für GS1. Hier
 ist die Technologie in hinreichendem Reifegrad verfügbar und es sind
-noch keine starken Konkurenten am Markt etabliert. ZUdem stellt die
-übertragung der bestehenden Idente in die SSI Welt eine natürliche
+noch keine starken Konkurenten am Markt etabliert. Zudem stellt die
+Übertragung der bestehenden Idente in die SSI Welt eine natürliche
 Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
-GS1 dar. Gleiches gilt für die Zertifizierung von Stammdaten für deren
+GS1 dar. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
 vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
+
+Im
+https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_id-ideal.html[ID-Ideal]
+Konsortium der Schaufensterregion um die Hochschule Mittweida sollen
+insbesondere auf SSI Technologie basierende Businessmodelle im Bereich
+der Datenökonomie entwickelt werden.
+Die weiterentwicklung bestehender Treuekarten und Punkte Systeme
+mittels SSI Technologie ermöglicht es Kundendaten in einer Detailtiefe
+und QUalität zu erschließen, wie dies sonst nur im online Handel
+möglich ist. Gleichzeitig bietet die SSI Technologie die Möglichkeit
+den Kunden ihre Datenhoheit zurückzugeben und sie fair und transparent
+am Geschäft mit den eigenen Daten zu beteiligen. Die etablierten
+Idente von GS1 im Handel werden hierbei eine wichtige Rolle spielen.
 
 
 Auf Basis der in den Forschungsprojekten auszuarbeitenden
@@ -1050,6 +1068,8 @@ grundlegenden Infrastruktur an sicheren Certified IDs können eine
 vielzahl von Use Cases innerhalb der Förderprojekte und darüber hinaus
 umgesetzt weden, insbesondere die in <<sec_use_cases>> vorgestellten.
 
+
+==== Strategische Ausrichtung
 
 Wichtige Strategische Fragen, etwa ob und wie GS1 die Überprüfung von
 Unternehmensstammdaten, z.B. konkret digitale Beglaubigung von
