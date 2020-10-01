@@ -701,7 +701,7 @@ In unserem Microgrid-Anwendungsfall ergeben sich zwei wesentliche Anwendungsfäl
 Anlagen untereinander, also Machine-to-Machine oder M2M Kommunikation:
 
 
-===== Statische Informationen
+==== Statische Informationen
 
 Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage
 charakterisieren. Dies können z.B. sein
@@ -724,11 +724,16 @@ derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. Werden d
 ein digitales Kommunikationsprotokoll übertragen, könnte man von einem digitalen Typenschild sprechen.
 
 [[eku-static]]
-.In der Demo wird die Nutzung statischer Daten, konkret eines digitalen Typenschildes, so wie der Problemfall manipulierter Daten dargestellt
-image::demo-screenshots/1-intro.png[]
+.In der Demo wird die Nutzung statischer Daten, konkret eines digitalen Typenschildes, dargestellt
+image::demo-screenshots/2-rental.png[]
+
+[[eku-static-hacked]]
+.Der Problemfall manipulierter statischer Daten wird ebenfalls aufgezeigt
+image::demo-screenshots/3-outage.png[]
 
 
-===== Dynamische Informationen
+[[sec_eku-dynamic]]
+==== Dynamische Informationen
 
 Neben den statischen Informationen über die Anlage entstehen während ihres Betriebs weitere Daten, die für
 andere Teilnehmer im Netzwerk interessant sein können. So z.B.
@@ -744,7 +749,16 @@ Diese Informationen entstehen erst während des Betriebs und verändern sich - a
 Anwendung - z.B. im Bereich von einigen 10ms.
 
 
-==== Verschiedene Dienstleister und Hersteller, Rekonfiguration
+[[eku-dynamic]]
+.Die Nutzung dynamischer Daten wird als Use Case präsentiert
+image::demo-screenshots/5-dynamic.png[]
+
+[[eku-dynamic-hacked]]
+.Manipulierte Daten werden problematisiert
+image::demo-screenshots/6-hacked.png[]
+
+
+==== Dynamische Rekonfiguration von Systemen verschiedener Dienstleister und Hersteller
 
 Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier
 arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel je nach Einsatzplan von
@@ -770,6 +784,11 @@ Veränderung schützen. Durch geeignete Mittel (z.B. dynamische oder challenge/r
 Typenschild (in Verbindung mit entsprechend gesicherter Elektronik) außerdem als Schutz gegen Plagiate
 eingesetzt werden.
 
+[[eku-certified]]
+.Vom Hersteller signierte digitale Typenschilder können nicht manipuliert werden und das in <<eku-static-hacked>> dargestellte Angriffszenario wird verhindert
+image::demo-screenshots/4-certified-dtls.png[]
+
+
 ===== Dynamische Daten
 
 um das Einschleusen von unerwünschter / schädlicher Informationen in die verteilten Regelsysteme zu vermeiden,
@@ -777,6 +796,47 @@ kann ein am Prozess beteiligtes Steuergerät seine komplette Kommunikation elekt
 die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufende Sequenznummern innerhalb
 der signierten Daten vereiteln außerdem Replay-Attacken.
 
+
+[[eku-certified-dynamic]]
+.Signierte dynamische Daten können auch in einer unsicheren Umgebung fälschungssicher übertragen werden und der in <<eku-dynamic-hacked>> dargestellte Angriff wird verhindert
+image::demo-screenshots/7-certified-dynamic.png[]
+
+
+=== Pay per User
+
+Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Businessmodelle, in denen nicht mehr
+die Geräte oder Maschinen direkt verkauft oder auf Zeit verliehen
+werden, sondern der Nutzen, den der Anwender durch diese erzielt, direkt
+bepreist wird. In solchen "Pay per Use" oder "as a Service" Modellen
+werden alle nötigen Voraussetzungen, wie Maschinen und Betriebsmittel,
+die der Nutzer braucht um den gewünschten Nutzen zu erzielen, zur
+Verfügung gestellt. Wichtig ist bei den zugrundelegenden Business
+Modellen immer, eine präzise und vor allem eine für alle beteiligten
+vertrauenswürdige Messung der Parameter (KPIs) auf denen die Berechnung der
+Kosten eines solchen Service beruht.
+
+Aufgrund der eingesetzten Sensorik und automatisierten
+Datenübertragung und Abwicklung, ggF. bis in die Abrechnung, handelt
+es sich hier um IoT Use Cases, die ein hohes maß an Sicherheit
+verlangen um eine Chance auf Akzeptanz am Markt zu haben.
+
+Dieser Use Case kann als ein Spezialfall der in <<sec_eku-dynamic>>
+thematisierten Übertragung dynamischer Daten in einem allgemeineren
+Kontext gesehen werden. Haben die zur Berechnung der
+KPIs eingesetzten Sensoren, z.B. Watt-Meter zur Messung der vom
+Generator erzeugten Leistung, eine ID Certified by GS1, so kann der
+entsprechende auf dem Gerät hinterlegte private Schlüssel zur Signatur
+der Daten genutzt werden. Die Überprüfung der korrekten Funktion des
+Sensors, etwa durch eine zertifizierte Eichung, kann ebenfalls über an
+die Certified ID gebundene digitale Zertifikate abgebildet
+werden. Auf diese Art und Weise werden die Daten eines Sensor
+manipulationssicher und vertrauenswürdig und können als
+Berechnungsgrundlage für den Preis in einem Pay per Use Modell dienen.
+
+
+[[eku-pay-per-use]]
+.Auch der Pay per Use Anwendungsfall wird in der Demo thematisiert
+image::demo-screenshots/8-pay-per-use.png[]
 
 
 
