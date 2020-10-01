@@ -346,8 +346,8 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 
 
-
-== Anwendungfälle
+[[sec_use_cases]]
+== Anwendungsfälle
 
 === Verified by GS1
 
@@ -931,7 +931,7 @@ image::Certificate-Chain-EECC.png[]
 
 
 
-
+[[sec_ssi_implementation]]
 === Verteilte Zertifikate Infrastruktur - Self Sovreign Identity (SSI)
 
 Im Rahmen des Certified by GS1 Projektes wurde ein Prototypisches
@@ -999,25 +999,9 @@ ausstellen abgebildet wird.
 image::certified-gs1-ids.png[]
 
 
-==== Certified by GS1 Idente in SSI für Deutschland
 
-
-- Rahmen: Förderprojekt
-** Schaufenster Digitale ID
-** SSI Entwicklungen in DE/Weltweit
-** *Hier oder in Einleitung?*
-
-- Konkretes Projekt 
-** Use Cases
-
-
-
-
-
-
-
-
-== Zusammenfassung der Projektergebnisse [4 Seiten]
+[[sec_conclusion]]
+== Fazit
 
 === Lessons Learned
 
@@ -1027,13 +1011,53 @@ image::certified-gs1-ids.png[]
 **Mayra**
 
 
+[[sec_next_steps]]
+=== Next Steps 
 
-=== Produktentwicklung/ Next Steps (Intern?)
+[CAUTION]
+--
+<<sec_next_steps>> bleibt GS1 (Germany?) Intern?
+--
 
-** Next steps für begonnene Cases
 
-** Alternative wege
+==== Umsetzung von Certified by GS1 in aktuellen SSI Netzwerken/Projekten
 
+In der aktuellen Ausschreibung des BMWi mit dem Titel
+https://www.digitale-technologien.de/DT/Navigation/DE/ProgrammeProjekte/AktuelleTechnologieprogramme/Sichere_Digitale_Identitaeten/sichere_digitale_ident.html[Schaufenster Sichere Digitale Identitäten]
+werden sich GS1 und das EECC voraussichtlich mit 2 Konsortien als
+Konsortailpartner um Förderung bewerben, um die in diesem Bericht
+vorgestellten Konzepte weiterzuentwickeln, insbesondere die Implementierung von Certified
+by GS1 Identen mittels SSI Technologie wie in
+<<sec_ssi_implementation>> beschrieben.
+
+Das 
+https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_ssi.html[Self Sovereign Identity für Deutschland]
+Konsortium hat neben Personen- auch Firmen-Idente und DInge im
+Blick. Während viele SSI Umsetzungen allein auf Personen fokussieren
+liegt gerade in der Anwendung der Technologie zur sicheren
+Identifizierung und Authentifizierung von juristischen Personen und
+Dingen, insbesondere im IoT Kontext, eine große Chance für GS1. Hier
+ist die Technologie in hinreichendem Reifegrad verfügbar und es sind
+noch keine starken Konkurenten am Markt etabliert. ZUdem stellt die
+übertragung der bestehenden Idente in die SSI Welt eine natürliche
+Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
+GS1 dar. Gleiches gilt für die Zertifizierung von Stammdaten für deren
+vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
+
+
+Auf Basis der in den Forschungsprojekten auszuarbeitenden
+grundlegenden Infrastruktur an sicheren Certified IDs können eine
+vielzahl von Use Cases innerhalb der Förderprojekte und darüber hinaus
+umgesetzt weden, insbesondere die in <<sec_use_cases>> vorgestellten.
+
+
+Wichtige Strategische Fragen, etwa ob und wie GS1 die Überprüfung von
+Unternehmensstammdaten, z.B. konkret digitale Beglaubigung von
+Handelsregisterauszügen, als Service anbieten möchte sind auf
+Management Ebene zu klären. Jenseits der technischen Konzepte und
+Anwendungsfälle muss ein Business Konzept für Certified Idente und
+Stammdaten Zertifikate entwickelt werden bevor an eine Markteinführung
+zu denken ist.
 
 
 [bibliography]
