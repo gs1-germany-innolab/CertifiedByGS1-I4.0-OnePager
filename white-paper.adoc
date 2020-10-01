@@ -51,13 +51,11 @@ Hier oder Einfügung
 [[Intro]]
 == Einführung
 
-In diesem White Paper werden verschiedene Konzepte rund um digitale Signaturen und Zertifikate erläutert, was sie in der Welt der GS1-Standards bedeuten und warum dies die Zukunft unserer Idente ist.
+Das vorliegende White Paper soll verschiedene Konzepte rund um digitale Signaturen und Zertifikate erläuteren und darstellen was sie in der Welt der GS1-Standards bedeuten und warum sie für die Zukunft unserer Idente wichtig sind.
 
-Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, haben Sie bitte keine Angst, wir haben dieses White Paper geschrieben, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Sie in diese spannende Welt einzuführen.
+Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, sind Sie dennoch eingeladen weiterzulesen, wir nutzen dieses White Paper auch, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Sie in diese spannende Welt einzuführen. Sollten Sie dahingehend bereits ein breites Wissen haben, dürfen Sie das Kapitel 2 gerne überspringen. Denn in diesem erhalten Sie einen Überblick über wichtige theoretische Konzepte für das weitere Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des Projekts entwickelt haben. In den darauf folgenden Abschnitten dieses Dokuments bieten wir Einblicke in die technische Umsetzung interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme unter Verwendung der GS1-Standards.
 
-In diesem Paper erhalten Sie einen Überblick über wichtige theoretische Konzepte für das weitere Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des Projekts entwickelt haben. In der zweiten Hälfte dieses Dokuments erhalten Sie wichtige Einblicke in die technische Umsetzung interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme unter Verwendung der GS1-Standards.
-
-Es war und bleibt eine aufregende und herausfordernde Reise, bei der wir alle gelernt, neue Dinge ausprobiert und unsere Komfortzone verlassen haben. 
+Es war und bleibt eine aufregende und herausfordernde Reise, bei der wir gelernt, neue Dinge ausprobiert und unsere Komfortzone verlassen haben. 
 
 
 Das Certified by GS1 Team
@@ -73,7 +71,7 @@ Das Certified by GS1 Team
 
 
 === Problemstellung
-Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem der vertrautesten - und vielleicht am meisten gehypten - Begriffe in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ist wie ein wilder Dschungel voller Lösungen unterschiedlicher Preise, Kosten und Qualität, bei denen Verbraucher und Nutzer völlig verloren gehen. Die Vielfalt ist unglaublich, und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
+Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem vertrauten - und vielleicht zum am meisten gehypten - Begriff in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ähnelt einem Labyrinth voller Angebote und Lösungen, in dem Verbraucher und Nutzer oft verloren sind. Die Vielfalt der angebotenen Möglichkeiten ist scheinbar ohne Grenzen und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
 
 Laut Gartner Research wird es bis 2020 rund 20 Milliarden Dinge geben, die mit dem Internet verbunden sind. Bei diesen "Dingen" handelt es sich nicht um Allzweckgeräte wie Smartphones und PCs, sondern um Objekte mit speziellen Funktionen wie Verkaufsautomaten, Düsentriebwerke, vernetzte Autos und unzählige andere Beispiele.
 
@@ -957,6 +955,8 @@ image::certified-gs1-ids.png[]
 
 - [[[acatech]]] Wandlungsfähige, menschzentrierte Strukturen in Fabriken und Netzwerken der Industrie 4.0 (acatech Studie), München: Herbert Utz Verlage 2018. https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/hm-2018-fb-wandlung.html
 - [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
+- [[[gleif]]] GLEIF und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
+- [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
 - [[[szenarien-i40]]] Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0 https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
 - [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
