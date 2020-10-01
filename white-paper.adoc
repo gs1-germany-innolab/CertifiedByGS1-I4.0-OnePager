@@ -53,13 +53,12 @@ Hier oder Einfügung
 
 In diesem White Paper werden verschiedene Konzepte rund um digitale Signaturen und Zertifikate erläutert, was sie in der Welt der GS1-Standards bedeuten und warum dies die Zukunft unserer Idente ist.
 
-Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, haben Sie bitte keine Angst, wir haben dieses White Paper geschrieben, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Ihnen in diese spannende Welt einzuführen.
+Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, haben Sie bitte keine Angst, wir haben dieses White Paper geschrieben, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Sie in diese spannende Welt einzuführen.
 
-In diesem Paper erhalten Sie einen Überblick über wichtige theoretische Konzepte für das weitere Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des Projekts entwickelt haben. In der zweiten Hälfte dieses Dokuments erhalten Sie wichtige Einblicke in die technische Umsetzung interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme mit der Verwendung der GS1-Standards.
+In diesem Paper erhalten Sie einen Überblick über wichtige theoretische Konzepte für das weitere Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des Projekts entwickelt haben. In der zweiten Hälfte dieses Dokuments erhalten Sie wichtige Einblicke in die technische Umsetzung interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme unter Verwendung der GS1-Standards.
 
-Es war eine aufregende und herausfordernde Reise, bei der wir alle gelernt, neue Dinge ausprobiert und unsere Komfortzone verlassen haben.
+Es war und bleibt eine aufregende und herausfordernde Reise, bei der wir alle gelernt, neue Dinge ausprobiert und unsere Komfortzone verlassen haben. 
 
-Wir hoffen, dass Sie beim Lesen genauso viel Zeit haben, wie wir beim Schreiben hatten!
 
 Das Certified by GS1 Team
 
@@ -343,56 +342,55 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 ==== Problem
 
 Die Fälschung von GS1 Identen an sich ist u.A. für Marktplätze wie
-Amazon ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt um
+Amazon ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt, um
 verschiedene Angebote zu gleichen Artikeln zu aggregieren und die
-echtheit der angebotenen Produkte sicherzustellen. Eine rein
+Echtheit der angebotenen Produkte sicherzustellen. Eine rein
 syntaktische Prüfung der Nummern auf z.B. korrekte Länge oder gültige
 Prüfziffer kann jedoch einfach umgangen werden und es tauchen
-regelmäßig regelmäßig Angebotsduplikate unter gefälschten
+regelmäßig Angebotsduplikate unter gefälschten
 Artikelnummern auf.
 
 ==== Existierende Lösungsansätze
 
-Ein Abgleich mit bei GS1 registrierten Artikel Stammdaten über die online
+Ein Abgleich mit bei GS1 registrierten Artikel-Stammdaten über die Online
 Services von GS1 Germany, wie Gepir <<gepir>> bzw. den GTIN Manager
 <<gtin-manager>> oder auch die Artikelstammdaten-Datenbank von GS1 Global (GS1
 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier
-Abhilfe schaffen. Eine solche online Abfrage stellt zum einen sicher, dass das
+Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das
 Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen,
-dass die Artikelbeschreibung mit den Hinterlegten Stammdaten in Einklang steht.
+dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht.
 Diese Überprüfung ist aktuell, je nach Service, manuell per Web-UI und/oder
 automatisiert per API möglich.
 
 ==== Verbesserungspotential durch Certified
 
-Nachteile an der aktuellen Lösung sind zum einen die Veröffentlichung
-der Idente und Stammdaten über eine Zentrale Datenbank. Hier gibt der
-Idente Inhaber die Datenhoheit aus der Hand und es gibt einen
-Zentralen Angriffspunkt bzw. Single Point of Failure.  Weiterhin kann
+Ein Nachteil an der aktuellen Lösung ist die Veröffentlichung
+der Idente und Stammdaten über eine zentrale Datenbank. Hier gibt der
+Identeinhaber die Datenhoheit aus der Hand und es gibt damit einen
+zentralen Angriffspunkt bzw. Single Point of Failure.  Weiterhin kann
 eine Überprüfung der Idente nur online und, je nach Service, nur durch
 entsprechend berechtigte/bezahlende Kunden erfolgen. Konkret steht
-etwa Verified by GS1 nur den GS1 Germany Kunden zur Verfügung.
-Schließlich wird die Korrektheit der Daten nur über das Vertrauen in
+etwa "Verified by GS1" nur den GS1 Germany Kunden zur Verfügung.
+Außerdem wird die Korrektheit der Daten nur über das Vertrauen in
 die Transportverschlüsselung (TLS) bei der Abfrage und die Identität
 des Servers, der die Daten bereit stellt, gesichert. Die Daten selbst
 sind in den aktuellen Konzepten nicht authentifiziert und es gibt
 keinen direkten Link zum Herausgeber.
 
 
-Certified by GS1 versetzt den Basisnummer-Inhaber in die Lage selbst
-Zertifikate für die von ihm Erstellten Idente und Masterdaten zu
+Die Umsetzung von "Certified by GS1" versetzt den Basisnummer-Inhaber in die Lage selbst
+Zertifikate für die von ihm erstellten Idente und Masterdaten zu
 signieren. Diese können über beliebige Kanäle weitergegeben werden,
-insbesondere wie bisher über zentrale Repositories, aber auch direkt
-an die relevanten Partner ohne dass dritte Einsicht erhalten oder ein
-Zentraler Angriffspunkt entsteht.  Die Gültigkeit der
+wie bisher über zentrale Repositories, aber auch direkt
+an die relevanten Partner, ohne dass dritte Einsicht erhalten oder ein
+zentraler Angriffspunkt entsteht.  Die Gültigkeit der
 Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von
 GS1, kann uneingeschränkt und offline überprüft werden.
 
-Vor allem wird durch die digitale Signatur und die entsprechenden
-Zertifikate die Integrität der Daten unabhängig vom Übertragungskanal
-sichergestellt. Der Überprüfer kann so sicher sein, dass ein Ident in
-der Tat vom authorisierten Basisnummern-Inhaber vergeben wurde und
-damit ein legitimes GS1 Ident ist, allein basierend auf den signierten Daten. Eine direkte Signatur der
+Durch die digitale Signatur und die entsprechenden
+Zertifikate wird vor allem die Integrität der Daten unabhängig vom Übertragungskanal
+sichergestellt. Der Überprüfer kann somit darauf vertrauen, dass ein Ident vom authorisierten Basisnummern-Inhaber vergeben wurde und
+damit ein legitimes GS1 Ident ist. Eine direkte Signatur der
 Masterdaten durch den legitimen Herausgeber bietet bestmöglichen
 Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten
 auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
@@ -406,43 +404,43 @@ auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikat
 
 Vertrauenswürdige Daten zu Unternehmen sind für digitale
 Handelsbeziehungen ebenso wichtig, wie die vertrauenswürdige
-authentifizierung realer Personen und ihrer Daten im online Handel,
-oder allgemeiner bei digitalen Vertragsabschlüssen. Entsprechend einem
-digitalen Ident mit ähnlicher vertrauenswürdigkeit wie dem
-Personalausweis benötiget ein Unternehmen möglicherweise einen digital
+Authentifizierung realer Personen und ihrer Daten im Online-Handel,
+oder - allgemeiner - bei digitalen Vertragsabschlüssen. Entsprechend einem
+digitalen Ident, mit ähnlicher Vertrauenswürdigkeit wie dem
+Personalausweis, benötigt ein Unternehmen möglicherweise einen digital
 beglaubigten Handelsregisterauszug um sich zu authentifizieren und die
 Legitimität eines Rechtsgeschäfts zu beweisen.
 
-Bei der Vergabe einer GS1 Company Prefix (GCP) und damit eines
-Nummernkreises an ein Unternehmen vergibt die GS1 normalerweise auch
+Bei der Vergabe eines GS1 Company Prefix (GCP) und damit eines
+Nummernkreises an ein Unternehmen vergibt die GS1 auch
 eine (Party) GLN zur Identifikation des Unternehmens selbst und
-erfasst daten zum Unternehmen, wie Name, Rechtsform, Hauptsitz, u.A.
+erfasst Daten zum Unternehmen wie Name, Rechtsform, Hauptsitz, u.a.
 
 Basierend auf einer kritischen Überprüfung der vom Unternehmen
-angegebenen Daten, wie diese z.B. bei der LEI vergabe durch GS1
-Germany aktuell bereits stattfindet, kann GS1 die echt heit solcher
+angegebenen Daten, wie diese z.B. bei der LEI-Vergabe durch GS1
+Germany aktuell bereits stattfindet, kann GS1 die Echtheit solcher
 Unternehmensstammdaten zertifizieren.
 Die Vorlage vertrauenswürdig zertifizierter Daten erspart den
 Vertragspartnern dieses Unternehmens künftig, diese Überprüfung selbst
-durchführen zu müssen und ermöglicht so shcneller und einfacher mit
+durchführen zu müssen und ermöglicht so schneller und einfacher mit
 dem Unternehmen in eine Rechtsbeziehung zu treten.
 
 
 ==== Supplier Onboarding
 
-Ein Konkreter Use Case basierend auf Unternehmensstammdaten ist das
-Supplier Onboarding. WIll ein Hersteller einen Zulieferer neu
-aufnehmen, so ist dies je nach Industriezweig typischerweise mit
-erheblichem Aufwand verbunden, worunter die flexibilität der
+Ein konkreter Use Case basierend auf Unternehmensstammdaten ist das
+Supplier Onboarding. Will ein Hersteller einen neuen Zulieferer in seine Systeme aufnehmen, 
+so ist dies je nach Industriezweig typischerweise mit
+erheblichem Aufwand verbunden, worunter die Flexibilität der
 Handelsbeziehungen leidet.
-Wärend bestimmte Hersteller spezifische Audits möglicherweise
-unumgänglich und gewünscht sind ließe sich ein erheblicher Teil der
+Während für bestimmte Hersteller spezifische Audits möglicherweise
+unumgänglich und gewünscht sind, ließe sich ein erheblicher Teil der
 papierbasierten Prüfung von Unternehmensdaten, Zulassungen und
-klassischen standardisierten Zertifizierungen, auf der Basis einer
+klassischen standardisierten Zertifizierungen, auf Basis einer
 Vertrauensinfrastruktur digitalisieren und automatisieren.
 
-Vertrauenswürdige Unternehmenidente Certified by GS1 und ein
-Grundstock an unternehmensstammdaten, der von GS1 Überprüft und
+Vertrauenswürdige Unternehmensidente certified by GS1 und ein
+Grundstock an Unternehmensstammdaten, der von GS1 Überprüft und
 zertifiziert wird, haben das Potential die Grundlage einer solchen
 Vertrauensinfrastruktur zu bilden.
 
@@ -545,7 +543,7 @@ image::Parts-Certified.png[IDs certified by GS1 - Vertrauen]
 Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
 gängigen Verschlüsselung der Kommunikation über das Internet, ein gesicherter
 Kommunikationskanal aufgebaut werden. So können z.B. Messdaten oder
-Steuerbefehle übertragen werden, ohne dass diese von dritten gefälscht werden
+Steuerbefehle übertragen werden, ohne dass diese von Dritten gefälscht werden
 können.
 
 
@@ -559,11 +557,11 @@ effizienter gestaltet werden können, indem die eingesetzten Ressourcen gezielt
 für den eigentlichen Prozess eingesetzt werden und der Ressourceneinsatz für
 nicht prozessrelevante Vorgänge weitestgehend eliminiert wird. Hierbei
 konzentriert sich EKU vorwiegend auf ortsveränderliche bzw. mobile Anlagen. Also
-Systeme die nicht an einem festen Ort installiert arbeiten, sondern bei denen
+Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
 regelmäßige Standortwechsel und Rekonfiguration zum normalen Betrieb gehören.
 Mit dem Engine Standby Controller (ESC) bietet EKU ein Start-Stopp-System an,
 das den Leerlaufbetrieb von mobil eingesetzte Großmotoren (Leistungsklasse ca. 1
-- 3 MW) auf nahezu Null bringen und somit neben der Einsparung von Kraftstoff
+- 3 MW) auf nahezu Null bringen kann und somit neben der Einsparung von Kraftstoff
 und Emissionen auch deutliche Einsparungseffekte durch Reduzierung der
 Betriebsstunden der eingesetzten Motoren erzielt. Dadurch ergeben sich
 verringerte Kosten durch Wartung und Ausfälle, sowie eine längere Lebensdauer
@@ -571,10 +569,10 @@ der Aggregate. Das ESC System wird als Nachrüstlösung für bestehende Anlagen
 angeboten. Eine der wesentlichen Herausforderungen in diesen Systemen ist die
 ständige Anpassung an veränderte Umgebungsbedingungen. Zeitintensive, manuelle
 Konfigurationsarbeit muss hierbei durch den konsequenten Einsatz von
-intelligenter, vernetzter Automatisierungstechnik vermeiden werden, um die
+intelligenter, vernetzter Automatisierungstechnik vermieden werden, um die
 Akzeptanz und Praxistauglichkeit der Systeme nicht zu gefährden. Während das ESC
 System sich bisher im Wesentlichen auf die Optimierung einer einzelnen mobilen
-Einheit beschränkt, steckt in der Anlagenübergreifenden Optimierung des
+Einheit beschränkt, steckt in der anlagenübergreifenden Optimierung des
 Energieeinsatzes im Gesamtprozess nochmal deutliches Potenzial, das mit einer
 verteilten Lastregelung ausgeschöpft werden soll.
 
@@ -587,9 +585,9 @@ wechseln regelmäßig ihren Standort, dabei kann es auch vorkommen, dass sie
 längere Zeit keine Datenverbindung zur Außenwelt aufbauen können, wenn sie - wie
 z.B. im Fall von Baumaschinen zur Erschließung von Öl- und Gasquellen - in dünn
 besiedelten Regionen eingesetzt werden. Alle Funktionen des SOPHIA Systems
-müssen also darauf ausgelegt sein ständig rekonfiguriert zu werden auch längere
+müssen also darauf ausgelegt sein ständig rekonfiguriert zu werden und auch längere
 Zeit ohne Datenverbindung zur Außenwelt alle wesentlichen Funktionen
-bereitstellen zu können Die SOPHIA Platform dient als Basis für diverse
+bereitstellen zu können. Die SOPHIA Platform dient als Basis für diverse
 Anwendungen, die EKU individuell auf den Anwendungsfall des Kunden zuschneidet.
 Hierzu gehören z.B. Monitoring-Systeme, die während des Betriebs der Anlagen im
 Feld Daten sammeln, die zur Bereitstellung von Leistungsindikatoren für das
