@@ -877,6 +877,8 @@ image::certified-gs1-ids.png[Certified VC issueing]
 
 - [[[acatech]]] Wandlungsfähige, menschzentrierte Strukturen in Fabriken und Netzwerken der Industrie 4.0 (acatech Studie), München: Herbert Utz Verlage 2018. https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/hm-2018-fb-wandlung.html
 - [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
+- [[[gleif]]] GLEIF und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
+- [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
 - [[[szenarien-i40]]] Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0 https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
 - [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
