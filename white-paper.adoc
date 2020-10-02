@@ -116,11 +116,51 @@ Sicherheits- und vor allem Vertrauens-Fragen zu verhindern.
 
 
 
-===  GS1 USP für die Lösung
-Als not-for-profit Standarisierungsorganisation, hat GS1 die Aufgabe globale Geschäftstandards zu entwickleln und pflegen. GS1 ist eine neutrale und vertrauenswürdige Organisation und eine etablierte issuing agency von Geschäfts- und Produktidente, als auch von nicht-digitale Zertifikate. Wenn nicht wir, wer noch? (noch nicht fertig)
+=== Warum GS1?
+
+GS1 ist eine etablierte Institution zur Vergabe von Nummernkreisen
+(Namensräumen) für Idente, insbesondere Geschäfts- und Produktidente.
+In diesem Sinne erfüllt die GS1 bereits die Rolle einer "Issuing
+Agency".  In Certified by GS1 wurden Konzepte entwickelt, die in in
+der Vergabe von Sicherheitsmerkmalen (Zertifikaten) strukturell dem
+bestehenden Vergabesystem für Idente entsprechen.
+
+GS1 vergibt (in der Regel) keine einzelnen Idente, sondern Kunden
+erwerben das Recht, selbst eine bestimmte Menge von
+Identen zu vergeben.
+Dieses Sytem wird im Rahmen von Certified by GS1 auch für die 
+Sicherheitsmerkmale und damit die authentifizierten Idente umgesetzt, so dass ein Kunde die
+bisherigen Prozesse zur Vergabe von Identen strukturell beibehalten
+und um die Sicherheits- und Authentifizierungsfunktion für die selbst
+erzeugten Idente erweitern kann.
+
+Gerade im Bereich des IoT, in dem jedes Gerät nicht nur ein serielles
+Ident, z.B. eine SGTIN, benötigt, sondern auch die Möglichkeit, sich
+individuell gegenüber anderen Geräten zu authentifizieren und mit
+diesen eine vertrauenswürdige und abhörsichere Verbindung aufzubauen,
+stellt die Möglichkeit solche "Certified" Idente selbst erzeugen zu
+können einen großen Vorteil für den Hersteller dar, gegenüber einem
+System bei dem jedes Ident und die zugehörigen Sicherheitsmerkmale
+einzeln bei einer zentralen Plattform erworben werden müssen.
 
 
+Als not-for-profit Standarisierungsorganisation, erfüllt GS1 die Aufgabe
+globale Geschäftstandards zu entwickleln und zu pflegen. GS1 ist eine
+neutrale und vertrauenswürdige Organisation. Diese Rolle als
+Vertrauensanker und neutrale Platform ermöglicht es GS1, Partner und
+Konkurrenten zu gemeinsamen Projekten, insbesondere im Bereich der
+Standardisieurung, zusammen zu bringen.
+Sie prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikate
+Infrastruktur, insbesondere wenn diese auf der authentifizierung der
+GS1 eigenen Idente beruht. 
 
+Des weiteren ist GS1 bereits heute in vielen Branchen Dreh- und
+Angelpunkt für mit den Identen assoziierte Stammdaten. Die
+Authentifizierung dieser Stammdaten über digitale Signatur basierend
+auf den Zertifikaten der Certified Idente ermöglicht eine noch weit
+größere Vielzahl von Anwendungsfällen zusätzlich zur authentifizierung
+der Idente selbst und liegt in einem Bereich in dem GS1 bereits
+vielfach aktiv und anerkannt ist.
 
 
 
