@@ -518,10 +518,10 @@ unautorisierter Zugriff über das Internet erfolgen kann.
 
 .ToDo
 [IMPORTANT]
-===============================
+--
 - Diesen Abschnitt mit <<Intro>> abgleichen
 - ggF Inhalte dorthin verschieben
-===============================
+--
 
 Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company
 Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs
@@ -1008,11 +1008,7 @@ image::certified-gs1-ids.png[]
 == Fazit
 
 === Lessons Learned
-
-*Anna* -> Umfrage -> IIoT
-
-
-
+Im Zusammenhang mit den im Vorfeld durchgeführten Umfragen, sowohl per Fragebogen als auch per individuellen Interviews, erhielt GS1 Germany eindeutige Aussagen im Industrie 4.0 Umfeld. Bis zum heutigen Zeitpunkt nehmen Cloud-Lösungen und offene Netzwerke in der Industrie noch keinen großen Stellenwert ein. Inselnetzwerke werden bevorzugt und OPC-UA ist überwiegend Zukunftsmusik. Jedoch wurde uns allgemein die Relevanz von eindeutigen sicheren IDs für Maschinen bestätigt. Bisher arbeitet der Maschinenbau mit proprietären Identen und war nicht gezwungen sich mit der Thematik auseinander zu setzen. Im Ausblick sehen alle Befragten aber die Wichtigkeit der digitalen Idente und Zertifikate und sprechen sich für die Certified by GS1 Idee aus, mit dem Hinweis, dass für die Industrie Plug-and-Play-Lösungen bevorzugt werden.
 
 === Business Opportunities (Extern)
 
@@ -1023,9 +1019,9 @@ image::certified-gs1-ids.png[]
 === Next Steps 
 
 [CAUTION]
---
+===
 <<sec_next_steps>> bleibt GS1 (Germany?) Intern?
---
+===
 
 
 ==== Umsetzung von Certified by GS1 in aktuellen SSI Netzwerken/Projekten
@@ -1107,5 +1103,9 @@ Online Ressourcen (Stand September 2020):
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 
-
+- [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
+- [[[ssi]]] https://hpd.de/artikel/self-sovereign-identities-helfen-internet-reparieren-17150
+- [[[ssi-am]]] https://digitaleweltmagazin.de/2019/08/12/chancen-der-self-sovereign-identities-ssi-aus-sicht-von-unternehmen-fuer-das-identity-access-management-iam/
+- [[[ssi-zukunft]]] https://www.validatedid.com/de/self-sovereign-identity-die-zukunft-steht-vor-der-tuer/ 
+- [[[ssi-bitkom]]] https://www.bitkom.org/Bitkom/Publikationen/Self-Sovereign-Identity-Use-Cases
 
