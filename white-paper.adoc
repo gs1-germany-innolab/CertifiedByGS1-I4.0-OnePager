@@ -1004,7 +1004,7 @@ image::certified-gs1-ids.png[]
 == Fazit
 
 === Lessons Learned
-
+Im Zusammenhang mit den im Vorfeld durchgeführten Umfragen, sowohl per Fragebogen als auch per individuellen Interviews, erhielt GS1 Germany eindeutige Aussagen im Industrie 4.0 Umfeld. Bis zum heutigen Zeitpunkt nehmen Cloud-Lösungen und offene Netzwerke in der Industrie noch keinen großen Stellenwert ein. Inselnetzwerke werden bevorzugt und OPC-UA ist überwiegend Zukunftsmusik. Jedoch wurde uns allgemein die Relevanz von eindeutigen sicheren IDs für Maschinen bestätigt. Bisher arbeitet der Maschinenbau mit proprietären Identen und war nicht gezwungen sich mit der Thematik auseinander zu setzen. Im Ausblick sehen alle Befragten aber die Wichtigkeit der digitalen Idente und Zertifikate und sprechen sich für die Certified by GS1 Idee aus, mit dem Hinweis, dass für die Industrie Plug-and-Play-Lösungen bevorzugt werden.
 
 === Business Opportunities (Extern)
 
