@@ -69,7 +69,7 @@ Anwendungsfälle, die im Rahmen des Projektes bearbeitet wurden und
 
 
 
-=== Problemstellung
+=== Warum Certified?
 
 Bei jeder Form der Kommunikation, sei es B2B oder B2C, Mashine to
 Mashine oder unter menschlicher Beteiligung, analog oder digital,
@@ -115,7 +115,7 @@ wird, um Digitalisierung und Automatisierung nicht durch
 Sicherheits- und vor allem Vertrauens-Fragen zu verhindern.
 
 
-
+[[sec_usp]]
 === Warum GS1?
 
 GS1 ist eine etablierte Institution zur Vergabe von Nummernkreisen
@@ -123,7 +123,9 @@ GS1 ist eine etablierte Institution zur Vergabe von Nummernkreisen
 In diesem Sinne erfüllt die GS1 bereits die Rolle einer "Issuing
 Agency".  In Certified by GS1 wurden Konzepte entwickelt, die in in
 der Vergabe von Sicherheitsmerkmalen (Zertifikaten) strukturell dem
-bestehenden Vergabesystem für Idente entsprechen.
+bestehenden Vergabesystem für Idente entsprechen. In
+<<sec_cert_chain>> wird dieser Punkt detaillierter erläutert.
+
 
 GS1 vergibt (in der Regel) keine einzelnen Idente, sondern Kunden
 erwerben das Recht, selbst eine bestimmte Menge von
@@ -166,39 +168,155 @@ vielfach aktiv und anerkannt ist.
 
 
 
-===  Begriffserklärungen
+=== Grundlegende Begriffe und Konzepte
+
+Eine Umfassende und didaktisch ausgereifte Einführung aller für das
+Verständnis der Certified by GS1 nötigen Grundlagen ist jenseits der
+Zielsetzung und des Umfangs dieses papers. Nichtsdestotrotz werden in
+diesem Abschnitt einige Grundlegende Begriffe aus der Welt der GS1
+Idente so wie der digitalen Zertifikate eingeführt um
+Missverständnisse bei den verwendeten Begriffen zu vermeiden. Verweise
+auf weiterführende Literatur ermöglichen von hier aus den Einstieg in
+unbekannte Themen.
+
+[[sec_gs1_ids]]
 ==== Idente, Echtheit und Identitätsdiebstahl
 
-Das Kernprodukt der GS1 Germany ist GS1 Complete. Hier handelt es sich um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird, in welchem dieser GTINs und andere Idente vergeben kann. Es beinhaltet zusätzlich noch weitere Services und Publikationen zur Optimierung der Geschäftsprozesse. 
+Das Kernprodukt der GS1 Germany ist GS1 Complete. Hierbei handelt es sich
+um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird,
+in welchem dieser GTINs (Global Trade Item
+Number) und andere Idente vergeben kann. Es beinhaltet
+weiterhin Services und Publikationen zur Optimierung der
+Geschäftsprozesse.
 
-Elementar ist der bereits erwähnte Nummernkreis. Im Detail wird dem Kunden eine 13-stellige GLN (Global Location Number) zugeteilt, deren Basisnummer entweder 7, 8 oder 9 Stellen beinhaltet. Entsprechend kann der Kunde damit 100.000, 10.000 oder 1.000 GTINs (Global Trade Item Number) erstellen. Auch alle anderen GS1 Idente können auf Grundlage dieser Basisnummer gebildet werden. Die Vergabe und Zuteilung der einzelnen Idente erfolgt durch den Kunden selbst, ohne Kontrolle durch GS1. Jede Nummer kann nur einmal vergeben werden und ist daher weltweit überschneidungsfrei. Damit ist grundsätzlich eine eindeutige Zuordnung aller Idente möglich.
+.ToDo
+[IMPORTANT]
+--
+- Publikationen? D.h. man kauft auch Schriftstücke? ;)
+--
 
-Eine Authentifikation durch GS1 ist bisher nicht gegeben. Eine Identitätsprüfung der Antragsteller für eine GS1 GLN erfolgt nicht. Dem Kunden wird bei Bestellung geglaubt, dass er derjenige ist für den er sich ausgibt. Trotz der fehlenden Kontrolle sind GS1 Germany bisher keine Identitätsdiebstähle bekannt. Ein Missbrauch der Idente erfolgt in einigen Fällen in der Nutzung gefälschter GTINs. Unternehmen, die keine GS1 Kunden sind, nutzen Nummernkombinationen entsprechend dem GS1 Nummernsystem, um Produkte online anbieten zu können. 
-Dieser GTIN-Missbrauch wird GS1-intern durch Mitarbeiter verfolgt und
-unterbunden. Eine teil-automatisierte Lösung, die in diesem Bereich
-wächst, ist der Service „Verified by GS1“ <<sec_verified_by_gs1>>. Hier können Online-Portale und Händler GTINs auf ihre Echtheit und Herkunft überprüfen, die im Vorfeld durch die Hersteller in die GS1 Registry eingepflegt wurden.
 
-==== LEI VS GLN
+Im Detail wird dem Kunden eine 13-stellige GLN (Global Location
+Number) zugeteilt, deren Basisnummer (GS1 Company Prefix, GCP)
+entweder 7, 8 oder 9 Stellen umfasst. Entsprechend kann der Kunde
+damit 100.000, 10.000 oder 1.000 GTINs erstellen, in dem die GCP um
+die fehlenden Stellen verlängert wird, um eine 13-stellige Nummer zu
+erhalten. Auch alle anderen GS1 Idente können auf Grundlage der GCP
+gebildet werden. Die Vergabe und Zuteilung der einzelnen Idente
+erfolgt durch den Kunden selbst, ohne Kontrolle durch GS1. Wie in
+<<sec_usp>> angesprochen ist gerade diese Dezentralität und Unabhängigkeit
+von GS1 bei der Vergabe einzelner Idente ein besonderer Vorteil des
+GS1 Systems.  Die über die GCP festgelegten Nummernkreise stellen
+sicher, dass jede Nummer nur einmal vergeben werden kann, solange der
+Kunde gemäß den Regeln des GS1 Systems nicht eigene Nummern mehrfach
+vergibt. Die GS1 Idente sind daher weltweit überschneidungsfrei. Damit
+ist grundsätzlich eine eindeutige Zuordnung aller Idente möglich.
 
-Der Legal Entity Identifier, LEI, ist ein 20-stelliger Code, der Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich um juristische Personen handeln, Einzelpersonen können keine LEI erhalten.
-Der LEI wurde nach der Finanzkrise durch den G20 Gipfel eingeführt um mehr Sicherheit und Transparenz bei Finanzgeschäften zu bieten und gilt weltweit. Der LEI ist verpflichtend und ermöglicht es hinterlegte Referenzdaten im Online-Datenpool der GLEIF abzufragen. Diese Referenzdaten sind mindestens der offizielle Name laut Registrierung des Rechtsträgers, Anschrift des Unternehmens, Land der Gründung, Codes für Darstellung der Ländernamen, sowie das Datum der ersten LEI-Zuweisung und der letzten Aktualisierung, je nachdem auch das Ablaufdatum. Denn eine LEI muss jährlich verlängert werden.
-Aufgebaut wird dieser Code nach dem ISO-Standard 17442. Dabei stellen die ersten vier Ziffern das LOU-Präfix dar, also den Code der jeweiligen Vergabestelle, gefolgt von den 16 Zeichen, die nicht sprechend von der Vergabestelle dem Unternehmen zugeordnet werden. Davon sollten Zeichen 5 und 6 auf null gesetzt sein. Der Code schließt ab mit der sogenannten Verifizierung-ID, also einem Prüfziffernpaar.
+
+Eine Authentifikation der Idente durch GS1 ist bisher nicht allgemein
+gegeben. Eine besondere 
+Identitätsprüfung der Antragsteller für eine GS1 GLN erfolgt aktuell in der Regel
+nicht. Dem Kunden wird bei Bestellung vertraut, dass er derjenige ist
+für den er sich ausgibt. Trotz der fehlenden Kontrolle sind GS1
+Germany bisher keine Identitätsdiebstähle auf Basis der GCP bekannt.
+
+Ein Missbrauch einzelner
+Idente erfolgt in einigen Fällen z.B. in der Nutzung gefälschter
+GTINs. Unternehmen, die keine GS1 Kunden sind, nutzen
+Nummernkombinationen entsprechend dem GS1 Nummernsystem, um Produkte
+online anbieten zu können.
+Dieser GTIN-Missbrauch wird GS1-intern
+durch Mitarbeiter verfolgt und unterbunden. Eine teil-automatisierte
+Lösung, die in diesem Bereich entwickelt wird, ist der Service „Verified by
+GS1“, welcher in <<sec_verified_by_gs1>> zusammen mit der
+Problemstellung genauer beleuchtet wird. Hier können Online-Portale und Händler
+GTINs auf ihre Echtheit und Herkunft überprüfen, die im Vorfeld durch
+die Hersteller in die GS1 Registry eingepflegt wurden.
+
+
+==== LEI
+
+.ToDo
+[IMPORTANT]
+--
+Motivation? -> Erläutern warum die LEI hier detailliert erklärt wird
+--
+
+GS1 vergibt nicht nur Idente im Rahmen der eigenen Standards.
+GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle 
+(Local Operating Unit, LOU) für
+Legal Entity Identifier (LEI) des GLEIF (Global Legal Entity
+Identifier Foundation). GS1 Germany ist Vertriebspartner von
+GS1 Global, ein sogenannter Registration Agent (RA) und agiert als
+Dienstleister um LEIs zu vergeben.
+
+Der Legal Entity Identifier, LEI, ist ein 20-stelliger Code, der
+Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich
+um juristische Personen handeln, Einzelpersonen können keine LEI
+erhalten.  Der LEI wurde nach der Finanzkrise durch den G20 Gipfel
+eingeführt um mehr Sicherheit und Transparenz bei Finanzgeschäften zu
+bieten und gilt weltweit. Der LEI ist verpflichtend und ermöglicht es
+hinterlegte Referenzdaten im Online-Datenpool der GLEIF
+abzufragen. Diese Referenzdaten sind mindestens der offizielle Name
+laut Registrierung des Rechtsträgers, Anschrift des Unternehmens, Land
+der Gründung, Codes für Darstellung der Ländernamen, sowie das Datum
+der ersten LEI-Zuweisung und der letzten Aktualisierung, ggF.
+auch das Ablaufdatum, denn eine LEI muss jährlich verlängert werden.
+
+Aufgebaut wird der LEI Code nach dem ISO-Standard 17442. Dabei stellen
+die ersten vier Ziffern das LOU-Präfix dar, also den Code der
+jeweiligen Vergabestelle, gefolgt von den 16 Zeichen, die nicht
+sprechend von der Vergabestelle dem Unternehmen zugeordnet
+werden. Davon sollten Zeichen 5 und 6 auf null gesetzt sein. Der Code
+schließt ab mit der sogenannten Verifizierung-ID, also einem
+Prüfziffernpaar.
 
 
 [[LEI]]
 .Aufbau einer LEI
 image::example-lei.png[]
 
-GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle (Local Operating Unit, LOU) für den GLEIF (Global Legal Entity Identifier Foundation). GS1 Germany ist hier nur Vertriebspartner von GS1 Global, ein sogenannter Registration Agent (RA) und agiert als Dienstleister um LEIs zu vergeben.
 
-Das Verfahren zum Erhalt einer LEI über GS1 beginnt damit, dass der Kunde einen Antrag auf lei.direct stellt und über dieses GS1-Online-Tool entsprechend eine Bezahlform hinterlegt. Das GS1-interne LEI Team prüft und bearbeitet den vorliegenden Antrag nach festgelegten Protokollen und Verfahren. Die Zuteilung erfolgt dann GS1 AISBL. Diese dient als Issuer. Bei GS1 befinden sich derzeit mehr als 26.000 LEIs in der Verwaltung.
+Das Verfahren zur Vergabe einer LEI über GS1 beginnt damit, dass der
+Kunde einen Antrag auf https://www.lei.direct stellt und über dieses
+GS1-Online-Tool entsprechend eine Bezahlform hinterlegt. Das
+GS1-interne LEI Team prüft und bearbeitet den vorliegenden Antrag nach
+festgelegten Protokollen und Verfahren. Die Zuteilung erfolgt dann
+durch GS1
+AISBL. Diese dient als Issuer. GS1 verwaltet derzeit mehr als
+26.000 LEIs.
 
-Im Gegensatz zur LEI ist die GLN (Global Location Number) ein alleiniges GS1-Produkt. Die GLN dient als Identifikationsnummer für die Unternehmen, die an GS1 Complete teilnehmen. Sie wird von GS1 Germany selbstständig vergeben und gliedert sich in das weltweite GS1 System ein. GS1 Germany handelt hier allerdings nicht als Vertriebspartner, sondern als eigene Gesellschaft.
-Eine GLN ist aber gleichzeitig nicht nur eine eindeutige Kundenzuordnung, sondern gleichzeitig die Basis, um weitere Idente nach GS1 Standard zu bilden. Je nach Aufbau der Basisnummer mit sieben, acht oder neun Stellen, hat der Kunde 1.000, 10.000 oder 100.000 Möglichkeiten selbstständig GLNs oder GTINs (aber auch andere Idente) zu erstellen. Dies alles zu einem Preis. Eine LEI dagegen ist einzeln zugeordnet und bietet keine weiteren Verwendungsmöglichkeiten.
 
-Eine GLN muss nicht wie die LEI verlängert werden, sondern verlängert sich automatisch, sofern sie nicht rechtzeitig gekündigt wird. Eine GLN kann eine juristische Person sein aber auch eine Lokation. Es ist möglich mit diesem Ident verschiedene Unternehmensbereiche zu identifizieren, was mit einer LEI verboten ist.
+==== GLN
 
-Auch vom Aufbau unterscheidet sich die GLN von der LEI, hat sie doch nur 13 Stellen. In der Basisnummer von sieben, acht oder neun Stellen findet man das Länderpräfix, welches die ausstellende GS1 Organisation identifiziert und die eindeutige Kundenkennung. Die darauffolgenden fünf, vier oder drei Nullen dienen dem Unternehmen als Namensraum zur selbstständigen, nicht sprechenden Vergabe der eigenen Idente. Bei der letzten Ziffer handelt es sich um eine Prüfziffer.
+Im Gegensatz zur LEI ist die GLN (Global Location Number) ein von
+GS1-Standardisiertes und ausschließlich im GS1 System vergebenes
+Ident. Die GLN ist primär ein Orts-Ident, dient als Party GLN jedoch
+auch als Identifikationsnummer für Unternehmen, insbesondere für
+diejenigen, die an GS1 Complete teilnehmen.
+ Es ist
+möglich mit der (Party) GLN verschiedene Unternehmensbereiche zu
+identifizieren, was mit einer LEI verboten ist.
+
+Die GS1 Company Prefix (GCP),
+auf der die GLN beruht, wird von GS1 Germany selbstständig
+vergeben und gliedert sich in das weltweite GS1 System ein. GS1
+Germany handelt hier allerdings nicht als Vertriebspartner, sondern
+als eigene Gesellschaft.
+
+Wie in <<sec_gs1_ids>> erläutert bildet die GCP als Basisnummer die Grundlage um
+in dem zugeteilten Nummernkreis eigene Idente zu vergeben, im
+Unterschied zur LEI, die zugeordnet wird und keine weiteren
+Verwendungsmöglichkeiten bietet.
+
+
+Auch vom Aufbau unterscheidet sich die GLN von der LEI.
+Konkret hat die GLN 13 Stellen. In der Basisnummer von sieben, acht oder neun Stellen
+findet man das Länderpräfix, welches die ausstellende GS1 Organisation
+identifiziert und die eindeutige Kundenkennung. Die darauf folgenden
+fünf, vier oder drei Ziffern dienen dem Unternehmen als Namensraum zur
+selbstständigen, nicht sprechenden Vergabe der eigenen Idente. Bei der
+letzten Ziffer handelt es sich um eine Prüfziffer.
 
 
 [[GLN_Aufbau]]
@@ -206,11 +324,35 @@ Auch vom Aufbau unterscheidet sich die GLN von der LEI, hat sie doch nur 13 Stel
 image::example-gln.png[]
 
 
-Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die GLN-Teilnehmer keine Überprüfung, weder anhand des Handelsregisters noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen registrieren.
-GS1 hält derzeit mehr als 1 Millionen GLNs und ist hier breiter aufgestellt als in der LEI-Vergabe.
+Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der
+LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die
+Teilnehmer hier keine Überprüfung, weder anhand des Handelsregisters
+noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen
+registrieren. GS1 hält derzeit mehr als 1 Millionen GCPs.
 
-Gemeinsam sind den beiden beschriebenen Identen demnach die Eindeutigkeit und weltweite Überschneidungsfreiheit. Zudem können die Referenzdaten der LEI und auch der GLN durch das Unternehmen verwaltet werden. Man findet die Daten der beiden Idente dann in den jeweiligen Datenbanken. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und vermindert Identitätsmissbrauch.
+.ToDo
+[IMPORTANT]
+--
+- GS1 Germany hat 1M Kunden? Oder alle MOs zusammen?
+--
 
+
+Gemeinsam sind der LEI und der (Party) GLN demnach die
+Eindeutigkeit und weltweite Überschneidungsfreiheit. Zudem können die
+Referenzdaten der LEI und auch der GS1 Complete Kunden durch das
+Unternehmen selbst im Datenpool der GS1 verwaltet
+werden. Man findet die Daten der beiden Idente in den jeweiligen
+Datenbanken. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
+vermindert Identitätsmissbrauch.
+
+.ToDo
+[IMPORTANT]
+--
+- Nicht alle Complete Kunden tauchen auf, soweit ich weis? Man kann
+wiedersprechen?
+- Ist die LEI Datanbank vollständig, d.h. findet man hier alle legal
+vergebenen Nummern?
+--
 
 
 ==== Symmetrische Verschlüsselung
@@ -411,10 +553,10 @@ erfolgen kann, die Möglichkeit im Namen der Identifizierten Entität digitale S
 [*zu lang*]
 
 .ToDo
-[[IMPORTANT]]
-===
-überlapp mit <<sec_verified_by_gs1>>
-==
+[IMPORTANT]
+--
+- überlapp mit <<sec_verified_by_gs1>>
+--
 
 
 ==== USP
@@ -977,7 +1119,7 @@ konkretem Format können auch weitere Details im Zertifikat eingetragen
 und damit beglaubigt werden.
 
 
-
+[[sec_cert_chain]]
 === Zertifikatsketten und Nummernkreise
 
 Wie in <<Chain>> dargestellt kann prinzipiell jeder vertrauenswürdige
