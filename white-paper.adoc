@@ -57,24 +57,20 @@ toc::[]
 
 
 :sectnums:
-[[Intro]]
+[[sec_intro]]
 == Einführung
 
-
-
-Sollten Sie dahingehend bereits ein breites Wissen haben, dürfen Sie
-<<Intro>> gerne überspringen. Denn in diesem erhalten Sie einen
-Überblick über wichtige theoretische Konzepte für das weitere
-Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des
-Projekts entwickelt haben. In den darauf folgenden Abschnitten dieses
-Dokuments bieten wir Einblicke in die technische Umsetzung
-interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme
-unter Verwendung der GS1-Standards.
-
+In <<sec_intro>> erhalten Sie einen Überblick über wichtige
+Hintergründe für das weitere Verständnis der im Projekt Certified by
+GS1 entwickelten Konzepte, Praxisbeispiele und
+Demonstrationen. <<sec_use_cases>> bietet Einblicke in die
+Anwendungsfälle, die im Rahmen des Projektes bearbeitet wurden und
+<<sec_implementation>> erläutert die technische Umsetzungskonzepte.
 
 
 
 === Problemstellung
+
 Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem vertrauten - und vielleicht zum am meisten gehypten - Begriff in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ähnelt einem Labyrinth voller Angebote und Lösungen, in dem Verbraucher und Nutzer oft verloren sind. Die Vielfalt der angebotenen Möglichkeiten ist scheinbar ohne Grenzen und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
 
 Laut Gartner Research wird es bis 2020 rund 20 Milliarden Dinge geben, die mit dem Internet verbunden sind. Bei diesen "Dingen" handelt es sich nicht um Allzweckgeräte wie Smartphones und PCs, sondern um Objekte mit speziellen Funktionen wie Verkaufsautomaten, Düsentriebwerke, vernetzte Autos und unzählige andere Beispiele.
@@ -519,7 +515,7 @@ unautorisierter Zugriff über das Internet erfolgen kann.
 .ToDo
 [IMPORTANT]
 --
-- Diesen Abschnitt mit <<Intro>> abgleichen
+- Diesen Abschnitt mit <<sec_intro>> abgleichen
 - ggF Inhalte dorthin verschieben
 --
 
@@ -856,6 +852,7 @@ image::demo-screenshots/8-pay-per-use.png[]
 
 
 
+[[sec_implementation]]
 == Umsetzung
 
 Im Rahmen des Certified by GS1 Projektes wurden verschiedene
