@@ -4,7 +4,7 @@ v0.2 von {docdatetime}
 :doctype: book
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
-:toclevels: 2
+:toclevels: 3
 :toc-title: Inhalt
 :figure-caption: Bild
 :table-caption: Tabelle
@@ -71,6 +71,49 @@ Anwendungsfälle, die im Rahmen des Projektes bearbeitet wurden und
 
 === Problemstellung
 
+Bei jeder Form der Kommunikation, sei es B2B oder B2C, Mashine to
+Mashine oder unter menschlicher Beteiligung, analog oder digital,
+immer ist es essentiell zu wissen wer mit wem spricht und über welche
+Objekte. GS1 vergibt seit *[Datum einfügen]* Idente um konkrete Dinge,
+Klassen, Orte, Handelspartner, uvm. eindeutig und unverwechselbar zu
+identifizieren.  Während gängige Bezeichnungen, etwa die Abkürzung
+"EECC" mehrdeutig oder dem Partner unbekannt sein können, sind GS1
+Idente, wie die (Party) GLN 4047111000006 eindeutig und über die
+Services der GS1 wie <<gepir>> lässt sich bei Unkenntnisse des Idents
+herausfinden, dass hiermit die "European EPC Competence Center GmbH"
+bezeichnet wird, wenn auch kein Service existiert bei dem alle
+gültigen GS1 Idente mit zugehörigen Daten erfasst oder gar einsehbar
+wären.
+
+Gibt sich einer der Kommunikationspartner als 4047111000006 aus ist
+also zumindest eindeutig, dass hiermit diese konkrete Firma gemeint
+ist und nicht z.B. eine Person mit diesen Initialen. Die von GS1
+vergebenen Idente ermöglichen also eine eindeutige
+Identifikation. Stand heute ist jedoch keine Authentifikation <<auth>>
+möglich. Es kann nicht überprüft
+werden, ob der Kommunikationspartner ist wer er vorgibt zu sein. Im
+allgemeinen ist es nicht einmal ohne weiteres Möglich herauszufinden,
+ob es sich bei einer Nummer um ein legitimes GS1 Ident oder nur eine
+Ziffernkombination im richtigen Format handelt. Letzteres Problem und
+existierende Lösungsansätze werden in <<sec_verified_by_gs1>>
+behandelt.
+
+Im Projekt Certified by GS1 wurde untersucht, wie klassische und
+moderne Konzepte aus dem Bereich der Digitalen Signatur und Digitaler
+Zertifikate genutzt werden können, um die Authentizität von GS1 Identen und damit
+zusammenhängende Stammdaten beweisbar zu machen.  Außerdem ermöglichen
+die hier Vorgestellten Konzepte den mit den
+Identen bezeichneten Firmen oder Dingen sich zweifelsfrei und
+fälschungssicher auszuweisen und gesicherte Kommunikationskanäle mit
+diesen aufzubauen.
+
+Certified by GS1 kann so die Basis für eine Vertrauensinfrastruktur
+schaffen, wie sie z.B. für das Internet of Things (IoT, siehe
+<<sec_iot>>) aber auch z.B. in klassischen B2B Prozessen wie dem
+Supplier Onboarding (siehe <<sec_onboarding>>) dringend benötigt
+wird, um Digitalisierung und Automatisierung nicht durch
+Sicherheits- und vor allem Vertrauens-Fragen zu verhindern.
+
 
 
 ===  GS1 USP für die Lösung
@@ -91,7 +134,9 @@ Das Kernprodukt der GS1 Germany ist GS1 Complete. Hier handelt es sich um ein Le
 Elementar ist der bereits erwähnte Nummernkreis. Im Detail wird dem Kunden eine 13-stellige GLN (Global Location Number) zugeteilt, deren Basisnummer entweder 7, 8 oder 9 Stellen beinhaltet. Entsprechend kann der Kunde damit 100.000, 10.000 oder 1.000 GTINs (Global Trade Item Number) erstellen. Auch alle anderen GS1 Idente können auf Grundlage dieser Basisnummer gebildet werden. Die Vergabe und Zuteilung der einzelnen Idente erfolgt durch den Kunden selbst, ohne Kontrolle durch GS1. Jede Nummer kann nur einmal vergeben werden und ist daher weltweit überschneidungsfrei. Damit ist grundsätzlich eine eindeutige Zuordnung aller Idente möglich.
 
 Eine Authentifikation durch GS1 ist bisher nicht gegeben. Eine Identitätsprüfung der Antragsteller für eine GS1 GLN erfolgt nicht. Dem Kunden wird bei Bestellung geglaubt, dass er derjenige ist für den er sich ausgibt. Trotz der fehlenden Kontrolle sind GS1 Germany bisher keine Identitätsdiebstähle bekannt. Ein Missbrauch der Idente erfolgt in einigen Fällen in der Nutzung gefälschter GTINs. Unternehmen, die keine GS1 Kunden sind, nutzen Nummernkombinationen entsprechend dem GS1 Nummernsystem, um Produkte online anbieten zu können. 
-Dieser GTIN-Missbrauch wird GS1-intern durch Mitarbeiter verfolgt und unterbunden. Eine teil-automatisierte Lösung die in diesem Bereich wächst ist der Service „Verified by GS1“. Hier können Online-Portale und Händler GTINs auf ihre Echtheit und Herkunft überprüfen, die im Vorfeld durch die Hersteller in die GS1 Registry eingepflegt wurden.
+Dieser GTIN-Missbrauch wird GS1-intern durch Mitarbeiter verfolgt und
+unterbunden. Eine teil-automatisierte Lösung, die in diesem Bereich
+wächst, ist der Service „Verified by GS1“ <<sec_verified_by_gs1>>. Hier können Online-Portale und Händler GTINs auf ihre Echtheit und Herkunft überprüfen, die im Vorfeld durch die Hersteller in die GS1 Registry eingepflegt wurden.
 
 ==== LEI VS GLN
 
@@ -325,6 +370,13 @@ erfolgen kann, die Möglichkeit im Namen der Identifizierten Entität digitale S
 - die Echtheit von Messdaten eines Sensors direkt durch diesen fälschungssicher zu beglaubigen.
 [*zu lang*]
 
+.ToDo
+[[IMPORTANT]]
+===
+überlapp mit <<sec_verified_by_gs1>>
+==
+
+
 ==== USP
 Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen das Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen zertifizierten Basis GLN, die das Unternehmen selbst als Legale Person identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1 Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs als Service anbieten.
 
@@ -338,6 +390,7 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 [[sec_use_cases]]
 == Anwendungsfälle
 
+[[sec_verified_by_gs1]]
 === Verified by GS1
 
 ==== Problem
@@ -427,6 +480,7 @@ durchführen zu müssen und ermöglicht so schneller und einfacher mit
 dem Unternehmen in eine Rechtsbeziehung zu treten.
 
 
+[[sec_onboarding]]
 ==== Supplier Onboarding
 
 Ein konkreter Use Case basierend auf Unternehmensstammdaten ist das
@@ -446,7 +500,7 @@ zertifiziert wird, haben das Potential die Grundlage einer solchen
 Vertrauensinfrastruktur zu bilden.
 
 
-
+[[sec_iot]]
 === IoT
 
 Das Internet der Dinge (Internet of Things, IoT) hat sich schnell zu einem vertrauten - und vielleicht zum am meisten gehypten - Begriff in Wirtschaft und Technologie entwickelt. Das Internet der Dinge (IoT) ähnelt einem Labyrinth voller Angebote und Lösungen, in dem Verbraucher und Nutzer oft verloren sind. Die Vielfalt der angebotenen Möglichkeiten ist scheinbar ohne Grenzen und die Menge an billigen und qualitativ hochwertigen Lösungen ist ziemlich groß.
@@ -1094,6 +1148,7 @@ zu denken ist.
 
 Online Ressourcen (Stand September 2020):
 
+- [[[auth]]] https://de.wikipedia.org/wiki/Authentifizierung
 - [[[gen-spec]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
