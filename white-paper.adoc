@@ -1,6 +1,6 @@
 = Certified By GS1 – White Paper
 Mayra Castellanos <mayra.castellanos@gs1.de>; Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v0.1 2020-10-01
+v0.2 von {docdatetime}
 :doctype: book
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
@@ -50,7 +50,7 @@ Brauchen wir wirklich ein Vorwort?
 [[executive-summary]]
 == Kurz-Zusammenfassung
 
-
+Certified by GS1 ist sehr gut. ;)
 
 
 toc::[]
