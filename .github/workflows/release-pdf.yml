@@ -7,7 +7,7 @@ name: Release PDFs
 
 jobs:
   buildI40:
-    name: compile and upload I4.0 Concept
+    name: compile and upload markdown
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

@@ -1,7 +1,10 @@
 = Certified By GS1 – White Paper
-Sebastian Schmittner <sebastian.schmittner@eecc.de>
-:toc:
-:toclevels: 4
+Mayra Castellanos <mayra.castellanos@gs1.de>; Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
+v0.1 2020-10-01
+:doctype: book
+:homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
+:toc: macro
+:toclevels: 2
 :toc-title: Inhalt
 :figure-caption: Bild
 :table-caption: Tabelle
@@ -10,62 +13,63 @@ Sebastian Schmittner <sebastian.schmittner@eecc.de>
 :xrefstyle: short
 :imagesdir: ./pics/
 :sectnums:
+:chapter-refsig: Abschnitt
+:appendix-refsig: Anhang
+:chapter-label: 
 
+Das vorliegende White Paper soll verschiedene Konzepte rund um
+digitale Signaturen und Zertifikate erläuteren und darstellen was sie
+in der Welt der GS1-Standards bedeuten und warum sie für die Zukunft
+unserer Idente wichtig sind.
 
-.Arbeitsnotiz
-[NOTE]
-===============================
-**Wat soll dä Quatsch?**
-
-- Zielgruppe:
-  **  Primär *Extern*
-  ** Aber auch als Interner Ergebnisbericht
-- Was ist das Ziel vom diesen "White Paper"?
-** Ergebnis des F&E Projektes Dokumentieren
-** Kommunikation der erarbeiteten Konzepte/Use Cases/... GS1 In- und Extern.
-** Grundlage für weitere Schritte
-*** MVP
-*** Produktentwicklung
-** Partner (Extern) für weitere Schritte gewinnen
-- Seitenzahl
-** min 10 
-** deutlich unter 100
-** Ziel 25
-
-- Deadline (nach Review!) 26.10.
-
-===============================
-
-[[executive-summary]]
-== Kurz-Zusammenfassung [1 Seite]
-
-- Abstract/Executive Summary auf 1 Seite
-- Schreiben wir als letztes
-
-
-Hier oder Einfügung
-
-- Cyber Security
-- "S" in IoT
-
-[[Intro]]
-== Einführung
-
-Das vorliegende White Paper soll verschiedene Konzepte rund um digitale Signaturen und Zertifikate erläuteren und darstellen was sie in der Welt der GS1-Standards bedeuten und warum sie für die Zukunft unserer Idente wichtig sind.
-
-Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign Identities gehört haben, sind Sie dennoch eingeladen weiterzulesen, wir nutzen dieses White Paper auch, um wichtige Konzepte rund-um IoT-Sicherheit zu entmystifizieren und Sie in diese spannende Welt einzuführen. Sollten Sie dahingehend bereits ein breites Wissen haben, dürfen Sie das Kapitel 2 gerne überspringen. Denn in diesem erhalten Sie einen Überblick über wichtige theoretische Konzepte für das weitere Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des Projekts entwickelt haben. In den darauf folgenden Abschnitten dieses Dokuments bieten wir Einblicke in die technische Umsetzung interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme unter Verwendung der GS1-Standards.
+Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign
+Identities gehört haben, sind Sie dennoch eingeladen weiterzulesen,
+wir nutzen dieses White Paper auch, um wichtige Konzepte rund-um
+IoT-Sicherheit zu entmystifizieren und Sie in diese spannende Welt
+einzuführen.
 
 Es war und bleibt eine aufregende und herausfordernde Reise, bei der wir gelernt, neue Dinge ausprobiert und unsere Komfortzone verlassen haben. 
 
 
-Das Certified by GS1 Team
+Mayra Castellanos
+
+Projektleiterin von Certified by GS1
+
+
+
+.ToDo
+[IMPORTANT]
+--
+Brauchen wir wirklich ein Vorwort?
+--
 
 
 
 
+:!sectnums:
+[[executive-summary]]
+== Kurz-Zusammenfassung
 
 
 
+
+toc::[]
+
+
+:sectnums:
+[[Intro]]
+== Einführung
+
+
+
+Sollten Sie dahingehend bereits ein breites Wissen haben, dürfen Sie
+<<Intro>> gerne überspringen. Denn in diesem erhalten Sie einen
+Überblick über wichtige theoretische Konzepte für das weitere
+Verständnis der Praxisbeispiele und Prototypen, die wir im Laufe des
+Projekts entwickelt haben. In den darauf folgenden Abschnitten dieses
+Dokuments bieten wir Einblicke in die technische Umsetzung
+interessanter Anwendungsfälle innerhalb bestehender IoT-Ökosysteme
+unter Verwendung der GS1-Standards.
 
 
 
@@ -166,7 +170,7 @@ Durch Hashing oder eine Hashfunktion, wird eine Zeichenkette variabler Länge au
 
 
 .ToDo
-[IMPORTANT}
+[IMPORTANT]
 --
 Beispiel:
 --
