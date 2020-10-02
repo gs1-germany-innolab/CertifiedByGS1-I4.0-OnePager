@@ -1083,5 +1083,9 @@ Online Ressourcen (Stand September 2020):
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 
-
+- [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
+- [[[ssi]]] https://hpd.de/artikel/self-sovereign-identities-helfen-internet-reparieren-17150
+- [[[ssi-am]]] https://digitaleweltmagazin.de/2019/08/12/chancen-der-self-sovereign-identities-ssi-aus-sicht-von-unternehmen-fuer-das-identity-access-management-iam/
+- [[[ssi-zukunft]]] https://www.validatedid.com/de/self-sovereign-identity-die-zukunft-steht-vor-der-tuer/ 
+- [[[ssi-bitkom]]] https://www.bitkom.org/Bitkom/Publikationen/Self-Sovereign-Identity-Use-Cases
 
