@@ -1254,9 +1254,9 @@ Im Zusammenhang mit den im Vorfeld durchgeführten Umfragen, sowohl per Fragebog
 === Next Steps 
 
 [CAUTION]
-===
+--
 <<sec_next_steps>> bleibt GS1 (Germany?) Intern?
-===
+--
 
 
 ==== Umsetzung von Certified by GS1 in aktuellen SSI Netzwerken/Projekten
