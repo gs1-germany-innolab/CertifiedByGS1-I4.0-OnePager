@@ -18,13 +18,13 @@ v0.5 von {docdatetime}
 :chapter-label: 
 
 Das vorliegende White Paper soll verschiedene Konzepte rund um
-digitale Signaturen und Zertifikate erläuteren und darstellen was sie
+digitale Signaturen und Zertifikate erläutern und darstellen was sie
 in der Welt der GS1-Standards bedeuten und warum sie für die Zukunft
 unserer Idente wichtig sind.
 
 Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign
-Identities gehört haben, sind Sie dennoch eingeladen weiterzulesen,
-wir nutzen dieses White Paper auch, um wichtige Konzepte rund-um
+Identities gehört haben, sind Sie dennoch eingeladen weiterzulesen.
+Wir nutzen dieses White Paper auch, um wichtige Konzepte rund um
 IoT-Sicherheit zu entmystifizieren und Sie in diese spannende Welt
 einzuführen.
 
@@ -65,54 +65,55 @@ Hintergründe für das weitere Verständnis der im Projekt Certified by
 GS1 entwickelten Konzepte, Praxisbeispiele und
 Demonstrationen. <<sec_use_cases>> bietet Einblicke in die
 Anwendungsfälle, die im Rahmen des Projektes bearbeitet wurden und
-<<sec_implementation>> erläutert die technische Umsetzungskonzepte.
+<<sec_implementation>> erläutert die technischeN Umsetzungskonzepte.
 
 
 
 === Warum Certified?
 
-Bei jeder Form der Kommunikation, sei es B2B oder B2C, Mashine to
-Mashine oder unter menschlicher Beteiligung, analog oder digital,
-immer ist es essentiell zu wissen wer mit wem spricht und über welche
-Objekte. GS1 vergibt seit *[Datum einfügen]* Idente um konkrete Dinge,
+Bei jeder Form der Kommunikation, sei es B2B oder B2C, Machine to
+Machine oder unter menschlicher Beteiligung, analog oder digital,
+ist es essentiell zu wissen wer mit wem spricht und über welche
+Objekte. 
+GS1 ermöglicht seit 1974 die Vergabe von Identen um konkrete Dinge,
 Klassen, Orte, Handelspartner, uvm. eindeutig und unverwechselbar zu
 identifizieren.  Während gängige Bezeichnungen, etwa die Abkürzung
 "EECC" mehrdeutig oder dem Partner unbekannt sein können, sind GS1
-Idente, wie die (Party) GLN 4047111000006 eindeutig und über die
-Services der GS1 wie <<gepir>> lässt sich bei Unkenntnisse des Idents
-herausfinden, dass hiermit die "European EPC Competence Center GmbH"
-bezeichnet wird, wenn auch kein Service existiert bei dem alle
+Idente, wie die (Party) GLN 4047111000006 eindeutig. Über
+Services der GS1 wie <<gepir>> lässt sich bei Unkenntnis des Idents z.B.
+herausfinden, dass mit der eben genannten Abkürzung "EECC" die "European EPC Competence Center GmbH"
+bezeichnet wird. Allgemein existiert jedoch kein Service unter dem alle
 gültigen GS1 Idente mit zugehörigen Daten erfasst oder gar einsehbar
-wären.
+sind.
 
-Gibt sich einer der Kommunikationspartner als 4047111000006 aus ist
+[*Überleitung unklar*]
+Gibt sich einer der Kommunikationspartner als 4047111000006 aus, ist
 also zumindest eindeutig, dass hiermit diese konkrete Firma gemeint
-ist und nicht z.B. eine Person mit diesen Initialen. Die von GS1
+ist und nicht z.B. eine Person mit diesen Initialen. [*???*] Die von GS1
 vergebenen Idente ermöglichen also eine eindeutige
 Identifikation. Stand heute ist jedoch keine Authentifikation <<auth>>
-möglich. Es kann nicht überprüft
-werden, ob der Kommunikationspartner ist wer er vorgibt zu sein. Im
-allgemeinen ist es nicht einmal ohne weiteres Möglich herauszufinden,
+dieser Daten möglich. Es kann nicht überprüft
+werden, ob der Kommunikationspartner derjenige ist, der er zu sein vorgibt. 
+Grundsätzlich ist es unter Umständen schwierig, herauszufinden,
 ob es sich bei einer Nummer um ein legitimes GS1 Ident oder nur eine
-Ziffernkombination im richtigen Format handelt. Letzteres Problem und
+Ziffernkombination im GS1-Format handelt. Letzteres Problem und
 existierende Lösungsansätze werden in <<sec_verified_by_gs1>>
 behandelt.
 
-Im Projekt Certified by GS1 wurde untersucht, wie klassische und
+Im Projekt "Certified by GS1" wird darauf aufbauend untersucht, wie klassische und
 moderne Konzepte aus dem Bereich der Digitalen Signatur und Digitaler
 Zertifikate genutzt werden können, um die Authentizität von GS1 Identen und damit
 zusammenhängende Stammdaten beweisbar zu machen.  Außerdem ermöglichen
-die hier Vorgestellten Konzepte den mit den
+die hier vorgestellten Konzepte den mit den
 Identen bezeichneten Firmen oder Dingen sich zweifelsfrei und
-fälschungssicher auszuweisen und gesicherte Kommunikationskanäle mit
-diesen aufzubauen.
+fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander aufzubauen.
 
-Certified by GS1 kann so die Basis für eine Vertrauensinfrastruktur
+"Certified by GS1" kann so die Basis für eine Vertrauensinfrastruktur
 schaffen, wie sie z.B. für das Internet of Things (IoT, siehe
 <<sec_iot>>) aber auch z.B. in klassischen B2B Prozessen wie dem
 Supplier Onboarding (siehe <<sec_onboarding>>) dringend benötigt
 wird, um Digitalisierung und Automatisierung nicht durch
-Sicherheits- und vor allem Vertrauens-Fragen zu verhindern.
+Sicherheits- und Vertrauensfragen zu verhindern.
 
 
 [[sec_usp]]
@@ -120,8 +121,8 @@ Sicherheits- und vor allem Vertrauens-Fragen zu verhindern.
 
 GS1 ist eine etablierte Institution zur Vergabe von Nummernkreisen
 (Namensräumen) für Idente, insbesondere Geschäfts- und Produktidente.
-In diesem Sinne erfüllt die GS1 bereits die Rolle einer "Issuing
-Agency".  In Certified by GS1 wurden Konzepte entwickelt, die in in
+In diesem Sinne erfüllt GS1 bereits die Rolle einer "Issuing
+Agency".  In "Certified by GS1" wurden Konzepte entwickelt, die in
 der Vergabe von Sicherheitsmerkmalen (Zertifikaten) strukturell dem
 bestehenden Vergabesystem für Idente entsprechen. In
 <<sec_cert_chain>> wird dieser Punkt detaillierter erläutert.
@@ -130,11 +131,11 @@ bestehenden Vergabesystem für Idente entsprechen. In
 GS1 vergibt (in der Regel) keine einzelnen Idente, sondern Kunden
 erwerben das Recht, selbst eine bestimmte Menge von
 Identen zu vergeben.
-Dieses Sytem wird im Rahmen von Certified by GS1 auch für die 
-Sicherheitsmerkmale und damit die authentifizierten Idente umgesetzt, so dass ein Kunde die
+Dieses Sytem wird im Rahmen von "Certified by GS1" auch für die 
+Sicherheitsmerkmale und damit die authentifizierten Idente umgesetzt. Ein Kunde kann so die
 bisherigen Prozesse zur Vergabe von Identen strukturell beibehalten
 und um die Sicherheits- und Authentifizierungsfunktion für die selbst
-erzeugten Idente erweitern kann.
+erzeugten Idente erweitern.
 
 Gerade im Bereich des IoT, in dem jedes Gerät nicht nur ein serielles
 Ident, z.B. eine SGTIN, benötigt, sondern auch die Möglichkeit, sich
@@ -144,6 +145,7 @@ stellt die Möglichkeit solche "Certified" Idente selbst erzeugen zu
 können einen großen Vorteil für den Hersteller dar, gegenüber einem
 System bei dem jedes Ident und die zugehörigen Sicherheitsmerkmale
 einzeln bei einer zentralen Plattform erworben werden müssen.
+[*Satz ist viel zu lang - sinnvolle Trennung in 2 Teile?*]
 
 
 Als not-for-profit Standarisierungsorganisation, erfüllt GS1 die Aufgabe
@@ -152,16 +154,16 @@ neutrale und vertrauenswürdige Organisation. Diese Rolle als
 Vertrauensanker und neutrale Platform ermöglicht es GS1, Partner und
 Konkurrenten zu gemeinsamen Projekten, insbesondere im Bereich der
 Standardisieurung, zusammen zu bringen.
-Sie prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikate
-Infrastruktur, insbesondere wenn diese auf der authentifizierung der
+Dies prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikate
+Infrastruktur, insbesondere wenn diese auf der Authentifizierung der
 GS1 eigenen Idente beruht. 
 
 Des weiteren ist GS1 bereits heute in vielen Branchen Dreh- und
 Angelpunkt für mit den Identen assoziierte Stammdaten. Die
-Authentifizierung dieser Stammdaten über digitale Signatur basierend
-auf den Zertifikaten der Certified Idente ermöglicht eine noch weit
-größere Vielzahl von Anwendungsfällen zusätzlich zur authentifizierung
-der Idente selbst und liegt in einem Bereich in dem GS1 bereits
+Authentifizierung dieser Stammdaten über digitale Signaturen, basierend
+auf den Zertifikaten der "Certified"-Idente ermöglicht eine noch
+größere Vielzahl von Anwendungsfällen zusätzlich zur Authentifizierung
+der Idente selbst. Außerdem liegen diese Anwendungsfälle in einem Bereich in dem GS1 bereits
 vielfach aktiv und anerkannt ist.
 
 
@@ -170,13 +172,13 @@ vielfach aktiv und anerkannt ist.
 
 === Grundlegende Begriffe und Konzepte
 
-Eine Umfassende und didaktisch ausgereifte Einführung aller für das
-Verständnis der Certified by GS1 nötigen Grundlagen ist jenseits der
-Zielsetzung und des Umfangs dieses papers. Nichtsdestotrotz werden in
-diesem Abschnitt einige Grundlegende Begriffe aus der Welt der GS1
-Idente so wie der digitalen Zertifikate eingeführt um
+Eine umfassende und didaktisch ausgereifte Einführung aller für das
+Verständnis der "Certified by GS1" nötigen Grundlagen ist jenseits der
+Zielsetzung und des Umfangs dieser Ausarbeitung. Nichtsdestotrotz werden im
+folgenden Abschnitt einige grundlegende Begriffe aus der Welt der GS1
+Idente sowie der digitalen Zertifikate eingeführt, um
 Missverständnisse bei den verwendeten Begriffen zu vermeiden. Verweise
-auf weiterführende Literatur ermöglichen von hier aus den Einstieg in
+auf weiterführende Literatur ermöglichen den Einstieg in
 unbekannte Themen.
 
 [[sec_gs1_ids]]
@@ -192,7 +194,7 @@ Geschäftsprozesse.
 .ToDo
 [IMPORTANT]
 --
-- Publikationen? D.h. man kauft auch Schriftstücke? ;)
+- Publikationen? D.h. man kauft auch Schriftstücke? ;) -> ja, tatsächlich beinhaltet dieses Kaufen eine ganze Bibliothek an Dokumenten, die sonst kostenpflichtig sind. Würde ich so stehen lassen.
 --
 
 
@@ -239,16 +241,20 @@ die Hersteller in die GS1 Registry eingepflegt wurden.
 .ToDo
 [IMPORTANT]
 --
-Motivation? -> Erläutern warum die LEI hier detailliert erklärt wird
+Motivation? -> Erläutern warum die LEI hier detailliert erklärt wird -> im ersten Absatz hinzugefügt
 --
 
-GS1 vergibt nicht nur Idente im Rahmen der eigenen Standards.
+GS1 vergibt jedoch nicht nur Idente im Rahmen der eigenen Standards.
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle 
 (Local Operating Unit, LOU) für
 Legal Entity Identifier (LEI) des GLEIF (Global Legal Entity
 Identifier Foundation). GS1 Germany ist Vertriebspartner von
 GS1 Global, ein sogenannter Registration Agent (RA) und agiert als
 Dienstleister um LEIs zu vergeben.
+Das bedeutet, dass GS1 bereits heute authentifizierte Idente vergibt und somit die
+Grundlage für das Konzept "Certified by GS1" bereits gelegt ist. Die LEI wird als Konzept für ein 
+authentifiziertes GS1 Ident genutzt. Im weiteren Verlauf wird deutlich welche Merkmale der LEI
+verhindern sie als ausschließliches Ident für Certified-Zwecke zu nutzen.
 
 Der Legal Entity Identifier, LEI, ist ein 20-stelliger Code, der
 Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich
@@ -290,7 +296,7 @@ AISBL. Diese dient als Issuer. GS1 verwaltet derzeit mehr als
 ==== GLN
 
 Im Gegensatz zur LEI ist die GLN (Global Location Number) ein von
-GS1-Standardisiertes und ausschließlich im GS1 System vergebenes
+GS1 standardisiertes und ausschließlich im GS1 System vergebenes
 Ident. Die GLN ist primär ein Orts-Ident, dient als Party GLN jedoch
 auch als Identifikationsnummer für Unternehmen, insbesondere für
 diejenigen, die an GS1 Complete teilnehmen.
@@ -304,8 +310,8 @@ vergeben und gliedert sich in das weltweite GS1 System ein. GS1
 Germany handelt hier allerdings nicht als Vertriebspartner, sondern
 als eigene Gesellschaft.
 
-Wie in <<sec_gs1_ids>> erläutert bildet die GCP als Basisnummer die Grundlage um
-in dem zugeteilten Nummernkreis eigene Idente zu vergeben, im
+Wie in <<sec_gs1_ids>> erläutert, bildet die GCP als Basisnummer die Grundlage, um
+in dem zugeteilten Nummernkreis eigene Idente zu vergeben. Hier gibt es erneut einen
 Unterschied zur LEI, die zugeordnet wird und keine weiteren
 Verwendungsmöglichkeiten bietet.
 
@@ -313,7 +319,7 @@ Verwendungsmöglichkeiten bietet.
 Auch vom Aufbau unterscheidet sich die GLN von der LEI.
 Konkret hat die GLN 13 Stellen. In der Basisnummer von sieben, acht oder neun Stellen
 findet man das Länderpräfix, welches die ausstellende GS1 Organisation
-identifiziert und die eindeutige Kundenkennung. Die darauf folgenden
+identifiziert, gefolgt von der eindeutigen Kundenkennung. Die darauf folgenden
 fünf, vier oder drei Ziffern dienen dem Unternehmen als Namensraum zur
 selbstständigen, nicht sprechenden Vergabe der eigenen Idente. Bei der
 letzten Ziffer handelt es sich um eine Prüfziffer.
@@ -328,48 +334,37 @@ Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der
 LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die
 Teilnehmer hier keine Überprüfung, weder anhand des Handelsregisters
 noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen
-registrieren. GS1 hält derzeit mehr als 1 Millionen GCPs.
-
-.ToDo
-[IMPORTANT]
---
-- GS1 Germany hat 1M Kunden? Oder alle MOs zusammen?
---
+registrieren. GS1 hält global derzeit mehr als 1 Millionen GCPs.
 
 
 Gemeinsam sind der LEI und der (Party) GLN demnach die
 Eindeutigkeit und weltweite Überschneidungsfreiheit. Zudem können die
-Referenzdaten der LEI und auch der GS1 Complete Kunden durch das
+Referenzdaten der LEI- und auch der GS1 Complete Kunden durch das
 Unternehmen selbst im Datenpool der GS1 verwaltet
 werden. Man findet die Daten der beiden Idente in den jeweiligen
 Datenbanken. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
-vermindert Identitätsmissbrauch.
+vermindert Identitätsmissbrauch. Allerdings gibt es auch hier derzeit Unterschiede:
+Ein GS1 Complete Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
+Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollständig und korrekt zu veröffentlichen. 
+Man muss jede vergebene LEI online nachverfolgen können.
 
-.ToDo
-[IMPORTANT]
---
-- Nicht alle Complete Kunden tauchen auf, soweit ich weis? Man kann
-wiedersprechen?
-- Ist die LEI Datanbank vollständig, d.h. findet man hier alle legal
-vergebenen Nummern?
---
 
 
 ==== Symmetrische Verschlüsselung
 
 Kryptografische Systeme kann man in zwei unterschiedliche Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie. Die symmetrische Verschlüsselung wird oftmals als Synonym für die symmetrische Kryptographie verwendet. Die asymmetrische Kryptographie hingegen umfasst zwei Themen: Die asymmetrische Verschlüsslung und digitale Signaturen.
 
-Die symmetrischen Verschlüsselungsverfahren reichen recht weit in die Menschheitsgeschichte zurück. Alle kryptografischen Algorithmen, begannen als symmetrische Verfahren.
-Schon 600v Chr. setzten hebräische Gelehrte einen einfachen Zeichenaustauschalgorithmus mit dem Namen Atbash-Verschlüsselung ein. Die Caesar-Verschlüsslung ist wahrscheinlich die bekannteste symmetrische Verschlüsselung. Diese geht auf den römischen Feldherrn Gaius Julius Caesar zurück. Er benutzte diese geheime Kommunikation für seine militärische Korrespondenz.
+Die symmetrischen Verschlüsselungsverfahren reichen weit in die Menschheitsgeschichte zurück. Alle kryptografischen Algorithmen begannen als symmetrische Verfahren.
+Schon 600v. Chr. setzten hebräische Gelehrte einen einfachen Zeichenaustauschalgorithmus mit dem Namen Atbash-Verschlüsselung ein. Die Caesar-Verschlüsslung ist wahrscheinlich die bekannteste symmetrische Verschlüsselung. Diese geht auf den römischen Feldherrn Gaius Julius Caesar zurück. Er benutzte diese geheime Kommunikation für seine militärische Korrespondenz.
 
-Die Funktionsweise der symmetrischen Schlüssel ist recht einfach. Es gibt nur einen Schlüssel, den geheimen Schlüssel. Der wird für die Ver- wie auch für die Entschlüsselung genutzt. Das bedeutet aber auch, dass sowohl der Sender, als auch der Empfänger immer diesen Schlüssel benötigen. Der Versender hat diesen Schlüssel, nur muss dieser auch über einen sicheren Übertragungsweg an den Empfänger gelangen, um z.B. ein Mitlesen der verschlüsselten Nachricht nicht zu ermöglichen. 
-Eine symmetrische Verschlüsselung kann man daher für das Verschlüsseln von Dateien, Verzeichnissen oder Laufwerken nutzen. 
+Die Funktionsweise der symmetrischen Schlüssel ist recht einfach. Es gibt nur einen Schlüssel, den geheimen Schlüssel. Der wird für die Ver- wie auch für die Entschlüsselung genutzt. Das bedeutet aber auch, dass sowohl der Sender, als auch der Empfänger immer diesen Schlüssel benötigen. Der Versender hat diesen Schlüssel und muss diesen auch über einen sicheren Übertragungsweg dem Empfänger zugänglich machen, um z.B. ein Mitlesen der verschlüsselten Nachricht nicht zu ermöglichen. 
+Eine symmetrische Verschlüsselung kann man für das Verschlüsseln von Dateien, Verzeichnissen oder Laufwerken nutzen. 
 
 ==== Asymmetrische Verschlüsselung
 
 In der Praxis nutzt man heute eher die asymmetrische Verschlüsselung.
 
-Denn bei der asymmetrischen Verschlüsselung benötigt man je einen Schlüssel zum Verschlüsseln der Daten und einen anderen Schlüssel zum Entschlüsseln. Der zur Verschlüsselung verwendete Schlüssel wird in einem asymmetrischen Verfahren als öffentlicher Schlüssel bezeichnet und kann jedem frei mitgeteilt werden. Der für die Entschlüsselung verwendete Schlüssel muss hingegen geheim gehalten werden. 
+Denn bei der asymmetrischen Verschlüsselung benötigt man je einen Schlüssel zum Verschlüsseln der Daten und einen anderen Schlüssel zum Entschlüsseln. Der zur Verschlüsselung verwendete Schlüssel wird in einem asymmetrischen Verfahren als öffentlicher Schlüssel bezeichnet und kann jedem frei mitgeteilt werden. Der für die Entschlüsselung verwendete Schlüssel muss hingegen geheim gehalten werden. [*kann man das Wort "Schlüssel" hier auch evtl. das ein oder andere Mal ersetzen?*]
 
 Erstmals wurde die Idee der asymmetrischen Verschlüsselung im Jahr 1976 von Diffie und Hellman in ihrem Aufsatz "New Directions in Cryptography" veröffentlicht. In diesem Aufsatz, führen die Autoren das Prinzip der asymmetrischen Kryptographie ein. Rivest, Shamir und Adleman stellten 1978 mit RSA das erste asymmetrische Verschlüsselungsverfahren vor. 
 
@@ -378,7 +373,7 @@ Jeder Teilnehmer erzeugt sich ein sogenanntes Schlüsselpaar. Das Schlüsselpaar
 
 ==== Hashing
 
-Durch Hashing oder eine Hashfunktion, wird eine Zeichenkette variabler Länge auf eine Zeichenkette fester Länge abgebildet. Durch eine effiziente mathematische Funktion, wird der Hashwert meist erheblich kürzer als der Text selber. Dadurch wird ein Fingerabdruck (Fingerprint) der Zeichenkette oder Dokument erstellt. Dieser Fingerabdruck dient dann als nahezu eindeutige Kennzeichnung des Dokumentes. Ähnlich dem menschlichen Fingerabdruck, der uns nahezu eindeutig identifiziert. Durch diesen Hashwert kann man z.B. überprüfen, ob ein Dokument, eine Datei oder ein Update verändert wurden. 
+Durch Hashing oder eine Hashfunktion, wird eine Zeichenkette variabler Länge auf eine Zeichenkette fester Länge abgebildet. Durch eine effiziente mathematische Funktion, wird der Hashwert meist erheblich kürzer als der Text. Dadurch wird ein Fingerabdruck (Fingerprint) der Zeichenkette oder Dokument erstellt. Dieser Fingerabdruck dient dann als nahezu eindeutige Kennzeichnung des Dokumentes. Ähnlich dem menschlichen Fingerabdruck, der uns nahezu eindeutig identifiziert. Durch diesen Hashwert kann man z.B. überprüfen, ob ein Dokument, eine Datei oder ein Update verändert wurden. 
 
 
 .ToDo
@@ -394,14 +389,15 @@ Wenn man von Signatur redet, muss man zwischen einer elektronischen Signatur und
 
 Bei der elektronischen Signatur (elektronische Unterschrift), spricht man eher von einem rechtlichen oder juristischen Begriff und basiert nicht zwangsläufig auf einer digitalen Signatur. Bei der digitalen Signatur hingegen, handelt es sicher eher um ein mathematisches oder technisches Verfahren. 
 
-Bei der digitalen Signatur wird mit dem privaten Schlüssel zu dem originalen Dokument eine „Unterschrift“/Signatur hinzugefügt. Mit dem öffentlichen Schlüssel kann dann später vom Empfänger festgestellt werden, ob die Daten wirklich von demjenigen stammen, der mit seinem privaten Schlüssel signiert hat und ob die Daten verändert worden und noch unverändert sind. Die digitalen Signaturen sind deshalb notwendig, da sich der Absender von Dateien, Dokumenten oder Nachrichten fälschen lässt. Beispielweise kann man den Absender einer E-Mail sehr einfach fälschen. Somit lässt sich die Identität des Unterzeichners zweifelsfrei nachweisen und die Integrität der elektronischen Nachricht sicherstellen. 
-Wie funktionert eine digitale Signatur? Aus Performance-Gründen wird als erstes von der Nachricht ein Hashwert berechnet. Dieser Haswert ist dann der Fingerabdruck dieser Nachricht. Für die Signatur wird der geheime private Schlüssel verwendet und durch einen Signieralgorithmus ein Wert, die sogenannte digitale Signatur, berechnet. Die Nachricht kann dann mit der digitalen Signatur an den Empfänger versendet werden. Der Empfänger kann mit dem öffentlichen Schlüssel des Versenders überprüfen, ob die Nachricht wirklich vom tatsächlichen Versender verschickt wurde und ob diese Nachricht unverändert ist. 
+Bei der digitalen Signatur wird mit dem privaten Schlüssel zu dem originalen Dokument eine „Unterschrift“/Signatur hinzugefügt. Mit dem öffentlichen Schlüssel kann dann später vom Empfänger festgestellt werden, ob die Daten wirklich von demjenigen stammen, der mit seinem privaten Schlüssel signiert hat und ob die Daten verändert worden und noch unverändert sind. Die digitalen Signaturen sind deshalb notwendig, da sich der Absender von Dateien, Dokumenten oder Nachrichten fälschen lässt, wie beispielweise den Absender einer E-Mail. Somit lässt sich die Identität des Unterzeichners zweifelsfrei nachweisen und die Integrität der elektronischen Nachricht sicherstellen. 
+
+Wie funktionert eine digitale Signatur? Aus Performance-Gründen wird als erstes von der Nachricht ein Hashwert berechnet. Dieser Hashwert ist der Fingerabdruck dieser Nachricht. Für die Signatur wird der geheime private Schlüssel verwendet und durch einen Signieralgorithmus ein Wert, die sogenannte digitale Signatur, berechnet. Die Nachricht kann dann mit der digitalen Signatur an den Empfänger versendet werden. Der Empfänger kann mit dem öffentlichen Schlüssel des Versenders überprüfen, ob die Nachricht wirklich vom tatsächlichen Versender verschickt wurde und ob diese Nachricht unverändert ist. 
 
 
 ==== Digitale Zertifikate
 
 Ein „normales“ Zertifikat ist im üblichen Sinne eine Bescheinigung oder eine Urkunde zu bestimmten Informationen, zu einem Unternehmen oder zu einer Person.
-GS1 vergibt in gedruckter Form ein Zertifkat für die erfolgreiche Teilnahme am globalen GS1 System. In diesem Zertifkat wird unter anderem die GLN und die dazugehörige Firma aufgeführt.
+GS1 vergibt in gedruckter Form ein Zertifkat für die Teilnahme am globalen GS1 System. In diesem Zertifkat wird unter anderem die GLN und die dazugehörige Firma aufgeführt.
 Im Gegensatz zu einem gedruckten Zertifikat, stellt ein digitales Zertifikat im Wesentlichen eine digitale Beglaubigung dar. Mit diesem digitalen Zertifikat kann man bestimmte Eigenschaften zu einem Objekt oder zu einer Person bestätigen, sowie die Echtheit und die Datenintegrität überprüfen. Durch ein Zertifikat lässt sich ein öffentlicher Schlüssel sicher einem bestimmten Besitzer zuweisen.
 
 Zertifikate werden genutzt, um:
@@ -422,19 +418,19 @@ Die am häufigsten verwendeten Zertifikate sind:
 Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
 Datenbanken wird eine PKI unabdingbar. Bis zu diesem Zeitpunkt wurden jedoch nur symmetrische Schlüssel eingesetzt, die sowohl für die Ver- als auch die Entschlüsselung den selben Schlüssel verwenden. 
 
-Die ersten nicht öffentlichen Entwicklungen der PKI fanden beim britischen Geheimdienst zu Anfang der 1970er Jahre statt. Wurden jedoch erst in den 1990er Jahren, aufgrund der strengen Geheimhaltungspflicht, im Nachhinein anerkannt. In einer ersten öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie und Martin Hellman vorgeschlagen. 
+Die ersten nicht öffentlichen Entwicklungen der PKI fanden beim britischen Geheimdienst zu Anfang der 1970er Jahre statt. Sie wurden jedoch erst in den 1990er Jahren, aufgrund der strengen Geheimhaltungspflicht, im Nachhinein anerkannt. In einer ersten öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie und Martin Hellman vorgeschlagen. 
 
 Der Vorteil einer PKI mit einem asymmetrischen kryptographischen Verfahren liegt darin, dass es nicht nur ein Schlüsselpaar für die Ver- und Entschlüsselung gibt. Neben der Generierung und anschließenden Zertifizierung von Schlüsselpaaren, gehört auch die Verteilung von öffentlichen Schlüsseln zum genannten Verfahren. 
 
-Eine PKI lässt sich in mehrere Komponenten einteilen: Einer Registrierungsstelle, einer Zertifizierungsstelle und dem Verzeichnisdienst. 
+Eine PKI lässt sich in mehrere Komponenten einteilen: Eine Registrierungsstelle, eine Zertifizierungsstelle und dem Verzeichnisdienst. 
 
 Die Registrierungsstelle erfasst und überprüft die Identität und ggfs. weitere Angaben des Antragstellers. Diese muss davon überzeugt sein, dass die persönlichen Daten und der erhaltene öffentliche Schlüssel auch wirklich zum Antragsteller gehören, bevor das Zertifikat ausgestellt wird. Nach einer positiven Überprüfung, wird der Zertifikatsantrag durch die Registrierungsstelle genehmigt und die Anfrage an die Zertifizierungsstelle weitergegeben. 
 
 Die Zertifizierungsstelle wiederum integriert den öffentlichen Schlüssel vom Antragssteller in ein Zertifikat, welches dieser anschließend erhält. Zusätzlich kann die Zertifizierungsstelle die Zertifikate zur Veröffentlichung in einem öffentlichen Verzeichnis ablegen.
 
-Oftmals befindet sich die Registrierungsstelle und die Zertifizierungsstelle in einem Unternehmen und bilden eine Einheit, als TrustCenter.
+Oftmals befinden sich die Registrierungsstelle und die Zertifizierungsstelle in einem Unternehmen und bilden eine Einheit, als TrustCenter.
 
-Der Verzeichnisdienst ist ein durchsuchbares Verzeichnis, das ausgestellte Zertifikate enthält. Sozusagen die Gelben Seiten der Zertifikate. Dadurch können die Zertifikate eines anderen Teilnehmers zum Prüfen einer Signatur abrufen.  ** (Unverständlich) **
+Der Verzeichnisdienst ist ein durchsuchbares Verzeichnis, das ausgestellte Zertifikate enthält. Sozusagen die Gelben Seiten der Zertifikate. Dadurch können die Zertifikate eines anderen Teilnehmers zum Prüfen einer Signatur abrufen.  ** [Unverständlich] **
 
 
 [[sec_ssi]]
@@ -489,7 +485,7 @@ Zur Verwirklichung einer selbstsouveränen Identität (self-sovereign identity, 
 
 Das Konzept einer selbstsouveränen Identität baut auf drei Hauptkomponenten auf, aus denen sie sich zusammensetzt. Zu diesen zählen neben DIDs noch Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI).
 
-**-> unverständlicher Abschnitt**
+[**-> unverständlicher Abschnitt**]
 
 
 ==== Verifiable Credentials
@@ -530,7 +526,7 @@ Ausweisketten
  
 Abbildung 1: Vertrauen in klassische Ausweisdokumente
 
-Das Vertrauen in die Identität z.B. einer realen Person kommt durch die Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande. Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem AUssteller, z.B. dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in Bild 1  dargestellt.
+Das Vertrauen in die Identität z.B. einer realen Person kommt durch die Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande. Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem Aussteller, z.B. dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in Bild 1  dargestellt.
 
 ==== IDs certified by GS1
  
@@ -560,7 +556,7 @@ erfolgen kann, die Möglichkeit im Namen der Identifizierten Entität digitale S
 
 
 ==== USP
-Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen das Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen zertifizierten Basis GLN, die das Unternehmen selbst als Legale Person identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1 Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs als Service anbieten.
+Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen, das Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen zertifizierten Basis GLN, die das Unternehmen selbst als Legale Person identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1 Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs als Service anbieten.
 
 ==== Technische Realisierung
 Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassische X.509 Zertifikatsketten (PKI) als auch über "Verifiable Credentials" im Rahmen einer SSI/DID Infrastruktur erprobt. Beide Ansätze ermöglichen die dezentrale Anwendung der Idente, ohne dass nach der initialen Vergabe der zertifizierten Basis GLN eine weitere Interaktion mit GS1 notwendig ist.
@@ -618,7 +614,7 @@ Die Umsetzung von "Certified by GS1" versetzt den Basisnummer-Inhaber in die Lag
 Zertifikate für die von ihm erstellten Idente und Masterdaten zu
 signieren. Diese können über beliebige Kanäle weitergegeben werden,
 wie bisher über zentrale Repositories, aber auch direkt
-an die relevanten Partner, ohne dass dritte Einsicht erhalten oder ein
+an die relevanten Partner, ohne dass Dritte Einsicht erhalten oder ein
 zentraler Angriffspunkt entsteht.  Die Gültigkeit der
 Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von
 GS1, kann uneingeschränkt und offline überprüft werden.
@@ -697,6 +693,7 @@ Seit das Internet weltweit eingesetzt wird, besteht die Schwierigkeit darin, all
 
 Nichtsdestotrotz sieht die IoT-Landschaft bisher ziemlich unreguliert aus und stellt ein größeres Sicherheitsrisiko dar, weil das Internet der Dinge und die zusätzlichen Ding-zu- Ding Kommunikationsfunktionen immer mehr an Bedeutung gewinnen. Weiß Ihr Home Assistant wirklich, ob er mit Ihrem Staubsauger-Roboter kommuniziert? Spricht der Roboterarm in der Fabrik wirklich mit dem Bediener, der in der Zentrale des Unternehmens sitzt? Diese Probleme sind im Großen und Ganzen noch nicht wirklich gelöst. Daher ist es dringend notwendig, jede einzelne Person, Firma oder "Ding", die mit dem Internet verbunden ist, zu authentifizieren. 
 
+[* Wie passt dieses Kapitel in die Use Cases? Kann es evtl. rausfallen oder verkürzt werden? Zusammenhang muss geklärt sein*]
 
 
 === Industrie 4.0 Szenario Wandlungsfähige Fabrik
@@ -761,7 +758,7 @@ Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company
 Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs
 vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit
 Basisnummer Certified By GS1 dem Unternehmen selbst Zertifikate für die eigenen
-IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
+IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. [*bereits weiter oben dargestellt*]
 
 [[Chain]]
 .Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
@@ -772,8 +769,8 @@ fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B.
 überprüft werden, dass eine SGTIN tatsächlich von dem Unternehmen erzeugt wurde,
 dem die zugehörige Basisnummer gehört, ohne das ein online Lookup in einer
 entsprechenden Datenbank nötig wäre. Auch Eigenschaften des mit der ID
-gekennzeichneten Assets können z.B. über die GS1 Standards in z.B. einen 2d Code
-wie die Datamatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert
+gekennzeichneten Assets können z.B. über die GS1 Standards in z.B. einen 2D Code
+wie den GS1 Datamatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert
 werden.
 
 
@@ -810,7 +807,7 @@ können.
 
 === Interaktive Demonstration
 
-Eine interaktive online Demonstration des Use Cases wurde entwickelt
+Eine interaktive online Demonstration des Use Cases wurde entwickelt,
 um den in diesem Abschnitt vorgestellten Use Case anschaulich und
 leicht verständlich darzustellen.  Die Demonstration ist unter
 <<online-demo>> öffentlich zugänglich.
@@ -824,9 +821,9 @@ image::demo-screenshots/1-intro.png[]
 
 EKU entwickelt gemeinsam mit seinen Kunden intelligente
 Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse
-effizienter gestaltet werden können, indem die eingesetzten Ressourcen gezielt
-für den eigentlichen Prozess eingesetzt werden und der Ressourceneinsatz für
-nicht prozessrelevante Vorgänge weitestgehend eliminiert wird. Hierbei
+effizienter gestaltet werden können. Die Ressourcen werden gezielt
+für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für
+nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Hierbei
 konzentriert sich EKU vorwiegend auf ortsveränderliche bzw. mobile Anlagen. Also
 Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
 regelmäßige Standortwechsel und Rekonfiguration zum normalen Betrieb gehören.
@@ -879,7 +876,7 @@ die Last dynamisch auf mehrere elektrisch betriebene Pumpen verteilt werden. EKU
 arbeitet hierzu am Aufbau eines lokalen Insel- Energieversorgungsnetzes
 (Microgrid), sodass mobile Anlagen nach und nach hybridisiert, also einzelne am
 Prozess beteiligte Systeme teilweise oder komplett elektrisch betrieben werden
-werden können. Über das Microgrid kann die für den Prozess benötigte Leistung
+können. Über das Microgrid kann die für den Prozess benötigte Leistung
 dynamisch zwischen Generatoren und Motoren verteilt und somit der Energiebedarf
 des Gesamtsystems reduziert werden.
 
@@ -899,10 +896,10 @@ Reglerkonzept eingesetzt.
 ===== Primärregelung
 
 Als primäre Regelgröße dienen durch alle Anlagen direkt messbare Größen des Netzes, die dessen Stabilität
-beschrieben. Bei Drehstromnetzen wird die Netzfrequenz als primäre Regelgröße genutzt. Wird die zuvor
+beschreiben. Bei Drehstromnetzen wird die Netzfrequenz als primäre Regelgröße genutzt. Wird die zuvor
 vereinbarte Netzfrequenz unterschritten, liegt eine Überlastung des Netzes vor, es muss mehr Leistung eingespeist
 oder weniger Leistung entnommen werden. Generatoren können dementsprechend ihre Motorleistung erhöhen,
-Verbraucher ihre Leistungsentnahme reduzieren um das Netz zu stabilisieren. Analog dazu zeigt die Überschreitung
+Verbraucher ihre Leistungsentnahme reduzieren, um das Netz zu stabilisieren. Analog dazu zeigt die Überschreitung
 der Nennfrequenz eine zu hohe Einspeiseleistung an, Generatoren müssen ihre Leistung drosseln, Verbraucher
 können mehr Leistung entnehmen. Analog zur Frequenz in Drehstromnetzen wird in Gleichstromnetzen (DC
 Microgrid) auf die Netzspannung geregelt. Die Primärregelung muss eine Reaktion auf Veränderungen innerhalb
@@ -1011,16 +1008,16 @@ image::demo-screenshots/6-hacked.png[]
 ==== Dynamische Rekonfiguration von Systemen verschiedener Dienstleister und Hersteller
 
 Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier
-arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel je nach Einsatzplan von
+arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel, je nach Einsatzplan von
 unterschiedlichen Unternehmen bereitgestellt, die wiederum auch eine bunte Mischung unterschiedlichster
-Anlagentypen mehrere Hersteller unterhalten. Hinzu kommt, dass die Anlagen nach einem Einsatz von z.B. 14
+Anlagentypen mehrerer Hersteller unterhalten. Hinzu kommt, dass die Anlagen nach einem Einsatz von z.B. 14
 Tagen wieder abgebaut und in einer komplett anderen Konfiguration an einer anderen Baustelle wieder aufgebaut
 und vernetzt werden sollen.
 Da hier kosteneffizient unter hohem Zeitdruck gearbeitet werden muss und das Personal ständig wechselt, müssen
-alle Konfigurationsvorgänge soweit möglich automatisiert ablaufen um Zeit einzusparen und die Anfälligkeit für
+alle Konfigurationsvorgänge soweit möglich automatisiert ablaufen, um Zeit einzusparen und die Anfälligkeit für
 Fehler zu minimieren.
 
-
+[EKU PD Voraussetzungen sehr ausführlich im Vergleich zum Rest erklärt - muss gekürzt werden]
 
 ==== Certified by GS1
 
@@ -1052,7 +1049,7 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 image::demo-screenshots/7-certified-dynamic.png[]
 
 
-=== Pay per User
+=== Pay per Use
 
 Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Businessmodelle, in denen nicht mehr
 die Geräte oder Maschinen direkt verkauft oder auf Zeit verliehen
@@ -1062,12 +1059,12 @@ werden alle nötigen Voraussetzungen, wie Maschinen und Betriebsmittel,
 die der Nutzer braucht um den gewünschten Nutzen zu erzielen, zur
 Verfügung gestellt. Wichtig ist bei den zugrundelegenden Business
 Modellen immer, eine präzise und vor allem eine für alle beteiligten
-vertrauenswürdige Messung der Parameter (KPIs) auf denen die Berechnung der
+vertrauenswürdige Messung der Parameter (KPIs), auf denen die Berechnung der
 Kosten eines solchen Service beruht.
 
 Aufgrund der eingesetzten Sensorik und automatisierten
 Datenübertragung und Abwicklung, ggF. bis in die Abrechnung, handelt
-es sich hier um IoT Use Cases, die ein hohes maß an Sicherheit
+es sich hier um IoT Use Cases, die ein hohes Maß an Sicherheit
 verlangen um eine Chance auf Akzeptanz am Markt zu haben.
 
 Dieser Use Case kann als ein Spezialfall der in <<sec_eku-dynamic>>
@@ -1099,7 +1096,7 @@ entwickelt und untersucht. Die Grundlage bildet die kryptografische
 digitale Signatur (siehe <<sec_digi_sig>>). 
 Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab
 dem Zeitpunkt der Signatur
-unverändert sind und vom angegebenen Urheber Stammen, *vorausgesetzt*
+unverändert sind und vom angegebenen Urheber stammen, *vorausgesetzt*
 es gibt eine vertrauenswürdige Infrastruktur, mit deren Hilfe die
 öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und
 diese sind in der Lage ihre privaten Schlüssel geheim zu halten.
@@ -1107,7 +1104,7 @@ diese sind in der Lage ihre privaten Schlüssel geheim zu halten.
 .ToDo
 [IMPORTANT]
 --
-In Einleitung verschieben?
+In Einleitung verschieben? [ja]
 --
 
 Wie in <<sec_pki>> und <<sec_ssi>> beschrieben kann ein
@@ -1124,14 +1121,14 @@ und damit beglaubigt werden.
 
 Wie in <<Chain>> dargestellt kann prinzipiell jeder vertrauenswürdige
 Teilnehmer den Kreis der vertrauenswürdigen Teilnehmer an der
-vertrauensinfrastruktur erweitern, in dem der bereits
+Vertrauensinfrastruktur erweitern, in dem der bereits
 vertrauenswürdige dem neuen Teilnehmer ein entsprechendes Zertifikat
 ausstellt.
 
 Bei der klassischen, d.h. weitgehend zentralen, 
 Schlüssel- und Zertifikate Infrastruktur, die
 z.B. bei der Absicherung der Kommunikation über das Internet mittels
-Transportverschlüßelung <<tls>> zum Einsatz kommt, stellen eine oder einige
+Transportverschlüsselung <<tls>> zum Einsatz kommt, stellen eine oder einige
 wenige zentrale Autoritäten, denen initial vertraut wird, Zertifikate
 an zwischengeschaltete Autoritäten aus. So ergeben sich, wie in
 <<sec_pki>> näher erläutert, baumartige Vertrauensstrukturen.
@@ -1139,11 +1136,11 @@ an zwischengeschaltete Autoritäten aus. So ergeben sich, wie in
 .TODO
 [IMPORTANT]
 --
-In Einleitung verschieben/mergen?
+In Einleitung verschieben/mergen? [mergen zu gcp und EECC Bsp, sonst komplett raus]
 --
 
 Das Nummernsystem der GS1 besteht im wesentlichen aus einer ähnlichen
-Baumartigen Struktur. Ausgehend von der Gesamtheit der GS1
+baumartigen Struktur. Ausgehend von der Gesamtheit der GS1
 Organisationen und GS1 global erhalten die einzelnen
 Mitgliedsorganisationen (MOs) Nummernkreise, indem eine betimmte
 Präfix einer MO zugeordnet wird. Z.B. gehören alle GS1 Idente deren
@@ -1179,7 +1176,7 @@ Masterdaten mittels SSI Technologie entwickelt. Dieses Konzept stellt
 eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
 Organisationen und mit den Partnern dar.
 
-Die in diesem Abschnitt verwendete grundlegenden
+Die in diesem Abschnitt verwendeten grundlegenden
 Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
 <<sec_ssi>> eingeführt erläutert.
 
@@ -1228,8 +1225,8 @@ serialisiertes Ident in Form eines VC zugewiesen werden. Wie in
 <<GS1SSI>> dargestellt wird die DiD der zugehörigen GTIN als Issuer
 verwendet, sodass die Kette der Idente von der GCP der Company über
 die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
-entsprechend als Kette von Verifiable Credentials die sich die DiDs
-ausstellen abgebildet wird.
+entsprechend als Kette von Verifiable Credentials, die sich die DiDs
+ausstellen, abgebildet wird.
 
 
 
@@ -1252,6 +1249,8 @@ Certified by GS1 wurde als Idee geboren, einen Dienst zu entwickeln, der die Fun
 Es besteht die Notwendigkeit, die Rolle von GS1 innerhalb der digitalen Zertifikatslandschaft sowohl innerhalb der PKI- als auch der SSI-Infrastrukturen zu fördern. 
 
 Die Entwicklung eines nachhaltigen Geschäftsmodells soll in einer zukünftigen Projektphase zusammen mit anderen Mitgliedsorganisationen und GS1 Global erfolgen.
+
+[evtl Bsp für zukünftige Business Opportunities darstellen???]
 
 [[sec_next_steps]]
 === Next Steps 
@@ -1281,7 +1280,7 @@ liegt gerade in der Anwendung der Technologie zur sicheren
 Identifizierung und Authentifizierung von juristischen Personen und
 Dingen, insbesondere im IoT Kontext, eine große Chance für GS1. Hier
 ist die Technologie in hinreichendem Reifegrad verfügbar und es sind
-noch keine starken Konkurenten am Markt etabliert. Zudem stellt die
+noch keine starken Konkurrenten am Markt etabliert. Zudem stellt die
 Übertragung der bestehenden Idente in die SSI Welt eine natürliche
 Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
 GS1 dar. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
@@ -1292,7 +1291,7 @@ https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/Schaufenste
 Konsortium der Schaufensterregion um die Hochschule Mittweida sollen
 insbesondere auf SSI Technologie basierende Businessmodelle im Bereich
 der Datenökonomie entwickelt werden.
-Die weiterentwicklung bestehender Treuekarten und Punkte Systeme
+Die Weiterentwicklung bestehender Treuekarten und Punkte Systeme
 mittels SSI Technologie ermöglicht es Kundendaten in einer Detailtiefe
 und QUalität zu erschließen, wie dies sonst nur im online Handel
 möglich ist. Gleichzeitig bietet die SSI Technologie die Möglichkeit
@@ -1303,13 +1302,13 @@ Idente von GS1 im Handel werden hierbei eine wichtige Rolle spielen.
 
 Auf Basis der in den Forschungsprojekten auszuarbeitenden
 grundlegenden Infrastruktur an sicheren Certified IDs können eine
-vielzahl von Use Cases innerhalb der Förderprojekte und darüber hinaus
+Vielzahl von Use Cases innerhalb der Förderprojekte und darüber hinaus
 umgesetzt weden, insbesondere die in <<sec_use_cases>> vorgestellten.
 
 
 ==== Strategische Ausrichtung
 
-Wichtige Strategische Fragen, etwa ob und wie GS1 die Überprüfung von
+Wichtige strategische Fragen, etwa ob und wie GS1 die Überprüfung von
 Unternehmensstammdaten, z.B. konkret digitale Beglaubigung von
 Handelsregisterauszügen, als Service anbieten möchte sind auf
 Management Ebene zu klären. Jenseits der technischen Konzepte und
