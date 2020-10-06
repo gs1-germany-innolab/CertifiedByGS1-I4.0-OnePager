@@ -65,7 +65,7 @@ Hintergründe für das weitere Verständnis der im Projekt Certified by
 GS1 entwickelten Konzepte, Praxisbeispiele und
 Demonstrationen. <<sec_use_cases>> bietet Einblicke in die
 Anwendungsfälle, die im Rahmen des Projektes bearbeitet wurden und
-<<sec_implementation>> erläutert die technischeN Umsetzungskonzepte.
+<<sec_implementation>> erläutert die technischen Umsetzungskonzepte.
 
 
 
@@ -137,15 +137,14 @@ bisherigen Prozesse zur Vergabe von Identen strukturell beibehalten
 und um die Sicherheits- und Authentifizierungsfunktion für die selbst
 erzeugten Idente erweitern.
 
-Gerade im Bereich des IoT, in dem jedes Gerät nicht nur ein serielles
-Ident, z.B. eine SGTIN, benötigt, sondern auch die Möglichkeit, sich
+Im IoT benötigt jedes Gerät nicht nur ein serielles
+Ident wie eine SGTIN, sondern auch die Möglichkeit sich
 individuell gegenüber anderen Geräten zu authentifizieren und mit
-diesen eine vertrauenswürdige und abhörsichere Verbindung aufzubauen,
+diesen eine vertrauenswürdige und abhörsichere Verbindung aufzubauen. Hier
 stellt die Möglichkeit solche "Certified" Idente selbst erzeugen zu
-können einen großen Vorteil für den Hersteller dar, gegenüber einem
+können einen großen Vorteil für den Hersteller dar gegenüber einem
 System bei dem jedes Ident und die zugehörigen Sicherheitsmerkmale
 einzeln bei einer zentralen Plattform erworben werden müssen.
-[*Satz ist viel zu lang - sinnvolle Trennung in 2 Teile?*]
 
 
 Als not-for-profit Standarisierungsorganisation, erfüllt GS1 die Aufgabe
@@ -191,12 +190,6 @@ Number) und andere Idente vergeben kann. Es beinhaltet
 weiterhin Services und Publikationen zur Optimierung der
 Geschäftsprozesse.
 
-.ToDo
-[IMPORTANT]
---
-- Publikationen? D.h. man kauft auch Schriftstücke? ;) -> ja, tatsächlich beinhaltet dieses Kaufen eine ganze Bibliothek an Dokumenten, die sonst kostenpflichtig sind. Würde ich so stehen lassen.
---
-
 
 Im Detail wird dem Kunden eine 13-stellige GLN (Global Location
 Number) zugeteilt, deren Basisnummer (GS1 Company Prefix, GCP)
@@ -238,23 +231,27 @@ die Hersteller in die GS1 Registry eingepflegt wurden.
 
 ==== LEI
 
-.ToDo
-[IMPORTANT]
---
-Motivation? -> Erläutern warum die LEI hier detailliert erklärt wird -> im ersten Absatz hinzugefügt
---
+GS1 vergibt bereits heute Idente zusammen mit von GS1 überprüften
+Stammdaten. Eine Solche überprüfung der hinterlegten Daten ist eine
+wichtige Grundlage für das Konzept "Certified by GS1". Damit eine
+Vertrauensinfrastruktur aufgebaut werden kann muss eine überprüfung
+der Partner statt finden, bevor Zertifikate ausgestellt werden können.
+Für die LEI Vergabe erfolgt eine solche überprüfung der beantragenden
+Unternehmen bereits, so dass GS1 hier auf bestehenden Prozessen
+aufbauen kann. In diesem Abschnitt wird die LEI allgemein erläutert
+und in den folgenden Abschnitten wird die LEI mit dem GS1 Idente System verglichen und
+eine zertifizierte LEI, wie sie aktuell im Rahmen des Trust over IP <<trust-over-ip>>
+Projektes entwickelt wird, wird mit den Möglichkeiten
+zertifizierter GS1 eigener Idente verglichen.
 
-GS1 vergibt jedoch nicht nur Idente im Rahmen der eigenen Standards.
+
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle 
 (Local Operating Unit, LOU) für
 Legal Entity Identifier (LEI) des GLEIF (Global Legal Entity
-Identifier Foundation). GS1 Germany ist Vertriebspartner von
+Identifier Foundation) <<gleif>>. GS1 Germany ist Vertriebspartner von
 GS1 Global, ein sogenannter Registration Agent (RA) und agiert als
 Dienstleister um LEIs zu vergeben.
-Das bedeutet, dass GS1 bereits heute authentifizierte Idente vergibt und somit die
-Grundlage für das Konzept "Certified by GS1" bereits gelegt ist. Die LEI wird als Konzept für ein 
-authentifiziertes GS1 Ident genutzt. Im weiteren Verlauf wird deutlich welche Merkmale der LEI
-verhindern sie als ausschließliches Ident für Certified-Zwecke zu nutzen.
+
 
 Der Legal Entity Identifier, LEI, ist ein 20-stelliger Code, der
 Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich
@@ -1335,15 +1332,15 @@ Online Ressourcen (Stand September 2020):
 - [[[auth]]] https://de.wikipedia.org/wiki/Authentifizierung
 - [[[gen-spec]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
+- [[[gleif]]] https://www.gleif.org/
+- [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
 - [[[online-demo]]] https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
-- [[[tls]]] https://de.wikipedia.org/wiki/Transport_Layer_Security
-- [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
-- [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
-
 - [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
 - [[[ssi]]] https://hpd.de/artikel/self-sovereign-identities-helfen-internet-reparieren-17150
 - [[[ssi-am]]] https://digitaleweltmagazin.de/2019/08/12/chancen-der-self-sovereign-identities-ssi-aus-sicht-von-unternehmen-fuer-das-identity-access-management-iam/
 - [[[ssi-zukunft]]] https://www.validatedid.com/de/self-sovereign-identity-die-zukunft-steht-vor-der-tuer/ 
 - [[[ssi-bitkom]]] https://www.bitkom.org/Bitkom/Publikationen/Self-Sovereign-Identity-Use-Cases
-
+- [[[tls]]] https://de.wikipedia.org/wiki/Transport_Layer_Security
+- [[[trust-over-ip]]] https://trustoverip.org/
+- [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
