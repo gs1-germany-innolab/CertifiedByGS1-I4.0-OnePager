@@ -346,49 +346,129 @@ Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollstän
 Man muss jede vergebene LEI online nachverfolgen können.
 
 
-
+[[symm]]
 ==== Symmetrische Verschlüsselung
 
-Kryptografische Systeme kann man in zwei unterschiedliche Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie. Die symmetrische Verschlüsselung wird oftmals als Synonym für die symmetrische Kryptographie verwendet. Die asymmetrische Kryptographie hingegen umfasst zwei Themen: Die asymmetrische Verschlüsslung und digitale Signaturen.
+Kryptografische Systeme kann man in zwei unterschiedliche
+Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie.
+Die symmetrischen Verschlüsselungsverfahren reichen weit in die
+Menschheitsgeschichte zurück. Schon 600v. Chr. setzten
+hebräische Gelehrte einen einfachen Zeichenaustauschalgorithmus mit
+dem Namen Atbash-Verschlüsselung ein. Die Caesar-Verschlüsslung ist
+wahrscheinlich die bekannteste symmetrische Verschlüsselung. Diese
+geht auf den römischen Feldherrn Gaius Julius Caesar zurück. Er
+benutzte diese zur Geheimhaltung seiner militärischen
+Korrespondenz.
 
-Die symmetrischen Verschlüsselungsverfahren reichen weit in die Menschheitsgeschichte zurück. Alle kryptografischen Algorithmen begannen als symmetrische Verfahren.
-Schon 600v. Chr. setzten hebräische Gelehrte einen einfachen Zeichenaustauschalgorithmus mit dem Namen Atbash-Verschlüsselung ein. Die Caesar-Verschlüsslung ist wahrscheinlich die bekannteste symmetrische Verschlüsselung. Diese geht auf den römischen Feldherrn Gaius Julius Caesar zurück. Er benutzte diese geheime Kommunikation für seine militärische Korrespondenz.
+Die konzeptionelle Funktionsweise der symmetrischen Verschlüsselung
+ist recht einfach. Es gibt nur einen Schlüssel. Dieser stellt ein nur
+den Kommunikationspartnern bekanntes Geheimnis dar und wird für die Ver- wie auch für die Entschlüsselung
+genutzt. Sowohl der Sender, als auch der
+Empfänger benötigen denselben Schlüssel.
 
-Die Funktionsweise der symmetrischen Schlüssel ist recht einfach. Es gibt nur einen Schlüssel, den geheimen Schlüssel. Der wird für die Ver- wie auch für die Entschlüsselung genutzt. Das bedeutet aber auch, dass sowohl der Sender, als auch der Empfänger immer diesen Schlüssel benötigen. Der Versender hat diesen Schlüssel und muss diesen auch über einen sicheren Übertragungsweg dem Empfänger zugänglich machen, um z.B. ein Mitlesen der verschlüsselten Nachricht nicht zu ermöglichen. 
-Eine symmetrische Verschlüsselung kann man für das Verschlüsseln von Dateien, Verzeichnissen oder Laufwerken nutzen. 
+In einer Situation, in der ein Sender einem Empfänger eine geheime
+Nachricht schicken möchte, ohne dass die beiden über ein als Schlüssel
+verwendbares geteiltes Geheimnis verfügen, ist symmetrische
+Kryptography d.h. prinzipiell nicht hilfreich. Einen Schlüssel sicher
+(d.h. geheim) zu übertragen stellt prinzipiell das selbe Problem dar,
+wie die Übertragung der geheimen Nachricht selbst.
 
+Da bei modernen symmetrischen Verschlüsselungsalgorithmen der
+Schlüssel deutlich kürzer sein kann als die Nachricht, nutzen moderne
+Protokolle wie TLS <<tls>> häufig ein rechenzeitintensives
+asymmetrisches verfahren um einen temporären symmetrischen Schlüssel
+auszuhandeln und dann ein deutlich effizienteres symmetrisches
+Verfahren um die eigentliche Kommunikation zu verschlüsseln.
+
+Auch wenn Sender und Empfänger dieselbe Person sind, etwa bei der
+Verschlüsselung von (Teilen der) Festplatte, kommen moderne
+symmetrische Verschlüsselungsverfahren zum Einsatz.
+
+[[asymm]]
 ==== Asymmetrische Verschlüsselung
 
-In der Praxis nutzt man heute eher die asymmetrische Verschlüsselung.
+Bei der asymmetrischen Verschlüsselung werden zwei verschiedene aber
+zusammenpassende Schlüssel zum Ver- und Entschlüsseln der Daten
+verwendet.  Der zur Verschlüsselung verwendete Schlüssel wird in einem
+asymmetrischen Verfahren als öffentlich bezeichnet, da dieser keine
+Rückschlüsse auf den privaten Schlüssel zulässt. Der für die
+Entschlüsselung verwendete private Schlüssel muss natürlich geheim
+gehalten werden, um unerwünschtes lesen der Daten zu verhindern.
 
-Denn bei der asymmetrischen Verschlüsselung benötigt man je einen Schlüssel zum Verschlüsseln der Daten und einen anderen Schlüssel zum Entschlüsseln. Der zur Verschlüsselung verwendete Schlüssel wird in einem asymmetrischen Verfahren als öffentlicher Schlüssel bezeichnet und kann jedem frei mitgeteilt werden. Der für die Entschlüsselung verwendete Schlüssel muss hingegen geheim gehalten werden. [*kann man das Wort "Schlüssel" hier auch evtl. das ein oder andere Mal ersetzen?*]
+Erstmals wurde die Idee der asymmetrischen Verschlüsselung im Jahr
+1976 von Diffie und Hellman in ihrem Aufsatz "New Directions in
+Cryptography" veröffentlicht. In diesem Aufsatz, führen die Autoren
+das Prinzip der asymmetrischen Kryptographie ein. Rivest, Shamir und
+Adleman stellten 1978 mit RSA das erste asymmetrische
+Verschlüsselungsverfahren vor.
 
-Erstmals wurde die Idee der asymmetrischen Verschlüsselung im Jahr 1976 von Diffie und Hellman in ihrem Aufsatz "New Directions in Cryptography" veröffentlicht. In diesem Aufsatz, führen die Autoren das Prinzip der asymmetrischen Kryptographie ein. Rivest, Shamir und Adleman stellten 1978 mit RSA das erste asymmetrische Verschlüsselungsverfahren vor. 
+Die Funktionsweise einer asymmetrischen Verschlüsselung lässt sich wie
+folgt erklären: Jeder Teilnehmer erzeugt ein Schlüsselpaar aus
+privatem und öffentlichem Schlüssel für sich selbst.
+Wenn ein Versender eine geheime
+Nachricht an einen Empfänger versenden möchte, so benötigt er den
+öffentlichen Schlüssel des Empfängers. Diesen bekommt er vom Empfänger
+selbst oder aus einem öffentlichen Schlüsselverzeichnis. Der Versender
+verschlüsselt die Nachricht mit dem öffentlichen Schlüssel und einer
+Verschlüsselungsfunktion. Die verschlüsselte Nachricht kann danach an
+den Empfänger versendet werden. Dieser benutzt die
+Entschlüsselungsfunktion mit Hilfe seines privaten Schlüssels, um die
+ursprüngliche Nachricht wiederherzustellen.
 
-Die Funktionsweise einer asymmetrischen Verschlüsselung lässt sich wie folgt erklären:
-Jeder Teilnehmer erzeugt sich ein sogenanntes Schlüsselpaar. Das Schlüsselpaar besteht aus einem öffentlichen und einem geheimen Schlüssel. Der private Schlüssel sollte dann nicht, oder nur in einer nicht vertretbaren Zeit, aus dem öffentlichen Schlüssel berechnet werden können. Wenn ein Versender eine geheime Nachricht an einen Empfänger versenden möchte, so benötigt er den öffentlichen Schlüssel vom Empfänger. Diesen bekommt er vom Empfänger selbst oder aus einem öffentlichen Schlüsselverzeichnis. Der Versender verschlüsselt die Nachricht mit dem öffentlichen Schlüssel und einer Verschlüsselungsfunktion. Die verschlüsselte Nachricht kann danach an den Empfänger versendet werden. Dieser benutzt die Entschlüsselungsfunktion mit Hilfe seines privaten Schlüssels, um die ursprüngliche Nachricht wiederherzustellen.
-
-==== Hashing
-
-Durch Hashing oder eine Hashfunktion, wird eine Zeichenkette variabler Länge auf eine Zeichenkette fester Länge abgebildet. Durch eine effiziente mathematische Funktion, wird der Hashwert meist erheblich kürzer als der Text. Dadurch wird ein Fingerabdruck (Fingerprint) der Zeichenkette oder Dokument erstellt. Dieser Fingerabdruck dient dann als nahezu eindeutige Kennzeichnung des Dokumentes. Ähnlich dem menschlichen Fingerabdruck, der uns nahezu eindeutig identifiziert. Durch diesen Hashwert kann man z.B. überprüfen, ob ein Dokument, eine Datei oder ein Update verändert wurden. 
+Das in <<symm>> erwähnte Problem des Schlüssel austausches wird also
+deutlich erleichtert, da der öffentliche Schlüssel nicht geheim
+gehalten werden muss. Es bleibt jedoch die Gefahr eines so genannten
+man-in-the-middle  Angriffs, der in <<mitm>> erläutert wird.
 
 
-.ToDo
-[IMPORTANT]
---
-Beispiel:
---
+[[mitm]]
+==== Man in the Middle
+
+Bei dem man-in-the-middle Angriff versendet ein dritter seinen
+öffentlichen Schlüssel unter falschem Namen.
+Will etwa Alice an Bob eine verschlüsselte Nachricht schreiben und
+fragt zu diesem zweck bei einem Schlüssel-Verzeichnis-Server Bobs öffentlichen
+Schlüssel an, so könnte Eve ihren eigenen öffentlichen Schlüssel unter
+Bobs Namen dort hinterlegt haben.
+
+Alice verschlüsselt ihre Nachricht in diesem Fall so, dass nur Eve sie
+entschlüsseln kann. Damit der ANgriff nicht auffällt wird Eve die
+Nachricht nach der Entschlüsselung wieder verschlüsseln, diesmal mit
+Bobs echtem Schlüssel und an Bob weiter leiten. Diese Relais-Rolle des
+Angreifers ist namensgebend.
+
+Um einen solchen Angriff auszuschließen wird eine vertrauenswürdige
+Identitäts-Infrastruktur benötigt, mit deren Hilfe Bob und Alice ihre
+Identitäten und die zugehörigen öffentlichen Schlüssel sicher
+verwalten können.
+
+
 
 [[sec_digi_sig]]
 ==== Digitale Signatur
 
-Wenn man von Signatur redet, muss man zwischen einer elektronischen Signatur und einer digitalen Signatur unterscheiden. Beide werden oftmals synonym verwendet, was jedoch nicht ganz richtig ist. 
+Bei der digitalen Signatur wird mit dem privaten Schlüssel und einem
+"original" Dokument eine "Unterschrift" hinzugefügt. Um verwechslungen
+mit z.B. einer eingescannten handschriftlichen Unterschrift zu
+vermeiden wird im folgenden der Begriff "Signatur" für diese digitale
+Signatur verwendet, auch wenn diese kozeptionell/juristisch die
+Funktion einer Unterschrift erfüllt.
 
-Bei der elektronischen Signatur (elektronische Unterschrift), spricht man eher von einem rechtlichen oder juristischen Begriff und basiert nicht zwangsläufig auf einer digitalen Signatur. Bei der digitalen Signatur hingegen, handelt es sicher eher um ein mathematisches oder technisches Verfahren. 
+Mit dem öffentlichen Schlüssel kann der Empfänger von Dokument und Signatur
+feststellen, ob das Dokument wirklich mit dem zum öffentlichen
+Schlüssel passenden privaten Schlüssel signiert wurde und ob das
+Dokument unverändert vorliegt oder manipuliert wurde.
+Steht die in <<mitm>> erwähnte vertrauenswürdige
+Identitätsinfrastruktur zur Verfügung, damit der Empfänger sicher sein
+kann den richtigen öffentlichen Schlüssel des Absenders zu kennen, so
+kann mit der digitalen SIgnatur sichergestellt werden, dass eine
+Nachricht wirklich vom vorgeblichen Absender stammt.
+Somit lässt sich die Identität des Unterzeichners zweifelsfrei
+nachweisen und außerdem die Integrität der elektronischen Nachricht
+sicherstellen.
 
-Bei der digitalen Signatur wird mit dem privaten Schlüssel zu dem originalen Dokument eine „Unterschrift“/Signatur hinzugefügt. Mit dem öffentlichen Schlüssel kann dann später vom Empfänger festgestellt werden, ob die Daten wirklich von demjenigen stammen, der mit seinem privaten Schlüssel signiert hat und ob die Daten verändert worden und noch unverändert sind. Die digitalen Signaturen sind deshalb notwendig, da sich der Absender von Dateien, Dokumenten oder Nachrichten fälschen lässt, wie beispielweise den Absender einer E-Mail. Somit lässt sich die Identität des Unterzeichners zweifelsfrei nachweisen und die Integrität der elektronischen Nachricht sicherstellen. 
-
-Wie funktionert eine digitale Signatur? Aus Performance-Gründen wird als erstes von der Nachricht ein Hashwert berechnet. Dieser Hashwert ist der Fingerabdruck dieser Nachricht. Für die Signatur wird der geheime private Schlüssel verwendet und durch einen Signieralgorithmus ein Wert, die sogenannte digitale Signatur, berechnet. Die Nachricht kann dann mit der digitalen Signatur an den Empfänger versendet werden. Der Empfänger kann mit dem öffentlichen Schlüssel des Versenders überprüfen, ob die Nachricht wirklich vom tatsächlichen Versender verschickt wurde und ob diese Nachricht unverändert ist. 
+Für nähere Details zur Funktionsweise von Signaturalgorithmen wird auf
+die Literatur verwiesen. <<sign>>
 
 
 ==== Digitale Zertifikate
@@ -1318,29 +1398,25 @@ zu denken ist.
 == Literaturverzeichnis/Quellenangaben
 
 - [[[acatech]]] Wandlungsfähige, menschzentrierte Strukturen in Fabriken und Netzwerken der Industrie 4.0 (acatech Studie), München: Herbert Utz Verlage 2018. https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/hm-2018-fb-wandlung.html
-- [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
-- [[[gleif]]] GLEIF und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
-- [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
-- [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
-- [[[szenarien-i40]]] Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0 https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
-- [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
-- [[[vdma-i40]]] Leitfaden Industrie 4.0 (VDMA - Forum Industrie 4.0) https://industrie40.vdma.org/viewer/-/v2article/render/15540546
-
-
-Online Ressourcen (Stand September 2020):
-
 - [[[auth]]] https://de.wikipedia.org/wiki/Authentifizierung
+- [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
 - [[[gen-spec]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
-- [[[gleif]]] https://www.gleif.org/
+- [[[gleif]]] GLEIF https://www.gleif.org/ und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
+- [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
 - [[[online-demo]]] https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
 - [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
+- [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
+- [[[sign]]] https://de.wikipedia.org/wiki/Digitale_Signatur ,  https://en.wikipedia.org/wiki/Digital_signature , https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 - [[[ssi]]] https://hpd.de/artikel/self-sovereign-identities-helfen-internet-reparieren-17150
 - [[[ssi-am]]] https://digitaleweltmagazin.de/2019/08/12/chancen-der-self-sovereign-identities-ssi-aus-sicht-von-unternehmen-fuer-das-identity-access-management-iam/
 - [[[ssi-zukunft]]] https://www.validatedid.com/de/self-sovereign-identity-die-zukunft-steht-vor-der-tuer/ 
 - [[[ssi-bitkom]]] https://www.bitkom.org/Bitkom/Publikationen/Self-Sovereign-Identity-Use-Cases
+- [[[szenarien-i40]]] Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0 https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
 - [[[tls]]] https://de.wikipedia.org/wiki/Transport_Layer_Security
 - [[[trust-over-ip]]] https://trustoverip.org/
+- [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
+- [[[vdma-i40]]] Leitfaden Industrie 4.0 (VDMA - Forum Industrie 4.0) https://industrie40.vdma.org/viewer/-/v2article/render/15540546
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
