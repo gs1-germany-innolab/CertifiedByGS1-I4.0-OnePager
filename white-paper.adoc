@@ -346,7 +346,7 @@ Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollstän
 Man muss jede vergebene LEI online nachverfolgen können.
 
 
-[[symm]]
+[[sec_symm]]
 ==== Symmetrische Verschlüsselung
 
 Kryptografische Systeme kann man in zwei unterschiedliche
@@ -384,7 +384,7 @@ Auch wenn Sender und Empfänger dieselbe Person sind, etwa bei der
 Verschlüsselung von (Teilen der) Festplatte, kommen moderne
 symmetrische Verschlüsselungsverfahren zum Einsatz.
 
-[[asymm]]
+[[sec_asymm]]
 ==== Asymmetrische Verschlüsselung
 
 Bei der asymmetrischen Verschlüsselung werden zwei verschiedene aber
@@ -415,24 +415,24 @@ den Empfänger versendet werden. Dieser benutzt die
 Entschlüsselungsfunktion mit Hilfe seines privaten Schlüssels, um die
 ursprüngliche Nachricht wiederherzustellen.
 
-Das in <<symm>> erwähnte Problem des Schlüssel austausches wird also
+Das in <<sec_symm>> erwähnte Problem des Schlüssel austausches wird also
 deutlich erleichtert, da der öffentliche Schlüssel nicht geheim
 gehalten werden muss. Es bleibt jedoch die Gefahr eines so genannten
-man-in-the-middle  Angriffs, der in <<mitm>> erläutert wird.
+Man-in-the-middle-Angriffs, der in <<sec_mitm>> erläutert wird.
 
 
-[[mitm]]
+[[sec_mitm]]
 ==== Man in the Middle
 
-Bei dem man-in-the-middle Angriff versendet ein dritter seinen
+Bei dem Man-in-the-middle-Angriff versendet ein dritter seinen
 öffentlichen Schlüssel unter falschem Namen.
 Will etwa Alice an Bob eine verschlüsselte Nachricht schreiben und
-fragt zu diesem zweck bei einem Schlüssel-Verzeichnis-Server Bobs öffentlichen
+fragt zu diesem zweck bei einem Schlüsselverzeichnis-Server Bobs öffentlichen
 Schlüssel an, so könnte Eve ihren eigenen öffentlichen Schlüssel unter
 Bobs Namen dort hinterlegt haben.
 
 Alice verschlüsselt ihre Nachricht in diesem Fall so, dass nur Eve sie
-entschlüsseln kann. Damit der ANgriff nicht auffällt wird Eve die
+entschlüsseln kann. Damit der Angriff nicht auffällt wird Eve die
 Nachricht nach der Entschlüsselung wieder verschlüsseln, diesmal mit
 Bobs echtem Schlüssel und an Bob weiter leiten. Diese Relais-Rolle des
 Angreifers ist namensgebend.
@@ -451,14 +451,14 @@ Bei der digitalen Signatur wird mit dem privaten Schlüssel und einem
 "original" Dokument eine "Unterschrift" hinzugefügt. Um verwechslungen
 mit z.B. einer eingescannten handschriftlichen Unterschrift zu
 vermeiden wird im folgenden der Begriff "Signatur" für diese digitale
-Signatur verwendet, auch wenn diese kozeptionell/juristisch die
+Signatur verwendet, auch wenn diese konzeptionell oder sogar juristisch die
 Funktion einer Unterschrift erfüllt.
 
-Mit dem öffentlichen Schlüssel kann der Empfänger von Dokument und Signatur
+Mithilfe des öffentlichen Schlüssels kann der Empfänger von Dokument und Signatur
 feststellen, ob das Dokument wirklich mit dem zum öffentlichen
 Schlüssel passenden privaten Schlüssel signiert wurde und ob das
 Dokument unverändert vorliegt oder manipuliert wurde.
-Steht die in <<mitm>> erwähnte vertrauenswürdige
+Steht die in <<sec_mitm>> erwähnte vertrauenswürdige
 Identitätsinfrastruktur zur Verfügung, damit der Empfänger sicher sein
 kann den richtigen öffentlichen Schlüssel des Absenders zu kennen, so
 kann mit der digitalen SIgnatur sichergestellt werden, dass eine
@@ -468,24 +468,72 @@ nachweisen und außerdem die Integrität der elektronischen Nachricht
 sicherstellen.
 
 Für nähere Details zur Funktionsweise von Signaturalgorithmen wird auf
-die Literatur verwiesen. <<sign>>
+die Literatur verwiesen <<sign>>.
 
 
 ==== Digitale Zertifikate
 
-Ein „normales“ Zertifikat ist im üblichen Sinne eine Bescheinigung oder eine Urkunde zu bestimmten Informationen, zu einem Unternehmen oder zu einer Person.
-GS1 vergibt in gedruckter Form ein Zertifkat für die Teilnahme am globalen GS1 System. In diesem Zertifkat wird unter anderem die GLN und die dazugehörige Firma aufgeführt.
-Im Gegensatz zu einem gedruckten Zertifikat, stellt ein digitales Zertifikat im Wesentlichen eine digitale Beglaubigung dar. Mit diesem digitalen Zertifikat kann man bestimmte Eigenschaften zu einem Objekt oder zu einer Person bestätigen, sowie die Echtheit und die Datenintegrität überprüfen. Durch ein Zertifikat lässt sich ein öffentlicher Schlüssel sicher einem bestimmten Besitzer zuweisen.
+Unter einem "Zertifikat" im klassischen Sinne versteht man eine Bescheinigung
+oder Urkunde, die bestimmten Informationen zu einem Unternehmen,
+einer Person oder Sache "zertifiziert". Ein Zertifikat hat immer einen
+Aussteller der mit einer klassischen Unterschrift, Stempel, Siegel
+oder ähnlichem bestätigt, dass er die zertifizierten Informationen
+überprüft hat und deren Korrektheit bestätigt.
+Zum Beispiel vergibt GS1 in gedruckter Form ein Zertifkat
+für die Teilnahme am globalen GS1 System. In diesem Zertifkat wird
+unter anderem die GLN und die dazugehörige Firma aufgeführt.
 
-Zertifikate werden genutzt, um:
--	den Datenverkehr im Internet zu verschlüsseln
--	Software, Updates oder digitale Dokumente zu signieren
--	E-Mails zu verschlüsseln und zu signieren
--	VPN Verbindungen aufzubauen
+.ToDo
+[IMPORTANT]
+--
+Zertifikat Bild einfügen
+--
 
-Die am häufigsten verwendeten Zertifikate sind: 
--	PGP Zertifikat (siehe Zertifikatsarten in PGP) 
--	X.509 Zertifikat
+Diese Eigenschaften des analogen Zertifikates werden mit dem digitalen
+Zertifikat nicht nur digitalisiert, sondern mittels einer digitalen
+Signatur (siehe <<sec_digi_sig>>) wird die Echtheit des Zertifikates
+kryptografisch abgesichert. Ein digitales Zertifikat ist damit
+deutlich schwerer zu fälschen als ein analoges, vorausgesetzt die
+Signatur beruht auf einer hinreichend sicheren Vertrauensinfrastruktur
+für die Verwaltung der öffentlichen Schlüssel und die Teilnehmer sind
+in der Lage, ihre privaten Schlüssel geheim zu halten.
+
+Konkret werden digitale Zertifikate verwendet, um bestimmte
+Eigenschaften zu einem Objekt oder zu einer Person zu bestätigen. Ein
+besonders wichtiges Zertifikat im Rahmen einer Vertrauensinfrastruktur
+ist die Bescheinigung, dass ein gewisser öffentlicher Schlüssel einem
+bestimmten Besitzer gehört.
+
+Im Beispiel aus <<sec_mitm>> kann Alice darauf vertrauen, dass ein
+öffentlicher Schlüssel wirklich Bob gehört und nicht von Eve
+untergeschoben wurde, wenn ein vertrauenswürdiger Dritter dies
+zertifiziert. Konkret stellt z.B. ein entsprechender
+vertrauenswürdiger Dienstleister ein Zertifikat aus, in dem
+Bescheinigt wird, dass Bobs öffentliche Schlüssel in der Tat Bob
+gehört. Dienstleister überprüft hierzu, dass Bob tatsächlich
+den passenden privaten Schlüssel besitzt und tatsächlich
+die Person ist, die er vorgibt zu sein.
+Solche Dienstleister werden auch als *Identitity Provider* (IDP)
+bezeichnet und spielen in den Vertrauensinfrastrukturen, die in den
+folgenden Abschnitten erläutert werden, eine wichtige Rolle.
+
+
+Zertifikate werden weiterhin genutzt, um z.B.:
+
+- Identitäten von Servern zu bescheinigen, um auf dieser
+Vertrauensbasis mittels <<tls>> den Datenverkehr im Internet zu verschlüsseln oder VPN Verbindungen aufzubauen
+- Zu bescheinigen, dass Software, Updates oder digitale Dokumente vom vorgeblichen Urheber stammen
+- Personen Identitäten zu bescheinigen, um, wie im Beispiels mit Alice und Bob, eine direkte Mensch zu Mensch Kommunikation abzusichern, z.B. via e-Mail oder Messenger
+
+
+Jede technische Implementierung einer Vertrauensinfrastruktur
+definiert typischerweise einen Standard für das Datenformat ihrer
+Zertifikate. Häufig verwendete Formate für Zertifikate sind (in historischer
+Reihenfolge):
+
+- X.509 Zertifikat <<x509>>
+- PGP Zertifikat <<pgp-cert>>
+- Verifiable Credentials <<vc-data-model>>
 
 
 
@@ -1406,7 +1454,8 @@ zu denken ist.
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
 - [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
-- [[[online-demo]]] https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
+- [[[online-demo]]]  https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
+- [[[pgp-cert]]] https://de.wikipedia.org/wiki/OpenPGP#Aufbau_der_Zertifikate
 - [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
 - [[[sign]]] https://de.wikipedia.org/wiki/Digitale_Signatur ,  https://en.wikipedia.org/wiki/Digital_signature , https://en.wikipedia.org/wiki/RSA_(cryptosystem)
@@ -1420,3 +1469,4 @@ zu denken ist.
 - [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
 - [[[vdma-i40]]] Leitfaden Industrie 4.0 (VDMA - Forum Industrie 4.0) https://industrie40.vdma.org/viewer/-/v2article/render/15540546
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
+- [[[x509]]] https://de.wikipedia.org/wiki/X.509
