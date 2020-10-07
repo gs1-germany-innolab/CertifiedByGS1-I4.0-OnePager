@@ -85,11 +85,9 @@ herausfinden, dass mit der eben genannten Abkürzung "EECC" die "European EPC Co
 bezeichnet wird. Allgemein existiert jedoch kein Service unter dem alle
 gültigen GS1 Idente mit zugehörigen Daten erfasst oder gar einsehbar
 sind.
-
-[*Überleitung unklar*]
 Gibt sich einer der Kommunikationspartner als 4047111000006 aus, ist
 also zumindest eindeutig, dass hiermit diese konkrete Firma gemeint
-ist und nicht z.B. eine Person mit diesen Initialen. [*???*] Die von GS1
+ist und nicht z.B. eine Person mit den Initialen "EECC". Die von GS1
 vergebenen Idente ermöglichen also eine eindeutige
 Identifikation. Stand heute ist jedoch keine Authentifikation <<auth>>
 dieser Daten möglich. Es kann nicht überprüft
