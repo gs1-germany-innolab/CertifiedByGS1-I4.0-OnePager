@@ -714,11 +714,11 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 
 ==== Problem
 
-Die missbräuchliche Verwendung von GS1 Identen (wie z.B. GTIN) an sich ist u.A. für Marktplätze wie Amazon ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt, um verschiedene Angebote zu gleichen Artikeln zu aggregieren und die Echtheit der angebotenen Produkte sicherzustellen. Eine rein syntaktische Prüfung der Nummern auf z.B. korrekte Länge oder gültige Prüfziffer kann jedoch einfach umgangen werden und es tauchen regelmäßig Angebotsduplikate unter gefälschten Artikelnummern auf.
+Die missbräuchliche Verwendung von GS1 Identen (wie z.B. GTIN) an sich ist u.A. für Online-Marktplätze ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt, um verschiedene Angebote zu gleichen Artikeln zu aggregieren und die Echtheit der angebotenen Produkte sicherzustellen. Eine rein syntaktische Prüfung der Nummern auf z.B. korrekte Länge oder gültige Prüfziffer kann jedoch einfach umgangen werden und es tauchen regelmäßig Angebotsduplikate unter gefälschten Artikelnummern auf.
 
 ==== Existierende Lösungsansätze
 
-Ein Abgleich mit bei GS1 registrierten Artikel-Stammdaten über die Online Services von GS1 Germany, wie Gepir <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Artikelstammdaten-Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
+Ein Abgleich mit bei GS1 registrierten Artikel-Stammdaten über die Online Services von GS1, wie Gepir <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
 
 ==== Verbesserungspotential durch Certified
 
