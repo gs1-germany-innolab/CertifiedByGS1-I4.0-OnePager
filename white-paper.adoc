@@ -180,11 +180,10 @@ weiterhin Services und Publikationen zur Optimierung der
 Geschäftsprozesse.
 
 
-Im Detail wird dem Kunden eine 13-stellige GLN (Global Location
-Number) zugeteilt, deren Basisnummer (GS1 Company Prefix, GCP)
+Im Detail wird dem Kunden eine Basisnummer (GS1 Company Prefix, GCP) zugeteilt, die
 entweder 7, 8 oder 9 Stellen umfasst. Entsprechend kann der Kunde
-damit 100.000, 10.000 oder 1.000 GTINs erstellen, in dem die GCP um
-die fehlenden Stellen verlängert wird, um eine 13-stellige Nummer zu
+damit 100.000, 10.000 oder 1.000 GTINs erstellen, in dem der GCP um
+die fehlenden Stellen aufgefüllt wird, um eine 13-stellige Nummer zu
 erhalten. Auch alle anderen GS1 Idente können auf Grundlage der GCP
 gebildet werden. Die Vergabe und Zuteilung der einzelnen Idente
 erfolgt durch den Kunden selbst, ohne Kontrolle durch GS1. Wie in
@@ -199,13 +198,13 @@ ist grundsätzlich eine eindeutige Zuordnung aller Idente möglich.
 
 Eine Authentifikation der Idente durch GS1 ist bisher nicht allgemein
 gegeben. Eine besondere 
-Identitätsprüfung der Antragsteller für eine GS1 GLN erfolgt aktuell in der Regel
+Identitätsprüfung der Antragsteller für GS1 Complete erfolgt aktuell in der Regel
 nicht. Dem Kunden wird bei Bestellung vertraut, dass er derjenige ist
 für den er sich ausgibt. Trotz der fehlenden Kontrolle sind GS1
 Germany bisher keine Identitätsdiebstähle auf Basis der GCP bekannt.
 
 Ein Missbrauch einzelner
-Idente erfolgt in einigen Fällen z.B. in der Nutzung gefälschter
+Idente erfolgt in einigen Fällen z.B. hinsichtlich
 GTINs. Unternehmen, die keine GS1 Kunden sind, nutzen
 Nummernkombinationen entsprechend dem GS1 Nummernsystem, um Produkte
 online anbieten zu können.
@@ -251,7 +250,7 @@ bieten und gilt weltweit. Der LEI ist verpflichtend und ermöglicht es
 hinterlegte Referenzdaten im Online-Datenpool der GLEIF
 abzufragen. Diese Referenzdaten sind mindestens der offizielle Name
 laut Registrierung des Rechtsträgers, Anschrift des Unternehmens, Land
-der Gründung, Codes für Darstellung der Ländernamen, sowie das Datum
+der Gründung, Ländercodes, sowie das Datum
 der ersten LEI-Zuweisung und der letzten Aktualisierung, ggF.
 auch das Ablaufdatum, denn eine LEI muss jährlich verlängert werden.
 
@@ -283,15 +282,15 @@ AISBL. Diese dient als Issuer. GS1 verwaltet derzeit mehr als
 
 Im Gegensatz zur LEI ist die GLN (Global Location Number) ein von
 GS1 standardisiertes und ausschließlich im GS1 System vergebenes
-Ident. Die GLN ist primär ein Orts-Ident, dient als Party GLN jedoch
-auch als Identifikationsnummer für Unternehmen, insbesondere für
-diejenigen, die an GS1 Complete teilnehmen.
- Es ist
-möglich mit der (Party) GLN verschiedene Unternehmensbereiche zu
-identifizieren, was mit einer LEI verboten ist.
+Ident. Die GLN dient vier Funktionen, sie ist als Party GLN eine Identifikationsnummer für Unternehmen, insbesondere für
+diejenigen, die an GS1 Complete teilnehmen (juristische Entität). Es ist
+möglich mit der GLN verschiedene Unternehmensbereiche zu
+identifizieren, was mit einer LEI verboten ist. Somit dient sie entsprechend auch der Identifikation
+von physischen sowie digitalen Lokationen. Weiterhin kann man auch Funktionen, das bedeutet einzelne Abteilungen oder Aufgaben, 
+identifizieren.
 
-Die GS1 Company Prefix (GCP),
-auf der die GLN beruht, wird von GS1 Germany selbstständig
+Die GS1 Company Prefix (GCP)
+wird von GS1 Germany selbstständig
 vergeben und gliedert sich in das weltweite GS1 System ein. GS1
 Germany handelt hier allerdings nicht als Vertriebspartner, sondern
 als eigene Gesellschaft.
@@ -303,8 +302,9 @@ Verwendungsmöglichkeiten bietet.
 
 
 Auch vom Aufbau unterscheidet sich die GLN von der LEI.
-Konkret hat die GLN 13 Stellen. In der Basisnummer von sieben, acht oder neun Stellen
-findet man das Länderpräfix, welches die ausstellende GS1 Organisation
+Konkret hat die GLN 13 Stellen. Im Kernprodukt der GS1 Germany, GS Complete, findet man
+in der Basisnummer von sieben, acht oder neun Stellen
+das Länderpräfix, welches die ausstellende GS1 Organisation
 identifiziert, gefolgt von der eindeutigen Kundenkennung. Die darauf folgenden
 fünf, vier oder drei Ziffern dienen dem Unternehmen als Namensraum zur
 selbstständigen, nicht sprechenden Vergabe der eigenen Idente. Bei der
@@ -326,9 +326,9 @@ registrieren. GS1 hält global derzeit mehr als 1 Millionen GCPs.
 Gemeinsam sind der LEI und der (Party) GLN demnach die
 Eindeutigkeit und weltweite Überschneidungsfreiheit. Zudem können die
 Referenzdaten der LEI- und auch der GS1 Complete Kunden durch das
-Unternehmen selbst im Datenpool der GS1 verwaltet
-werden. Man findet die Daten der beiden Idente in den jeweiligen
-Datenbanken. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
+Unternehmen selbst verwaltet werden. 
+Man findet die Daten der beiden Idente in den jeweiligen
+Datenbanken, wie der LEI-Datenbank oder gepir. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
 vermindert Identitätsmissbrauch. Allerdings gibt es auch hier derzeit Unterschiede:
 Ein GS1 Complete Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
 Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollständig und korrekt zu veröffentlichen. 
