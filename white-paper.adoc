@@ -742,8 +742,8 @@ Bei der Vergabe eines GS1 Company Prefix (GCP) und damit eines Nummernkreises an
 Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Daten, wie diese z.B. bei der LEI-Vergabe durch GS1 Germany aktuell bereits stattfindet, kann GS1 die Echtheit solcher Unternehmensstammdaten zertifizieren. Die Vorlage vertrauenswürdig zertifizierter Daten erspart den Vertragspartnern dieses Unternehmens künftig, diese Überprüfung selbst durchführen zu müssen und ermöglicht so schneller und einfacher mit dem Unternehmen in eine Rechtsbeziehung zu treten. 
 
 
-=== Beispiel Microgrids - EKU Power Drives
-==== Problemstellung
+== Beispiel Microgrids - EKU Power Drives
+=== Problemstellung
 
 EKU entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Hierbei
 konzentriert sich EKU vorwiegend auf ortsveränderliche bzw. mobile Anlagen. Also Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
@@ -757,8 +757,8 @@ Eine der wesentlichen Herausforderungen in diesen Systemen ist die ständige Anp
 .Einführungstext der interaktiven Demonstration des Use Case
 image::demo-screenshots/1-intro.png[]
 
-==== Existierende Lösungsansätze
-===== Statische Informationen
+=== Existierende Lösungsansätze
+==== Statische Informationen
 Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage
 charakterisieren. Dies können z.B. sein
 
@@ -789,7 +789,7 @@ image::demo-screenshots/3-outage.png[]
 
 
 [[sec_eku-dynamic]]
-===== Dynamische Informationen
+==== Dynamische Informationen
 
 Neben den statischen Informationen über die Anlage entstehen während ihres Betriebs weitere Daten, die für
 andere Teilnehmer im Netzwerk interessant sein können. So z.B.
@@ -812,7 +812,7 @@ image::demo-screenshots/5-dynamic.png[]
 .Manipulierte Daten werden problematisiert
 image::demo-screenshots/6-hacked.png[]
 
-===== Dynamische Rekonfiguration von Systemen verschiedener Dienstleister und Hersteller
+==== Dynamische Rekonfiguration von Systemen verschiedener Dienstleister und Hersteller
 Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier
 arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel, je nach Einsatzplan von
 unterschiedlichen Unternehmen bereitgestellt, die wiederum auch eine bunte Mischung unterschiedlichster
@@ -825,9 +825,9 @@ Fehler zu minimieren.
 
 [EKU PD Voraussetzungen sehr ausführlich im Vergleich zum Rest erklärt - muss gekürzt werden]
 
-==== Verbesserungspotential durch Certified by GS1
+=== Verbesserungspotential durch Certified by GS1
 
-=====  Typenschild
+====  Typenschild
 Das digitale Typenschild, das alle für die Anlage technisch relevanten Informationen enthält, kann vom Hersteller
 mittels einer elektronischen Signatur beglaubigt werden. Es kann nicht verändert werden, ohne Kenntnis des
 privaten Schlüssels des Herstellers. Analog zum SSL Zertifikat im WWW, das die Echtheit einer besuchten Webseite
@@ -841,7 +841,7 @@ eingesetzt werden.
 image::demo-screenshots/4-certified-dtls.png[]
 
 
-===== Dynamische Daten
+==== Dynamische Daten
 Um das Einschleusen von unerwünschter / schädlicher Informationen in die verteilten Regelsysteme zu vermeiden,
 kann ein am Prozess beteiligtes Steuergerät seine komplette Kommunikation elektronisch signieren. Somit kann
 die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufende Sequenznummern innerhalb
@@ -852,7 +852,7 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 image::demo-screenshots/7-certified-dynamic.png[]
 
 
-===== Pay per Use
+==== Pay per Use
 Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Businessmodelle, in denen nicht mehr die Geräte oder Maschinen direkt verkauft oder auf Zeit verliehen
 werden, sondern der Nutzen, den der Anwender durch diese erzielt, direkt bepreist wird. In solchen "Pay per Use" oder "as a Service" Modellen werden alle nötigen Voraussetzungen, wie Maschinen und Betriebsmittel, die der Nutzer braucht um den gewünschten Nutzen zu erzielen, zur Verfügung gestellt. Wichtig ist bei den zugrundelegenden Business Modellen immer, eine präzise und vor allem eine für alle beteiligten vertrauenswürdige Messung der Parameter (KPIs), auf denen die Berechnung der Kosten eines solchen Service beruht.
 
