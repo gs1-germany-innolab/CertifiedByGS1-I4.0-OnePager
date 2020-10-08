@@ -808,10 +808,6 @@ image::demo-screenshots/5-dynamic.png[]
 .Manipulierte Daten werden problematisiert
 image::demo-screenshots/6-hacked.png[]
 
-==== Dynamische Rekonfiguration von Systemen verschiedener Dienstleister und Hersteller
-Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel, je nach Einsatzplan von unterschiedlichen Unternehmen bereitgestellt, die wiederum auch eine bunte Mischung unterschiedlichster Anlagentypen mehrerer Hersteller unterhalten. Hinzu kommt, dass die Anlagen nach einem Einsatz von z.B. 14 Tagen wieder abgebaut und in einer komplett anderen Konfiguration an einer anderen Baustelle wieder aufgebaut und vernetzt werden sollen.
-Da hier kosteneffizient unter hohem Zeitdruck gearbeitet werden muss und das Personal ständig wechselt, müssen alle Konfigurationsvorgänge soweit möglich automatisiert ablaufen, um Zeit einzusparen und die Anfälligkeit für Fehler zu minimieren.
-
 === Verbesserungspotential durch Certified by GS1
 ====  Statische Daten
 Das digitale Typenschild, das alle für die Anlage technisch relevanten Informationen enthält, kann vom Hersteller
