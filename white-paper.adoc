@@ -122,7 +122,7 @@ Sinne erfüllt GS1 bereits die Rolle eines "Identity Provider" <<idp>> in der
 analogen Welt. In "Certified by GS1" wurden Konzepte zur Vergabe von
 Sicherheitsmerkmalen (Zertifikaten) zur authentifizierung dieser Idente
 entwickelt. Hierbei entsprechen die entwickelten Zertifikate Systeme strukturell
-dem bestehenden Vergabesystem für Idente  In <<sec_cert_chain>> wird dieser
+dem bestehenden Vergabesystem für Idente  In <<sec_gs1_id_scheme>> wird dieser
 Punkt detaillierter erläutert.
 
 
@@ -134,6 +134,11 @@ Sicherheitsmerkmale und damit die authentifizierten Idente umgesetzt. Ein Kunde 
 bisherigen Prozesse zur Vergabe von Identen strukturell beibehalten
 und um die Sicherheits- und Authentifizierungsfunktion für die selbst
 erzeugten Idente erweitern.
+
+[[Chain-EECC]]
+.Die vergabe von Zertifikaten im Rahmen von Certified by GS1 folgt der Logik bei der Vergabe der GS1 Idente, siehe <<pic_id_tree>>
+image::Certificate-Chain-EECC.png[]
+
 
 Im IoT benötigt jedes Gerät nicht nur ein serielles
 Ident wie eine SGTIN, sondern auch die Möglichkeit sich
@@ -290,66 +295,57 @@ AISBL. Diese dient als Issuer. GS1 verwaltet derzeit mehr als
 
 
 
-[[sec_cert_chain]]
+[[sec_gs1_id_scheme]]
 ==== Nummernkreise der GS1
 
 
-Das Nummernsystem der GS1 besteht im wesentlichen aus einer ähnlichen
-baumartigen Struktur. Ausgehend von der Gesamtheit der GS1
-Organisationen und GS1 global erhalten die einzelnen
-Mitgliedsorganisationen (MOs) Nummernkreise, indem eine betimmte
-Präfix einer MO zugeordnet wird. Z.B. gehören alle GS1 Idente deren
-erste 3 Ziffern im Bereich 400 bis 440 liegen zu GS1 Germany
-<<gs1-prefix>>.
-Innerhalb des eigenen Nummernkreises (d.h. beginnend mit der eigenen
-GS1 Präfix) vergeben die MOs eine GS1 Company Prefix (GCP) und damit
-den Kreis der Nummern beginnend mit der GCP an Firmen, z.B. gehören
-alle GS1 Idente beginnend mit 4047111 zum Nummernkreis des EECC. Die
-Firmen können nun innerhalb der Regeln für GS1 Idente selbst
-z.B. Idente für Warenkategorien oder individuelle Waren, aber auch für
-Standorte, Warensendungen, Coupons, uvm. <<gen-spec>>
-vergeben. Z.B. bezeichnet die GLN 4047111000006 den
-Unternehmenshauptsitz des EECC, wobei streng genommen die Art des
-Idents mit dem entsprechenden Code, z.B. 414 für die GLN, mit
-angegeben werden sollte. (414) 4047111000006 (254) 01 wäre ein
-Beispiel für eine SGLN mit der das EECC einen spezifischeren Ort, etwa
-den Posteingang des Hauptsitzes, bezeichnen könnte.
-
-[[Chain-EECC]]
-.Die vergabe von Zertifikaten im Rahmen von Certified by GS1 folgt der Logik bei der Vergabe der GS1 Idente
-image::Certificate-Chain-EECC.png[]
-
-==== GLN
-
-Die GLN (Global Location Number) ein von
-GS1 standardisiertes und ausschließlich im GS1 System vergebenes
-Ident. Die GLN dient vier Funktionen, sie ist als Party GLN eine Identifikationsnummer für Unternehmen, insbesondere für
-diejenigen, die an GS1 Complete teilnehmen (juristische Entität). Es ist
-möglich mit der GLN verschiedene Unternehmensbereiche zu
-identifizieren, was mit einer LEI verboten ist. Somit dient sie entsprechend auch der Identifikation
-von physischen sowie digitalen Lokationen. Weiterhin kann man auch Funktionen, das bedeutet einzelne Abteilungen oder Aufgaben, 
-identifizieren.
-
-Die GS1 Company Prefix (GCP)
-wird von GS1 Germany selbstständig
-vergeben und gliedert sich in das weltweite GS1 System ein. GS1
-Germany handelt hier allerdings nicht als Vertriebspartner, sondern
-als eigene Gesellschaft.
-
-Wie in <<sec_gs1_ids>> erläutert, bildet die GCP als Basisnummer die Grundlage, um
-in dem zugeteilten Nummernkreis eigene Idente zu vergeben. Hier gibt es erneut einen
-Unterschied zur LEI, die zugeordnet wird und keine weiteren
-Verwendungsmöglichkeiten bietet.
+GS1 Idente sind wie folgt aufgebaut: Ausgehend von der Gesamtheit der GS1
+Organisationen und GS1 global erhalten die einzelnen Mitgliedsorganisationen
+(MOs) Nummernkreise, indem eine bestimmte Präfix einer MO zugeordnet wird. Z.B.
+gehören alle GS1 Idente deren erste 3 Ziffern im Bereich 400 bis 440 liegen zu
+GS1 Germany <<gs1-prefix>>. Innerhalb des eigenen Nummernkreises (d.h. beginnend
+mit der eigenen GS1 Präfix) vergeben die MOs eine GS1 Company Prefix (GCP) und
+damit den Kreis der Nummern beginnend mit der GCP an Firmen. Z.B. gehören alle
+GS1 Idente beginnend mit 4047111 zum Nummernkreis des EECC. Die Firmen können
+nun innerhalb der Regeln für GS1 Idente selbst Idente für z.B. Warenkategorien
+oder individuelle Waren, aber auch für Standorte, Warensendungen, Coupons, uvm.
+(siehe <<gen-spec>>) vergeben. Beispielsweise bezeichnet die GLN 4047111000006
+den Unternehmenshauptsitz des EECC, wobei die letzte Ziffer eine Prüfziffer
+darstellt. Die Art des Idents wird über den sogenannten Application Identifier
+(AI) kodiert, z.B. 414 für die GLN. (414) 4047111000006 (254) 01 wäre ein
+Beispiel für eine SGLN mit der das EECC einen spezifischeren Ort, etwa den
+Posteingang des Hauptsitzes, bezeichnen könnte. Diese Baumstruktur aus
+viele-zu-einem Zuordnungen von serialisierten Identen zu Klassenidenten zu
+Companies zu MOs existiert in entsprechender Form (teilweise ohne die Klassen
+Ebene) für praktisch alle GS1 Idente und ist in <<pic_id_tree>> schematisch
+dargestellt. Dies stellt einen wichtigen Unterschied zu Systemen dar, in denen
+nur einzelne Idente vergeben werden, etwa bei der LEI, da GS1 Complete Kunden
+die Möglichkeit erhalten, selbst als intermediäre Vergabestelle eigene Idente zu
+vergeben.
 
 
-Auch vom Aufbau unterscheidet sich die GLN von der LEI.
+[[pic_id_tree]]
+.Hierarchie der Nummernkreise der GS1
+image::GS1-ID-Tree.png[]
+
+
+Neben der (Serial) Global Trade Item Numer (S)GTIN zur Identifikation von
+einzelnen Waren, bzw. von Warenklassen, ist die GLN (Global Location Number)
+eines der wichtigsten GS1 Idente. Neben der Identifikation physischer oder
+abstrakter Orte (Lokationen) dient diese als Party GLN auch als
+Identifikationsnummer für Unternehmen (juristische Personen). Es ist weiterhin
+vorgesehen mit der GLN verschiedene Unternehmensteile oder auch Funktionen oder
+Rollen, wie Abteilungen oder Ämter, zu identifizieren.
+
+
 Konkret hat die GLN 13 Stellen. Im Kernprodukt der GS1 Germany, GS Complete, findet man
-in der Basisnummer von sieben, acht oder neun Stellen
+in der Basisnummer (GCP) von sieben, acht oder neun Stellen
 das Länderpräfix, welches die ausstellende GS1 Organisation
 identifiziert, gefolgt von der eindeutigen Kundenkennung. Die darauf folgenden
 fünf, vier oder drei Ziffern dienen dem Unternehmen als Namensraum zur
 selbstständigen, nicht sprechenden Vergabe der eigenen Idente. Bei der
 letzten Ziffer handelt es sich um eine Prüfziffer.
+GS1 hält global derzeit mehr als 1 Millionen GCPs.
 
 
 [[GLN_Aufbau]]
@@ -357,14 +353,8 @@ letzten Ziffer handelt es sich um eine Prüfziffer.
 image::example-gln.png[]
 
 
-Ein Unternehmen, das GS1 Complete Kunde werden möchte, füllt wie der
-LEI-Kunde eine Online-Antragsstrecke aus. Jedoch erfolgt für die
-Teilnehmer hier keine Überprüfung, weder anhand des Handelsregisters
-noch auf Bonität. Es ist möglich, dass sich auch Privatpersonen
-registrieren. GS1 hält global derzeit mehr als 1 Millionen GCPs.
 
-
-Gemeinsam sind der LEI und der (Party) GLN demnach die
+Gemeinsam sind der LEI und der GLN demnach die
 Eindeutigkeit und weltweite Überschneidungsfreiheit. Zudem können die
 Referenzdaten der LEI- und auch der GS1 Complete Kunden durch das
 Unternehmen selbst verwaltet werden. 
