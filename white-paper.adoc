@@ -91,12 +91,13 @@ Sicherheits- und Vertrauensfragen zu verhindern.
 === Warum GS1?
 
 GS1 ist eine etablierte Institution zur Vergabe von Nummernkreisen
-(Namensräumen) für Idente, insbesondere Geschäfts- und Produktidente.
-In diesem Sinne erfüllt GS1 bereits die Rolle einer "Issuing
-Agency".  In "Certified by GS1" wurden Konzepte entwickelt, die in
-der Vergabe von Sicherheitsmerkmalen (Zertifikaten) strukturell dem
-bestehenden Vergabesystem für Idente entsprechen. In
-<<sec_cert_chain>> wird dieser Punkt detaillierter erläutert.
+(Namensräumen) für Idente, insbesondere Geschäfts- und Produktidente. In diesem
+Sinne erfüllt GS1 bereits die Rolle eines "Identity Provider" <<idp>> in der
+analogen Welt. In "Certified by GS1" wurden Konzepte zur Vergabe von
+Sicherheitsmerkmalen (Zertifikaten) zur authentifizierung dieser Idente
+entwickelt. Hierbei entsprechen die entwickelten Zertifikate Systeme strukturell
+dem bestehenden Vergabesystem für Idente  In <<sec_cert_chain>> wird dieser
+Punkt detaillierter erläutert.
 
 
 GS1 vergibt (in der Regel) keine einzelnen Idente, sondern Kunden
@@ -119,11 +120,11 @@ einzeln bei einer zentralen Plattform erworben werden müssen.
 
 
 Als not-for-profit Standarisierungsorganisation, erfüllt GS1 die Aufgabe
-globale Geschäftstandards zu entwickleln und zu pflegen. GS1 ist eine
+globale Geschäftstandards zu entwickeln und zu pflegen. GS1 ist eine
 neutrale und vertrauenswürdige Organisation. Diese Rolle als
 Vertrauensanker und neutrale Platform ermöglicht es GS1, Partner und
 Konkurrenten zu gemeinsamen Projekten, insbesondere im Bereich der
-Standardisieurung, zusammen zu bringen.
+Standardisierung, zusammen zu bringen.
 Dies prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikate
 Infrastruktur, insbesondere wenn diese auf der Authentifizierung der
 GS1 eigenen Idente beruht. 
@@ -260,9 +261,41 @@ AISBL. Diese dient als Issuer. GS1 verwaltet derzeit mehr als
 26.000 LEIs.
 
 
+
+
+
+[[sec_cert_chain]]
+==== Nummernkreise der GS1
+
+
+Das Nummernsystem der GS1 besteht im wesentlichen aus einer ähnlichen
+baumartigen Struktur. Ausgehend von der Gesamtheit der GS1
+Organisationen und GS1 global erhalten die einzelnen
+Mitgliedsorganisationen (MOs) Nummernkreise, indem eine betimmte
+Präfix einer MO zugeordnet wird. Z.B. gehören alle GS1 Idente deren
+erste 3 Ziffern im Bereich 400 bis 440 liegen zu GS1 Germany
+<<gs1-prefix>>.
+Innerhalb des eigenen Nummernkreises (d.h. beginnend mit der eigenen
+GS1 Präfix) vergeben die MOs eine GS1 Company Prefix (GCP) und damit
+den Kreis der Nummern beginnend mit der GCP an Firmen, z.B. gehören
+alle GS1 Idente beginnend mit 4047111 zum Nummernkreis des EECC. Die
+Firmen können nun innerhalb der Regeln für GS1 Idente selbst
+z.B. Idente für Warenkategorien oder individuelle Waren, aber auch für
+Standorte, Warensendungen, Coupons, uvm. <<gen-spec>>
+vergeben. Z.B. bezeichnet die GLN 4047111000006 den
+Unternehmenshauptsitz des EECC, wobei streng genommen die Art des
+Idents mit dem entsprechenden Code, z.B. 414 für die GLN, mit
+angegeben werden sollte. (414) 4047111000006 (254) 01 wäre ein
+Beispiel für eine SGLN mit der das EECC einen spezifischeren Ort, etwa
+den Posteingang des Hauptsitzes, bezeichnen könnte.
+
+[[Chain-EECC]]
+.Die vergabe von Zertifikaten im Rahmen von Certified by GS1 folgt der Logik bei der Vergabe der GS1 Idente
+image::Certificate-Chain-EECC.png[]
+
 ==== GLN
 
-Im Gegensatz zur LEI ist die GLN (Global Location Number) ein von
+Die GLN (Global Location Number) ein von
 GS1 standardisiertes und ausschließlich im GS1 System vergebenes
 Ident. Die GLN dient vier Funktionen, sie ist als Party GLN eine Identifikationsnummer für Unternehmen, insbesondere für
 diejenigen, die an GS1 Complete teilnehmen (juristische Entität). Es ist
@@ -315,6 +348,7 @@ vermindert Identitätsmissbrauch. Allerdings gibt es auch hier derzeit Unterschi
 Ein GS1 Complete Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
 Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollständig und korrekt zu veröffentlichen. 
 Man muss jede vergebene LEI online nachverfolgen können.
+
 
 
 [[sec_symm]]
@@ -515,20 +549,28 @@ Reihenfolge):
 - Verifiable Credentials <<vc-data-model>>
 
 
-
 [[sec_pki]]
-=== Zentrale Vertrauensinfrastruktur
+=== Vertrauensinfrastruktur
 
 Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
 Schlüssel und entsprechende Zertifikate bilden die Grundlage für den
-Aufbau einer "Public Key Infrastructure" (PKI). Durch das enorme
-Wachstum und die Verbreitung des World Wide Web stieg auch der Bedarf
-an Authentifizierung der beteiligten Menschen und Server, welche für
-eine sicherer Kommunikation unabdingbar ist, stark an. Alleine aus
-kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks
-oder Online-Zugriff auf Datenbanken wird eine PKI unabdingbar.
+Aufbau einer "Public Key Infrastructure" (PKI).
+Wie in <<Chain-EECC>> dargestellt kann prinzipiell jeder vertrauenswürdige
+Teilnehmer den Kreis der vertrauenswürdigen Teilnehmer an der
+Vertrauensinfrastruktur erweitern, in dem der bereits
+vertrauenswürdige dem neuen Teilnehmer ein entsprechendes Zertifikat
+ausstellt.
 
-Die klassische zentrale PKI besteht aus 3 Funktionen: Eine Registrierungsstelle,
+Bei der klassischen, d.h. weitgehend zentralen, 
+Schlüssel- und Zertifikate Infrastruktur, die
+z.B. bei der Absicherung der Kommunikation über das Internet mittels
+Transportverschlüsselung <<tls>> zum Einsatz kommt, stellen eine oder einige
+wenige zentrale Autoritäten, denen initial vertraut wird, Zertifikate
+an zwischengeschaltete Autoritäten aus. So ergeben sich baumartige Vertrauensstrukturen.
+
+
+
+In der PKI gibt es 3 wesentliche Funktionen: Eine Registrierungsstelle,
 eine Zertifizierungsstelle und dem Verzeichnisdienst. 
 
 Die *Registrierungsstelle* erfasst und überprüft die Identität und ggfs. weitere
@@ -646,25 +688,6 @@ Durch die eIDAS Verordnung hat die Europäische Union einen kompatiblen europäi
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
 
-==== Certified by GS1 Trust Model Das Vertrauen in Idente certified by GS1
-funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die
-entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell
-unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI
-Zertifikatsketten. Ausweisketten
- 
-Abbildung 1: Vertrauen in klassische Ausweisdokumente
-
-Das Vertrauen in die Identität z.B. einer realen Person kommt durch die
-Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im
-Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande.
-Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem Aussteller, z.B.
-dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der
-Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält
-das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen
-und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt
-wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des
-Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in
-Bild 1  dargestellt.
 
 ==== IDs certified by GS1
  
@@ -840,6 +863,8 @@ Vertrauensinfrastruktur zu bilden.
 === Industrie 4.0 Szenario Wandlungsfähige Fabrik
 
 
+
+
 Sicherheitsfragen können in industriellen Anwendungen missionskritisch werden,
 das gilt insbesondere wenn das **Industrial Internet of Things (IIoT)**
 Maschinen miteinander vernetzt und deren Steuerung und Konfiguration zunehmend
@@ -888,6 +913,11 @@ unautorisierter Zugriff über das Internet erfolgen kann.
 ==== Certified By GS1
 
 
+[[Chain]]
+.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
+image::Certificate-Chain.png[]
+
+
 .ToDo
 [IMPORTANT]
 --
@@ -901,9 +931,6 @@ vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit
 Basisnummer Certified By GS1 dem Unternehmen selbst Zertifikate für die eigenen
 IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. [*bereits weiter oben dargestellt*]
 
-[[Chain]]
-.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
-image::Certificate-Chain.png[]
 
 Mit dem Unternehmenszertifikat kann die Echtheit der eigenen IDs
 fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B.
@@ -1257,55 +1284,6 @@ konkretem Format können auch weitere Details im Zertifikat eingetragen
 und damit beglaubigt werden.
 
 
-[[sec_cert_chain]]
-=== Zertifikatsketten und Nummernkreise
-
-Wie in <<Chain>> dargestellt kann prinzipiell jeder vertrauenswürdige
-Teilnehmer den Kreis der vertrauenswürdigen Teilnehmer an der
-Vertrauensinfrastruktur erweitern, in dem der bereits
-vertrauenswürdige dem neuen Teilnehmer ein entsprechendes Zertifikat
-ausstellt.
-
-Bei der klassischen, d.h. weitgehend zentralen, 
-Schlüssel- und Zertifikate Infrastruktur, die
-z.B. bei der Absicherung der Kommunikation über das Internet mittels
-Transportverschlüsselung <<tls>> zum Einsatz kommt, stellen eine oder einige
-wenige zentrale Autoritäten, denen initial vertraut wird, Zertifikate
-an zwischengeschaltete Autoritäten aus. So ergeben sich, wie in
-<<sec_pki>> näher erläutert, baumartige Vertrauensstrukturen.
-
-.TODO
-[IMPORTANT]
---
-In Einleitung verschieben/mergen? [mergen zu gcp und EECC Bsp, sonst komplett raus]
---
-
-Das Nummernsystem der GS1 besteht im wesentlichen aus einer ähnlichen
-baumartigen Struktur. Ausgehend von der Gesamtheit der GS1
-Organisationen und GS1 global erhalten die einzelnen
-Mitgliedsorganisationen (MOs) Nummernkreise, indem eine betimmte
-Präfix einer MO zugeordnet wird. Z.B. gehören alle GS1 Idente deren
-erste 3 Ziffern im Bereich 400 bis 440 liegen zu GS1 Germany
-<<gs1-prefix>>.
-Innerhalb des eigenen Nummernkreises (d.h. beginnend mit der eigenen
-GS1 Präfix) vergeben die MOs eine GS1 Company Prefix (GCP) und damit
-den Kreis der Nummern beginnend mit der GCP an Firmen, z.B. gehören
-alle GS1 Idente beginnend mit 4047111 zum Nummernkreis des EECC. Die
-Firmen können nun innerhalb der Regeln für GS1 Idente selbst
-z.B. Idente für Warenkategorien oder individuelle Waren, aber auch für
-Standorte, Warensendungen, Coupons, uvm. <<gen-spec>>
-vergeben. Z.B. bezeichnet die GLN 4047111000006 den
-Unternehmenshauptsitz des EECC, wobei streng genommen die Art des
-Idents mit dem entsprechenden Code, z.B. 414 für die GLN, mit
-angegeben werden sollte. (414) 4047111000006 (254) 01 wäre ein
-Beispiel für eine SGLN mit der das EECC einen spezifischeren Ort, etwa
-den Posteingang des Hauptsitzes, bezeichnen könnte.
-
-[[Chain-EECC]]
-.Die vergabe von Zertifikaten im Rahmen von Certified by GS1 folgt der Logik bei der Vergabe der GS1 Idente
-image::Certificate-Chain-EECC.png[]
-
-
 
 
 [[sec_ssi_implementation]]
@@ -1473,6 +1451,7 @@ zu denken ist.
 - [[[gleif]]] GLEIF https://www.gleif.org/ und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
+- [[[idp]]] https://en.wikipedia.org/wiki/Identity_provider
 - [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
 - [[[online-demo]]]  https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
 - [[[pgp-cert]]] https://de.wikipedia.org/wiki/OpenPGP#Aufbau_der_Zertifikate
