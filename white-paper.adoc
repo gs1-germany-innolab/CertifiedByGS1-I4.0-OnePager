@@ -774,10 +774,7 @@ charakterisieren. Dies können z.B. sein
 - vorgeschriebene Wartungsintervalle
 - ...
 
-Alle diese Eigenschaften werden vom Hersteller der Anlage angegeben. Sie werden sich über ihre Lebensdauer
-hinweg nicht verändern (und wenn, dann ist diese Veränderung ebenso vorhersehbar). Üblicherweise werden
-derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. Werden diese Informationen also über
-ein digitales Kommunikationsprotokoll übertragen, könnte man von einem digitalen Typenschild sprechen.
+Alle diese Eigenschaften werden vom Hersteller der Anlage angegeben. Sie werden sich über ihre Lebensdauer hinweg nicht verändern (und wenn, dann ist diese Veränderung ebenso vorhersehbar). Üblicherweise werden derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. Werden diese Informationen also über ein digitales Kommunikationsprotokoll übertragen, könnte man von einem digitalen Typenschild sprechen.
 
 [[eku-static]]
 .In der Demo wird die Nutzung statischer Daten, konkret eines digitalen Typenschildes, dargestellt
@@ -801,8 +798,7 @@ andere Teilnehmer im Netzwerk interessant sein können. So z.B.
 - Zeit bis zur nächsten Wartung
 - ...
 
-Diese Informationen entstehen erst während des Betriebs und verändern sich - abhängig von der jeweiligen
-Anwendung - z.B. im Bereich von einigen 10ms.
+Diese Informationen entstehen erst während des Betriebs und verändern sich - abhängig von der jeweiligen Anwendung - z.B. im Bereich von einigen 10ms.
 
 [[eku-dynamic]]
 .Die Nutzung dynamischer Daten wird als Use Case präsentiert
@@ -813,19 +809,11 @@ image::demo-screenshots/5-dynamic.png[]
 image::demo-screenshots/6-hacked.png[]
 
 ==== Dynamische Rekonfiguration von Systemen verschiedener Dienstleister und Hersteller
-Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier
-arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel, je nach Einsatzplan von
-unterschiedlichen Unternehmen bereitgestellt, die wiederum auch eine bunte Mischung unterschiedlichster
-Anlagentypen mehrerer Hersteller unterhalten. Hinzu kommt, dass die Anlagen nach einem Einsatz von z.B. 14
-Tagen wieder abgebaut und in einer komplett anderen Konfiguration an einer anderen Baustelle wieder aufgebaut
-und vernetzt werden sollen.
-Da hier kosteneffizient unter hohem Zeitdruck gearbeitet werden muss und das Personal ständig wechselt, müssen
-alle Konfigurationsvorgänge soweit möglich automatisiert ablaufen, um Zeit einzusparen und die Anfälligkeit für
-Fehler zu minimieren.
+Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel, je nach Einsatzplan von unterschiedlichen Unternehmen bereitgestellt, die wiederum auch eine bunte Mischung unterschiedlichster Anlagentypen mehrerer Hersteller unterhalten. Hinzu kommt, dass die Anlagen nach einem Einsatz von z.B. 14 Tagen wieder abgebaut und in einer komplett anderen Konfiguration an einer anderen Baustelle wieder aufgebaut und vernetzt werden sollen.
+Da hier kosteneffizient unter hohem Zeitdruck gearbeitet werden muss und das Personal ständig wechselt, müssen alle Konfigurationsvorgänge soweit möglich automatisiert ablaufen, um Zeit einzusparen und die Anfälligkeit für Fehler zu minimieren.
 
 === Verbesserungspotential durch Certified by GS1
-
-====  Typenschild
+====  Statische Daten
 Das digitale Typenschild, das alle für die Anlage technisch relevanten Informationen enthält, kann vom Hersteller
 mittels einer elektronischen Signatur beglaubigt werden. Es kann nicht verändert werden, ohne Kenntnis des
 privaten Schlüssels des Herstellers. Analog zum SSL Zertifikat im WWW, das die Echtheit einer besuchten Webseite
@@ -837,7 +825,6 @@ eingesetzt werden.
 [[eku-certified]]
 .Vom Hersteller signierte digitale Typenschilder können nicht manipuliert werden und das in <<eku-static-hacked>> dargestellte Angriffszenario wird verhindert
 image::demo-screenshots/4-certified-dtls.png[]
-
 
 ==== Dynamische Daten
 Um das Einschleusen von unerwünschter / schädlicher Informationen in die verteilten Regelsysteme zu vermeiden,
@@ -864,8 +851,7 @@ image::demo-screenshots/8-pay-per-use.png[]
 [[EKU-PD]]
 
 === Interaktive Demonstration
-
-Eine interaktive online Demonstration des Use Cases wurde entwickelt, um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verständlich darzustellen.  Die Demonstration ist unter <<online-demo>> öffentlich zugänglich.
+Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verständlich darzustellen, wurde eine interaktive online Demonstration des Use Cases entwickelt. Die in diesem Abschnitt gezeigten Bilder, stammen aus diesem Demonstrator. Die Demonstration ist unter <<online-demo>> öffentlich zugänglich.
 
 [[sec_implementation]]
 == Umsetzung
