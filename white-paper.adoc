@@ -743,7 +743,7 @@ Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Dat
 
 
 === Beispiel Microgrids - EKU Power Drives
-=== Problemstellung
+==== Problemstellung
 
 EKU entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Hierbei
 konzentriert sich EKU vorwiegend auf ortsveränderliche bzw. mobile Anlagen. Also Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
@@ -812,9 +812,7 @@ image::demo-screenshots/5-dynamic.png[]
 .Manipulierte Daten werden problematisiert
 image::demo-screenshots/6-hacked.png[]
 
-
 ===== Dynamische Rekonfiguration von Systemen verschiedener Dienstleister und Hersteller
-
 Die mobilen Anlagen in unserer Anwendung werden üblicherweise in Baustellenumgebungen eingesetzt. Hier
 arbeiten mehrere Dienstleister Hand in Hand und das eingesetzte Equipment wird flexibel, je nach Einsatzplan von
 unterschiedlichen Unternehmen bereitgestellt, die wiederum auch eine bunte Mischung unterschiedlichster
@@ -854,7 +852,7 @@ der signierten Daten vereiteln außerdem Replay-Attacken.
 image::demo-screenshots/7-certified-dynamic.png[]
 
 
-=== Pay per Use
+===== Pay per Use
 Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Businessmodelle, in denen nicht mehr die Geräte oder Maschinen direkt verkauft oder auf Zeit verliehen
 werden, sondern der Nutzen, den der Anwender durch diese erzielt, direkt bepreist wird. In solchen "Pay per Use" oder "as a Service" Modellen werden alle nötigen Voraussetzungen, wie Maschinen und Betriebsmittel, die der Nutzer braucht um den gewünschten Nutzen zu erzielen, zur Verfügung gestellt. Wichtig ist bei den zugrundelegenden Business Modellen immer, eine präzise und vor allem eine für alle beteiligten vertrauenswürdige Messung der Parameter (KPIs), auf denen die Berechnung der Kosten eines solchen Service beruht.
 
