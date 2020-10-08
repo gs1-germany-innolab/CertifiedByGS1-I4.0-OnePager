@@ -742,14 +742,7 @@ Bei der Vergabe eines GS1 Company Prefix (GCP) und damit eines Nummernkreises an
 Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Daten, wie diese z.B. bei der LEI-Vergabe durch GS1 Germany aktuell bereits stattfindet, kann GS1 die Echtheit solcher Unternehmensstammdaten zertifizieren. Die Vorlage vertrauenswürdig zertifizierter Daten erspart den Vertragspartnern dieses Unternehmens künftig, diese Überprüfung selbst durchführen zu müssen und ermöglicht so schneller und einfacher mit dem Unternehmen in eine Rechtsbeziehung zu treten. 
 
 [[EKU-PD]]
-=== Dynamische Microgrids von EKU Power Drives
-
-.ToDo
-[IMPORTANT]
-===============================
-- <<EKU-PD>> ist größtenteils noch roh zusammen kopiert -> Lesen und schleifen.
-===============================
-
+=== Beispiel 
 
 === Interaktive Demonstration
 
