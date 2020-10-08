@@ -823,8 +823,6 @@ Da hier kosteneffizient unter hohem Zeitdruck gearbeitet werden muss und das Per
 alle Konfigurationsvorgänge soweit möglich automatisiert ablaufen, um Zeit einzusparen und die Anfälligkeit für
 Fehler zu minimieren.
 
-[EKU PD Voraussetzungen sehr ausführlich im Vergleich zum Rest erklärt - muss gekürzt werden]
-
 === Verbesserungspotential durch Certified by GS1
 
 ====  Typenschild
