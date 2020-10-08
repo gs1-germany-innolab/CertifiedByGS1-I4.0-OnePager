@@ -37,15 +37,6 @@ Projektleiterin von Certified by GS1
 
 
 
-.ToDo
-[IMPORTANT]
---
-Brauchen wir wirklich ein Vorwort?
---
-
-
-
-
 :!sectnums:
 [[executive-summary]]
 == Kurz-Zusammenfassung
@@ -393,12 +384,18 @@ Rückschlüsse auf den privaten Schlüssel zulässt. Der für die
 Entschlüsselung verwendete private Schlüssel muss natürlich geheim
 gehalten werden, um unerwünschtes lesen der Daten zu verhindern.
 
-Erstmals wurde die Idee der asymmetrischen Verschlüsselung im Jahr
-1976 von Diffie und Hellman in ihrem Aufsatz "New Directions in
+Die ersten (geheimen) Entwicklungen asymmetrischer Verfahren  fanden beim
+britischen Geheimdienst zu Anfang der 1970er Jahre statt und wurden
+erst in den 1990er Jahren veröffentlicht. In einer ersten
+öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen
+Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie
+und Martin Hellman in ihrem Aufsatz "New Directions in
 Cryptography" veröffentlicht. In diesem Aufsatz, führen die Autoren
 das Prinzip der asymmetrischen Kryptographie ein. Rivest, Shamir und
-Adleman stellten 1978 mit RSA das erste asymmetrische
-Verschlüsselungsverfahren vor.
+Adleman entwickelten 1978 das nach Ihnen als RSA benannte asymmetrische
+Verschlüsselungsverfahren basierend auf Zahlentheoretischen
+Algorithmen und Komplexitätsüberlegungen vor, dass teilweise bis heute
+verwendet wird.
 
 Die Funktionsweise einer asymmetrischen Verschlüsselung lässt sich wie
 folgt erklären: Jeder Teilnehmer erzeugt ein Schlüsselpaar aus
@@ -468,7 +465,7 @@ sicherstellen.
 Für nähere Details zur Funktionsweise von Signaturalgorithmen wird auf
 die Literatur verwiesen <<sign>>.
 
-
+[[sec_certs]]
 ==== Digitale Zertifikate
 
 Unter einem "Zertifikat" im klassischen Sinne versteht man eine Bescheinigung
@@ -481,11 +478,6 @@ Zum Beispiel vergibt GS1 in gedruckter Form ein Zertifkat
 für die Teilnahme am globalen GS1 System. In diesem Zertifkat wird
 unter anderem die GLN und die dazugehörige Firma aufgeführt.
 
-.ToDo
-[IMPORTANT]
---
-Zertifikat Bild einfügen
---
 
 Diese Eigenschaften des analogen Zertifikates werden mit dem digitalen
 Zertifikat nicht nur digitalisiert, sondern mittels einer digitalen
@@ -519,9 +511,16 @@ folgenden Abschnitten erläutert werden, eine wichtige Rolle.
 Zertifikate werden weiterhin genutzt, um z.B.:
 
 - Identitäten von Servern zu bescheinigen, um auf dieser
-Vertrauensbasis mittels <<tls>> den Datenverkehr im Internet zu verschlüsseln oder VPN Verbindungen aufzubauen
-- Zu bescheinigen, dass Software, Updates oder digitale Dokumente vom vorgeblichen Urheber stammen
-- Personen Identitäten zu bescheinigen, um, wie im Beispiels mit Alice und Bob, eine direkte Mensch zu Mensch Kommunikation abzusichern, z.B. via e-Mail oder Messenger
+  Vertrauensbasis mittels <<tls>> den Datenverkehr im Internet zu
+  verschlüsseln oder VPN Verbindungen aufzubauen
+
+- Zu bescheinigen, dass Software, Updates oder digitale Dokumente vom
+  vorgeblichen Urheber stammen
+
+- Personen Identitäten zu bescheinigen, um, wie im Beispiels mit Alice
+  und Bob, eine direkte Mensch zu Mensch Kommunikation abzusichern,
+  z.B. via e-Mail oder Messenger
+  
 
 
 Jede technische Implementierung einer Vertrauensinfrastruktur
@@ -536,24 +535,46 @@ Reihenfolge):
 
 
 [[sec_pki]]
-=== Zentrale Zertifikate und Schlüssel Infrastruktur
+=== Zentrale Vertrauensinfrastruktur
 
-Die in den vorangegangenen Kapiteln beschriebenen Verfahren und Methoden, bilden die Grundlage für den Aufbau einer Public Key Infrastruktur (PKI). Durch das enorme Wachstum und Verbreitung des World Wide Web und den darin angebotenen Services und Dienstleistungen, stieg auch der Bedarf an Authentifizierung und sicherer Kommunikation stark an. Alleine aus kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks oder Online-Zugriff auf 
-Datenbanken wird eine PKI unabdingbar. Bis zu diesem Zeitpunkt wurden jedoch nur symmetrische Schlüssel eingesetzt, die sowohl für die Ver- als auch die Entschlüsselung den selben Schlüssel verwenden. 
+Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
+Schlüssel und entsprechende Zertifikate bilden die Grundlage für den
+Aufbau einer "Public Key Infrastructure" (PKI). Durch das enorme
+Wachstum und die Verbreitung des World Wide Web stieg auch der Bedarf
+an Authentifizierung der beteiligten Menschen und Server, welche für
+eine sicherer Kommunikation unabdingbar ist, stark an. Alleine aus
+kommerziellen Gründen wie z.B. E-Commerce, Banking, Social Networks
+oder Online-Zugriff auf Datenbanken wird eine PKI unabdingbar.
 
-Die ersten nicht öffentlichen Entwicklungen der PKI fanden beim britischen Geheimdienst zu Anfang der 1970er Jahre statt. Sie wurden jedoch erst in den 1990er Jahren, aufgrund der strengen Geheimhaltungspflicht, im Nachhinein anerkannt. In einer ersten öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie und Martin Hellman vorgeschlagen. 
+Die klassische zentrale PKI besteht aus 3 Funktionen: Eine Registrierungsstelle,
+eine Zertifizierungsstelle und dem Verzeichnisdienst. 
 
-Der Vorteil einer PKI mit einem asymmetrischen kryptographischen Verfahren liegt darin, dass es nicht nur ein Schlüsselpaar für die Ver- und Entschlüsselung gibt. Neben der Generierung und anschließenden Zertifizierung von Schlüsselpaaren, gehört auch die Verteilung von öffentlichen Schlüsseln zum genannten Verfahren. 
+Die *Registrierungsstelle* erfasst und überprüft die Identität und ggfs. weitere
+Angaben des Antragstellers. Diese muss davon überzeugt sein, dass die
+persönlichen Daten und der i.d.R. vom Antragssteller bereitgestellte öffentliche
+Schlüssel auch wirklich zum Antragsteller gehören, bevor das Zertifikat
+ausgestellt wird. Nach einer positiven Überprüfung, wird der Zertifikatsantrag
+durch die Registrierungsstelle genehmigt und die Anfrage an die
+Zertifizierungsstelle weitergegeben. 
 
-Eine PKI lässt sich in mehrere Komponenten einteilen: Eine Registrierungsstelle, eine Zertifizierungsstelle und dem Verzeichnisdienst. 
+Die *Zertifizierungsstelle* (Certificate Authority, CA, siehe auch <<ca>>)
+wiederum integriert die Daten und den öffentlichen Schlüssel des Antragsstellers
+in ein Zertifikat, d.h. ein digitales Dokument im entsprechenden Format
+(klassisch X.509) wird erstellt und von der CA signiert. Zusätzlich kann die
+Zertifizierungsstelle die Zertifikate zur Veröffentlichung in einem öffentlichen
+Verzeichnis ablegen.
 
-Die Registrierungsstelle erfasst und überprüft die Identität und ggfs. weitere Angaben des Antragstellers. Diese muss davon überzeugt sein, dass die persönlichen Daten und der erhaltene öffentliche Schlüssel auch wirklich zum Antragsteller gehören, bevor das Zertifikat ausgestellt wird. Nach einer positiven Überprüfung, wird der Zertifikatsantrag durch die Registrierungsstelle genehmigt und die Anfrage an die Zertifizierungsstelle weitergegeben. 
+Oftmals befinden sich die Registrierungsstelle und die Zertifizierungsstelle in
+einem Unternehmen und bilden eine Einheit, als Trust Center.
 
-Die Zertifizierungsstelle wiederum integriert den öffentlichen Schlüssel vom Antragssteller in ein Zertifikat, welches dieser anschließend erhält. Zusätzlich kann die Zertifizierungsstelle die Zertifikate zur Veröffentlichung in einem öffentlichen Verzeichnis ablegen.
+Der *Verzeichnisdienst* stellt eine Art öffentliches Adressbuch dar, in dem alle
+ausgestellten Zertifikate zum Abruf bereit stehen. Eine weitere wichtige
+Funktion ist das bereitstellen von sogenannten Revocation Lists, in denen
+veröffentlicht wird welche Zertifikate schon vor ihrem regulären Ablaufdatum
+ungültig gewirden sind, etwa weil eingetragene Daten nicht mehr aktuell sind
+oder weil im schlimmsten Fall der private Schlüssel nicht mehr als sicher
+angesehen werden kann, etwa nach einem Cyber Angriff.
 
-Oftmals befinden sich die Registrierungsstelle und die Zertifizierungsstelle in einem Unternehmen und bilden eine Einheit, als TrustCenter.
-
-Der Verzeichnisdienst ist ein durchsuchbares Verzeichnis, das ausgestellte Zertifikate enthält. Sozusagen die Gelben Seiten der Zertifikate. Dadurch können die Zertifikate eines anderen Teilnehmers zum Prüfen einer Signatur abrufen.  ** [Unverständlich] **
 
 
 [[sec_ssi]]
@@ -1445,6 +1466,7 @@ zu denken ist.
 
 - [[[acatech]]] Wandlungsfähige, menschzentrierte Strukturen in Fabriken und Netzwerken der Industrie 4.0 (acatech Studie), München: Herbert Utz Verlage 2018. https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/hm-2018-fb-wandlung.html
 - [[[auth]]] https://de.wikipedia.org/wiki/Authentifizierung
+- [[[ca]]] https://de.wikipedia.org/wiki/Zertifizierungsstelle vor allem aber https://en.wikipedia.org/wiki/Certificate_authority
 - [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
 - [[[gen-spec]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
