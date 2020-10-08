@@ -760,19 +760,7 @@ image::demo-screenshots/1-intro.png[]
 === Existierende Lösungsansätze
 ==== Statische Informationen
 Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage
-charakterisieren. Dies können z.B. sein
-
-- Hersteller
-- Modell
-- Nennleistung
-- zulässiger Leistungsbereich
-- Nennspannung
-- zulässiger Spannungsbereich
-- Nennfrequenz
-- zulässiger Drehzahl- / Frequenzbereich
-- Wirkungsgrad- Kennfeld
-- vorgeschriebene Wartungsintervalle
-- ...
+charakterisieren. Dies können z.B. sein Hersteller, Modell, Nennleistung, uulässiger Leistungsbereich, Nennspannung, zulässiger Spannungsbereich, usw.
 
 Alle diese Eigenschaften werden vom Hersteller der Anlage angegeben. Sie werden sich über ihre Lebensdauer hinweg nicht verändern (und wenn, dann ist diese Veränderung ebenso vorhersehbar). Üblicherweise werden derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. Werden diese Informationen also über ein digitales Kommunikationsprotokoll übertragen, könnte man von einem digitalen Typenschild sprechen.
 
@@ -810,28 +798,18 @@ image::demo-screenshots/6-hacked.png[]
 
 === Verbesserungspotential durch Certified by GS1
 ====  Statische Daten
-Das digitale Typenschild, das alle für die Anlage technisch relevanten Informationen enthält, kann vom Hersteller
-mittels einer elektronischen Signatur beglaubigt werden. Es kann nicht verändert werden, ohne Kenntnis des
-privaten Schlüssels des Herstellers. Analog zum SSL Zertifikat im WWW, das die Echtheit einer besuchten Webseite
-z.B. für online-banking bestätigt, kann das elektronische Typenschild technisch relevante Informationen vor
-Veränderung schützen. Durch geeignete Mittel (z.B. dynamische oder challenge/response Inhalte) kann das digitale
-Typenschild (in Verbindung mit entsprechend gesicherter Elektronik) außerdem als Schutz gegen Plagiate
-eingesetzt werden.
+Das digitale Typenschild, das alle für die Anlage technisch relevanten Informationen enthält, kann vom Hersteller mittels einer elektronischen Signatur beglaubigt werden. Es kann nicht verändert werden, ohne Kenntnis des privaten Schlüssels des Herstellers. Analog zum SSL Zertifikat im WWW, das die Echtheit einer besuchten Webseite z.B. für online-banking bestätigt, kann das elektronische Typenschild technisch relevante Informationen vor Veränderung schützen. Durch geeignete Mittel (z.B. dynamische oder challenge/response Inhalte) kann das digitale Typenschild (in Verbindung mit entsprechend gesicherter Elektronik) außerdem als Schutz gegen Plagiate eingesetzt werden.
 
 [[eku-certified]]
 .Vom Hersteller signierte digitale Typenschilder können nicht manipuliert werden und das in <<eku-static-hacked>> dargestellte Angriffszenario wird verhindert
 image::demo-screenshots/4-certified-dtls.png[]
 
 ==== Dynamische Daten
-Um das Einschleusen von unerwünschter / schädlicher Informationen in die verteilten Regelsysteme zu vermeiden,
-kann ein am Prozess beteiligtes Steuergerät seine komplette Kommunikation elektronisch signieren. Somit kann
-die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufende Sequenznummern innerhalb
-der signierten Daten vereiteln außerdem Replay-Attacken.
+Um das Einschleusen von unerwünschter / schädlicher Informationen in die verteilten Regelsysteme zu vermeiden, kann ein am Prozess beteiligtes Steuergerät seine komplette Kommunikation elektronisch signieren. Somit kann die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufende Sequenznummern innerhalb der signierten Daten vereiteln außerdem Replay-Attacken.
 
 [[eku-certified-dynamic]]
 .Signierte dynamische Daten können auch in einer unsicheren Umgebung fälschungssicher übertragen werden und der in <<eku-dynamic-hacked>> dargestellte Angriff wird verhindert
 image::demo-screenshots/7-certified-dynamic.png[]
-
 
 ==== Pay per Use
 Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Businessmodelle, in denen nicht mehr die Geräte oder Maschinen direkt verkauft oder auf Zeit verliehen
@@ -842,7 +820,6 @@ Aufgrund der eingesetzten Sensorik und automatisierten Datenübertragung und Abw
 [[eku-pay-per-use]]
 .Auch der Pay per Use Anwendungsfall wird in der Demo thematisiert
 image::demo-screenshots/8-pay-per-use.png[]
-
 
 [[EKU-PD]]
 
