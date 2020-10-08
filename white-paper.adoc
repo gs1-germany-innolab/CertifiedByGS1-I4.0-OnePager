@@ -17,24 +17,6 @@ v0.5 von {docdatetime}
 :appendix-refsig: Anhang
 :chapter-label: 
 
-Das vorliegende White Paper soll verschiedene Konzepte rund um
-digitale Signaturen und Zertifikate erläutern und darstellen was sie
-in der Welt der GS1-Standards bedeuten und warum sie für die Zukunft
-unserer Idente wichtig sind.
-
-Wenn Sie noch nie von PKI, Public-Private Key Pair oder Self Sovereign
-Identities gehört haben, sind Sie dennoch eingeladen weiterzulesen.
-Wir nutzen dieses White Paper auch, um wichtige Konzepte rund um
-IoT-Sicherheit zu entmystifizieren und Sie in diese spannende Welt
-einzuführen.
-
-Es war und bleibt eine aufregende und herausfordernde Reise, bei der wir gelernt, neue Dinge ausprobiert und unsere Komfortzone verlassen haben. 
-
-
-Mayra Castellanos
-
-Projektleiterin von Certified by GS1
-
 
 
 :!sectnums:
@@ -1383,10 +1365,13 @@ image::certified-gs1-ids.png[]
 [[sec_conclusion]]
 == Fazit
 
+Certified by GS1 ist sehr gut.
+
 === Lessons Learned
 Im Zusammenhang mit den im Vorfeld durchgeführten Umfragen, sowohl per Fragebogen als auch per individuellen Interviews, erhielt GS1 Germany eindeutige Aussagen im Industrie 4.0 Umfeld. Bis zum heutigen Zeitpunkt nehmen Cloud-Lösungen und offene Netzwerke in der Industrie noch keinen großen Stellenwert ein. Inselnetzwerke werden bevorzugt und OPC-UA ist überwiegend Zukunftsmusik. Jedoch wurde uns allgemein die Relevanz von eindeutigen sicheren IDs für Maschinen bestätigt. Bisher arbeitet der Maschinenbau mit proprietären Identen und war nicht gezwungen sich mit der Thematik auseinander zu setzen. Im Ausblick sehen alle Befragten aber die Wichtigkeit der digitalen Idente und Zertifikate und sprechen sich für die Certified by GS1 Idee aus, mit dem Hinweis, dass für die Industrie Plug-and-Play-Lösungen bevorzugt werden.
 
-=== Business Opportunities
+
+=== Chancen
 
 Certified by GS1 wurde als Idee geboren, einen Dienst zu entwickeln, der die Funktionalitäten der bestehenden GS1-Standards erweitert, und es hat sich gezeigt, dass dies möglich und machbar ist, solange bestimmte Anforderungen erfüllt werden.
 
@@ -1397,7 +1382,7 @@ Die Entwicklung eines nachhaltigen Geschäftsmodells soll in einer zukünftigen 
 [evtl Bsp für zukünftige Business Opportunities darstellen???]
 
 [[sec_next_steps]]
-=== Next Steps 
+=== Ausblick 
 
 [CAUTION]
 --
