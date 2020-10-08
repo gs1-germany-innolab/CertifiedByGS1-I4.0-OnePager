@@ -646,19 +646,37 @@ Durch die eIDAS Verordnung hat die Europäische Union einen kompatiblen europäi
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
 
-==== Certified by GS1 Trust Model
-Das Vertrauen in Idente certified by GS1 funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI Zertifikatsketten.
-Ausweisketten
+==== Certified by GS1 Trust Model Das Vertrauen in Idente certified by GS1
+funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die
+entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell
+unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI
+Zertifikatsketten. Ausweisketten
  
 Abbildung 1: Vertrauen in klassische Ausweisdokumente
 
-Das Vertrauen in die Identität z.B. einer realen Person kommt durch die Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande. Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem Aussteller, z.B. dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in Bild 1  dargestellt.
+Das Vertrauen in die Identität z.B. einer realen Person kommt durch die
+Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im
+Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande.
+Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem Aussteller, z.B.
+dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der
+Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält
+das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen
+und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt
+wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des
+Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in
+Bild 1  dargestellt.
 
 ==== IDs certified by GS1
  
 Abbildung 2: Vertrauen in IDs certified by GS1
 
-Das Vertrauen in Maschinen oder allgemein IoT Devices, die sich mit Identen certified by GS1 ausweisen, entsteht analog zum klassischen Vertrauen in Ausweisdokumente, wie in Bild 2 analog zu Bild 1 dargestellt. Wichtig ist hierbei, dass lediglich zwischen GS1 und dem Maschinenhersteller ein Vertragsverhältnis existieren muss. Es bedarf prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 oder [oder????] -> geht beides, Stichwort GIAI
+Das Vertrauen in Maschinen oder allgemein IoT Devices, die sich mit Identen
+certified by GS1 ausweisen, entsteht analog zum klassischen Vertrauen in
+Ausweisdokumente, wie in Bild 2 analog zu Bild 1 dargestellt. Wichtig ist
+hierbei, dass lediglich zwischen GS1 und dem Maschinenhersteller ein
+Vertragsverhältnis existieren muss. Es bedarf prinzipiell keiner direkten
+Verbindung zwischen dem Fabrikbetreiber und GS1 oder [oder????] -> geht beides,
+Stichwort GIAI
 
 ==== Produkt: Certified IDs
 
@@ -682,10 +700,23 @@ erfolgen kann, die Möglichkeit im Namen der Identifizierten Entität digitale S
 
 
 ==== USP
-Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen, das Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen zertifizierten Basis GLN, die das Unternehmen selbst als Legale Person identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1 Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs als Service anbieten.
+
+Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen, das
+Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen
+zertifizierten Basis GLN, die das Unternehmen selbst als Legale Person
+identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für
+z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1
+Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese
+Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs
+als Service anbieten.
 
 ==== Technische Realisierung
-Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassische X.509 Zertifikatsketten (PKI) als auch über "Verifiable Credentials" im Rahmen einer SSI/DID Infrastruktur erprobt. Beide Ansätze ermöglichen die dezentrale Anwendung der Idente, ohne dass nach der initialen Vergabe der zertifizierten Basis GLN eine weitere Interaktion mit GS1 notwendig ist.
+
+Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über
+klassische X.509 Zertifikatsketten (PKI) als auch über "Verifiable Credentials"
+im Rahmen einer SSI/DID Infrastruktur erprobt. Beide Ansätze ermöglichen die
+dezentrale Anwendung der Idente, ohne dass nach der initialen Vergabe der
+zertifizierten Basis GLN eine weitere Interaktion mit GS1 notwendig ist.
 
 
 
