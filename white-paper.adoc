@@ -668,41 +668,52 @@ Durch die eIDAS Verordnung hat die Europäische Union einen kompatiblen europäi
 
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
-
-==== Certified by GS1 Trust Model
 Das Vertrauen in Idente certified by GS1 funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI Zertifikatsketten.
-Ausweisketten
- 
-Abbildung 1: Vertrauen in klassische Ausweisdokumente
+
+==== Analoge Welt
 
 Das Vertrauen in die Identität z.B. einer realen Person kommt durch die Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande. Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem Aussteller, z.B. dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in Bild 1  dargestellt.
 
-==== IDs certified by GS1
- 
-Abbildung 2: Vertrauen in IDs certified by GS1
+Abbildung 1: Vertrauen in klassische Ausweisdokumente
 
-Das Vertrauen in Maschinen oder allgemein IoT Devices, die sich mit Identen certified by GS1 ausweisen, entsteht analog zum klassischen Vertrauen in Ausweisdokumente, wie in Bild 2 analog zu Bild 1 dargestellt. Wichtig ist hierbei, dass lediglich zwischen GS1 und dem Maschinenhersteller ein Vertragsverhältnis existieren muss. Es bedarf prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 oder [oder????] -> geht beides, Stichwort GIAI
+==== Certified By GS1 Trust Model
 
-==== Produkt: Certified IDs
+Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company
+Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs
+vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit
+Basisnummer Certified By GS1 dem Unternehmen selbst Zertifikate für die eigenen
+IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. [*bereits weiter oben dargestellt*]
 
-Die zertifizierten Versionen der GS1 Idente, insbesondere
-- (S)GLNs für Unternehmen(steile) und
-- GIAI für Assets wie Machinen, Sensoren, oder allgemein IoT Devices,
+[[Chain]]
+.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
+image::Certificate-Chain.png[]
 
-bieten, neben einer Authentifikation (Echtheits-/Urheber-Prüfung) der Idente, die in Abgrenzung zu den online Services wie GEPIR oder Verified by GS1
-- offline und
-- unabhängig von einer Zentralen Stelle, d.h. ohne den Zwang zur Datenweitergabe
-erfolgen kann, die Möglichkeit im Namen der Identifizierten Entität digitale Signaturen zu erstellen und so z.B.
-- digitale Geschäftsdokumente im Namen eines Unternehmens(teils) zu signieren oder
-- die Echtheit von Messdaten eines Sensors direkt durch diesen fälschungssicher zu beglaubigen.
-[*zu lang*]
+Mit dem Unternehmenszertifikat kann die Echtheit der eigenen IDs
+fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B.
+überprüft werden, dass eine SGTIN tatsächlich von dem Unternehmen erzeugt wurde,
+dem die zugehörige Basisnummer gehört, ohne das ein online Lookup in einer
+entsprechenden Datenbank nötig wäre. Auch Eigenschaften des mit der ID
+gekennzeichneten Assets können z.B. über die GS1 Standards in z.B. einen 2D Code
+wie den GS1 Datamatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert
+werden.
 
-.ToDo
-[IMPORTANT]
---
-- überlapp mit <<sec_verified_by_gs1>>
---
+Abgeleitete ID-spezifische Zertifikate sind besonders im IoT Kontext
+interessant, da Maschinen sich mit einer solchen ID Certified By GS1 selbst
+ausweisen können. Mittels etablierter kryptografischer Verfahren können
+Maschinen sich basierend auf dem Certified by GS1 System gegenseitig überprüfen
+und so eine gesicherte Verbindung untereinander oder auch über das Internet z.B.
+zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt.
 
+
+[[Certificates]]
+.Vertrauen in IDs certified by GS1 ermöglicht M2M authentifizierung und den Aufbau gesicherter Kommunikationskanäle
+image::Parts-Certified.png[]
+
+Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
+gängigen Verschlüsselung der Kommunikation über das Internet, ein gesicherter
+Kommunikationskanal aufgebaut werden. So können z.B. Messdaten oder
+Steuerbefehle übertragen werden, ohne dass diese von Dritten gefälscht werden
+können.
 
 ==== USP
 Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen, das Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen zertifizierten Basis GLN, die das Unternehmen selbst als Legale Person identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1 Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs als Service anbieten.
@@ -718,7 +729,7 @@ Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über klassi
 == Anwendungsfälle
 
 [[sec_verified_by_gs1]]
-=== Verified by GS1
+=== Artikel-Stammdaten
 
 ==== Problem
 
@@ -825,107 +836,6 @@ Vertrauenswürdige Unternehmensidente certified by GS1 und ein
 Grundstock an Unternehmensstammdaten, der von GS1 Überprüft und
 zertifiziert wird, haben das Potential die Grundlage einer solchen
 Vertrauensinfrastruktur zu bilden.
-
-
-
-
-=== Industrie 4.0 Szenario Wandlungsfähige Fabrik
-
-
-Sicherheitsfragen können in industriellen Anwendungen missionskritisch werden,
-das gilt insbesondere wenn das **Industrial Internet of Things (IIoT)**
-Maschinen miteinander vernetzt und deren Steuerung und Konfiguration zunehmend
-autonom und vernetzt erfolgt. Eine gesicherte automatische Identifizierung und
-Authentifizierung ist hier absolut notwendig.
-
-
-Im Anwendungsszenario "Wandlungsfähige Fabrik" der Plattform Industrie 4.0 wird
-die moderne Fabrik von vielfältigen Maschinen (Robotern, Werkzeuge,
-Fördertechnik, etc.) bevölkert, die im IIoT miteinander kommunizieren. Die
-Maschinen selbst sind dynamisch in ihren Fähigkeiten, z.B. können Roboter und
-Werkzeuge umkonfiguriert werden um verschiedene Aufgaben auszuführen. Vor allem
-aber kommen verschiedene Maschinen verschiedener Hersteller gemeinsam in einer
-Fertigung zum Einsatz und müssen sich möglichst direkt untereinander abstimmen,
-um den aktuellen Auftrag zu fertigen. Hierdurch wird ein modularer und dadurch
-wandlungsfähiger Aufbau der Produktion innerhalb einer Fabrik realisiert.
-
-[[WFF]]
-.Anwendungszenario WFF aus <<szenarien-i40>>
-image::anwendungszenario-wff.png[]
-
-
-Eine essentielle Voraussetzung hierfür ist, dass die Maschinen sich
-untereinander individuell identifizieren und Daten austauschen können, wie in
-der folgenden Grafik (angelehnt an die Veröffentlichung des VDMA <<vdma-i40>>)
-dargestellt:
-
-[[Werkzeugkasten]]
-.Abgeleitet von: Werkzeugkaste Industrie 4.0 aus <<vdma-i40>>, <<acatech>>
-image::werkzeugkaste-i40-vdma-part.png[]
-
-Hervorgehoben sind die Identifikation und Einbindung von Industrial IoT (IIoT)
-Devices und der Datenaustausch als notwendige Voraussetzung für die Industrie
-4.0.
-
-Ein Standard für die automatische Identifikation und Authentifizierung ist
-unabdingbar, um die Abhängigkeit von einem zentralen Plattformanbieter zu
-vermeiden. Zudem sind Sicherheitsfragen, insbesondere Vertrauensfragen, äußerst
-relevant, um zu verhindern, dass unautorisierte Maschinen in die
-Fertigungsstraße eingebracht, gefälschte Daten eingeschleust werden oder gar ein
-unautorisierter Zugriff über das Internet erfolgen kann.
-
-
-
-
-==== Certified By GS1
-
-
-.ToDo
-[IMPORTANT]
---
-- Diesen Abschnitt mit <<sec_intro>> abgleichen
-- ggF Inhalte dorthin verschieben
---
-
-Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company
-Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs
-vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit
-Basisnummer Certified By GS1 dem Unternehmen selbst Zertifikate für die eigenen
-IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. [*bereits weiter oben dargestellt*]
-
-[[Chain]]
-.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
-image::Certificate-Chain.png[]
-
-Mit dem Unternehmenszertifikat kann die Echtheit der eigenen IDs
-fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B.
-überprüft werden, dass eine SGTIN tatsächlich von dem Unternehmen erzeugt wurde,
-dem die zugehörige Basisnummer gehört, ohne das ein online Lookup in einer
-entsprechenden Datenbank nötig wäre. Auch Eigenschaften des mit der ID
-gekennzeichneten Assets können z.B. über die GS1 Standards in z.B. einen 2D Code
-wie den GS1 Datamatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert
-werden.
-
-
-Abgeleitete ID-spezifische Zertifikate sind besonders im IoT Kontext
-interessant, da Maschinen sich mit einer solchen ID Certified By GS1 selbst
-ausweisen können. Mittels etablierter kryptografischer Verfahren können
-Maschinen sich basierend auf dem Certified by GS1 System gegenseitig überprüfen
-und so eine gesicherte Verbindung untereinander oder auch über das Internet z.B.
-zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt.
-
-
-[[Certificates]]
-.Vertrauen in IDs certified by GS1 ermöglicht M2M authentifizierung und den Aufbau gesicherter Kommunikationskanäle
-image::Parts-Certified.png[]
-
-
-Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
-gängigen Verschlüsselung der Kommunikation über das Internet, ein gesicherter
-Kommunikationskanal aufgebaut werden. So können z.B. Messdaten oder
-Steuerbefehle übertragen werden, ohne dass diese von Dritten gefälscht werden
-können.
-
 
 
 [[EKU-PD]]
