@@ -1,7 +1,7 @@
 = Certified By GS1 – White Paper
 Mayra Castellanos <mayra.castellanos@gs1.de>; Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v0.5 von {docdatetime}
-:doctype: book
+v{docdatetime}
+:doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
 :toclevels: 3
@@ -17,10 +17,13 @@ v0.5 von {docdatetime}
 :appendix-refsig: Anhang
 :chapter-label: 
 
+Version: {revnumber}
+
+Autoren: {authors}
 
 
 :!sectnums:
-[[executive-summary]]
+[[sec_executive]]
 == Management Summary
 
 Auf Grund der häufig auftretenden Sicherheitslücken im Rahmen von Digitalisierung und Internet of Things (IoT) 
