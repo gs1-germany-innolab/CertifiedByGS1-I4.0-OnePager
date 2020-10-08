@@ -21,9 +21,32 @@ v0.5 von {docdatetime}
 
 :!sectnums:
 [[executive-summary]]
-== Kurz-Zusammenfassung
+== Management Summary
 
-Certified by GS1 ist sehr gut. ;)
+Auf Grund der häufig auftretenden Sicherheitslücken im Rahmen von Digitalisierung und Internet of Things (IoT) 
+beschäftigt sich folgende Ausarbeitung mit dem Bedarf von digitalen Signaturen und Zertifikaten 
+und wie diese mit GS1 realisiert werden könnten.
+
+Besonders in der digitalen Kommunikation mangelt es an beweisbaren Identen und Kommunikationspartner können nicht zweifelsfrei authentifiziert werden. 
+Um eine Automatisierung nicht zu verhindern, braucht es sichere Konzepte um eine Vertrauensinfrastruktur aufbauen und halten zu können.
+
+Es ist zu entscheiden, ob GS1 den Vertrauensanker einer digitalen Zertifikatsinfrastruktur darstellen kann 
+und in der Lage ist hinreichend Idente und Stammdaten zu authentifizieren.
+Durch eine Erweiterung der bestehenden GS1 Idente um Sicherheits- und Authentifizierungsfunktionen 
+könnte Certified by GS1 sich im IoT-Umfeld platzieren und zukünftige Marktanteile sichern. 
+Die alternative Option ist hinsichtlich der Umsetzung digitaler Signaturen und Zertifikate nichts zu unternehmen, 
+in der Erwartung, dass eine Lösung für die Authentifizierung der Idente von einem anderen Anbieter erreicht wird 
+bzw. GS1 Idente in allen Branchen auch ohne Authentifizierung den gleichen Stellenwert wie derzeitig beibehalten. 
+
+Das Konzept zu „Certified by GS1“ wurde anhand von Kundenumfragen und –interviews 
+unter Betrachtung von klassischen und modernen Konzepten zu digitalen Signaturen und Zertifikaten erarbeitet. 
+Die Erläuterung von Themen wie DiD oder SSI unterstützt die Erkenntnisse. 
+Mit der Darstellung einiger Use Cases wird die Vielzahl von Anwendungsmöglichkeiten des Konzeptes „Certified by GS1“ verdeutlicht.
+
+Es wird unter Betrachtung der erarbeiteten Konzepte und Use Cases folgendes vorgeschlagen: 
+Das „Certified by GS1“ Konzept sollte mit Partnern getestet und detaillierter fortgeführt werden, 
+um langfristig die Relevanz und den Marktanteil von GS1 Identen hoch halten zu können.
+
 
 
 toc::[]
