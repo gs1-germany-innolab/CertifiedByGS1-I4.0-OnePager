@@ -646,26 +646,46 @@ angesehen werden kann, etwa nach einem Cyber Angriff.
 [[sec_ssi]]
 === Dezentrale Zertifikate und Schlüssel Infrastruktur
 
+...
+
+Die Entwicklung einer solchen dezentralisierten
+Public Key Infrastructure (DPKI) ist momentan in vollem Gange und
+könnte ebenso große
+Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen
+Raum haben, wie es einst die Entwicklung des SSL/TLS-Protokolls [tls]
+für den verschlüsselten Netzwerkverkehr hatte.
+
 
 ==== Decentralized Identifiers (DiDs)
 
-Decentralized Identifiers (DIDs) sind Identifikatoren, die eine verifizierbare und dezentralisierte digitale Identität ermöglichen sollen. 
-Dabei entscheidet mindestens eine sogenannte Kontrollinstanz (DID controller) darüber, 
-welches beliebige Subjekt (DID subject) eine DID identifizieren soll. 
-Dieses Subjekt können u.a. Personen, Organisationen, Dinge, Datenmodelle, abstrakte Entitäten sein. 
-DIDs sollen unabhängig von zentralisierten Registrierungsstellen, Identitäts-Providern 
-oder Zertifizierungsstellen in Umlauf gebracht und genutzt werden können.
+Decentralized Identifiers (DIDs) sind Idente, die, wie der Name
+bereits andeutet, nicht zentral vergeben werden, sondern von jedem
+Teilnehmer an einer entsprechenden Infrastruktur selbst erzeugt werden
+können.  DIDs können Personen, Organisationen, Dinge,
+Datenmodelle, oder abstrakte Entitäten identifizieren, wobei die mit
+der DID identifizierte Entität als _Subjekt_ der DID bezeichnet wird.
 
-Technisch betrachtet ist eine DID eine URI, die eine Verbindung zwischen dem DID-Subjekt 
-und den Mechanismen einer vertrauenswürdigen Interaktion mit diesem Subjekt herstellt. 
-Diese Mechanismen sind als Datensätze in einem sogenannten DID-Dokument (DID document) enthalten 
-und können z.B. Public Keys oder pseudonymisierte Biometriedaten enthalten, 
-mit denen sich das DID-Subjekt authentifizieren und seine Eigentümerschaft an der DID beweisen kann. 
-Darüber hinaus können Service-Endpunkte enthalten sein, die eine gesicherte Interaktion mit dem DID-Subjekt ermöglichen.
-Ist das zu identifizierende Subjekt selbst Teil der DID-Controller-Gruppe, 
-ist damit eine notwendige Bedingung für Selbstsouveränität erfüllt (siehe Kapitel 1.6 Selbstsouveräne Identität).
+Technisch betrachtet ist eine DID eine URN, die neben dem Schema "did"
+und der eindeutigen
+Identifikationsnummer auch eine Referenz auf die zugrundeliegende
+konkrete Vertrauensinfrastruktur enthält, im Rahmen derer die DID
+erstellt wurde und genutzt werden kann. Beispielsweise bezeichnet die
+DID `did:idu:HX74LKTfWUxnnUAE935u1P` die Identität von GS1 Germany als
+Steward im ID-Union (Test-)Netzwerk von SSI für Deutschland. Hier
+bezeichnet "idu" die sog. DID-Methode mit deren Kenntnisse das zur DID
+zugehörige DID-Dokument aus dem entsprechenden Verzeichnis abgerufen
+werden kann.
 
-DIDs können u.a. die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben, wie es einst die Entwicklung des SSL/TLS-Protokolls [tls] für den verschlüsselten Netzverkehr hatte.
+Im DID-Dokument sind Datensätze zum Subjekt enthalten, insbesondere
+Methoden, mit denen das Subjekt sich als DID Inhaber authentifizieren
+kann. In der Regel sind dies Public Keys, möglich sind aber auch
+z.B. pseudonymisierte Biometriedaten. Darüber hinaus können
+Service-Endpunkte im DID-Dokument definiert werden, die eine gesicherte Interaktion mit
+dem DID-Subjekt ermöglichen. 
+
+DIDs stellen die Kernkomponente einer gänzlich neuen Ebene von
+dezentralisierter digitaler Identität im Rahmen einer neuen Public Key
+Infrastructure dar. 
 
 
 ==== Use Cases
