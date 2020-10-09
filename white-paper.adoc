@@ -830,12 +830,6 @@ Die in diesem Abschnitt verwendeten grundlegenden
 Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
 <<sec_ssi>> eingeführt erläutert.
 
-.ToDo
-[IMPORTANT]
-===============================
-- Sicherstellen, dass dort alles erklärt wird
-===============================
-
 ===== DiDs
 
 In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
