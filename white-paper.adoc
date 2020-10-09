@@ -320,7 +320,7 @@ AISBL. Diese dient als Issuer. GS1 verwaltet derzeit mehr als
 
 
 [[sec_gs1_id_scheme]]
-==== Nummernkreise der GS1
+==== GS1
 
 
 GS1 Idente sind wie folgt aufgebaut: Ausgehend von der Gesamtheit der GS1
@@ -647,83 +647,109 @@ angesehen werden kann, etwa nach einem Cyber Angriff.
 
 ==== Decentralized Identifiers (DiDs)
 
-Decentralized Identifiers (DIDs) sind neuartige Identifikatoren, die eine verifizierbare und dezentralisierte digitale Identität ermöglichen sollen. Dabei entscheidet mindestens eine sogenannte Kontrollinstanz (DID controller) darüber, welches beliebige Subjekt (DID subject) eine DID identifizieren soll. Dieses Subjekt können u.a. Personen, Organisationen, Dinge, Datenmodelle, abstrakte Entitäten sein.
+Decentralized Identifiers (DIDs) sind Identifikatoren, die eine verifizierbare und dezentralisierte digitale Identität ermöglichen sollen. 
+Dabei entscheidet mindestens eine sogenannte Kontrollinstanz (DID controller) darüber, 
+welches beliebige Subjekt (DID subject) eine DID identifizieren soll. 
+Dieses Subjekt können u.a. Personen, Organisationen, Dinge, Datenmodelle, abstrakte Entitäten sein. 
+DIDs sollen unabhängig von zentralisierten Registrierungsstellen, Identitäts-Providern 
+oder Zertifizierungsstellen in Umlauf gebracht und genutzt werden können.
 
-Die Bezeichner sind derart konzipiert, dass der DID-Controller beweisen kann, dass er die Kontrolle über die DID ausübt. Sie [**WER?**] sollen unabhängig von zentralisierten Registrierungsstellen, Identitäts-Providern oder Zertifizierungsstellen in Umlauf gebracht und genutzt werden können.
+Technisch betrachtet ist eine DID eine URI, die eine Verbindung zwischen dem DID-Subjekt 
+und den Mechanismen einer vertrauenswürdigen Interaktion mit diesem Subjekt herstellt. 
+Diese Mechanismen sind als Datensätze in einem sogenannten DID-Dokument (DID document) enthalten 
+und können z.B. Public Keys oder pseudonymisierte Biometriedaten enthalten, 
+mit denen sich das DID-Subjekt authentifizieren und seine Eigentümerschaft an der DID beweisen kann. 
+Darüber hinaus können Service-Endpunkte enthalten sein, die eine gesicherte Interaktion mit dem DID-Subjekt ermöglichen.
+Ist das zu identifizierende Subjekt selbst Teil der DID-Controller-Gruppe, 
+ist damit eine notwendige Bedingung für Selbstsouveränität erfüllt (siehe Kapitel 1.6 Selbstsouveräne Identität).
 
-Technisch betrachtet ist eine DID eine URL, die eine Verbindung zwischen dem DID-Subjekt und den Mechanismen einer vertrauenswürdigen Interaktion mit diesem Subjekt herstellt. Diese Mechanismen sind als Datensätze in einem sogenannten DID-Dokument (DID document) enthalten und können z.B. Public Keys oder pseudonymisierte Biometriedaten enthalten, mit denen sich das DID-Subjekt authentifizieren und seine Eigentümerschaft an der DID beweisen kann. Darüber hinaus können Service-Endpunkte enthalten sein, die eine gesicherte Interaktion mit dem DID-Subjekt ermöglichen.
+DIDs können u.a. die Kernkomponente einer gänzlich neuen Ebene von dezentralisierter digitaler Identität und der Public Key Infrastructure für das Internet bilden. Diese könnte in Gestalt einer dezentralisierten Public Key Infrastructure (DPKI) ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben, wie es einst die Entwicklung des SSL/TLS-Protokolls [tls] für den verschlüsselten Netzverkehr hatte.
 
-Ist das zu identifizierende Subjekt selbst Teil der DID-Controller-Gruppe, ist damit eine notwendige Bedingung für Selbstsouveränität erfüllt.
-
-
-Abstract from <<did-core>>.
-
-Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. Specifically, while other parties might be used to help enable the discovery of information related to a DID, the design enables the controller of a DID to prove control over it without requiring permission from any other party. DIDs are URLs that associate a DID subject with a DID document allowing trustable interactions associated with that subject. Each DID document can express cryptographic material, verification methods, or service endpoints, which provide a set of mechanisms enabling a DID controller to prove control of the DID. Service endpoints enable trusted interactions associated with the DID subject. A DID document might contain semantics about the subject that it identifies. A DID document might contain the DID subject itself (e.g. a data model). 
-
-
-
-
-==== Identity Layer für das Internet
-DIDs können die Kernkomponente einer gänzlich neuen Ebene von
-dezentralisierter digitaler Identität und der Public Key
-Infrastructure für das Internet bilden. Diese könnte in Gestalt einer
-dezentralisierten Public Key Infrastructure (DPKI) ebenso große
-Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen
-Raum haben wie es einst die Entwicklung des SSL/TLS-Protokolls <<tls>>
-für den
-verschlüsselten Netzverkehr hatte.
 
 ==== Use Cases
-Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Bezeichner in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifenden Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen. 
+Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Ident in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifenden Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen.
 
 ==== Vergleiche mit anderen Identifiern
-Persistenz und Dezentralität
-Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, ist nicht neu. UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122).
+DIDs vereinen wichtige Eigenschaften anderer Identifier. 
+Das sind unter anderem Dezentralität, Persistent und globale Auflösbarkeit. 
+Diese sind die Grundvoraussetzung um eine selbstsouveräne Identität (Kapitel 1.6) zu erreichen.
 
-Persistenz und globale Auflösbarkeit
-Der Bedarf an persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, welche gleichzeitig global auflösbar sind, ist ebensowenig neu. Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert (<<rfc-2141>>, RFC 8141).
+Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, 
+ist bereits länger gegeben. 
+UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck 
+bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122). 
+Auch das Konzept von persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, 
+welche gleichzeitig global auflösbar sind, ist ebenso wenig neu. 
+Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert ([rfc-2141], RFC 8141).
 
-==== Kryptographische Verifizierbarkeit
-Im Regelfall sind UUIDs jedoch nicht global auflösbar und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösbar sind. Darüber hinaus ist weder UUIDs noch URNs eine weitere notwendige Eigenschaft inhärent: die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren.
+Im Regelfall sind oben genannte UUIDs jedoch nicht global auflösbar 
+und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösbar sind. 
+Darüber hinaus fehlen sowohl UUIDs als auch URNs eine weitere notwendige Eigenschaft: 
+die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren. 
 
-Tabelle 1. Eigenschaften von Identifikatoren 
+[Tabelle 1. Eigenschaften von Identifikatoren]
 
-==== Selbstsouveräne Identität
-Zur Verwirklichung einer selbstsouveränen Identität (self-sovereign identity, SSI) – definiert als lebenslang gültige, portierbare digitale Identität, welche unabhängig ist von zentralisierten Autoritäten – muss der neue Bezeichner über jede der folgenden Eigenschaften verfügen: Persistenz, globale Auflösbarkeit, kryptographische Verifizierbarkeit und Dezentralität.]
+Das bedeutet im Umkehrschluss, dass nur DIDs eine Komponente der geforderten selbstsouveränen Identität sein können. 
+Weitere Hauptkomponenten sind Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI). 
+Dazu bleibt festzuhalten, dass DIDs lediglich die untere Ebene einer dezentralisierten Identitätsinfrastruktur bilden. 
+Die darüber liegende Ebene, welche den meisten Mehrwert bietet, formen die sogenannten Verifiable Credentials (VCs). 
+Dieser technische Begriff steht für einen digital signierten elektronischen Berechtigungsnachweis, 
+welcher den von der W3C Verifiable Claims Working Group entwickelten Interoperabilitätsstandards entspricht.
 
-Das Konzept einer selbstsouveränen Identität baut auf drei Hauptkomponenten auf, aus denen sie sich zusammensetzt. Zu diesen zählen neben DIDs noch Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI).
-
-[**-> unverständlicher Abschnitt**]
-
-
-==== Verifiable Credentials
-
-DIDs bilden lediglich die untere Ebene einer dezentralisierten Identitätsinfrastruktur. Die darüber liegende Ebene, welche den meisten Mehrwert bietet, bilden die sogenannten Verifiable Credentials (VCs). Dieser technische Begriff steht für einen digital signierten elektronischen Berechtigungsnachweis, welcher den von der W3C Verifiable Claims Working Group entwickelten Interoperabilitätsstandards entspricht.
 
 
 ==== Web of Trust
 
-Die üblichen Identitätsmanagement-Systeme basieren auf zentralisierten Autoritäten wie Verzeichnisdiensten innerhalb eines Unternehmen, Zertifizierungsstellen oder Domain-Name-Registraren. In diesem Kontext spielt auch GS1 die Rolle eines Registrars, indem über die Company-Prefix ein Namensraum zugewiesen (verkauft) wird. Dabei bilden diese Autoritäten jeweils ihre eigene Wurzel der Sicherheitskette. Damit ein Identitätsmanagement jedoch zwischen den genannten Systemen etabliert werden kann, bedarf es eines föderalistischen Identitätsmanagements.
+Die üblichen Identitätsmanagement-Systeme basieren auf zentralisierten Autoritäten, 
+wie Verzeichnisdiensten innerhalb eines Unternehmen, Zertifizierungsstellen oder Domain-Name-Registraren. 
+In diesem Kontext spielt auch GS1 die Rolle eines Registrars, indem über die Company-Prefix ein Namensraum zugewiesen (verkauft) wird. 
+Dabei bilden diese Autoritäten jeweils ihre eigene Wurzel der Sicherheitskette. 
+Damit ein Identitätsmanagement jedoch zwischen den genannten Systemen etabliert werden kann, bedarf es eines föderalistischen Identitätsmanagements.
 
-Das Aufkommen von Distributed-Ledger-Technologien (DLTs) und der Blockchain-Technologie vereinfacht technisch völlig dezentralisierte Identitätsmanagement-Systeme. In einem dezentralen Identitätsmanagement-System können die Entitäten (Personen, Organisationen, Dinge, etc.) ihre geteilte Root of Trust frei wählen. Global verteilte Ledger, dezentralisierte P2P-Netzwerke oder andere Systeme mit gleichartigen Fähigkeiten ermöglichen eine Root of Trust ohne eine zentralisierte Autoritätsinstanz oder einen Single Point of Failure. Gemeinsam ermöglichen es DLTs und dezentralisierte Identitätsmanagement-Systeme beliebigen Entitäten ihre eigenen Bezeichner oder eine nicht festgelegte Menge an verteilten Roots of Trust zu erstellen und zu managen.
+Das Aufkommen von Distributed-Ledger-Technologien (DLTs), wie der Blockchain-Technologie, 
+vereinfacht technisch dezentralisierte Identitätsmanagement-Systeme. 
+In einem dezentralen Identitätsmanagement-System können die Entitäten (Personen, Organisationen, Dinge, etc.) ihre geteilte Root of Trust frei wählen. 
+Global verteilte Ledger, dezentralisierte P2P-Netzwerke oder andere Systeme mit gleichartigen Fähigkeiten 
+ermöglichen eine Root of Trust ohne eine zentralisierte Autoritätsinstanz oder einen Single Point of Failure. 
+Gemeinsam ermöglichen es DLTs und dezentralisierte Identitätsmanagement-Systeme beliebigen Entitäten 
+ihre eigenen Identifier oder eine nicht festgelegte Menge an verteilten Roots of Trust zu erstellen und zu managen.
+Entitäten werden mittels DIDs identifiziert und können sich authentisieren, 
+indem sie Nachweise wie z.B. digitale Signaturen oder datenschutzkonforme biometrische Protokolle nutzen.
 
-Entitäten werden mittels DIDs identifiziert und können sich authentisieren, indem sie Nachweise wie z.B. digitale Signaturen oder datenschutzkonforme biometrische Protokolle nutzen.
+Dieses Design beseitigt sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für Identifier als auch von zentralisierten Zertifizierungsstellen für Schlüsselverwaltungen – was zurzeit den Standard bei der hierarchischen Public-Key-Infrastruktur (PKI) darstellt. 
+Falls die DID-Registry ein verteilter Ledger ist, kann jede Entität als ihre eigene Root of Trust fungieren. Diese Architektur wird als DPKI (dezentralisierte PKI) bezeichnet.
 
-Dieses Design beseitigt sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für Identifier als auch von zentralisierten Zertifizierungsstellen für Schlüsselverwaltungen – was zurzeit den Standard bei der hierarchischen Public-Key-Infrastruktur (PKI) darstellt. Falls die DID-Registry ein verteilter Ledger ist, kann jede Entität als ihre eigene Root of Trust fungieren. Diese Architektur wird als DPKI (dezentralisierte PKI) bezeichnet.
 
 === Self Sovereign Identity (SSI)
 
-Durch den rasanten Anstieg von Social Media, stiegen neben den digitalen Aktivitäten der Nutzer auch die Anzahl der unterschiedlichsten Plattformen an. Auf jeder Plattform muss für die digitale Identität jeweils ein eigenes Profil erstellt werden. Diese Profile hinterlassen stets eine digitale Spur im Internet. Bei diesen hinterlegten Daten, handelt es sich überwiegend um sensible und personenbezogene Daten, die für die Plattformen enorm wichtig sind, aber auch eine gewisse Gefahr für einen Datendiebstahl darstellen. 
+In der analogen Welt stehen unterschiedliche Verfahren zur Verfügung, um unsere Identität nachzuweisen: 
+u.a. der Personalausweis, welcher ein sehr hohes Vertrauen darstellt oder der Fingerabdruck. 
+In der digitalen Welt hingegen ist es etwas schwieriger. Hier haben wir die Möglichkeit über unterschiedliche Verfahren 
+wie z.B. Post-Ident, Video-Ident, WebIdent oder Accounts bei Sozialen Netzwerken unsere Identität nachzuweisen. 
+Jedoch müssen wir uns immer wieder neu ausweisen und stützen uns dabei stets auf dritte Dienstleister, 
+welche unsere Identität bestätigen, die Daten speichern und verwalten. 
+Dies hat den großen Nachteil, dass wir nicht immer wissen, wer welche Daten besitzt und welche Daten an andere weitergegeben werden.
 
-Für diese sensiblen und wertvollen Verbraucherdaten muss die Plattform auch die Verantwortung übernehmen. Vielen Unternehmen war dieses nicht bewusst und so war der Schutz der Daten nicht immer ausreichend gewährleistet und dadurch gefährdet. Oftmals wurde der Ruf der Verbraucher für die eigen zu verwaltende Identität laut. 
-In den letzten Jahren entwickelte sich die Blockchain- Technologie zu einem neuen Ansatz, der dezentralen Informationssysteme. [**Unverständlich**] Bei dieser neuen Technologie, können Daten auf einzigartige Weise registriert und nicht mehr veränderbar über ein Netzwerk verteilt werden. Ein Konsens-Mechanismus zur Validierung der Informationen, ohne eine zentrale Autorität, stellt sicher, dass alle Teilnehmer eine identische Kopie der verteilten Datenbank besitzen.
+Mit Hilfe einer Self-sovereign identity und dem dahinterliegenden System, 
+kann ein Identitätsinhaber seine eigene Identität erstellen und auch komplett kontrollieren. 
+Dafür benötigt er keine Erlaubnis einer weiteren Instanz oder einer zentralen Behörde. 
+Zusätzlich kann jeder selbst entscheiden, mit wem er seine Daten teilt und wie diese verwendet werden. 
+Das Konzept der „Public Key Infrastructure“ (PKI) wird dabei nicht verworfen, sondern entsprechend der Herausforderungen angepasst 
+und im Sinne einer „Decentralized PKI“ weiterentwickelt. 
 
-Aus diesen beiden scheinbar nicht zusammenhängenden Ideen entwickelte sich das Konzept der selbstsouveränen Identität (Self-Sovereign Identity oder SSI). In der analogen Welt stehen unterschiedliche Verfahren zur Verfügung, um unsere Identität nachzuweisen: u.a. der Personalausweis, welcher ein sehr hohes Vertrauen darstellt oder der Fingerabdruck.  
-In der digitalen Welt hingegen ist es etwas schwieriger. Hier haben wir die Möglichkeit über unterschiedliche Verfahren wie z.B. Post-Ident, Video-Ident, WebIdent oder Accounts bei Sozialen Netzwerken unsere Identität nachzuweisen. Jedoch müssen wir uns immer wieder neu ausweisen und stützen uns dabei stets auf dritte Dienstleister, welche unsere Identität bestätigen, die Daten speichern und verwalten. Dies hat auch den großen Nachteil, dass wir nicht immer wissen, wer welche Daten besitzt und welche Daten an andere weitergegeben werden.
+Anstelle eines Schlüsselverzeichnisses, das für die Speicherung und den Abruf von öffentlichen Schlüsseln dient, 
+wird eine Blockchain eingesetzt. 
+Dadurch sind keine zentralen Instanzen mehr notwendig, da der Identitätsinhaber, 
+der seinen privaten Schlüssel kontrolliert, seine Zertifikate ohne einen Servicedienstleister selber ausstellt. 
+Die Blockchain dient dabei als Schlüsselverzeichnis. 
+Zusätzlich können die Vorteile der Blockchain-Technologie, wie eindeutige Nachweisbarkeit und Unveränderlichkeit von Transaktionen umgesetzt werden.
 
-Mit Hilfe einer Self-sovereign identity und dem dahinterliegenden System, kann ein Identitätsinhaber seine eigene Identität erstellen und auch komplett kontrollieren, dafür benötigt er keine Erlaubnis einer weiteren Instanz oder einer zentralen Behörde. Zusätzlich kann jeder selbst entscheiden, mit wem er seine Daten teilt und wie diese verwendet werden. Das oben beschriebene Konzept der „Public Key Infrastructure“ (PKI) wird dabei nicht verworfen, sondern aus den neuen aufkommenden Herausforderungen angepasst und im Sinne einer „Decentralized PKI“ weiterentwickelt. Anstelle eines Schlüsselverzeichnisses, das für die Speicherung und den Abruf von öffentlichen Schlüsseln dient, wird eine Blockchain eingesetzt. Dadurch sind keine zentralen Instanzen mehr notwendig, da der Identitätsinhaber, der seinen privaten Schlüssel kontrolliert, seine Zertifikate ohne einen Servicedienstleister selber ausstellt. Die Blockchain dient dabei als Schlüsselverzeichnis. Zusätzlich können die Vorteile der Blockchain-Technologie, wie eindeutige Nachweisbarkeit und Unveränderlichkeit von Transaktionen umgesetzt werden. 
+Durch die eIDAS Verordnung der Europäischen Union, der Verordnung über elektronische Identifizierung und Vertrauensdienste, 
+wurde ein kompatibler europäischer Rahmen für die selbstsouveräne Identität geschaffen. 
+Das sogenannte European Self-Sovereign Identity Framework (ESSIF) 
+verwendet dezentrale Kennungen (DIDs) und die European Blockchain Services Infrastructure(EBSI). 
+Ein deutlicher Fingerzeig auf die Relevanz der hier vorgestellten Konzepte.
 
-Durch die eIDAS Verordnung hat die Europäische Union einen kompatiblen europäischen Rahmen für die selbstsouveräne Identität (European Self-Sovereign Identity Framework / ESSIF) geschaffen. Das ESSIF verwendet dezentrale Kennungen (decentralized identifiers / DIDs) und die European Blockchain Services Infrastructure(EBSI).  [**ein wenig aus dem Zusammenhang, evtl. ist dem Leser eIDAS nicht bekannt. **]
 
 
 === Vertrauen / GS1 als Vertrauenswürdiger Dritter
@@ -827,7 +853,7 @@ image::certified-gs1-ids.png[]
 == Anwendungsfälle
 
 [[sec_verified_by_gs1]]
-=== Missbräuchliche Verwendung von GTINS oder Validierung/ Verifizierung von Identen
+=== Validierung/ Verifizierung von Identen
 
 ==== Problemstellung
 
@@ -845,7 +871,7 @@ Die Umsetzung von "Certified by GS1" versetzt den Basisnummer-Inhaber in die Lag
 
 Durch die digitale Signatur und die entsprechenden Zertifikate wird vor allem die Integrität der Daten unabhängig vom Übertragungskanal sichergestellt. Der Überprüfer kann somit darauf vertrauen, dass ein Ident vom authorisierten Basisnummern-Inhaber vergeben wurde und damit ein legitimes GS1 Ident ist. Eine direkte Signatur der Masterdaten durch den legitimen Herausgeber bietet bestmöglichen Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
-=== Supplier Onboarding oder Validierung/ Verifizierung von Unternehmen
+=== Validierung/ Verifizierung von Unternehmen
 ==== Problemstellung
 Vertrauenswürdige Daten zu Unternehmen sind für digitale Handelsbeziehungen ebenso wichtig, wie die vertrauenswürdige Authentifizierung realer Personen und ihrer Daten im Online-Handel, oder - allgemeiner - bei digitalen Vertragsabschlüssen. Entsprechend einem digitalen Ident, mit ähnlicher Vertrauenswürdigkeit wie dem Personalausweis, benötigt ein Unternehmen möglicherweise einen digital beglaubigten Handelsregisterauszug um sich zu authentifizieren und die Legitimität eines Rechtsgeschäfts zu beweisen.
 
