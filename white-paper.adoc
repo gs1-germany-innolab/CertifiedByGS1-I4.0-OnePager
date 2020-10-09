@@ -32,7 +32,7 @@ Draft-Version: {revnumber}
 Zur Beantwortung der dringenden Sicherheitsfragen im Rahmen der Digitalisierung
 im Allgemeinen und dem Internet of Things (IoT) im Besonderen wird eine
 vertrauenswürdige und sichere Identitätsinfrastruktur zur Identifizierung und
-Authentifizierung von natürlichen und juristischen Personen, aber auch von
+Authentifizierung von natürlichen und juristischen Personen, Unternehmen, aber auch von
 Dingen, benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt um das
 bestehende System der GS1 Idente durch digitale Zertifikate abzusichern und
 authentifizierbar zu machen, um die Rolle der GS1 als vertrauenswürdige und
@@ -40,7 +40,7 @@ neutrale Organisation zu der eines Identitätsanbieters und Vertrauensanker in e
 Vertrauensinfrastruktur auf basis digitaler Zertifikate auszubauen.
 
 
-In vielen Anwendungsfällen wir eine weitgehende Automatisierung von Abläufen
+In vielen Anwendungsfällen wird eine weitgehende Automatisierung von Abläufen
 dadurch verhindern, dass Kommunikationspartner, insbesondere im
 Machine-To-Machine (M2M) Bereich, ebenso aber in B2B und B2C Prozessen, nicht
 sicher automatisch authentifiziert werden können. Durch eine Erweiterung der
@@ -53,16 +53,16 @@ Die _Certified by GS1_ Konzepte wurde durch Kundenumfragen und –interviews mit
 Partnern aus verschiedenen Branchen abgestimmt und unter Betrachtung von
 klassischen und modernen technologischen Umsetzungsmöglichkeiten digitaler
 Signaturen und Zertifikate erarbeitet. Insbesondere die Block-Chain-basierte SSI
-(Selv Sovreign Identity) Technologie, die sich aktuell rasant entwickelt und
+(Self Sovereign Identity) Technologie, die sich aktuell rasant entwickelt und
 verbreitet, bietet eine historische Chance, Entwicklungen im Bereich digitaler
 Identitäten mitzugestalten. Im Rahmen von _Certified by GS1_ wurden nicht nur
 abstrakte Konzepte und möglichkeiten zu deren konkreter technischen Umsetzung
-erarbeitet. In zusammenarbeit mit den externen Partnern wurden mehrere konkrete
+erarbeitet. In zusammenarbeit mit externen Partnern wurden mehrere konkrete
 Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
-Konzeptes zu verdeutlicht.
+Konzeptes zu verdeutlichen.
 
 
-Die in- und externen Projektbeteiligten empfehlen eine weiterentwicklung der im
+Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im
 Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und MVPs,
 insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv
 testen und zur Marktreife führen zu können.
