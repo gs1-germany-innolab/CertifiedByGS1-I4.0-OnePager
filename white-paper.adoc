@@ -4,7 +4,7 @@ v{docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
-:toclevels: 3
+:toclevels: 2
 :toc-title: Inhalt
 :figure-caption: Bild
 :table-caption: Tabelle
