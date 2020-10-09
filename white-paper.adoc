@@ -651,7 +651,7 @@ Dieses bedeutet für den einzelnen Benutzer, dass er den Besitz seiner eigenen I
 
 Die Entwicklung einer solchen dezentralisierten Public Key Infrastructure (DPKI) ist momentan in vollem Gange und könnte ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben, wie es einst die Entwicklung des SSL/TLS-Protokolls [tls] für den verschlüsselten Netzwerkverkehr hatte.
 
-==== Decentralized Identifiers (DiDs)
+==== Decentralized Identifiers (DIDs)
 
 Decentralized Identifiers (DIDs) sind Idente, die, wie der Name
 bereits andeutet, nicht zentral vergeben werden, sondern von jedem
