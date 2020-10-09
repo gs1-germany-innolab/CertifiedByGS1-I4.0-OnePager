@@ -788,30 +788,10 @@ veröffentlichen.
 
 ===== Verifiable Credentials
 
-Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein
-Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company
-Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1
-Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis
-(beginnend mit der GCP) zu
-vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC
-stellt sicher, dass die GTIN *echt* d.h. nach den <<Regeln>> von GS1
-korrekt vergeben wurde. Die Vertrauenswürdigkeit und Integrität
-der direkt vom Hersteller beglaubigten
-Produkteigenschaften sind als Verifiable Credentials überprüfbar.
+Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
 
-.ToDo
-[IMPORTANT]
-===============================
-- "Regeln" ersetzen -> Verweis auf ISO
-===============================
-
-Der DiD einer konkreten Produktinstanz kann nun eine SGTIN als
-serialisiertes Ident in Form eines VC zugewiesen werden. Wie in
-<<GS1SSI>> dargestellt wird die DiD der zugehörigen GTIN als Issuer
-verwendet, sodass die Kette der Idente von der GCP der Company über
-die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
-entsprechend als Kette von Verifiable Credentials, die sich die DiDs
-ausstellen, abgebildet wird.
+Der DiD einer konkreten Produktinstanz kann nun eine SGTIN als serialisiertes Ident in Form eines VC zugewiesen werden. Wie in <<GS1SSI>> dargestellt wird die DiD der zugehörigen GTIN als Issuer verwendet, sodass die Kette der Idente von der GCP der Company über die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
+entsprechend als Kette von Verifiable Credentials, die sich die DiDs ausstellen, abgebildet wird.
 
 [[GS1SSI]]
 .Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DiDs
@@ -1035,6 +1015,7 @@ zu denken ist.
 - [[[gleif]]] GLEIF https://www.gleif.org/ und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
+- [[[gen-specs]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications/
 - [[[idp]]] https://en.wikipedia.org/wiki/Identity_provider
 - [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
 - [[[online-demo]]]  https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
