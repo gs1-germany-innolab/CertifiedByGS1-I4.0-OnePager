@@ -991,12 +991,6 @@ Die Entwicklung eines nachhaltigen Geschäftsmodells soll in einer zukünftigen 
 [[sec_next_steps]]
 === Ausblick 
 
-[CAUTION]
---
-<<sec_next_steps>> bleibt GS1 (Germany?) Intern?
---
-
-
 ==== Umsetzung von Certified by GS1 in aktuellen SSI Netzwerken/Projekten
 
 In der aktuellen Ausschreibung des Bundesministeriums für Wirtschaft
