@@ -565,7 +565,7 @@ Reihenfolge):
 
 
 [[sec_pki]]
-=== Vertrauensinfrastruktur
+==== Vertrauensinfrastruktur
 
 Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
 Schlüssel und entsprechende Zertifikate bilden die Grundlage für den
