@@ -645,16 +645,11 @@ angesehen werden kann, etwa nach einem Cyber Angriff.
 
 [[sec_ssi]]
 === Dezentrale Zertifikate und Schlüssel Infrastruktur
+Mit dem rasanten Anstieg von Social Media Diensten, stieg auch die digitale Aktivität der Nutzer an und somit auch die Anzahl der unterschiedlichsten Plattformen. Auf jeder dieser Plattform muss ein Nutzer sein eigenes Profil und dadurch jedesmal seine eigene digitale Identität erstellen. In den letzten Jahren entwickelte sich die Blockchain-Technologie zu einem neuen Paradigma dezentraler Informationssysteme. Über den Ansatz der dezentralen Informationssysteme können Daten registriert, nicht veränderbar und über das ganze Netzwerk verteilt werden. Dafür wird ein Konsens-Mechanismus zur Validierung – ohne zentrale oder föderale Autorität – verwendet. Aus dem Kontext der Identitäten heraus, entwickelte sich aus diesen beiden Möglichkeit, das Konzept der selbstsouveränen Identität (Self-Sovereign Identity or SSI). 
 
-...
+Dieses bedeutet für den einzelnen Benutzer, dass er den Besitz seiner eigenen Identitätsdaten wiedererlangen kann und in die Lage versetzt wird, die Identitätsdaten zu kontrollieren und zu bestimmen, wer Zugriff auf welche Informationen erhält und diese auch jederzeit unterbinden kann. Die Möglichkeiten der jüngsten Entwicklung zur Online-Identifizierung und Verwaltung kann nicht nur für Personen genutzt werden, sondern auch für Organisationen und Geräten.
 
-Die Entwicklung einer solchen dezentralisierten
-Public Key Infrastructure (DPKI) ist momentan in vollem Gange und
-könnte ebenso große
-Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen
-Raum haben, wie es einst die Entwicklung des SSL/TLS-Protokolls [tls]
-für den verschlüsselten Netzwerkverkehr hatte.
-
+Die Entwicklung einer solchen dezentralisierten Public Key Infrastructure (DPKI) ist momentan in vollem Gange und könnte ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben, wie es einst die Entwicklung des SSL/TLS-Protokolls [tls] für den verschlüsselten Netzwerkverkehr hatte.
 
 ==== Decentralized Identifiers (DiDs)
 
