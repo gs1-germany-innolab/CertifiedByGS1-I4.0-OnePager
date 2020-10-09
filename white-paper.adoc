@@ -1,4 +1,4 @@
-= Certified By GS1 – White Paper
+= Certified By GS1 - White Paper
 Mayra Castellanos <mayra.castellanos@gs1.de>; Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
 v{docdatetime}
 :doctype: article
@@ -17,39 +17,59 @@ v{docdatetime}
 :appendix-refsig: Anhang
 :chapter-label: 
 
-Version: {revnumber}
+
+Ergebnisbericht des F&E Projekts _Certified by GS1_ der GS1 Germany GmbH unter beteiligung der European EPC Competence Center GmbH (EECC)
 
 Autoren: {authors}
+
+Draft-Version: {revnumber}
 
 
 :!sectnums:
 [[sec_executive]]
 == Management Summary
 
-Auf Grund der häufig auftretenden Sicherheitslücken im Rahmen von Digitalisierung und Internet of Things (IoT) 
-beschäftigt sich folgende Ausarbeitung mit dem Bedarf von digitalen Signaturen und Zertifikaten 
-und wie diese mit GS1 realisiert werden könnten.
+Zur Beantwortung der dringenden Sicherheitsfragen im Rahmen der Digitalisierung
+im Allgemeinen und dem Internet of Things (IoT) im Besonderen wird eine
+vertrauenswürdige und sichere Identitätsinfrastruktur zur Identifizierung und
+Authentifizierung von natürlichen und juristischen Personen, aber auch von
+Dingen, benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt um das
+bestehende System der GS1 Idente durch digitale Zertifikate abzusichern und
+authentifizierbar zu machen, um die Rolle der GS1 als vertrauenswürdige und
+neutrale Organisation zu der eines Identitätsanbieters und Vertrauensanker in einer digitalen
+Vertrauensinfrastruktur auf basis digitaler Zertifikate auszubauen.
 
-Besonders in der digitalen Kommunikation mangelt es an beweisbaren Identen und Kommunikationspartner können nicht zweifelsfrei authentifiziert werden. 
-Um eine Automatisierung nicht zu verhindern, braucht es sichere Konzepte um eine Vertrauensinfrastruktur aufbauen und halten zu können.
 
-Es ist zu entscheiden, ob GS1 den Vertrauensanker einer digitalen Zertifikatsinfrastruktur darstellen kann 
-und in der Lage ist hinreichend Idente und Stammdaten zu authentifizieren.
-Durch eine Erweiterung der bestehenden GS1 Idente um Sicherheits- und Authentifizierungsfunktionen 
-könnte Certified by GS1 sich im IoT-Umfeld platzieren und zukünftige Marktanteile sichern. 
-Die alternative Option ist hinsichtlich der Umsetzung digitaler Signaturen und Zertifikate nichts zu unternehmen, 
-in der Erwartung, dass eine Lösung für die Authentifizierung der Idente von einem anderen Anbieter erreicht wird 
-bzw. GS1 Idente in allen Branchen auch ohne Authentifizierung den gleichen Stellenwert wie derzeitig beibehalten. 
+In vielen Anwendungsfällen wir eine weitgehende Automatisierung von Abläufen
+dadurch verhindern, dass Kommunikationspartner, insbesondere im
+Machine-To-Machine (M2M) Bereich, ebenso aber in B2B und B2C Prozessen, nicht
+sicher automatisch authentifiziert werden können. Durch eine Erweiterung der
+bestehenden GS1 Idente um Sicherheits- und Authentifizierungsfunktionen könnte
+Certified by GS1 IDs im IoT-Umfeld die unternehmensübergreifende eindeutige und
+sichere Identifikation von Maschinen untereinander sicherstellen, eine wichtige
+Funktion, für die bisher kein alternatives System etabliert ist.
 
-Das Konzept zu „Certified by GS1“ wurde anhand von Kundenumfragen und –interviews 
-unter Betrachtung von klassischen und modernen Konzepten zu digitalen Signaturen und Zertifikaten erarbeitet. 
-Die Erläuterung von Themen wie DiD oder SSI unterstützt die Erkenntnisse. 
-Mit der Darstellung einiger Use Cases wird die Vielzahl von Anwendungsmöglichkeiten des Konzeptes „Certified by GS1“ verdeutlicht.
+Die _Certified by GS1_ Konzepte wurde durch Kundenumfragen und –interviews mit
+Partnern aus verschiedenen Branchen abgestimmt und unter Betrachtung von
+klassischen und modernen technologischen Umsetzungsmöglichkeiten digitaler
+Signaturen und Zertifikate erarbeitet. Insbesondere die Block-Chain-basierte SSI
+(Selv Sovreign Identity) Technologie, die sich aktuell rasant entwickelt und
+verbreitet, bietet eine historische Chance, Entwicklungen im Bereich digitaler
+Identitäten mitzugestalten. Im Rahmen von _Certified by GS1_ wurden nicht nur
+abstrakte Konzepte und möglichkeiten zu deren konkreter technischen Umsetzung
+erarbeitet. In zusammenarbeit mit den externen Partnern wurden mehrere konkrete
+Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
+Konzeptes zu verdeutlicht.
 
-Es wird unter Betrachtung der erarbeiteten Konzepte und Use Cases folgendes vorgeschlagen: 
-Das „Certified by GS1“ Konzept sollte mit Partnern getestet und detaillierter fortgeführt werden, 
-um langfristig die Relevanz und den Marktanteil von GS1 Identen hoch halten zu können.
 
+Die in- und externen Projektbeteiligten empfehlen eine weiterentwicklung der im
+Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und MVPs,
+insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv
+testen und zur Marktreife führen zu können.
+
+Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln möchten,
+melden Sie sich gerne für Informationen zum aktuellen Stand bei den Autoren von
+GS1 und EECC!
 
 
 toc::[]
@@ -62,10 +82,15 @@ toc::[]
 Im Rahmen des Certified by GS1 Projektes wurden verschiedene Möglichkeiten der technischen Umsetzung authentifizierbarer Idente entwickelt und untersucht. Die Grundlage bildet die kryptografische digitale Signatur (siehe <<sec_digi_sig>>). Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab dem Zeitpunkt der Signatur
 unverändert sind und vom angegebenen Urheber stammen, *vorausgesetzt* es gibt eine vertrauenswürdige Infrastruktur, mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und diese sind in der Lage ihre privaten Schlüssel geheim zu halten.
 
+
 Wie in <<sec_pki>> und <<sec_ssi>> beschrieben kann ein vertrauenswürdiger Teilnehmer, d.h. z.B. eine Firma wie GS1, anderen Teilnehmern Zertifikate ausstellen. Hierbei handelt es sich immer um unterschriebene Dokumente, in denen eine Zuordnung eines öffentlichen Schlüssels zu einem anderen Teilnehmer bescheinigt wird. Je nach konkretem Format können auch weitere Details im Zertifikat eingetragen und damit beglaubigt werden.
 
 In <<sec_intro>> erhalten Sie einen Überblick über wichtige Hintergründe für das weitere Verständnis der im Projekt Certified by GS1 entwickelten Konzepte, Praxisbeispiele und
 Demonstrationen. <<sec_use_cases>> bietet Einblicke in die Anwendungsfälle, die im Rahmen des Projektes bearbeitet wurden und <<sec_implementation>> erläutert die technischen Umsetzungskonzepte.
+
+
+
+
 
 === Warum Certified?
 
