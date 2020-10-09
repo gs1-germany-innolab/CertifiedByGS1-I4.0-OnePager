@@ -72,6 +72,8 @@ melden Sie sich gerne für Informationen zum aktuellen Stand bei den Autoren von
 GS1 und EECC!
 
 
+<<<
+
 toc::[]
 
 
