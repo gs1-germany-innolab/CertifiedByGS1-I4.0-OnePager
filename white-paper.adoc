@@ -885,7 +885,7 @@ Bei der Vergabe eines GS1 Company Prefix (GCP) und damit eines Nummernkreises an
 Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Daten, wie diese z.B. bei der LEI-Vergabe durch GS1 Germany aktuell bereits stattfindet, kann GS1 die Echtheit solcher Unternehmensstammdaten zertifizieren. Die Vorlage vertrauenswürdig zertifizierter Daten erspart den Vertragspartnern dieses Unternehmens künftig, diese Überprüfung selbst durchführen zu müssen und ermöglicht so schneller und einfacher mit dem Unternehmen in eine Rechtsbeziehung zu treten. 
 
 
-=== Industrie 4.0 - Beispiel Microgrids 
+=== Industrie 4.0 - Microgrids 
 ==== Problemstellung
 
 EKU Power Dirves entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Hierbei
