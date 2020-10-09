@@ -295,7 +295,7 @@ AISBL. Diese dient als Issuer. GS1 verwaltet derzeit mehr als
 
 
 [[sec_gs1_id_scheme]]
-==== Nummernkreise der GS1
+==== GS1
 
 
 GS1 Idente sind wie folgt aufgebaut: Ausgehend von der Gesamtheit der GS1
