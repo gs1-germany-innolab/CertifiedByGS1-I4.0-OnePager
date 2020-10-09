@@ -701,7 +701,7 @@ und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösb
 Darüber hinaus fehlen sowohl UUIDs als auch URNs eine weitere notwendige Eigenschaft: 
 die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren. 
 
-[Tabelle 1. Eigenschaften von Identifikatoren]
+[Tabelle 1. Eigenschaften von Identen]
 
 Das bedeutet im Umkehrschluss, dass nur DIDs eine Komponente der geforderten selbstsouveränen Identität sein können. 
 Weitere Hauptkomponenten sind Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI). 
