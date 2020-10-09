@@ -885,10 +885,10 @@ Bei der Vergabe eines GS1 Company Prefix (GCP) und damit eines Nummernkreises an
 Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Daten, wie diese z.B. bei der LEI-Vergabe durch GS1 Germany aktuell bereits stattfindet, kann GS1 die Echtheit solcher Unternehmensstammdaten zertifizieren. Die Vorlage vertrauenswürdig zertifizierter Daten erspart den Vertragspartnern dieses Unternehmens künftig, diese Überprüfung selbst durchführen zu müssen und ermöglicht so schneller und einfacher mit dem Unternehmen in eine Rechtsbeziehung zu treten. 
 
 
-== Beispiel Microgrids - EKU Power Drives
-=== Problemstellung
+=== Industrie 4.0 - Microgrids 
+==== Problemstellung
 
-EKU entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Hierbei
+EKU Power Dirves entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Hierbei
 konzentriert sich EKU vorwiegend auf ortsveränderliche bzw. mobile Anlagen. Also Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
 regelmäßige Standortwechsel und Rekonfiguration zum normalen Betrieb gehören.
 
@@ -900,8 +900,8 @@ Eine der wesentlichen Herausforderungen in diesen Systemen ist die ständige Anp
 .Einführungstext der interaktiven Demonstration des Use Case
 image::demo-screenshots/1-intro.png[]
 
-=== Existierende Lösungsansätze
-==== Statische Informationen
+==== Existierende Lösungsansätze
+===== Statische Informationen
 Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage
 charakterisieren. Dies können z.B. sein Hersteller, Modell, Nennleistung, uulässiger Leistungsbereich, Nennspannung, zulässiger Spannungsbereich, usw.
 
@@ -917,7 +917,7 @@ image::demo-screenshots/3-outage.png[]
 
 
 [[sec_eku-dynamic]]
-==== Dynamische Informationen
+===== Dynamische Informationen
 
 Neben den statischen Informationen über die Anlage entstehen während ihres Betriebs weitere Daten, die für
 andere Teilnehmer im Netzwerk interessant sein können. So z.B.
@@ -939,22 +939,22 @@ image::demo-screenshots/5-dynamic.png[]
 .Manipulierte Daten werden problematisiert
 image::demo-screenshots/6-hacked.png[]
 
-=== Verbesserungspotential durch Certified by GS1
-====  Statische Daten
+==== Verbesserungspotential durch Certified by GS1
+=====  Statische Daten
 Das digitale Typenschild, das alle für die Anlage technisch relevanten Informationen enthält, kann vom Hersteller mittels einer elektronischen Signatur beglaubigt werden. Es kann nicht verändert werden, ohne Kenntnis des privaten Schlüssels des Herstellers. Analog zum SSL Zertifikat im WWW, das die Echtheit einer besuchten Webseite z.B. für online-banking bestätigt, kann das elektronische Typenschild technisch relevante Informationen vor Veränderung schützen. Durch geeignete Mittel (z.B. dynamische oder challenge/response Inhalte) kann das digitale Typenschild (in Verbindung mit entsprechend gesicherter Elektronik) außerdem als Schutz gegen Plagiate eingesetzt werden.
 
 [[eku-certified]]
 .Vom Hersteller signierte digitale Typenschilder können nicht manipuliert werden und das in <<eku-static-hacked>> dargestellte Angriffszenario wird verhindert
 image::demo-screenshots/4-certified-dtls.png[]
 
-==== Dynamische Daten
+===== Dynamische Daten
 Um das Einschleusen von unerwünschter / schädlicher Informationen in die verteilten Regelsysteme zu vermeiden, kann ein am Prozess beteiligtes Steuergerät seine komplette Kommunikation elektronisch signieren. Somit kann die Echtheit der Informationen bei den Empfängern verifiziert werden. Fortlaufende Sequenznummern innerhalb der signierten Daten vereiteln außerdem Replay-Attacken.
 
 [[eku-certified-dynamic]]
 .Signierte dynamische Daten können auch in einer unsicheren Umgebung fälschungssicher übertragen werden und der in <<eku-dynamic-hacked>> dargestellte Angriff wird verhindert
 image::demo-screenshots/7-certified-dynamic.png[]
 
-==== Pay per Use
+===== Pay per Use
 Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Businessmodelle, in denen nicht mehr die Geräte oder Maschinen direkt verkauft oder auf Zeit verliehen
 werden, sondern der Nutzen, den der Anwender durch diese erzielt, direkt bepreist wird. In solchen "Pay per Use" oder "as a Service" Modellen werden alle nötigen Voraussetzungen, wie Maschinen und Betriebsmittel, die der Nutzer braucht um den gewünschten Nutzen zu erzielen, zur Verfügung gestellt. Wichtig ist bei den zugrundelegenden Business Modellen immer, eine präzise und vor allem eine für alle beteiligten vertrauenswürdige Messung der Parameter (KPIs), auf denen die Berechnung der Kosten eines solchen Service beruht.
 
@@ -966,7 +966,7 @@ image::demo-screenshots/8-pay-per-use.png[]
 
 [[EKU-PD]]
 
-=== Interaktive Demonstration
+==== Interaktive Demonstration
 Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verständlich darzustellen, wurde eine interaktive online Demonstration des Use Cases entwickelt. Die in diesem Abschnitt gezeigten Bilder, stammen aus diesem Demonstrator. Die Demonstration ist unter <<online-demo>> öffentlich zugänglich.
 
 
