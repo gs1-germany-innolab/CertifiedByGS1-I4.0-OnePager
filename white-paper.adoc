@@ -4,7 +4,7 @@ v{docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
-:toclevels: 2
+:toclevels: 3
 :toc-title: Inhalt
 :figure-caption: Bild
 :table-caption: Tabelle
@@ -34,7 +34,7 @@ im Allgemeinen und dem Internet of Things (IoT) im Besonderen wird eine
 vertrauenswürdige und sichere Identitätsinfrastruktur zur Identifizierung und
 Authentifizierung von natürlichen und juristischen Personen, Unternehmen, aber auch von
 Dingen, benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt um das
-bestehende System der GS1 Idente durch digitale Zertifikate abzusichern und
+bestehende System der GS1 Identifikationsnummern durch digitale Zertifikate abzusichern und
 authentifizierbar zu machen, um die Rolle der GS1 als vertrauenswürdige und
 neutrale Organisation zu der eines Identitätsanbieters und Vertrauensanker in einer digitalen
 Vertrauensinfrastruktur auf basis digitaler Zertifikate auszubauen.
@@ -44,7 +44,7 @@ In vielen Anwendungsfällen wird eine weitgehende Automatisierung von Abläufen
 dadurch verhindern, dass Kommunikationspartner, insbesondere im
 Machine-To-Machine (M2M) Bereich, ebenso aber in B2B und B2C Prozessen, nicht
 sicher automatisch authentifiziert werden können. Durch eine Erweiterung der
-bestehenden GS1 Idente um Sicherheits- und Authentifizierungsfunktionen könnte
+bestehenden GS1 Identifikationsschlüssel um Sicherheits- und Authentifizierungsfunktionen könnte
 Certified by GS1 IDs im IoT-Umfeld die unternehmensübergreifende eindeutige und
 sichere Identifikation von Maschinen untereinander sicherstellen, eine wichtige
 Funktion, für die bisher kein alternatives System etabliert ist.
@@ -81,7 +81,7 @@ toc::[]
 [[sec_intro]]
 == Einführung
 
-Im Rahmen des Certified by GS1 Projektes wurden verschiedene Möglichkeiten der technischen Umsetzung authentifizierbarer Idente entwickelt und untersucht. Die Grundlage bildet die kryptografische digitale Signatur (siehe <<sec_digi_sig>>). Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab dem Zeitpunkt der Signatur
+Im Rahmen des Certified by GS1 Projektes wurden verschiedene Möglichkeiten der technischen Umsetzung authentifizierbarer Identifikationsschlüssel entwickelt und untersucht. Die Grundlage bildet die kryptografische digitale Signatur (siehe <<sec_digi_sig>>). Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab dem Zeitpunkt der Signatur
 unverändert sind und vom angegebenen Urheber stammen, *vorausgesetzt* es gibt eine vertrauenswürdige Infrastruktur, mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und diese sind in der Lage ihre privaten Schlüssel geheim zu halten.
 
 
@@ -100,34 +100,34 @@ Bei jeder Form der Kommunikation, sei es B2B oder B2C, Machine to
 Machine oder unter menschlicher Beteiligung, analog oder digital,
 ist es essentiell zu wissen wer mit wem spricht und über welche
 Objekte. 
-GS1 ermöglicht seit 1974 die Vergabe von Identen um konkrete Dinge,
+GS1 ermöglicht seit 1974 die Vergabe von Identifikationsnummern um konkrete Dinge,
 Klassen, Orte, Handelspartner, uvm. eindeutig und unverwechselbar zu
 identifizieren.  Während gängige Bezeichnungen, etwa die Abkürzung
 "EECC" mehrdeutig oder dem Partner unbekannt sein können, sind GS1
-Idente, wie die (Party) GLN 4047111000006 eindeutig. Über
-Services der GS1 wie <<gepir>> lässt sich bei Unkenntnis des Idents z.B.
+Identifikationsnummern, wie die (Party) GLN 4047111000006 eindeutig. Über
+Services der GS1 wie <<gepir>> lässt sich zu einer unbekannten Identifikationsnummer z.B.
 herausfinden, dass mit der eben genannten Abkürzung "EECC" die "European EPC Competence Center GmbH"
 bezeichnet wird. 
 
 Gibt sich einer der Kommunikationspartner als 4047111000006 aus, ist
 also zumindest eindeutig, dass hiermit diese konkrete Firma gemeint
 ist und nicht z.B. eine Person mit den Initialen "EECC". Die von GS1
-vergebenen Idente ermöglichen also eine eindeutige
+vergebenen Identifikationsnummern ermöglichen also eine eindeutige
 Identifikation. Stand heute ist jedoch keine Authentifikation <<auth>>
 dieser Daten möglich. Es kann nicht überprüft
 werden, ob der Kommunikationspartner derjenige ist, der er zu sein vorgibt. 
 Grundsätzlich ist es unter Umständen schwierig, herauszufinden,
-ob es sich bei einer Nummer um ein legitimes GS1 Ident oder nur eine
+ob es sich bei einer Nummer um eine legitime GS1 Identifikationsnummer oder nur eine
 Ziffernkombination im GS1-Format handelt. Letzteres Problem und
 existierende Lösungsansätze werden in <<sec_verified_by_gs1>>
 behandelt.
 
 Im Projekt "Certified by GS1" wird darauf aufbauend untersucht, wie klassische und
 moderne Konzepte aus dem Bereich der Digitalen Signatur und Digitaler
-Zertifikate genutzt werden können, um die Authentizität von GS1 Identen und damit
-zusammenhängende Stammdaten beweisbar zu machen.  Außerdem ermöglichen
+Zertifikate genutzt werden können, um die Authentizität von GS1 Identifikationsnummern und damit
+zusammenhängenden Stammdaten beweisbar zu machen.  Außerdem ermöglichen
 die hier vorgestellten Konzepte den mit den
-Identen bezeichneten Firmen oder Dingen sich zweifelsfrei und
+Identifikationsnummern bezeichneten Firmen oder Dingen sich zweifelsfrei und
 fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander aufzubauen.
 
 "Certified by GS1" kann so die Basis für eine Vertrauensinfrastruktur
@@ -142,17 +142,17 @@ Sicherheits- und Vertrauensfragen zu verhindern.
 === Warum GS1?
 
 GS1 ist eine etablierte Institution zur Vergabe von Nummernkreisen
-(Namensräumen) für Idente, insbesondere Geschäfts- und Produktidente. In diesem
+(Namensräumen) für Idente, insbesondere Geschäfts- und Produktidentifikationsnummern. In diesem
 Sinne erfüllt GS1 bereits die Rolle eines "Identity Provider" <<idp>>. In "Certified by GS1" wurden Konzepte zur Vergabe von
-Sicherheitsmerkmalen (Zertifikaten) zur authentifizierung dieser Idente
+Sicherheitsmerkmalen (Zertifikaten) zur authentifizierung dieser Identifikationsnummern
 entwickelt. Hierbei entsprechen die entwickelten Zertifikate Systeme strukturell
-dem bestehenden Vergabesystem für Idente  In <<sec_gs1_id_scheme>> wird dieser
+dem bestehenden Vergabesystem für Identifikationsnummern  In <<sec_gs1_id_scheme>> wird dieser
 Punkt detaillierter erläutert.
 
 
-GS1 vergibt (in der Regel) keine einzelnen Idente, sondern Kunden
+GS1 vergibt (in der Regel) keine einzelnen Identifikationsnummern, sondern Kunden
 erwerben das Recht, selbst eine bestimmte Menge von
-Identen zu vergeben.
+Identifikationsnummern zu vergeben.
 Dieses Sytem wird im Rahmen von "Certified by GS1" auch für die 
 Sicherheitsmerkmale und damit die authentifizierten Idente umgesetzt. Ein Kunde kann so die
 bisherigen Prozesse zur Vergabe von Identen strukturell beibehalten
