@@ -636,7 +636,7 @@ Oftmals befinden sich die Registrierungsstelle und die Zertifizierungsstelle in
 einem Unternehmen und bilden eine Einheit, als Trust Center.
 
 Der *Verzeichnisdienst* stellt eine Art öffentliches Adressbuch dar, in dem alle
-ausgestellten Zertifikate zum Abruf bereit stehen. Eine weitere wichtige
+öffentlichen Schlüssel und vor allem die ausgestellten Zertifikate zum Abruf bereit stehen. Eine weitere wichtige
 Funktion ist das bereitstellen von sogenannten Revocation Lists, in denen
 veröffentlicht wird welche Zertifikate schon vor ihrem regulären Ablaufdatum
 ungültig gewirden sind, etwa weil eingetragene Daten nicht mehr aktuell sind
@@ -645,8 +645,60 @@ angesehen werden kann, etwa nach einem Cyber Angriff.
 
 
 
+=== Entwicklung von SSI als Dezentrale Zertifikate und Schlüssel Infrastruktur
+
+In einem dezentralen Identitätsmanagement-System können die Entitäten
+(Personen, Organisationen, Dinge, etc.) die Vertrauensanker für den
+jeweiligen Anwendungsfall frei wählen.  Global verteilte Ledger
+(DLTs), dezentrale P2P-Netzwerke oder andere Systeme mit gleichartigen
+Fähigkeiten ermöglichen eine solche Vertrauensinfrastruktur ohne
+zentrale Autoritätsinstanzen oder Single Points of Failure, etwa im
+Verzeichnisdienst.  Dezentralisierte Identitätsmanagement-Systeme
+ermöglichen beliebigen Entitäten ihre eigenen Identifier und verteilte
+Vertrauensanker zu erstellen und zu managen.  Dieses Design beseitigt
+sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für
+Identifizierungsschlüssel als auch für Zertifikate (siehe
+<<sec_pki>>). Typischerweise kann hier jede Entität als ihre eigene
+Root of Trust fungieren. Diese Architektur wird als DPKI
+(dezentralisierte PKI) bezeichnet.
+
+==== Web of Trust
+
+Seit den frühen 90er Jahren kam mit der Entwicklung von PGP (Pretty
+Good Privacy) und den freien Varianten OpenPGP und GPG (Gnu Privacy
+Guard) ein neues Konzept einer Vertrauensinfrastruktur auf, welches
+nicht mehr hierarchischer organisiert ist, sondern komplett dezentral.
+Die
+Grundidee des Web of Trust ist, dass sich einzelne Parteien direkt
+gegenseitig vertrauen und z.B. nach überprüfung der Personalausweise
+bei einem persönlichen Treffen gegenseitig entsprechende Zertifikate
+ausstellen und veröffentlichen. Vertrauen kann dann ähnlich wie in der
+Realen Welt über direkte und indirekte Kontakte aufgebaut
+werden.
+
+Zum Beispiel kann Alice einen nicht direkt von ihr zertifizierten
+(d.h. Ihr nicht bekannten) öffentlichen Schlüssel von Bob als
+vertrauenswürdig einstufen, wenn z.B. mindestens 3 Personen denen
+Alice vertraut, Bobs schlüssel als vertrauenswürdig zertifiziert
+haben. Über die genauen Parameter können Teilnehmer im Web of Trust
+gemäß ihrer individuellen Anforderungen eine striktere oder weniger
+restriktive Vererbung von Vertrauen jeweils individuell konfigurieren.
+
+Im Bereich der e-Mail Signatur ist PGP eine Alternative zu
+S/MIME, dass auf (in der regel kostenpflichtigen oder
+unternehmensinternen) X.509 Zertifikaten von zentralen
+Vertrauensanbietern beruht. Aufgrund mangelnder Unterstützung des
+PGP Standards durch die Anbieter der relevanten e-Mail-Clients, vor allem
+Outlook, kam es allerdings nie zu einer flächendeckenden Verbreitung.
+
+Die Grundidee, dass prinzipiell alle Identitäten innerhalb einer
+Vertrauensinfrastruktur als Intermediäre eigene Zertifikate ausstellen
+können, wird im Rahmen von SSI aufgegriffen und mit modernen
+technischen Möglichkeiten weiterentwickelt.
+
+
 [[sec_ssi]]
-=== Dezentrale Zertifikate und Schlüssel Infrastruktur
+==== SSI
 
 Namensgebend für die Selv Sovereign Identity (SSI) war die Motivation,
 natürlichen Personen die Kontrolle über Ihre eigene digitale Identität
@@ -656,8 +708,7 @@ amerikanischer Unternehmen nutzen zu müssen.  Während
 Personenidentifikation und die Ausstellung und Verwaltung
 vertrauenswürdiger Fakten (sog. _Credentials_, siehe <<sec_vc>>) zu diesen Personen
 weiterhin den Kern vieler SSI Anwendungsfälle bilden, eignen sich die
-auf der Basis von Block Chain Technologie entwickelten technischen
-Lösungen in diesem Bereich auch um die klassischen Probleme der
+SSI Infrastrukturen auch, um die klassischen Probleme der
 Identifikation über Zertifikate und der Schlüsselverwaltung in
 neuartiger dezentraler Weise zu lösen, unabhängig davon auf welche
 Entitäten sich die Idente beziehen.
@@ -667,22 +718,26 @@ Identität die volle Kontrolle über die Leseberechtigungen an allen
 Daten zu seiner Identität. Der Verwalter muss hierbei nicht
 notwendigerweise das "Subjekt" sein, d.h. die Entität die
 identifiziert wird, siehe <<sec_did>>.
+Als Verzeichnisdiesnt (siehe <<sec_pki>>) kann in SSI Netzwerken eine
+Block Chain (Distributed Ledger) eingesetzt werden, dies ist
+allerdings nach den Entsprechenden Standards des W3C kein
+Wesensmerkmal der SSI Technologie.
+
 
 Entwicklung und Aufbau einer dezentralisierten Public Key
-Infrastructure (DPKI) auf SSI Basis ist momentan in vollem Gange und
-könnte ebenso große Bedeutung für die globale Sicherheit und den
-Datenschutz im virtuellen Raum erlangen, wie es einst die Entwicklung
-des SSL/TLS-Protokolls [tls] und der dazu genuzten zentralen PKI für
-den verschlüsselten Netzwerkverkehr hatte.
+Infrastructure (DPKI) auf SSI Basis sind momentan in vollem Gange. SSI
+basierte dezentrale PKI könnte eine ebenso große Bedeutung für die
+globale Sicherheit und den Datenschutz im virtuellen Raum erlangen,
+wie es einst die Entwicklung zentraler PKI für des den verschlüsselten
+Netzwerkverkehr über das SSL/TLS-Protokolls [tls] hatte.
 
 
 Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen
 mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu
 zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der
-Automobilherstellung oder dem bauwesen (BIM), verschlüsselte
+Automobilherstellung oder dem Bauwesen (BIM), verschlüsselte
 Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen
-hinterlegten Stammdaten, als Ident in einem "Verifiable
-Credentials"-Ökosystem. Auch der plattformübergreifende
+hinterlegten Stammdaten. Auch der plattformübergreifende
 Austausch von service-bezogenen und werberelevanten Daten ohne die heute
 damit in Verbindung stehende Weitergabe von personenbezogenen Daten
 ist ein Anwendungsfall, der zwar auf Personenidentifikation beruht
@@ -718,37 +773,64 @@ Im DID-Dokument sind Datensätze zum Subjekt enthalten, insbesondere
 Methoden, mit denen das Subjekt sich als DID Inhaber authentifizieren
 kann. In der Regel sind dies Public Keys, möglich sind aber auch
 z.B. pseudonymisierte Biometriedaten. Darüber hinaus können
-Service-Endpunkte im DID-Dokument definiert werden, die eine gesicherte Interaktion mit
-dem DID-Subjekt ermöglichen. 
+Service-Endpunkte im DID-Dokument definiert werden, die eine
+gesicherte Interaktion mit dem DID-Subjekt ermöglichen.
 
 DIDs stellen die Kernkomponente einer gänzlich neuen Ebene von
 dezentralisierter digitaler Identität im Rahmen einer neuen Public Key
 Infrastructure dar. 
 
+[[sec_vc]]
+==== Verifiable Credentials
+
+Die Im Rahmen von SSI Vertrauensinfrastruktren ausgestellten
+Zertifikate werden als Verifiable Credentials <<vc-data-model>> Bezeichnet und über
+einen speziellen Service-Endpunkt, der innerhalb eines DID-Dokuments
+definiert werden kann, im Netzwerk zur Verfügung gestellt.
+
+Im Unterschied zu klassischen Zertifikaten (insbesondere X.509) ist
+das Schema, d.h. das Datenmodell, dieser Zertifikate sehr
+flexibel. Die Veröffentlichung der Schemata ist eine zusätzliche
+Aufgabe des Verzeichnisdienstes (Distributed Ledger) in SSI
+Netzwerken. 
 
 
 ==== Vergleiche mit anderen Identifikationsschemata
 
 DIDs vereinen wichtige Eigenschaften anderer Identifikationsschlüssel,
 insbesondere Dezentralität, Persistenz und globale Auflösbarkeit. 
+
 Der Bedarf an global eindeutigen Kennzeichnern, welche keine
 zentralisierten Registrierungsstelle benötigen, führte bereits in den
 1980er Jahren zur entwicklnug und standardisierung der
 Universally Unique Identifiers (UUIDs, seltener auch Globally Unique
 Identifiers GUIDs genannt), siehe <<rfc-4122>>. UUIDs sind jedoch
-nicht prinzipiell global auflösbar.
-Auch der Bedarf an persistenten, d.h. dauerhaft einer Entität zugewiesenen und unveränderlichen, Kennzeichnern, 
-welche gleichzeitig global auflösbar sind, besteht seit langem und
-wird z.B. durch URNs (Uniform Resource Names) bedient, siehe
-<<rfc-2141>>, <<rfc-8141>>.
-URNs benötigen jedoch eine zentrale Registrierungsstelle, ähnlich wie
-das Nummernsystem der GS1. Während das GS1 System ein gewisses Maß an
-Dezentralität bietet, indem ein Complete Kunde seine
-eigenen Identifikationsnummern in seinem Namensraum verwalten kann,
-ist dies bei URNs in der Regel nicht vorgesehen.
+global auflösbar, in dem Sinne dass eine UUID keinerlei Informationen
+darüber trägt von wem/in welchem Ramen oder zur bezeichnung von was
+sie erstellt wurde oder wo nähere Informationen verfbar sind.
 
-Darüber hinaus fehlen sowohl UUIDs als auch URNs, ebenso wie den heute
-verwendeten Identifikationsnummern der GS1, eine wichtige Eigenschaft
+Auch der Bedarf an persistenten, d.h. dauerhaft einer Entität
+zugewiesenen und unveränderlichen, Kennzeichnern, welche gleichzeitig
+global auflösbar sind, besteht seit langem und wird z.B. durch URNs
+(Uniform Resource Names) bedient, siehe <<rfc-2141>>, <<rfc-8141>>. In
+ihrem Schema definieren URNs zumindest einen Kontext der
+typischerweise Rückschlüsse darauf zulässt in welchem Rahmen ein Ident
+vergeben wurde und ggF. auch welcher natur das identifizierte Subjekt
+ist. Einige URN Schemata sind in einem engeren Sinne zu einer URL
+auflösbar, unter der Informationen zum konkreten Subjekt abgerufen
+werden können. Der GS1 Digital Link (bzgl. des standard Resolvers)
+stellt eine solche URL dar, die kanonisch mit einem GS1
+Identifikationsschlüssel im URN Format assoziiert werden kann.
+
+Die Namensräume (Schemata) der URNs benötigen eine zentrale
+Registrierungsstelle und auch die Vergabe der einzelnen
+Identifikationsschlüssel innerhalb eines Schemas ist zumindest wie
+beim GS1 System hirarchich, wenn nicht gar zentral organisiert, um die
+eindeutigkeit der Idente sicherzustellen. 
+
+Sowohl UUIDs als auch URNs, ebenso wie den heute
+verwendeten Identifikationsnummern der GS1 fehlt eine wichtige
+Eigenschaft.
 Die Möglichkeit der sicheren kryptographischen zu Verifikation der
 Echtheit und Authentitzität von Identifizierungsschlüßeln ist für viele
 Anwendungen essentiell und kann heute komplett digital sichergestellt
@@ -764,7 +846,7 @@ Verfügung steht.
 |DID
 |UUID
 |URN
-|GS1 DigitalLink
+|GS1 (DigitalLink)
 
 |*Persistent*
 |icon:check[size=2x,role=green]
@@ -775,7 +857,7 @@ Verfügung steht.
 |*Global auflösbar (Unternehmens übergreifend)*
 |icon:check[size=2x,role=green]
 |icon:times[size=2x,role=red]
-|icon:check[size=2x,role=green]
+|Teilweise
 |icon:check[size=2x,role=green]
 
 |*Kryptographisch verifizierbar*
@@ -787,8 +869,8 @@ Verfügung steht.
 |*Dezentral*
 |icon:check[size=2x,role=green]
 |icon:check[size=2x,role=green]
-|icon:times[size=2x,role=red]
-|icon:times[size=2x] icon:check[size=2x]
+|Kaum
+|Hierarchisch
 
 |*Medien-übergreifend*
 |icon:times[size=2x,role=red]
@@ -809,66 +891,7 @@ prädestiniert sind in AutoID label eingebettet zu werden und dass die
 Vergabe von GS1 Identen einem klar regulierten System erfolgt
 
 
-Das bedeutet im Umkehrschluss, dass nur DIDs eine Komponente der geforderten selbstsouveränen Identität sein können. 
-Weitere Hauptkomponenten sind Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI). 
-Dazu bleibt festzuhalten, dass DIDs lediglich die untere Ebene einer dezentralisierten Identitätsinfrastruktur bilden. 
-Die darüber liegende Ebene, welche den meisten Mehrwert bietet, formen die sogenannten Verifiable Credentials (VCs). 
-Dieser technische Begriff steht für einen digital signierten elektronischen Berechtigungsnachweis, 
-welcher den von der W3C Verifiable Claims Working Group entwickelten Interoperabilitätsstandards entspricht.
 
-
-
-==== Web of Trust
-
-Die üblichen Identitätsmanagement-Systeme basieren auf zentralisierten Autoritäten, 
-wie Verzeichnisdiensten innerhalb eines Unternehmen, Zertifizierungsstellen oder Domain-Name-Registraren. 
-In diesem Kontext spielt auch GS1 die Rolle eines Registrars, indem über die Company-Prefix ein Namensraum zugewiesen (verkauft) wird. 
-Dabei bilden diese Autoritäten jeweils ihre eigene Wurzel der Sicherheitskette. 
-Damit ein Identitätsmanagement jedoch zwischen den genannten Systemen etabliert werden kann, bedarf es eines föderalistischen Identitätsmanagements.
-
-Das Aufkommen von Distributed-Ledger-Technologien (DLTs), wie der Blockchain-Technologie, 
-vereinfacht technisch dezentralisierte Identitätsmanagement-Systeme. 
-In einem dezentralen Identitätsmanagement-System können die Entitäten (Personen, Organisationen, Dinge, etc.) ihre geteilte Root of Trust frei wählen. 
-Global verteilte Ledger, dezentralisierte P2P-Netzwerke oder andere Systeme mit gleichartigen Fähigkeiten 
-ermöglichen eine Root of Trust ohne eine zentralisierte Autoritätsinstanz oder einen Single Point of Failure. 
-Gemeinsam ermöglichen es DLTs und dezentralisierte Identitätsmanagement-Systeme beliebigen Entitäten 
-ihre eigenen Identifier oder eine nicht festgelegte Menge an verteilten Roots of Trust zu erstellen und zu managen.
-Entitäten werden mittels DIDs identifiziert und können sich authentisieren, 
-indem sie Nachweise wie z.B. digitale Signaturen oder datenschutzkonforme biometrische Protokolle nutzen.
-
-Dieses Design beseitigt sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für Identifier als auch von zentralisierten Zertifizierungsstellen für Schlüsselverwaltungen – was zurzeit den Standard bei der hierarchischen Public-Key-Infrastruktur (PKI) darstellt. 
-Falls die DID-Registry ein verteilter Ledger ist, kann jede Entität als ihre eigene Root of Trust fungieren. Diese Architektur wird als DPKI (dezentralisierte PKI) bezeichnet.
-
-
-=== Self Sovereign Identity (SSI)
-
-In der analogen Welt stehen unterschiedliche Verfahren zur Verfügung, um unsere Identität nachzuweisen: 
-u.a. der Personalausweis, welcher ein sehr hohes Vertrauen darstellt oder der Fingerabdruck. 
-In der digitalen Welt hingegen ist es etwas schwieriger. Hier haben wir die Möglichkeit über unterschiedliche Verfahren 
-wie z.B. Post-Ident, Video-Ident, WebIdent oder Accounts bei Sozialen Netzwerken unsere Identität nachzuweisen. 
-Jedoch müssen wir uns immer wieder neu ausweisen und stützen uns dabei stets auf dritte Dienstleister, 
-welche unsere Identität bestätigen, die Daten speichern und verwalten. 
-Dies hat den großen Nachteil, dass wir nicht immer wissen, wer welche Daten besitzt und welche Daten an andere weitergegeben werden.
-
-Mit Hilfe einer Self-sovereign identity und dem dahinterliegenden System, 
-kann ein Identitätsinhaber seine eigene Identität erstellen und auch komplett kontrollieren. 
-Dafür benötigt er keine Erlaubnis einer weiteren Instanz oder einer zentralen Behörde. 
-Zusätzlich kann jeder selbst entscheiden, mit wem er seine Daten teilt und wie diese verwendet werden. 
-Das Konzept der „Public Key Infrastructure“ (PKI) wird dabei nicht verworfen, sondern entsprechend der Herausforderungen angepasst 
-und im Sinne einer „Decentralized PKI“ weiterentwickelt. 
-
-Anstelle eines Schlüsselverzeichnisses, das für die Speicherung und den Abruf von öffentlichen Schlüsseln dient, 
-wird eine Blockchain eingesetzt. 
-Dadurch sind keine zentralen Instanzen mehr notwendig, da der Identitätsinhaber, 
-der seinen privaten Schlüssel kontrolliert, seine Zertifikate ohne einen Servicedienstleister selber ausstellt. 
-Die Blockchain dient dabei als Schlüsselverzeichnis. 
-Zusätzlich können die Vorteile der Blockchain-Technologie, wie eindeutige Nachweisbarkeit und Unveränderlichkeit von Transaktionen umgesetzt werden.
-
-Durch die eIDAS Verordnung der Europäischen Union, der Verordnung über elektronische Identifizierung und Vertrauensdienste, 
-wurde ein kompatibler europäischer Rahmen für die selbstsouveräne Identität geschaffen. 
-Das sogenannte European Self-Sovereign Identity Framework (ESSIF) 
-verwendet dezentrale Kennungen (DIDs) und die European Blockchain Services Infrastructure(EBSI). 
-Ein deutlicher Fingerzeig auf die Relevanz der hier vorgestellten Konzepte.
 
 
 
@@ -954,7 +977,6 @@ Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
 Gewicht, Leistungsaufnahme, etc. als Verifiable Credentials
 veröffentlichen.
 
-[[sec_vc]]
 ==== Verifiable Credentials
 
 Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
@@ -1198,6 +1220,11 @@ vorgestellten Ideen geeignet, insbesondere bieten _Verifiable
 Credentials_ eine sehr gute Möglichkeit, die oben angesprochene
 Dezentralität des Identifikationsschlüssel-Systems Certified by GS1 zu
 realisieren.
+
+Durch die eIDAS Verordnung der Europäischen Union, der Verordnung über elektronische Identifizierung und Vertrauensdienste, 
+wurde ein kompatibler europäischer Rahmen für die selbstsouveräne Identität geschaffen. 
+Das sogenannte European Self-Sovereign Identity Framework (ESSIF) 
+verwendet dezentrale Kennungen (DIDs) und die European Blockchain Services Infrastructure(EBSI). 
 
 
 === Ausblick
