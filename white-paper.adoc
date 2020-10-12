@@ -84,7 +84,7 @@ toc::[]
 == Einführung
 
 Im Rahmen des Certified by GS1 Projektes wurden verschiedene Möglichkeiten der technischen Umsetzung authentifizierbarer Identifikationsschlüssel entwickelt und untersucht. Die Grundlage bildet die kryptografische digitale Signatur (siehe <<sec_digi_sig>>). Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab dem Zeitpunkt der Signatur
-unverändert sind und vom angegebenen Urheber stammen, *vorausgesetzt* es gibt eine vertrauenswürdige Infrastruktur, mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und diese sind in der Lage ihre privaten Schlüssel geheim zu halten.
+unverändert sind und vom angegebenen Urheber stammen, *vorausgesetzt* es gibt eine vertrauenswürdige Infrastruktur, mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und diese in der Lage sind ihre privaten Schlüssel geheim zu halten.
 
 
 Wie in <<sec_pki>> und <<sec_ssi>> beschrieben kann ein vertrauenswürdiger Teilnehmer, d.h. z.B. eine Firma wie GS1, anderen Teilnehmern Zertifikate ausstellen. Hierbei handelt es sich immer um unterschriebene Dokumente, in denen eine Zuordnung eines öffentlichen Schlüssels zu einem anderen Teilnehmer bescheinigt wird. Je nach konkretem Format können auch weitere Details im Zertifikat eingetragen und damit beglaubigt werden.
