@@ -1,6 +1,6 @@
 = Certified By GS1 - White Paper
-Mayra Castellanos <mayra.castellanos@gs1.de>; Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v{docdatetime}
+Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
+v2.0.0 + {docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
@@ -25,7 +25,9 @@ Draft-Version: {revnumber}
 Copyright 2020 GS1 Germany GmbH, European EPC Competence Center GmbH
 (EECC)
 
-Autoren: {authors}
+Projektleitung: mailto:mayra.castellanos@gs1.de[Mayra Castellanos]
+
+Autoren: mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter]
 
 
 :!sectnums:
