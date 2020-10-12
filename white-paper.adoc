@@ -888,6 +888,7 @@ Durch die digitale Signatur und die entsprechenden Zertifikate wird vor allem di
 ==== Problemstellung
 Vertrauenswürdige Daten zu Unternehmen sind für digitale Handelsbeziehungen ebenso wichtig, wie die vertrauenswürdige Authentifizierung realer Personen und ihrer Daten im Online-Handel, oder - allgemeiner - bei digitalen Vertragsabschlüssen. Entsprechend einem digitalen Ident, mit ähnlicher Vertrauenswürdigkeit wie dem Personalausweis, benötigt ein Unternehmen möglicherweise einen digital beglaubigten Handelsregisterauszug um sich zu authentifizieren und die Legitimität eines Rechtsgeschäfts zu beweisen.
 
+[[sec_onboarding]]
 ==== Existierende Lösungsansätze
 Ein konkreter Use Case basierend auf Unternehmensstammdaten ist das Supplier Onboarding. Will ein Hersteller einen neuen Zulieferer in seine Systeme aufnehmen, 
 so ist dies je nach Industriezweig typischerweise mit erheblichem Aufwand verbunden, worunter die Flexibilität der Handelsbeziehungen leidet. Während für bestimmte Hersteller spezifische Audits möglicherweise unumgänglich und gewünscht sind, ließe sich ein erheblicher Teil der papierbasierten Prüfung von Unternehmensdaten, Zulassungen und klassischen standardisierten Zertifizierungen, auf Basis einer Vertrauensinfrastruktur digitalisieren und automatisieren.
@@ -983,38 +984,42 @@ Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verstä
 == Fazit
 
 Im Projekt _Certified by GS1_ wurde aufgezeigt, wie die GS1
-prinzipiell ihre Stellung als vertrauenswürdige und neutrale
-Organisation nutzen kann um ihre Kernprodukte, unternehmens- und
-branchenübergreifend einsetzbare eindeutige Identifikationsnummern und
-Stammdaten zu den bezeichneten Entitäten, weiterzuentwickeln. Durch
-die Vergabe digitaler Zertifikate, welche direkt beweisen, dass die
-zertifizierten Identifikationsnummern gültig sind und korrekt nach den
-Regeln des GS1 Systems erzeugt wurden, wird GS1 in einem zweiten
-Schritt zum Vertrauensanker einer Infrastruktur, in der Firmen ihre
-Stammdaten direkt mit dem jeweiligen Identifikationsschlüssel
-unterschrieben können.
+die eigene Stellung als vertrauenswürdige und neutrale
+Organisation nutzen kann, um unternehmens- und branchenübergreifend
+einsetzbare eindeutige Identifikationsnummern und Stammdaten zu den
+bezeichneten Entitäten weiterzuentwickeln. Durch die Vergabe digitaler
+Zertifikate, welche direkt beweisen, dass die zertifizierten
+Identifikationsnummern gültig sind und korrekt nach den Regeln des GS1
+Systems erzeugt wurden, kann GS1 zum Vertrauensanker einer
+Infrastruktur werden, in der Firmen auch Stammdaten direkt mit dem
+jeweiligen Identifikationsschlüssel sichern und vertrauenswürdig
+signieren können.
 
 USP der Certified by GS1 Lösung, im Vergleich zu ähnlichen
 Entwicklungen etwa bei der GLEIF, ist, dass die Kunden von GS1 als
-Intermediäre selbst Zertifizierte Identifikationsschlüßel erstellen
-können und so die volle Hoheit über ihre Identifikationsschlüssel
+Intermediäre selbst Zertifizierte Identifikationsschlüssel erstellen
+können und so die volle Hoheit über ihre Idente und Zertifikate
 behalten, ähnlich wie dies bereits heute der Regelfall für GS1
-Identifikationsnummern ist. AUf diese Art und Weise bleibt das GS1
+Identifikationsnummern ist. Auf diese Art und Weise bleibt das GS1
 System dezentral und Hersteller, die einmal eine zertifizierte GCP
 erworben haben, können die entsprechende Anzahl von
 z.B. zertifizierten GTINs vergeben, ohne jede einzelne zentral
 registrieren zu müssen.
 
-Besonders interessant ist dies im IoT Bereich, in dem die erzeugung
+
+Besonders interessant ist dies im IoT Bereich, in dem die Erzeugung
 der Identifikationsschlüssel (z.B. SGTINs) in den Herstellungsprozess
-integriert werden kann, so dass sich die Geräte auf Basis der
+integriert werden kann, sodass sich die Geräte auf Basis der
 Certified by GS1 Vertrauensinfrastruktur sicher authentifizieren und
 die Echtheit der von Ihnen versendeten (Mess-)Daten beweisen können.
+In Recherchen und Interviews im Projektverlauf wurde klar
+festgestellt, dass dieser Baustein zur interoperablen Absicherung
+heute im (I)IoT fehlt, aber zumindest mittelfristig, insbesondere zur Realisierung
+der Industrie 4.0 Zukunftszenarien, dringend benötigt wird. 
 
-
-Weiterhin hat sich im Verlauf des Projektes klar herausgestellt, dass
-von GS1 zertifizierte Stammdaten großes Potential haben. GS1 könnte,
-ähnlich wie bereits heute bei der LEI vergabe, gewisse
+Als weiteres Ergebnis des Projektes hat sich klar herausgestellt, dass
+von GS1 *zertifizierte Stammdaten* großes Potential haben. GS1 könnte,
+ähnlich wie bereits heute bei der LEI Vergabe, gewisse
 Unternehmensstammdaten überprüfen und die
 Vertrauenswürdigkeit der überprüften Daten anschließen digital
 Bescheinigen. Auf Basis der erhöhten Vertrauenswürdigkeit solcher
@@ -1024,35 +1029,34 @@ da die Prüfung im folgenden digital und automatisiert erfolgen
 kann. Ein konkretes Beispiel wurde in <<sec_onboarding>> dargestellt.
 
 
-
-In diesem Projekt stand die konzeptionelle und technische Entwicklung
-der Certified by GS1 Ideen im Vordergrund, so wie die Untersuchung
-konkreter Use Cases und die Marktanalyse und Networking im IIoT Bereich.
-Die Entwicklung eines nachhaltigen Geschäftsmodells zusammen mit
-anderen Mitgliedsorganisationen und GS1 Global und die
-Konkretisierung der Lösungen im Zusammenspiel
-mit bestehenden Initiativen, insbesondere der Digital Signature
-Mission Specific Working Group der GS1, sind wichtige Schritte auf dem
-Weg zu einem MVP.
+Allein die
+Übertragung der bestehenden Identifikationsnummern in die SSI Welt
+stellt eine natürliche
+Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
+GS1 dar und sicher die Zukunftsfähigkeit. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
+vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
 
 
-=== Industrie 4.0
+=== Stand der Industrie 4.0 Umsetzung
 
-Im Zusammenhang mit den im Vorfeld durchgeführten Umfragen, sowohl per
-Fragebogen als auch per individuellen Interviews, erhielt GS1 Germany
-eindeutige Aussagen im Industrie 4.0 Umfeld. Cloud-Lösungen und offene
-Netzwerke nehmen bei den befragten Unternehmen und deren Kunden
-aktuell noch keinen großen Stellenwert ein. Inselnetzwerke werden bevorzugt
-und z.B. OPC-UA wird in der Regel angeboten, aber selten nachgefragt.
-Es wurde trotzdem allgemein die Relevanz von unternehmensübergreifend eindeutigen und vor allem
-sicheren Identifikationsnummern für Maschinen
-bestätigt. Bisher arbeitet der Maschinenbau mit proprietären Identen
-und war nicht gezwungen sich mit der Thematik auseinander zu
-setzen. Im Ausblick sehen alle Befragten aber die Wichtigkeit der
-digitalen Idente und Zertifikate und sprechen sich für die Certified
-by GS1 Idee aus, mit dem Hinweis, dass für die Industrie eine einfache
-Integration in bestehende Herstellungsprozesse und Anwendungen
-essentiell sind.
+Die im Rahmen des Projektes durchgeführten Umfragen per Fragebogen und
+direkten Interviews zeichnen ein klares Bild des aktuellen Stands der
+Umsetzung von Industrie 4.0 Konzepten und Ideen bei den befragten
+Partner im Industrie 4.0 Umfeld. Cloud-Lösungen und offene Netzwerke
+im Sinne eines echten _Internet_ of Things nehmen bei den befragten
+Unternehmen und deren Kunden aktuell noch keinen großen Stellenwert
+ein. Lokale Netzwerke werden bevorzugt und Standards zur
+unternehmensübergreifenden Kommunikation, wie OPC-UA, werden zwar in
+der Regel angeboten, aber selten nachgefragt.  Es wurde trotzdem
+allgemein die Relevanz von unternehmensübergreifend eindeutigen und
+vor allem sicheren Identifikationsnummern für Maschinen
+bestätigt. Bisher arbeitet der Maschinenbau im wesentlichen mit
+proprietären Identen und war nicht gezwungen sich mit der Thematik
+auseinander zu setzen. Im Ausblick sehen alle Befragten aber die
+Wichtigkeit der digitalen Idente und Zertifikate und sprechen sich für
+die Certified by GS1 Idee aus. Eine einfache Integration in bestehende
+Herstellungsprozesse und Anwendungen wird hierbei als essentiell für
+die Industrielle Anwendung gesehen.
 
 In einzelnen konkreten Use Cases, in denen eine regelmäßige oder gar
 kontinuierliche dynamische umkonfiguration des Maschinenparks erfolgt,
@@ -1065,44 +1069,63 @@ denkbar. Für ein Konkretes Anwendungsbeispiel sei auf <<sec_eku>> verwiesen.
 
 === Umsetzung mittels SSI Technologie
 
-Die in <sec_ssi>> näher erläuterte auf SSI Technologie basierende
+
+Die in <<sec_ssi>> näher erläuterte auf SSI Technologie basierende
 dezentrale Vertrauensinfrastruktur befindet sich aktuell in einem für
 Anwender höchst interessanten Entwicklungsstadium. Die Technologischen
 Grundlagen sind größtenteils entwickelt und in ersten Großprojekten
 (namentlich Sovrin <<sovrin>>) produktiv erprobt worden. Das Thema
-wurde von der politik als relevant erkannt und die Entwicklung wird
-zur zeit auf breiter Front, gerade auch in Europa
-gefördert. Dementsprechend beschäftigen sich aktuell eine vielzahl von
-Projekten und Konsortien in verschiedenen Technologischen und
-wirtschaftlichen Reifegeraden mit dem aufbau einer solchen
-Infrastruktur in Europa. Wie in <<sec_ssi_implementation>> beschrieben
+wurde von der Politik als relevant erkannt und die Entwicklung wird
+zur Zeit auf breiter Front gefördert. Besonders interessant ist die
+Entwicklung in Europa, dass bei
+der zentralen PKI Infrastruktur die Chance verpasst hatte, wichtige
+Vertrauensinfrastrukturkomponenten rechtzeitig selbst
+aufzubauen. Dementsprechend beschäftigen sich aktuell eine Vielzahl
+von Projekten und Konsortien in verschiedenen technologischen und
+wirtschaftlichen Reifegraden mit dem Aufbau einer solchen
+Infrastruktur. Wie in <<sec_ssi_implementation>> beschrieben
 ist SSI Technologie sehr gut zur Implementierung der hier
 vorgestellten Ideen geeignet, insbesondere bieten _Verifiable
 Credentials_ eine sehr gute Möglichkeit, die oben angesprochene
-Dezentralität des Identifikationsschlüssel Systems Certified by GS1 zu
+Dezentralität des Identifikationsschlüssel-Systems Certified by GS1 zu
 realisieren.
 
 
-Konkret werden sich GS1 und das EECC voraussichtlich mit 2 Konsortien als
-Konsortailpartner um Förderung in der aktuellen Ausschreibung des Bundesministeriums für Wirtschaft
+=== Ausblick
+
+In diesem Projekt stand die konzeptionelle und technische Entwicklung
+der Certified by GS1 Ideen im Vordergrund, sowie die Untersuchung
+konkreter Use Cases und die Marktanalyse und Networking im IIoT Bereich.
+Die Entwicklung eines nachhaltigen Geschäftsmodells in enger Zusammenarbeit mit
+den anderen GS1 Mitgliedsorganisationen und GS1 Global und die
+Anwendung der entwickelten Lösungen in bestehenden Initiativen, insbesondere der Digital Signature
+Mission Specific Working Group der GS1, sind wichtige Schritte auf dem
+Weg zu einem MVP.
+
+
+Um durch die Implementierung von
+Identifikationsschlüsseln Certified by GS1 mittels SSI Technologie die
+technische Grundlage für konkrete Prototypische Anwendungen zu schaffen werden sich GS1 und das EECC in 2 Konsortien als um Förderung in der aktuellen Ausschreibung des Bundesministeriums für Wirtschaft
 und Energie (BMWi) mit dem Titel
 https://www.digitale-technologien.de/DT/Navigation/DE/ProgrammeProjekte/AktuelleTechnologieprogramme/Sichere_Digitale_Identitaeten/sichere_digitale_ident.html[Schaufenster Sichere Digitale Identitäten]
-bewerben, um die in diesem Bericht
-vorgestellten Konzepte weiterzuentwickeln.
+bewerben.
+Die beteiligung an zwei Konsortien mit verschiedenen Inhaltlichen
+Schwerpunkten und Use Cases in verschiedenen Branchen bietet die
+Möglichkeit, die Interoperabilität der entwickelten Lösung über die
+grenzen eines Konkreten SSI Netzwerkes hinaus sicherzustellen, wie sie
+von einem GS1 Standard zu erwarten ist.
+
 
 Das 
 https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_ssi.html[Self Sovereign Identity für Deutschland]
-Konsortium hat neben Personen- auch Firmen-Idente und Dinge im
+Konsortium hat neben Personen- auch Firmenidentifikation und Dinge im
+IoT Sinne im
 Blick. Während viele SSI Umsetzungen allein auf Personen fokussieren
 liegt gerade in der Anwendung der Technologie zur sicheren
 Identifizierung und Authentifizierung von juristischen Personen und
 Dingen, insbesondere im IoT Kontext, eine große Chance für GS1. Hier
 ist die Technologie in hinreichendem Reifegrad verfügbar und es sind
-noch keine starken Konkurrenten am Markt etabliert. Zudem stellt die
-Übertragung der bestehenden Idente in die SSI Welt eine natürliche
-Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
-GS1 dar. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
-vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
+noch keine starken Konkurrenten am Markt etabliert.
 
 Im
 https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_id-ideal.html[ID-Ideal]
@@ -1115,13 +1138,13 @@ und Qualität zu erschließen, wie dies sonst nur im online Handel
 möglich ist. Gleichzeitig bietet die SSI Technologie die Möglichkeit
 den Kunden ihre Datenhoheit zurückzugeben und sie fair und transparent
 am Geschäft mit den eigenen Daten zu beteiligen. Die etablierten
-Idente von GS1 im Handel werden hierbei eine wichtige Rolle spielen.
+Identifikationsnummern von GS1 im Handel werden hierbei eine wichtige Rolle spielen.
 
 
 Auf Basis der in den Forschungsprojekten auszuarbeitenden
-grundlegenden Infrastruktur an sicheren Certified IDs können eine
+grundlegenden Infrastruktur an sicheren Certified Identifiationsschlüsseln können eine
 Vielzahl von Use Cases innerhalb der Förderprojekte und darüber hinaus
-umgesetzt weden, insbesondere die in <<sec_use_cases>> vorgestellten.
+umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 
 
 
