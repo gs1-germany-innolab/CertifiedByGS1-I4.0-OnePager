@@ -884,20 +884,20 @@ eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
 Organisationen und mit den Partnern dar.
 
 Die in diesem Abschnitt verwendeten grundlegenden
-Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
+Begriffe, insbesondere DIDs und Verifiable Credentials, werden in
 <<sec_ssi>> eingeführt erläutert.
 
-==== DiDs
+==== DIDs
 
 *NAMENSKONFLIKT DES ABSCHNITTS!*
 
 In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
-Firmen, insbesondere GS1, eine eigene DiD. Konkreten Dingen,
+Firmen, insbesondere GS1, eine eigene DID. Konkreten Dingen,
 etwa serialisierte Handelswaren oder IoT Devices, und auch abstrakten
-Konzepten wie einer Klasse von Waren oder Geräten können gemäß <<did-core>> DiDs
+Konzepten wie einer Klasse von Waren oder Geräten können gemäß <<did-core>> DIDs
 zugeordnet werden.
 Indem eine Klasse von Gegenständen, etwa alle Sensoren einer
-bestimmten Baureihe eines bestimmten Herstellers, eine eigene DiD
+bestimmten Baureihe eines bestimmten Herstellers, eine eigene DID
 erhalten können dieser Klasse Eigenschaften als Verifiable Credentials (VC)
 attestiert werden. Insbesondere kann der Hersteller die GTIN der
 Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
@@ -907,13 +907,13 @@ veröffentlichen.
 [[sec_vc]]
 ==== Verifiable Credentials
 
-Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
+Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
 
-Der DiD einer konkreten Produktinstanz kann nun eine SGTIN als serialisiertes Ident in Form eines VC zugewiesen werden. Wie in <<GS1SSI>> dargestellt wird die DiD der zugehörigen GTIN als Issuer verwendet, sodass die Kette der Idente von der GCP der Company über die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
-entsprechend als Kette von Verifiable Credentials, die sich die DiDs ausstellen, abgebildet wird.
+Der DID einer konkreten Produktinstanz kann nun eine SGTIN als serialisiertes Ident in Form eines VC zugewiesen werden. Wie in <<GS1SSI>> dargestellt wird die DID der zugehörigen GTIN als Issuer verwendet, sodass die Kette der Idente von der GCP der Company über die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
+entsprechend als Kette von Verifiable Credentials, die sich die DIDs ausstellen, abgebildet wird.
 
 [[GS1SSI]]
-.Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DiDs
+.Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DIDs
 image::certified-gs1-ids.png[]
 
 
