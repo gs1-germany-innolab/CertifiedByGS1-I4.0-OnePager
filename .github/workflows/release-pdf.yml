@@ -2,9 +2,6 @@ on:
   release:
     types:
       - created
-      - published
-      - edited
-      - prereleased
 
 name: Release PDFs
 
