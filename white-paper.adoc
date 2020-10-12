@@ -771,16 +771,17 @@ Ein deutlicher Fingerzeig auf die Relevanz der hier vorgestellten Konzepte.
 
 
 
-=== Vertrauen / GS1 als Vertrauenswürdiger Dritter
+== GS1 als Vertrauensanker
+
 Das Vertrauen in Idente certified by GS1 funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI Zertifikatsketten.
 
-==== Analoge Welt
+=== Analoge Welt
 
 Das Vertrauen in die Identität z.B. einer realen Person kommt durch die Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande. Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem Aussteller, z.B. dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in Bild 1  dargestellt.
 
 Abbildung 1: Vertrauen in klassische Ausweisdokumente
 
-==== Certified By GS1 Trust Model
+=== Certified By GS1 Trust Model
 
 Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit Basisnummer Certified By GS1 dem Unternehmen selbst Zertifikate für die eigenen IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. [*bereits weiter oben dargestellt*]
 
@@ -803,7 +804,7 @@ Kommunikationskanal aufgebaut werden. So können z.B. Messdaten oder
 Steuerbefehle übertragen werden, ohne dass diese von Dritten gefälscht werden
 können.
 
-==== USP
+=== USP
 
 Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen, das
 Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen
@@ -814,7 +815,7 @@ Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese
 Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs
 als Service anbieten.
 
-==== Technische Realisierung
+=== Technische Realisierung
 
 Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über
 klassische X.509 Zertifikatsketten (PKI) als auch über "Verifiable Credentials"
@@ -823,7 +824,7 @@ dezentrale Anwendung der Idente, ohne dass nach der initialen Vergabe der
 zertifizierten Basis GLN eine weitere Interaktion mit GS1 notwendig ist.
 
 [[sec_ssi_implementation]]
-==== Prototypisches Konzept
+=== Implementierungskonzept mittels SSI Technologie
 
 Im Rahmen des Certified by GS1 Projektes wurde ein Prototypisches
 Konzept zur Zertifizierung von GS1 Identen und assoziierten
@@ -835,7 +836,7 @@ Die in diesem Abschnitt verwendeten grundlegenden
 Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
 <<sec_ssi>> eingeführt erläutert.
 
-===== DiDs
+==== DiDs
 
 In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
 Firmen, insbesondere GS1, eine eigene DiD. Konkreten Dingen,
@@ -850,7 +851,7 @@ Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
 Gewicht, Leistungsaufnahme, etc. als Verifiable Credentials
 veröffentlichen.
 
-===== Verifiable Credentials
+==== Verifiable Credentials
 
 Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
 
@@ -860,6 +861,10 @@ entsprechend als Kette von Verifiable Credentials, die sich die DiDs ausstellen,
 [[GS1SSI]]
 .Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DiDs
 image::certified-gs1-ids.png[]
+
+
+
+
 
 
 [[sec_use_cases]]
