@@ -647,31 +647,72 @@ angesehen werden kann, etwa nach einem Cyber Angriff.
 
 [[sec_ssi]]
 === Dezentrale Zertifikate und Schlüssel Infrastruktur
-Mit dem rasanten Anstieg von Social Media Diensten, stieg auch die digitale Aktivität der Nutzer an und somit auch die Anzahl der unterschiedlichsten Plattformen. Auf jeder dieser Plattform muss ein Nutzer sein eigenes Profil und dadurch jedesmal seine eigene digitale Identität erstellen. In den letzten Jahren entwickelte sich die Blockchain-Technologie zu einem neuen Paradigma dezentraler Informationssysteme. Über den Ansatz der dezentralen Informationssysteme können Daten registriert, nicht veränderbar und über das ganze Netzwerk verteilt werden. Dafür wird ein Konsens-Mechanismus zur Validierung – ohne zentrale oder föderale Autorität – verwendet. Aus dem Kontext der Identitäten heraus, entwickelte sich aus diesen beiden Möglichkeit, das Konzept der selbstsouveränen Identität (Self-Sovereign Identity or SSI). 
 
-Dieses bedeutet für den einzelnen Benutzer, dass er den Besitz seiner eigenen Identitätsdaten wiedererlangen kann und in die Lage versetzt wird, die Identitätsdaten zu kontrollieren und zu bestimmen, wer Zugriff auf welche Informationen erhält und diese auch jederzeit unterbinden kann. Die Möglichkeiten der jüngsten Entwicklung zur Online-Identifizierung und Verwaltung kann nicht nur für Personen genutzt werden, sondern auch für Organisationen und Geräten.
+Namensgebend für die Selv Sovereign Identity (SSI) war die Motivation,
+natürlichen Personen die Kontrolle über Ihre eigene digitale Identität
+zurückzugeben, anstatt die personenbezogenen Daten und Single Sign On
+Dienste unter zentraler Kontrolle weniger großer Plattformen
+amerikanischer Unternehmen nutzen zu müssen.  Während
+Personenidentifikation und die Ausstellung und Verwaltung
+vertrauenswürdiger Fakten (sog. _Credentials_, siehe <<sec_vc>>) zu diesen Personen
+weiterhin den Kern vieler SSI Anwendungsfälle bilden, eignen sich die
+auf der Basis von Block Chain Technologie entwickelten technischen
+Lösungen in diesem Bereich auch um die klassischen Probleme der
+Identifikation über Zertifikate und der Schlüsselverwaltung in
+neuartiger dezentraler Weise zu lösen, unabhängig davon auf welche
+Entitäten sich die Idente beziehen.
 
-Die Entwicklung einer solchen dezentralisierten Public Key Infrastructure (DPKI) ist momentan in vollem Gange und könnte ebenso große Bedeutung für die globale Sicherheit und den Datenschutz im virtuellen Raum haben, wie es einst die Entwicklung des SSL/TLS-Protokolls [tls] für den verschlüsselten Netzwerkverkehr hatte.
+In einer SSI basierten Vertrauensinfrastruktur hat der Verwalter einer
+Identität die volle Kontrolle über die Leseberechtigungen an allen
+Daten zu seiner Identität. Der Verwalter muss hierbei nicht
+notwendigerweise das "Subjekt" sein, d.h. die Entität die
+identifiziert wird, siehe <<sec_did>>.
 
+Entwicklung und Aufbau einer dezentralisierten Public Key
+Infrastructure (DPKI) auf SSI Basis ist momentan in vollem Gange und
+könnte ebenso große Bedeutung für die globale Sicherheit und den
+Datenschutz im virtuellen Raum erlangen, wie es einst die Entwicklung
+des SSL/TLS-Protokolls [tls] und der dazu genuzten zentralen PKI für
+den verschlüsselten Netzwerkverkehr hatte.
+
+
+Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen
+mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu
+zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der
+Automobilherstellung oder dem bauwesen (BIM), verschlüsselte
+Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen
+hinterlegten Stammdaten, als Ident in einem "Verifiable
+Credentials"-Ökosystem. Auch der plattformübergreifende
+Austausch von service-bezogenen und werberelevanten Daten ohne die heute
+damit in Verbindung stehende Weitergabe von personenbezogenen Daten
+ist ein Anwendungsfall, der zwar auf Personenidentifikation beruht
+aber in Verbindung mit Handelswaren, etwa im online Handel, auch für GS1
+Identifikationsschlüssel interessant sein könnte.
+
+
+[[sec_did]]
 ==== Decentralized Identifiers (DIDs)
 
 Decentralized Identifiers (DIDs) sind Idente, die, wie der Name
 bereits andeutet, nicht zentral vergeben werden, sondern von jedem
 Teilnehmer an einer entsprechenden Infrastruktur selbst erzeugt werden
-können.  DIDs können Personen, Organisationen, Dinge,
-Datenmodelle, oder abstrakte Entitäten identifizieren, wobei die mit
-der DID identifizierte Entität als _Subjekt_ der DID bezeichnet wird.
+können.  DIDs können Personen, Organisationen, Dinge, Datenmodelle,
+oder abstrakte Entitäten identifizieren, wobei die mit der DID
+identifizierte Entität als _Subjekt_ der DID bezeichnet wird.  Die
+Kontrolle über eine DID kann von einem Verwalter ausgeübt werden,
+z.B. von einem entsprechend befugten Mitarbeiter, falls das Subjekt
+eine juristische Person ist, oder dem Hersteller, falls das Subjekt
+ein Ding oder Konzept ist.
 
 Technisch betrachtet ist eine DID eine URN, die neben dem Schema "did"
-und der eindeutigen
-Identifikationsnummer auch eine Referenz auf die zugrundeliegende
-konkrete Vertrauensinfrastruktur enthält, im Rahmen derer die DID
-erstellt wurde und genutzt werden kann. Beispielsweise bezeichnet die
-DID `did:idu:HX74LKTfWUxnnUAE935u1P` die Identität von GS1 Germany als
-Steward im ID-Union (Test-)Netzwerk von SSI für Deutschland. Hier
-bezeichnet "idu" die sog. DID-Methode mit deren Kenntnisse das zur DID
-zugehörige DID-Dokument aus dem entsprechenden Verzeichnis abgerufen
-werden kann.
+und der eindeutigen Identifikationsnummer auch eine Referenz auf die
+zugrundeliegende konkrete Vertrauensinfrastruktur enthält, im Rahmen
+derer die DID erstellt wurde und genutzt werden kann. Beispielsweise
+bezeichnet die DID `did:idu:HX74LKTfWUxnnUAE935u1P` die Identität von
+GS1 Germany als Steward im ID-Union (Test-)Netzwerk von SSI für
+Deutschland. Hier bezeichnet "idu" die sog. DID-Methode mit deren
+Kenntnisse das zur DID zugehörige DID-Dokument aus dem entsprechenden
+Verzeichnis abgerufen werden kann.
 
 Im DID-Dokument sind Datensätze zum Subjekt enthalten, insbesondere
 Methoden, mit denen das Subjekt sich als DID Inhaber authentifizieren
@@ -685,28 +726,88 @@ dezentralisierter digitaler Identität im Rahmen einer neuen Public Key
 Infrastructure dar. 
 
 
-==== Use Cases
-Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der Automobilherstellung, verschlüsselte Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen hinterlegten Stammdaten, als Ident in einem "Verifiable Credentials"-Ökosystem (W3C). Außerdem kann man den plattformübergreifenden Austausch von service-bezogenen und werberelevanten Daten ohne die oft damit in Verbindung stehende Weitergabe von personenbezogenen Daten miteinbeziehen.
 
-==== Vergleiche mit anderen Identifiern
-DIDs vereinen wichtige Eigenschaften anderer Identifier. 
-Das sind unter anderem Dezentralität, Persistent und globale Auflösbarkeit. 
-Diese sind die Grundvoraussetzung um eine selbstsouveräne Identität (Kapitel 1.6) zu erreichen.
+==== Vergleiche mit anderen Identifikationsschemata
 
-Der Bedarf an global eindeutigen Kennzeichnern, welche keine zentralisierten Registrierungsstellen benötigen, 
-ist bereits länger gegeben. 
-UUIDs (Universally Unique Identifiers, auch GUIDs genannt – Globally Unique Identifiers) wurden zu diesem Zweck 
-bereits in den 1980er Jahren entwickelt und standardisiert (Open Software Foundation und IETF RFC 4122). 
-Auch das Konzept von persistenten – dauerhaft einer Entität zugewiesenen und unveränderlichen – Kennzeichnern, 
-welche gleichzeitig global auflösbar sind, ist ebenso wenig neu. 
-Diese Art der Kennzeichner wurden als URNs (Uniform Resource Names) standardisiert ([rfc-2141], RFC 8141).
+DIDs vereinen wichtige Eigenschaften anderer Identifikationsschlüssel,
+insbesondere Dezentralität, Persistenz und globale Auflösbarkeit. 
+Der Bedarf an global eindeutigen Kennzeichnern, welche keine
+zentralisierten Registrierungsstelle benötigen, führte bereits in den
+1980er Jahren zur entwicklnug und standardisierung der
+Universally Unique Identifiers (UUIDs, seltener auch Globally Unique
+Identifiers GUIDs genannt), siehe <<rfc-4122>>. UUIDs sind jedoch
+nicht prinzipiell global auflösbar.
+Auch der Bedarf an persistenten, d.h. dauerhaft einer Entität zugewiesenen und unveränderlichen, Kennzeichnern, 
+welche gleichzeitig global auflösbar sind, besteht seit langem und
+wird z.B. durch URNs (Uniform Resource Names) bedient, siehe
+<<rfc-2141>>, <<rfc-8141>>.
+URNs benötigen jedoch eine zentrale Registrierungsstelle, ähnlich wie
+das Nummernsystem der GS1. Während das GS1 System ein gewisses Maß an
+Dezentralität bietet, indem ein Complete Kunde seine
+eigenen Identifikationsnummern in seinem Namensraum verwalten kann,
+ist dies bei URNs in der Regel nicht vorgesehen.
 
-Im Regelfall sind oben genannte UUIDs jedoch nicht global auflösbar 
-und URNs benötigen eine zentralisierte Registrierungsstelle, falls sie auflösbar sind. 
-Darüber hinaus fehlen sowohl UUIDs als auch URNs eine weitere notwendige Eigenschaft: 
-die Fähigkeit die Inhaberschaft des Kennzeichners kryptographisch zu verifizieren. 
+Darüber hinaus fehlen sowohl UUIDs als auch URNs, ebenso wie den heute
+verwendeten Identifikationsnummern der GS1, eine wichtige Eigenschaft
+Die Möglichkeit der sicheren kryptographischen zu Verifikation der
+Echtheit und Authentitzität von Identifizierungsschlüßeln ist für viele
+Anwendungen essentiell und kann heute komplett digital sichergestellt
+werden, in so fern eine entsprechende Vertrauensinfrastruktur zur
+Verfügung steht.
 
-[Tabelle 1. Eigenschaften von Identen]
+
+
+.Eigenschaften von Identifikatoren
+[tab_compare, cols="<.<,^.<,^.<,^.<,^.<",options="header"]
+|===
+|
+|DID
+|UUID
+|URN
+|GS1 DigitalLink
+
+|*Persistent*
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+
+|*Global auflösbar (Unternehmens übergreifend)*
+|icon:check[size=2x,role=green]
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+
+|*Kryptographisch verifizierbar*
+|icon:check[size=2x,role=green]
+|icon:times[size=2x,role=red]
+|icon:times[size=2x,role=red]
+|icon:times[size=2x,role=red]
+
+|*Dezentral*
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+|icon:times[size=2x,role=red]
+|icon:times[size=2x] icon:check[size=2x]
+
+|*Medien-übergreifend*
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+
+|*Kontrollierte Vergabe*
+|icon:times[size=2x,role=red]
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+
+|===
+
+In <<tab_compare>> wurde weiterhin aufgenommen, dass GS1 Idente dafür
+prädestiniert sind in AutoID label eingebettet zu werden und dass die
+Vergabe von GS1 Identen einem klar regulierten System erfolgt
+
 
 Das bedeutet im Umkehrschluss, dass nur DIDs eine Komponente der geforderten selbstsouveränen Identität sein können. 
 Weitere Hauptkomponenten sind Verifiable Credentials und dezentralisiertes (Public) Key Management (DPKI). 
@@ -838,6 +939,8 @@ Begriffe, insbesondere DiDs und Verifiable Credentials, werden in
 
 ==== DiDs
 
+*NAMENSKONFLIKT DES ABSCHNITTS!*
+
 In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
 Firmen, insbesondere GS1, eine eigene DiD. Konkreten Dingen,
 etwa serialisierte Handelswaren oder IoT Devices, und auch abstrakten
@@ -851,6 +954,7 @@ Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
 Gewicht, Leistungsaufnahme, etc. als Verifiable Credentials
 veröffentlichen.
 
+[[sec_vc]]
 ==== Verifiable Credentials
 
 Dem Hersteller, d.h. der DiD der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
@@ -1195,6 +1299,8 @@ Interviewpartner
 - [[[pgp-cert]]] https://de.wikipedia.org/wiki/OpenPGP#Aufbau_der_Zertifikate
 - [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
+- [[[rfc-4122]]] Open Software Foundation und IETF RFC 4122 https://www.rfc-editor.org/info/rfc4122
+- [[[rfc-8141]]] RFC 8141 https://www.rfc-editor.org/info/rfc8141
 - [[[sign]]] https://de.wikipedia.org/wiki/Digitale_Signatur ,  https://en.wikipedia.org/wiki/Digital_signature , https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 - [[[sovrin]]] https://sovrin.org/
 - [[[ssi]]] https://hpd.de/artikel/self-sovereign-identities-helfen-internet-reparieren-17150
@@ -1208,3 +1314,4 @@ Interviewpartner
 - [[[vdma-i40]]] Leitfaden Industrie 4.0 (VDMA - Forum Industrie 4.0) https://industrie40.vdma.org/viewer/-/v2article/render/15540546
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
 - [[[x509]]] https://de.wikipedia.org/wiki/X.509
+
