@@ -900,7 +900,7 @@ Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Dat
 === Industrie 4.0 - Microgrids 
 ==== Problemstellung
 
-EKU Power Dirves entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Dabei liegt der Fokus auf ortsveränderliche bzw. mobile Anlagen. Also Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
+EKU Power Drives entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Dabei liegt der Fokus auf ortsveränderliche bzw. mobile Anlagen. Also Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
 regelmäßige Standortwechsel und Rekonfiguration zum normalen Betrieb gehören.
 
 Eine der wesentlichen Herausforderungen in diesen Systemen ist die ständige Anpassung an veränderte Umgebungsbedingungen. Zeitintensive, manuelle Konfigurationsarbeit muss hierbei durch den konsequenten Einsatz von intelligenter, vernetzter Automatisierungstechnik vermieden werden, um die Akzeptanz und Praxistauglichkeit der Systeme nicht zu gefährden. Der Betrieb eines solchen Microgrids bringt allerdings einige Herausforderungen mit sich. Da die Zahl der daran angebundenen Anlagen im Vergleich zum
