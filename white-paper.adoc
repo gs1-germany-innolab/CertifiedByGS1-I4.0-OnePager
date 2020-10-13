@@ -67,7 +67,7 @@ Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
 Konzeptes zu verdeutlichen.
 
 
-Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und Minimum Viable Products (MVP), insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv testen und zur Marktreife führen zu können.
+Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und Minimum Viable Product (MVP), insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv testen und zur Marktreife führen zu können.
 
 Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln möchten,
 melden Sie sich gerne für Informationen zum aktuellen Stand bei den Autoren von
@@ -135,7 +135,7 @@ fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander
 _Certified by GS1_ kann so die Basis für eine Vertrauensinfrastruktur
 schaffen, wie sie z.B. für das Internet of Things (IoT) aber auch z.B. in klassischen B2B Prozessen wie dem
 Supplier Onboarding (siehe <<sec_onboarding>>) dringend benötigt
-werden, um Digitalisierung und Automatisierung nicht durch
+wird, um Digitalisierung und Automatisierung nicht durch
 Sicherheits- und Vertrauensfragen zu verhindern.
 
 
@@ -215,12 +215,12 @@ Das Kernprodukt der GS1 Germany ist GS1 Complete. Hierbei handelt es sich
 um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird,
 in welchem dieser GTINs (Global Trade Item
 Number) und andere Idente vergeben kann. Es beinhaltet
-weiterhin umfangreiche Services und Publikationen zur Optimierung von
-Geschäftsprozessen.
+weiterhin Services und Publikationen zur Optimierung der
+Geschäftsprozesse.
 
 GS1 Idente sind wie folgt aufgebaut: Ausgehend von der Gesamtheit der GS1
 Organisationen und GS1 global erhalten die einzelnen Mitgliedsorganisationen
-(MOs) Nummernkreise, indem ein bestimmter Präfix einer MO zugeordnet wird. 
+(MOs) Nummernkreise, indem eine bestimmte Präfix einer MO zugeordnet wird. 
 Beispielsweise gehören alle GS1 Idente deren erste drei Ziffern im Bereich 400 bis 440 liegen zu
 GS1 Germany <<gs1-prefix>>. 
 Innerhalb des eigenen Nummernkreises (d.h. beginnend
@@ -1053,6 +1053,12 @@ image::demo-screenshots/8-pay-per-use.png[]
 ==== Interaktive Demonstration
 Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verständlich darzustellen, wurde eine interaktive Online Demonstration des Use Cases entwickelt. Die in diesem Abschnitt gezeigten Bilder, stammen aus diesem Demonstrator. Die Demonstration ist unter <<online-demo>> öffentlich zugänglich.
 
+In diesem Zusammenhang möchten wir uns besonders bei Kristian Binder
+und seinen Kollegen von EKU Power Drives bedanken, die uns mit Ihrer
+Expertise zu Seite gestanden haben. EKU Power Drives hat ihren Use Case sehr
+ausführlich erläutert und mit uns zum heutigen Stand entwickelt. Die detaillierten
+Inhalte wurden für den Demonstrator zur Verfügung gestellt, sodass dieser nun in vorliegender Form erprobbar ist.
+
 
 
 
@@ -1232,25 +1238,8 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 
 
 :!sectnums:
-== Danksagung
-
-Wir bedanken uns bei allen Kollegen, die Inhalte und Anregungen in
-Form von Text oder Feedback zu diesem Dokument beigesteuert haben,
-insbesondere bei
-Roger van Essen
-Dr. Ralph Tröger
-Christian Cybilla
-...
 
 
-Weiterhin bedanken wir uns bei allen Partnern, die uns mit Ihrer
-Expertise zu Seite gestanden haben, allen voran bei Kristian Binder
-und seinen Kollegen von EKU Power Drives, die ihren Use Case sehr
-ausführlich erläutert und mit uns entwickelt und sehr detaillierte
-Inhalte für den Demonstrator zur Verfügung gestellt haben.
-
-Interviewpartner
-...
 
 
 
