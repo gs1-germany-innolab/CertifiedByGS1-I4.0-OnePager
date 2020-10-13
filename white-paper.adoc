@@ -316,7 +316,7 @@ hinterlegte Referenzdaten im Online-Datenpool der GLEIF
 abzufragen. Diese Referenzdaten sind mindestens der offizielle Name
 laut Registrierung des Rechtsträgers, Anschrift des Unternehmens, Land
 der Gründung, Ländercodes, sowie das Datum
-der ersten LEI-Zuweisung und der letzten Aktualisierung, ggF.
+der ersten LEI-Zuweisung und der letzten Aktualisierung, ggf.
 auch das Ablaufdatum, denn eine LEI muss jährlich verlängert werden.
 
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle 
@@ -334,7 +334,7 @@ weltweite Überschneidungsfreiheit gemeinsam. Zudem können die
 Referenzdaten der LEI- und auch der GS1 Complete Kunden durch das
 Unternehmen selbst verwaltet werden. 
 Man findet die Daten der beiden Idente in den jeweiligen
-Datenbanken, wie der LEI-Datenbank oder gepir. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
+Datenbanken, wie der LEI-Datenbank oder GEPIR. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
 vermindert Identitätsmissbrauch. Allerdings gibt es auch hier derzeit Unterschiede:
 Ein GS1 Complete Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
 Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollständig und korrekt zu veröffentlichen. 
@@ -953,7 +953,7 @@ Die missbräuchliche Verwendung von GS1 Identen (wie z.B. GTIN) an sich ist u.A.
 
 ==== Existierende Lösungsansätze
 
-Ein Abgleich mit bei GS1 registrierten Artikelstammdaten über die Online Services von GS1, wie Gepir <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
+Ein Abgleich mit bei GS1 registrierten Artikelstammdaten über die Online Services von GS1, wie GEPIR <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
 
 ==== Verbesserungspotential durch Certified by GS1
 
