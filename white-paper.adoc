@@ -18,7 +18,7 @@ v2.0.0 + {docdatetime}
 :chapter-label: 
 
 
-Ergebnisbericht des F&E Projekts _Certified by GS1_ der GS1 Germany GmbH unter beteiligung der European EPC Competence Center GmbH (EECC)
+Ergebnisbericht des F&E Projekts _Certified by GS1_ der GS1 Germany GmbH unter Beteiligung der European EPC Competence Center GmbH (EECC)
 
 Draft-Version: {revnumber}
 
@@ -34,14 +34,14 @@ Autoren: mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@e
 [[sec_executive]]
 == Management Summary
 
-Zur Beantwortung der dringenden Sicherheitsfragen im Rahmen der Digitalisierung
+Zur Beantwortung von dringenden Sicherheitsfragen im Rahmen der Digitalisierung
 im Allgemeinen und dem Internet of Things (IoT) im Besonderen wird eine
 vertrauenswürdige und sichere Identitätsinfrastruktur zur Identifizierung und
 Authentifizierung von natürlichen und juristischen Personen, Unternehmen, aber auch von
-Dingen, benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt um das
+Dingen, benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt, um das
 bestehende System der GS1 Identifikationsnummern durch digitale Zertifikate abzusichern und
 authentifizierbar zu machen. Auf Basis digitaler Zertifikate wird die Rolle der GS1 als vertrauenswürdige 
-und neutrale Organisation, zu der eines Identitätsanbieters und Vertrauensanker in einer digitalen Vertrauensinfrastruktur ausgebaut.
+und neutrale Organisation, zu der eines Identitätsanbieters und Vertrauensankers in einer digitalen Vertrauensinfrastruktur ausgebaut.
 
 
 In vielen Anwendungsfällen wird eine weitgehende Automatisierung von Abläufen
@@ -49,7 +49,7 @@ dadurch verhindert, dass Kommunikationspartner, insbesondere im
 Machine-To-Machine (M2M) Bereich, ebenso aber in B2B und B2C Prozessen, nicht
 sicher automatisch authentifiziert werden können. Durch eine Erweiterung der
 bestehenden GS1 Idente um Sicherheits- und Authentifizierungsfunktionen, 
-könnten Certified by GS1 Idente, im IoT-Umfeld die unternehmensübergreifende eindeutige und
+könnten _Certified by GS1_ Idente im IoT-Umfeld die unternehmensübergreifende eindeutige und
 sichere Identifikation von Maschinen untereinander sicherstellen. Eine wichtige
 Funktion, für die bisher kein alternatives System etabliert ist.
 
@@ -83,11 +83,11 @@ toc::[]
 [[sec_intro]]
 == Einführung
 
-Im Rahmen des Certified by GS1 Projektes wurden verschiedene Möglichkeiten der technischen Umsetzung authentifizierbarer Identifikationsschlüssel entwickelt und untersucht. Die Grundlage bildet die kryptografische digitale Signatur (siehe <<sec_digi_sig>>). Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab dem Zeitpunkt der Signatur
-unverändert sind und vom angegebenen Urheber stammen, *vorausgesetzt* es gibt eine vertrauenswürdige Infrastruktur, mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und diese in der Lage sind ihre privaten Schlüssel geheim zu halten.
+Im Rahmen des _Certified by GS1_ Projektes wurden verschiedene Möglichkeiten der technischen Umsetzung authentifizierbarer Identifikationsschlüssel entwickelt und untersucht. Die Grundlage bildet die kryptografische digitale Signatur (siehe <<sec_digi_sig>>). Mittels digitaler Signatur kann sicher gestellt werden, dass Daten ab dem Zeitpunkt der Signatur
+unverändert sind und vom angegebenen Urheber stammen. *Vorausgesetzt* ist, dass es eine vertrauenswürdige Infrastruktur gibt, mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern zugeordnet werden und diese in der Lage sind ihre privaten Schlüssel geheim zu halten.
 
 
-Wie in <<sec_pki>> und <<sec_ssi>> beschrieben kann ein vertrauenswürdiger Teilnehmer, d.h. z.B. eine Firma wie GS1, anderen Teilnehmern Zertifikate ausstellen. Hierbei handelt es sich immer um unterschriebene Dokumente, in denen eine Zuordnung eines öffentlichen Schlüssels zu einem anderen Teilnehmer bescheinigt wird. Je nach konkretem Format können auch weitere Details im Zertifikat eingetragen und damit beglaubigt werden.
+Wie in <<sec_pki>> und <<sec_ssi>> beschrieben, kann ein vertrauenswürdiger Teilnehmer, d.h. beispielsweise eine Firma wie GS1, anderen Teilnehmern Zertifikate ausstellen. Hierbei handelt es sich immer um unterschriebene Dokumente, in denen eine Zuordnung eines öffentlichen Schlüssels zu einem anderen Teilnehmer bescheinigt wird. Je nach konkretem Format können auch weitere Details im Zertifikat eingetragen und damit beglaubigt werden.
 
 In <<sec_intro>> erhalten Sie einen Überblick über wichtige Hintergründe für das weitere Verständnis der im Projekt Certified by GS1 entwickelten Konzepte, Praxisbeispiele und
 Demonstrationen. <<sec_use_cases>> bietet Einblicke in die Anwendungsfälle, die im Rahmen des Projektes bearbeitet wurden und <<sec_implementation>> erläutert die technischen Umsetzungskonzepte.
@@ -106,7 +106,7 @@ GS1 ermöglicht seit 1974 die Vergabe von Identifikationsnummern um konkrete Din
 Klassen, Orte, Handelspartner, uvm. eindeutig und unverwechselbar zu
 identifizieren.  Während gängige Bezeichnungen, etwa die Abkürzung
 "EECC" mehrdeutig oder dem Partner unbekannt sein können, sind GS1
-Identifikationsnummern, wie die (Party) GLN 4047111000006 eindeutig. Über
+Identifikationsnummern, wie die entsprechende (Party) GLN 4047111000006 eindeutig. Über
 Services der GS1 wie <<gepir>> lässt sich zu einer unbekannten Identifikationsnummer z.B.
 herausfinden, dass mit der eben genannten Abkürzung "EECC" die "European EPC Competence Center GmbH"
 bezeichnet wird. 
@@ -115,7 +115,7 @@ Gibt sich einer der Kommunikationspartner als 4047111000006 aus, ist
 also zumindest eindeutig, dass hiermit diese konkrete Firma gemeint
 ist und nicht z.B. eine Person mit den Initialen "EECC". Die von GS1
 vergebenen Identifikationsnummern ermöglichen also eine eindeutige
-Identifikation. Stand heute ist jedoch keine Authentifikation <<auth>>
+Zuordnung. Stand heute ist jedoch keine Authentifikation <<auth>>
 dieser Daten möglich. Es kann nicht überprüft
 werden, ob der Kommunikationspartner derjenige ist, der er zu sein vorgibt. 
 Grundsätzlich ist es unter Umständen schwierig, herauszufinden,
@@ -124,7 +124,7 @@ Ziffernkombination im GS1-Format handelt. Letzteres Problem und
 existierende Lösungsansätze werden in <<sec_verified_by_gs1>>
 behandelt.
 
-Im Projekt "Certified by GS1" wird darauf aufbauend untersucht, wie klassische und
+Im Projekt _Certified by GS1_ wird darauf aufbauend untersucht, wie klassische und
 moderne Konzepte aus dem Bereich der Digitalen Signatur und Digitaler
 Zertifikate genutzt werden können, um die Authentizität von GS1 Identifikationsnummern und damit
 zusammenhängenden Stammdaten beweisbar zu machen.  Außerdem ermöglichen
@@ -132,9 +132,8 @@ die hier vorgestellten Konzepte den mit den
 Identifikationsnummern bezeichneten Firmen oder Dingen sich zweifelsfrei und
 fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander aufzubauen.
 
-"Certified by GS1" kann so die Basis für eine Vertrauensinfrastruktur
-schaffen, wie sie z.B. für das Internet of Things (IoT, siehe
-<<sec_iot>>) aber auch z.B. in klassischen B2B Prozessen wie dem
+_Certified by GS1_ kann so die Basis für eine Vertrauensinfrastruktur
+schaffen, wie sie z.B. für das Internet of Things (IoT) aber auch z.B. in klassischen B2B Prozessen wie dem
 Supplier Onboarding (siehe <<sec_onboarding>>) dringend benötigt
 wird, um Digitalisierung und Automatisierung nicht durch
 Sicherheits- und Vertrauensfragen zu verhindern.
@@ -146,16 +145,16 @@ Sicherheits- und Vertrauensfragen zu verhindern.
 GS1 ist eine etablierte Institution, deren Kerngeschäft u.a. in der Vergabe von Nummernkreisen
 (Namensräumen) für Idente, insbesondere Geschäfts- und Produktidentifikationsnummern besteht. In diesem
 Sinne erfüllt GS1 bereits die Rolle eines "Identity Provider" <<idp>>. In "Certified by GS1" wurden Konzepte zur Vergabe von
-Sicherheitsmerkmalen (Zertifikaten) zur authentifizierung dieser Identifikationsnummern
-entwickelt. Hierbei entsprechen die entwickelten Zertifikate Systeme strukturell
-dem bestehenden Vergabesystem für Identifikationsnummern  In <<sec_gs1_id_scheme>> wird dieser
+Sicherheitsmerkmalen (Zertifikaten) zur Authentifizierung dieser Identifikationsnummern
+entwickelt. Hierbei entsprechen die entwickelten Zertifikatssysteme strukturell
+dem bestehenden Vergabesystem für Identifikationsnummern.  In <<sec_gs1_id_scheme>> wird dieser
 Punkt detaillierter erläutert.
 
 
 GS1 vergibt (in der Regel) keine einzelnen Identifikationsnummern, sondern Kunden
 erwerben das Recht, selbst eine bestimmte Menge von
 Identifikationsnummern zu vergeben.
-Dieses Sytem wird im Rahmen von "Certified by GS1" auch für die 
+Dieses Sytem wird im Rahmen von _Certified by GS1_ auch für die 
 Sicherheitsmerkmale und damit die authentifizierten Idente umgesetzt. Ein Kunde kann so die
 bisherigen Prozesse zur Vergabe von Identen strukturell beibehalten
 und um die Sicherheits- und Authentifizierungsfunktion für die selbst
@@ -171,7 +170,7 @@ Ident wie eine SGTIN oder GIAI, sondern auch die Möglichkeit sich
 individuell gegenüber anderen Geräten zu authentifizieren und mit
 diesen eine vertrauenswürdige und abhörsichere Verbindung aufzubauen. Hier
 stellt die Möglichkeit solche "Certified" Idente selbst erzeugen zu
-können einen großen Vorteil für den Hersteller dar gegenüber einem
+können einen großen Vorteil für den Hersteller dar, denn dem gegenüber steht ein
 System bei dem jedes Ident und die zugehörigen Sicherheitsmerkmale
 einzeln bei einer zentralen Plattform erworben werden müssen.
 
@@ -182,15 +181,15 @@ neutrale und vertrauenswürdige Organisation. Diese Rolle als
 Vertrauensanker und neutrale Platform ermöglicht es GS1, Partner und
 Konkurrenten zu gemeinsamen Projekten, insbesondere im Bereich der
 Standardisierung, zusammen zu bringen.
-Dies prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikate
-Infrastruktur, insbesondere wenn diese auf der Authentifizierung der
-GS1 eigenen Idente beruht. 
+Dies prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikatsinfrastruktur, 
+insbesondere wenn diese auf der Authentifizierung der
+GS1-eigenen Idente beruht. 
 
 Des weiteren ist GS1 bereits heute in vielen Branchen Dreh- und
-Angelpunkt für mit den Identen assoziierte Stammdaten. Die
+Angelpunkt für mit Identen assoziierte Stammdaten. Die
 Authentifizierung dieser Stammdaten über digitale Signaturen, basierend
 auf den Zertifikaten der "Certified"-Idente ermöglicht eine noch
-größere Vielzahl von Anwendungsfällen zusätzlich zur Authentifizierung
+größere Vielzahl von Anwendungsfällen, zusätzlich zur Authentifizierung
 der Idente selbst. Außerdem liegen diese Anwendungsfälle in einem Bereich in dem GS1 bereits
 vielfach aktiv und anerkannt ist.
 
@@ -222,7 +221,7 @@ Geschäftsprozesse.
 GS1 Idente sind wie folgt aufgebaut: Ausgehend von der Gesamtheit der GS1
 Organisationen und GS1 global erhalten die einzelnen Mitgliedsorganisationen
 (MOs) Nummernkreise, indem eine bestimmte Präfix einer MO zugeordnet wird. 
-Beispielsweise gehören alle GS1 Idente deren erste 3 Ziffern im Bereich 400 bis 440 liegen zu
+Beispielsweise gehören alle GS1 Idente deren erste drei Ziffern im Bereich 400 bis 440 liegen zu
 GS1 Germany <<gs1-prefix>>. 
 Innerhalb des eigenen Nummernkreises (d.h. beginnend
 mit der eigenen GS1 Präfix) vergeben die MOs an Firmenkunden einen GS1 Company Prefix (GCP) und
@@ -237,9 +236,9 @@ am Anfang der Nummer, gefolgt vom frei verfügbaren Namensraum und beendet mit e
 
 Die Art des Idents wird über den sogenannten Application Identifier
 (AI) kodiert, z.B. 414 für die GLN. Entsprechend stellt (414) 4047111000006 (254) 01 
-ein Beispiel für eine SGLN dar, mit der das EECC einen spezifischeren Ort, etwa den
-Posteingang des Hauptsitzes, bezeichnen könnte oder auch Funktionen oder
-Rollen, wie Abteilungen oder Ämter. 
+ein Beispiel für eine GLN mit Erweiterungskomponente dar, mit der das EECC einen spezifischeren Ort, etwa den
+Posteingang des Hauptsitzes, bezeichnen könnte. Eine GLN kann neben Lokationen aber auch Funktionen oder
+Rollen, wie Abteilungen oder Ämter, identifizieren. 
 
 
 [[GLN_Aufbau]]
@@ -272,7 +271,7 @@ Eine Authentifikation der Idente durch GS1 ist bisher nicht allgemein
 gegeben. Eine besondere 
 Identitätsprüfung der Antragsteller für GS1 Complete erfolgt aktuell in der Regel
 nicht. Dem Kunden wird bei Bestellung vertraut, dass er derjenige ist
-für den er sich ausgibt. Trotz der fehlenden Kontrolle sind GS1
+für den er sich ausgibt und auch für das angegebene Unternehmen arbeitet. Trotz der fehlenden Kontrolle sind GS1
 Germany bisher keine Identitätsdiebstähle auf Basis der GCP bekannt.
 
 Ein Missbrauch einzelner
@@ -291,12 +290,12 @@ die Hersteller in die GS1 Registry eingepflegt wurden.
 
 ==== LEI
 
-GS1 vergibt außerdem bereits heute Idente zusammen mit von GS1 überprüften
+GS1 vergibt zudem bereits heute Idente zusammen mit von GS1 überprüften
 Stammdaten, außerhalb dem eigenen Nummernsystem, im Rahmen der bereits erwähnten
 LEI-Vergabe. 
 Eine solche Überprüfung der hinterlegten Daten ist eine
 wichtige Grundlage für das Konzept "Certified by GS1". Damit eine
-Vertrauensinfrastruktur aufgebaut werden kann muss eine überprüfung
+Vertrauensinfrastruktur aufgebaut werden kann, muss eine Überprüfung
 der Partner statt finden, bevor Zertifikate ausgestellt werden können.
 Für die LEI Vergabe erfolgt eine solche Überprüfung der beantragenden
 Unternehmen bereits, so dass GS1 hier auf bestehenden Prozessen
@@ -368,16 +367,16 @@ Empfänger benötigen denselben Schlüssel.
 In einer Situation, in der ein Sender einem Empfänger eine geheime
 Nachricht schicken möchte, ohne dass die beiden über ein als Schlüssel
 verwendbares geteiltes Geheimnis verfügen, ist symmetrische
-Kryptography d.h. prinzipiell nicht hilfreich. Einen Schlüssel sicher
-(d.h. geheim) zu übertragen stellt prinzipiell das selbe Problem dar,
+Kryptographie prinzipiell nicht hilfreich. Einen Schlüssel sicher
+(d.h. geheim) zu übertragen, stellt das gleiche Problem dar
 wie die Übertragung der geheimen Nachricht selbst.
 
 Da bei modernen symmetrischen Verschlüsselungsalgorithmen der
 Schlüssel deutlich kürzer sein kann als die Nachricht, nutzen moderne
 Protokolle wie TLS <<tls>> häufig ein rechenzeitintensives
-asymmetrisches verfahren um einen temporären symmetrischen Schlüssel
-auszuhandeln und dann ein deutlich effizienteres symmetrisches
-Verfahren um die eigentliche Kommunikation zu verschlüsseln.
+asymmetrisches verfahren, um einen temporären symmetrischen Schlüssel
+auszuhandeln. Danach wird ein deutlich effizienteres symmetrisches
+Verfahren angewendet, um die eigentliche Kommunikation zu verschlüsseln.
 
 Auch wenn Sender und Empfänger dieselbe Person sind, etwa bei der
 Verschlüsselung von (Teilen der) Festplatte, kommen moderne
@@ -394,17 +393,17 @@ Rückschlüsse auf den privaten Schlüssel zulässt. Der für die
 Entschlüsselung verwendete private Schlüssel muss natürlich geheim
 gehalten werden, um unerwünschtes lesen der Daten zu verhindern.
 
-Die ersten (geheimen) Entwicklungen asymmetrischer Verfahren  fanden beim
+Die ersten (geheimen) Entwicklungen asymmetrischer Verfahren fanden beim
 britischen Geheimdienst zu Anfang der 1970er Jahre statt und wurden
 erst in den 1990er Jahren veröffentlicht. In einer ersten
 öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen
 Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie
 und Martin Hellman in ihrem Aufsatz "New Directions in
-Cryptography" veröffentlicht. In diesem Aufsatz, führen die Autoren
+Cryptography" veröffentlicht. In diesem Aufsatz führen die Autoren
 das Prinzip der asymmetrischen Kryptographie ein. Rivest, Shamir und
 Adleman entwickelten 1978 das nach Ihnen als RSA benannte asymmetrische
-Verschlüsselungsverfahren basierend auf Zahlentheoretischen
-Algorithmen und Komplexitätsüberlegungen vor, dass teilweise bis heute
+Verschlüsselungsverfahren, basierend auf zahlentheoretischen
+Algorithmen und Komplexitätsüberlegungen, das teilweise bis heute
 verwendet wird.
 
 Die Funktionsweise einer asymmetrischen Verschlüsselung lässt sich wie
@@ -420,7 +419,7 @@ den Empfänger versendet werden. Dieser benutzt die
 Entschlüsselungsfunktion mit Hilfe seines privaten Schlüssels, um die
 ursprüngliche Nachricht wiederherzustellen.
 
-Das in <<sec_symm>> erwähnte Problem des Schlüssel austausches wird also
+Das in <<sec_symm>> erwähnte Problem des Schlüsselaustausches wird also
 deutlich erleichtert, da der öffentliche Schlüssel nicht geheim
 gehalten werden muss. Es bleibt jedoch die Gefahr eines so genannten
 Man-in-the-middle-Angriffs, der in <<sec_mitm>> erläutert wird.
@@ -429,21 +428,21 @@ Man-in-the-middle-Angriffs, der in <<sec_mitm>> erläutert wird.
 [[sec_mitm]]
 ==== Man in the Middle
 
-Bei dem Man-in-the-middle-Angriff versendet ein dritter seinen
+Bei dem Man-in-the-middle-Angriff versendet eine dritte Person seinen
 öffentlichen Schlüssel unter falschem Namen.
 Will etwa Alice an Bob eine verschlüsselte Nachricht schreiben und
-fragt zu diesem zweck bei einem Schlüsselverzeichnis-Server Bobs öffentlichen
+fragt zu diesem Zweck bei einem Schlüsselverzeichnis-Server Bobs öffentlichen
 Schlüssel an, so könnte Eve ihren eigenen öffentlichen Schlüssel unter
 Bobs Namen dort hinterlegt haben.
 
 Alice verschlüsselt ihre Nachricht in diesem Fall so, dass nur Eve sie
 entschlüsseln kann. Damit der Angriff nicht auffällt wird Eve die
 Nachricht nach der Entschlüsselung wieder verschlüsseln, diesmal mit
-Bobs echtem Schlüssel und an Bob weiter leiten. Diese Relais-Rolle des
+Bobs echtem Schlüssel und an Bob weiterleiten. Diese Relais-Rolle des
 Angreifers ist namensgebend.
 
 Um einen solchen Angriff auszuschließen wird eine vertrauenswürdige
-Identitäts-Infrastruktur benötigt, mit deren Hilfe Bob und Alice ihre
+Identitätsinfrastruktur benötigt, mit deren Hilfe Bob und Alice ihre
 Identitäten und die zugehörigen öffentlichen Schlüssel sicher
 verwalten können.
 
@@ -453,9 +452,9 @@ verwalten können.
 ==== Digitale Signatur
 
 Bei der digitalen Signatur wird mit dem privaten Schlüssel und einem
-"original" Dokument eine "Unterschrift" hinzugefügt. Um verwechslungen
+"Original" Dokument eine "Unterschrift" hinzugefügt. Um Verwechslungen
 mit z.B. einer eingescannten handschriftlichen Unterschrift zu
-vermeiden wird im folgenden der Begriff "Signatur" für diese digitale
+vermeiden, wird im folgenden der Begriff "Signatur" für diese digitale
 Signatur verwendet, auch wenn diese konzeptionell oder sogar juristisch die
 Funktion einer Unterschrift erfüllt.
 
@@ -466,7 +465,7 @@ Dokument unverändert vorliegt oder manipuliert wurde.
 Steht die in <<sec_mitm>> erwähnte vertrauenswürdige
 Identitätsinfrastruktur zur Verfügung, damit der Empfänger sicher sein
 kann den richtigen öffentlichen Schlüssel des Absenders zu kennen, so
-kann mit der digitalen SIgnatur sichergestellt werden, dass eine
+kann mit der digitalen Signatur sichergestellt werden, dass eine
 Nachricht wirklich vom vorgeblichen Absender stammt.
 Somit lässt sich die Identität des Unterzeichners zweifelsfrei
 nachweisen und außerdem die Integrität der elektronischen Nachricht
@@ -493,10 +492,10 @@ Diese Eigenschaften des analogen Zertifikates werden mit dem digitalen
 Zertifikat nicht nur digitalisiert, sondern mittels einer digitalen
 Signatur (siehe <<sec_digi_sig>>) wird die Echtheit des Zertifikates
 kryptografisch abgesichert. Ein digitales Zertifikat ist damit
-deutlich schwerer zu fälschen als ein analoges, vorausgesetzt die
-Signatur beruht auf einer hinreichend sicheren Vertrauensinfrastruktur
-für die Verwaltung der öffentlichen Schlüssel und die Teilnehmer sind
-in der Lage, ihre privaten Schlüssel geheim zu halten.
+deutlich schwerer zu fälschen als ein analoges. Voraussetzung ist, dass die
+Signatur auf einer hinreichend sicheren Vertrauensinfrastruktur
+für die Verwaltung der öffentlichen Schlüssel beruht und die Teilnehmer
+in der Lage sind, ihre privaten Schlüssel geheim zu halten.
 
 Konkret werden digitale Zertifikate verwendet, um bestimmte
 Eigenschaften zu einem Objekt oder zu einer Person zu bestätigen. Ein
@@ -507,11 +506,11 @@ bestimmten Besitzer gehört.
 Im Beispiel aus <<sec_mitm>> kann Alice darauf vertrauen, dass ein
 öffentlicher Schlüssel wirklich Bob gehört und nicht von Eve
 untergeschoben wurde, wenn ein vertrauenswürdiger Dritter dies
-zertifiziert. Konkret stellt z.B. ein entsprechender
+zertifiziert. Konkret stellt ein entsprechender
 vertrauenswürdiger Dienstleister ein Zertifikat aus, in dem
-Bescheinigt wird, dass Bobs öffentliche Schlüssel in der Tat Bob
-gehört. Dienstleister überprüft hierzu, dass Bob tatsächlich
-den passenden privaten Schlüssel besitzt und tatsächlich
+bescheinigt wird, dass Bobs öffentlicher Schlüssel in der Tat Bob
+gehört. Der Dienstleister überprüft hierzu, dass Bob tatsächlich
+den passenden privaten Schlüssel besitzt und wirklich
 die Person ist, die er vorgibt zu sein.
 Solche Dienstleister werden auch als *Identitity Provider* (IDP)
 bezeichnet und spielen in den Vertrauensinfrastrukturen, die in den
@@ -524,11 +523,11 @@ Zertifikate werden weiterhin genutzt, um z.B.:
   Vertrauensbasis mittels <<tls>> den Datenverkehr im Internet zu
   verschlüsseln oder VPN Verbindungen aufzubauen
 
-- Zu bescheinigen, dass Software, Updates oder digitale Dokumente vom
+- zu bescheinigen, dass Software, Updates oder digitale Dokumente vom
   vorgeblichen Urheber stammen
 
-- Personen Identitäten zu bescheinigen, um, wie im Beispiels mit Alice
-  und Bob, eine direkte Mensch zu Mensch Kommunikation abzusichern,
+- Personenidentitäten zu bescheinigen, um, wie im Beispiels mit Alice
+  und Bob, eine direkte Mensch-zu-Mensch Kommunikation abzusichern,
   z.B. via e-Mail oder Messenger
   
 
@@ -550,9 +549,8 @@ Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
 Schlüssel und entsprechende Zertifikate bilden die Grundlage für den
 Aufbau einer "Public Key Infrastructure" (PKI).
 Wie in <<Chain-EECC>> dargestellt kann prinzipiell jeder vertrauenswürdige
-Teilnehmer den Kreis der vertrauenswürdigen Teilnehmer an der
-Vertrauensinfrastruktur erweitern, in dem der bereits
-vertrauenswürdige dem neuen Teilnehmer ein entsprechendes Zertifikat
+Teilnehmer den Kreis der ebenso vertrauenswürdigen Teilnehmer an der
+Vertrauensinfrastruktur erweitern, indem ersterer dem neuen Teilnehmer ein entsprechendes Zertifikat
 ausstellt.
 
 Bei der klassischen, d.h. weitgehend zentralen, 
@@ -564,8 +562,8 @@ an zwischengeschaltete Autoritäten aus. So ergeben sich baumartige Vertrauensst
 
 
 
-In der PKI gibt es 3 wesentliche Funktionen: Eine Registrierungsstelle,
-eine Zertifizierungsstelle und dem Verzeichnisdienst. 
+In der PKI gibt es drei wesentliche Funktionen: Eine Registrierungsstelle,
+eine Zertifizierungsstelle und den Verzeichnisdienst. 
 
 Die *Registrierungsstelle* erfasst und überprüft die Identität und ggfs. weitere
 Angaben des Antragstellers. Diese muss davon überzeugt sein, dass die
@@ -587,27 +585,27 @@ einem Unternehmen und bilden eine Einheit, als Trust Center.
 
 Der *Verzeichnisdienst* stellt eine Art öffentliches Adressbuch dar, in dem alle
 öffentlichen Schlüssel und vor allem die ausgestellten Zertifikate zum Abruf bereit stehen. Eine weitere wichtige
-Funktion ist das bereitstellen von sogenannten Revocation Lists, in denen
+Funktion ist das Bereitstellen von sogenannten Revocation Lists, in denen
 veröffentlicht wird welche Zertifikate schon vor ihrem regulären Ablaufdatum
-ungültig gewirden sind, etwa weil eingetragene Daten nicht mehr aktuell sind
-oder weil im schlimmsten Fall der private Schlüssel nicht mehr als sicher
+ungültig geworden sind. Dies geschieht etwa weil eingetragene Daten nicht mehr aktuell sind
+oder weil, im schlimmsten Fall, der private Schlüssel nicht mehr als sicher
 angesehen werden kann, etwa nach einem Cyber Angriff.
 
 
 
-=== Entwicklung von SSI als Dezentrale Zertifikate und Schlüssel Infrastruktur
+=== Entwicklung von SSI als Dezentrale Zertifikate und Schlüsselinfrastruktur
 
-In einem dezentralen Identitätsmanagement-System können die Entitäten
+In einem dezentralen Identitätsmanagementsystem können die Entitäten
 (Personen, Organisationen, Dinge, etc.) die Vertrauensanker für den
 jeweiligen Anwendungsfall frei wählen.  Global verteilte Ledger
 (DLTs), dezentrale P2P-Netzwerke oder andere Systeme mit gleichartigen
 Fähigkeiten ermöglichen eine solche Vertrauensinfrastruktur ohne
 zentrale Autoritätsinstanzen oder Single Points of Failure, etwa im
-Verzeichnisdienst.  Dezentralisierte Identitätsmanagement-Systeme
-ermöglichen beliebigen Entitäten ihre eigenen Identifier und verteilte
+Verzeichnisdienst.  Dezentralisierte Identitätsmanagementsysteme
+ermöglichen beliebigen Entitäten ihre eigenen Idente und verteilte
 Vertrauensanker zu erstellen und zu managen.  Dieses Design beseitigt
 sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für
-Identifizierungsschlüssel als auch für Zertifikate (siehe
+Identifikationsschlüssel als auch für Zertifikate (siehe
 <<sec_pki>>). Typischerweise kann hier jede Entität als ihre eigene
 Root of Trust fungieren. Diese Architektur wird als DPKI
 (dezentralisierte PKI) bezeichnet.
@@ -620,23 +618,23 @@ Guard) ein neues Konzept einer Vertrauensinfrastruktur auf, welches
 nicht mehr hierarchischer organisiert ist, sondern komplett dezentral.
 Die
 Grundidee des Web of Trust ist, dass sich einzelne Parteien direkt
-gegenseitig vertrauen und z.B. nach überprüfung der Personalausweise
+gegenseitig vertrauen und z.B. nach Überprüfung der Personalausweise
 bei einem persönlichen Treffen gegenseitig entsprechende Zertifikate
 ausstellen und veröffentlichen. Vertrauen kann dann ähnlich wie in der
-Realen Welt über direkte und indirekte Kontakte aufgebaut
+realen Welt über direkte und indirekte Kontakte aufgebaut
 werden.
 
 Zum Beispiel kann Alice einen nicht direkt von ihr zertifizierten
-(d.h. Ihr nicht bekannten) öffentlichen Schlüssel von Bob als
-vertrauenswürdig einstufen, wenn z.B. mindestens 3 Personen denen
+(d.h. ihr nicht bekannten) öffentlichen Schlüssel von Bob als
+vertrauenswürdig einstufen, wenn z.B. mindestens drei Personen denen
 Alice vertraut, Bobs schlüssel als vertrauenswürdig zertifiziert
 haben. Über die genauen Parameter können Teilnehmer im Web of Trust
 gemäß ihrer individuellen Anforderungen eine striktere oder weniger
 restriktive Vererbung von Vertrauen jeweils individuell konfigurieren.
 
 Im Bereich der e-Mail Signatur ist PGP eine Alternative zu
-S/MIME, dass auf (in der regel kostenpflichtigen oder
-unternehmensinternen) X.509 Zertifikaten von zentralen
+S/MIME, das auf, in der Regel kostenpflichtigen oder
+unternehmensinternen, X.509 Zertifikaten von zentralen
 Vertrauensanbietern beruht. Aufgrund mangelnder Unterstützung des
 PGP Standards durch die Anbieter der relevanten e-Mail-Clients, vor allem
 Outlook, kam es allerdings nie zu einer flächendeckenden Verbreitung.
@@ -650,8 +648,8 @@ technischen Möglichkeiten weiterentwickelt.
 [[sec_ssi]]
 ==== SSI
 
-Namensgebend für die Selv Sovereign Identity (SSI) war die Motivation,
-natürlichen Personen die Kontrolle über Ihre eigene digitale Identität
+Namensgebend für die Self Sovereign Identity (SSI) war die Motivation,
+natürlichen Personen die Kontrolle über ihre eigene digitale Identität
 zurückzugeben, anstatt die personenbezogenen Daten und Single Sign On
 Dienste unter zentraler Kontrolle weniger großer Plattformen
 amerikanischer Unternehmen nutzen zu müssen.  Während
@@ -663,14 +661,14 @@ Identifikation über Zertifikate und der Schlüsselverwaltung in
 neuartiger dezentraler Weise zu lösen, unabhängig davon auf welche
 Entitäten sich die Idente beziehen.
 
-In einer SSI basierten Vertrauensinfrastruktur hat der Verwalter einer
+In einer SSI-basierten Vertrauensinfrastruktur hat der Verwalter einer
 Identität die volle Kontrolle über die Leseberechtigungen an allen
 Daten zu seiner Identität. Der Verwalter muss hierbei nicht
 notwendigerweise das "Subjekt" sein, d.h. die Entität die
 identifiziert wird, siehe <<sec_did>>.
 Als Verzeichnisdiesnt (siehe <<sec_pki>>) kann in SSI Netzwerken eine
-Block Chain (Distributed Ledger) eingesetzt werden, dies ist
-allerdings nach den Entsprechenden Standards des W3C kein
+Block Chain (Distributed Ledger) eingesetzt werden. Dies ist
+allerdings nach den entsprechenden Standards des W3C kein
 Wesensmerkmal der SSI Technologie.
 
 
@@ -678,7 +676,7 @@ Entwicklung und Aufbau einer dezentralisierten Public Key
 Infrastructure (DPKI) auf SSI Basis sind momentan in vollem Gange. SSI
 basierte dezentrale PKI könnte eine ebenso große Bedeutung für die
 globale Sicherheit und den Datenschutz im virtuellen Raum erlangen,
-wie es einst die Entwicklung zentraler PKI für des den verschlüsselten
+wie es einst die Entwicklung zentraler PKI für den verschlüsselten
 Netzwerkverkehr über das SSL/TLS-Protokolls [tls] hatte.
 
 
@@ -692,7 +690,7 @@ Austausch von service-bezogenen und werberelevanten Daten ohne die heute
 damit in Verbindung stehende Weitergabe von personenbezogenen Daten
 ist ein Anwendungsfall, der zwar auf Personenidentifikation beruht
 aber in Verbindung mit Handelswaren, etwa im online Handel, auch für GS1
-Identifikationsschlüssel interessant sein könnte.
+Idente interessant sein könnte.
 
 
 [[sec_did]]
@@ -733,8 +731,8 @@ Infrastructure dar.
 [[sec_vc]]
 ==== Verifiable Credentials
 
-Die Im Rahmen von SSI Vertrauensinfrastruktren ausgestellten
-Zertifikate werden als Verifiable Credentials <<vc-data-model>> Bezeichnet und über
+Die im Rahmen von SSI Vertrauensinfrastruktren ausgestellten
+Zertifikate werden als Verifiable Credentials <<vc-data-model>> bezeichnet und über
 einen speziellen Service-Endpunkt, der innerhalb eines DID-Dokuments
 definiert werden kann, im Netzwerk zur Verfügung gestellt.
 
@@ -750,22 +748,22 @@ Netzwerken.
 DIDs vereinen wichtige Eigenschaften anderer Identifikationsschlüssel,
 insbesondere Dezentralität, Persistenz und globale Auflösbarkeit. 
 
-Der Bedarf an global eindeutigen Kennzeichnern, welche keine
+Der Bedarf an global eindeutigen Identen, welche keine
 zentralisierten Registrierungsstelle benötigen, führte bereits in den
-1980er Jahren zur entwicklnug und standardisierung der
+1980er Jahren zur Entwicklung und Standardisierung der
 Universally Unique Identifiers (UUIDs, seltener auch Globally Unique
-Identifiers GUIDs genannt), siehe <<rfc-4122>>. UUIDs sind jedoch
-global auflösbar, in dem Sinne dass eine UUID keinerlei Informationen
-darüber trägt von wem/in welchem Ramen oder zur bezeichnung von was
-sie erstellt wurde oder wo nähere Informationen verfbar sind.
+Identifiers GUIDs genannt), siehe <<rfc-4122>>. UUIDs sind jedoch nicht
+global auflösbar, im Sinne, dass eine UUID keinerlei Informationen
+darüber trägt von wem/in welchem Rahmen oder zur Bezeichnung von was
+sie erstellt wurde oder wo nähere Informationen abrufbar sind.
 
 Auch der Bedarf an persistenten, d.h. dauerhaft einer Entität
-zugewiesenen und unveränderlichen, Kennzeichnern, welche gleichzeitig
+zugewiesenen und unveränderlichen, Identen, welche gleichzeitig
 global auflösbar sind, besteht seit langem und wird z.B. durch URNs
 (Uniform Resource Names) bedient, siehe <<rfc-2141>>, <<rfc-8141>>. In
-ihrem Schema definieren URNs zumindest einen Kontext der
-typischerweise Rückschlüsse darauf zulässt in welchem Rahmen ein Ident
-vergeben wurde und ggF. auch welcher natur das identifizierte Subjekt
+ihrem Schema definieren URNs zumindest einen Kontext, der
+typischerweise Rückschlüsse darauf zulässt, in welchem Rahmen ein Ident
+vergeben wurde und ggf. auch welcher Natur das identifizierte Subjekt
 ist. Einige URN Schemata sind in einem engeren Sinne zu einer URL
 auflösbar, unter der Informationen zum konkreten Subjekt abgerufen
 werden können. Der GS1 Digital Link (bzgl. des standard Resolvers)
@@ -774,15 +772,15 @@ Identifikationsschlüssel im URN Format assoziiert werden kann.
 
 Die Namensräume (Schemata) der URNs benötigen eine zentrale
 Registrierungsstelle und auch die Vergabe der einzelnen
-Identifikationsschlüssel innerhalb eines Schemas ist zumindest wie
-beim GS1 System hirarchich, wenn nicht gar zentral organisiert, um die
-eindeutigkeit der Idente sicherzustellen. 
+Identifikationsschlüssel innerhalb eines Schemas ist, wie
+beim GS1 System, hierarchisch, wenn nicht gar zentral organisiert, um die
+Eindeutigkeit der Idente sicherzustellen. 
 
 Sowohl UUIDs als auch URNs, ebenso wie den heute
 verwendeten Identifikationsnummern der GS1 fehlt eine wichtige
-Eigenschaft.
+Eigenschaft:
 Die Möglichkeit der sicheren kryptographischen zu Verifikation der
-Echtheit und Authentitzität von Identifizierungsschlüßeln ist für viele
+Echtheit und Authentitzität von Identifizierungsschlüsseln ist für viele
 Anwendungen essentiell und kann heute komplett digital sichergestellt
 werden, in so fern eine entsprechende Vertrauensinfrastruktur zur
 Verfügung steht.
@@ -837,8 +835,8 @@ Verfügung steht.
 |===
 
 In <<tab_compare>> wurde weiterhin aufgenommen, dass GS1 Idente dafür
-prädestiniert sind in AutoID label eingebettet zu werden und dass die
-Vergabe von GS1 Identen einem klar regulierten System erfolgt
+prädestiniert sind, in AutoID Label eingebettet zu werden und dass die
+Vergabe von GS1 Identen einem klar regulierten System folgt.
 
 
 
@@ -847,7 +845,7 @@ Vergabe von GS1 Identen einem klar regulierten System erfolgt
 
 == GS1 als Vertrauensanker
 
-Das Vertrauen in Idente certified by GS1 funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI Zertifikatsketten.
+Das Vertrauen in Idente _certified by GS1_ funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI Zertifikatsketten.
 
 === Analoge Welt
 
@@ -857,15 +855,15 @@ Abbildung 1: Vertrauen in klassische Ausweisdokumente
 
 === Certified By GS1 Trust Model
 
-Bei der ID Vergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst IDs vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit Basisnummer Certified By GS1 dem Unternehmen selbst Zertifikate für die eigenen IDs zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. [*bereits weiter oben dargestellt*]
+Bei der Identvergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst Idente vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit Basisnummer _Certified By GS1_ dem Unternehmen selbst Zertifikate für die eigenen Idente zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. 
 
 [[Chain]]
 .Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
 image::Certificate-Chain.png[]
 
-Mit dem Unternehmenszertifikat kann die Echtheit der eigenen IDs fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B. überprüft werden, dass eine SGTIN tatsächlich von dem Unternehmen erzeugt wurde, dem die zugehörige Basisnummer gehört, ohne das ein online Lookup in einer entsprechenden Datenbank nötig wäre. Auch Eigenschaften des mit der ID gekennzeichneten Assets können z.B. über die GS1 Standards in z.B. einen 2D Code wie den GS1 DataMatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert werden.
+Mit dem Unternehmenszertifikat kann die Echtheit der eigenen Identifikationsnummern fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B. überprüft werden, dass eine SGTIN tatsächlich von dem Unternehmen erzeugt wurde, dem die zugehörige Basisnummer gehört, ohne das ein online Lookup in einer entsprechenden Datenbank nötig wäre. Auch Eigenschaften des mit dem Ident gekennzeichneten Assets können über die GS1 Standards beispielsweise in einen 2D Code wie den GS1 DataMatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert werden.
 
-Abgeleitete ID-spezifische Zertifikate sind besonders im IoT Kontext interessant, da Maschinen sich mit einer solchen ID Certified By GS1 selbst ausweisen können. Mittels etablierter kryptografischer Verfahren können Maschinen sich basierend auf dem Certified by GS1 System gegenseitig überprüfen und so eine gesicherte Verbindung untereinander oder auch über das Internet z.B. zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt. Wichtig ist hierbei, dass es prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 bedarf.
+Abgeleitete identspezifische Zertifikate sind besonders im IoT Kontext interessant, da Maschinen sich mit einer solchen ID _Certified By GS1_ selbst ausweisen könnten. Mittels etablierter kryptografischer Verfahren könnten Maschinen sich basierend auf dem _Certified by GS1_-System gegenseitig überprüfen und so eine gesicherte Verbindung untereinander oder auch über das Internet z.B. zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt. Wichtig ist hierbei, dass es prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 bedarf.
 
 
 [[Certificates]]
@@ -882,7 +880,7 @@ können.
 
 Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen, das
 Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen
-zertifizierten Basis GLN, die das Unternehmen selbst als Legale Person
+zertifizierten GLN, die das Unternehmen selbst als legale Person
 identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für
 z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1
 Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese
@@ -900,7 +898,7 @@ zertifizierten Basis GLN eine weitere Interaktion mit GS1 notwendig ist.
 [[sec_ssi_implementation]]
 === Implementierungskonzept mittels SSI Technologie
 
-Im Rahmen des Certified by GS1 Projektes wurde ein Prototypisches
+Im Rahmen des Certified by GS1 Projektes wurde ein prototypisches
 Konzept zur Zertifizierung von GS1 Identen und assoziierten
 Masterdaten mittels SSI Technologie entwickelt. Dieses Konzept stellt
 eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
@@ -908,7 +906,7 @@ Organisationen und mit den Partnern dar.
 
 Die in diesem Abschnitt verwendeten grundlegenden
 Begriffe, insbesondere DIDs und Verifiable Credentials, werden in
-<<sec_ssi>> eingeführt erläutert.
+<<sec_ssi>> erläutert.
 
 ==== DIDs
 
@@ -921,7 +919,7 @@ Konzepten wie einer Klasse von Waren oder Geräten können gemäß <<did-core>> 
 zugeordnet werden.
 Indem eine Klasse von Gegenständen, etwa alle Sensoren einer
 bestimmten Baureihe eines bestimmten Herstellers, eine eigene DID
-erhalten können dieser Klasse Eigenschaften als Verifiable Credentials (VC)
+erhalten, können dieser Klasse Eigenschaften als Verifiable Credentials (VC)
 attestiert werden. Insbesondere kann der Hersteller die GTIN der
 Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
 Gewicht, Leistungsaufnahme, etc. als Verifiable Credentials
@@ -929,7 +927,7 @@ veröffentlichen.
 
 ==== Verifiable Credentials
 
-Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde ist und damit berechtigt, Nummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
+Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde und damit berechtigt ist, Identifikationsnummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
 
 Der DID einer konkreten Produktinstanz kann nun eine SGTIN als serialisiertes Ident in Form eines VC zugewiesen werden. Wie in <<GS1SSI>> dargestellt wird die DID der zugehörigen GTIN als Issuer verwendet, sodass die Kette der Idente von der GCP der Company über die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
 entsprechend als Kette von Verifiable Credentials, die sich die DIDs ausstellen, abgebildet wird.
@@ -951,17 +949,17 @@ image::certified-gs1-ids.png[]
 
 ==== Problemstellung
 
-Die missbräuchliche Verwendung von GS1 Identen (wie z.B. GTIN) an sich ist u.A. für Online-Marktplätze ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt, um verschiedene Angebote zu gleichen Artikeln zu aggregieren und die Echtheit der angebotenen Produkte sicherzustellen. Eine rein syntaktische Prüfung der Nummern auf z.B. korrekte Länge oder gültige Prüfziffer kann jedoch einfach umgangen werden und es tauchen regelmäßig Angebotsduplikate unter gefälschten Artikelnummern auf.
+Die missbräuchliche Verwendung von GS1 Identen (wie z.B. GTIN) an sich ist u.A. für Online-Marktplätze ein Problem. Auf diesem Marktplatz wird die GTIN als Ident genutzt, um verschiedene Angebote zu gleichen Artikeln zu aggregieren und die Echtheit der angebotenen Produkte sicherzustellen. Eine rein syntaktische Prüfung der Identifikationsnummern auf z.B. korrekte Länge oder gültige Prüfziffer kann jedoch einfach umgangen werden und es tauchen regelmäßig Angebotsduplikate unter gefälschten Artikelnummern auf.
 
 ==== Existierende Lösungsansätze
 
-Ein Abgleich mit bei GS1 registrierten Artikel-Stammdaten über die Online Services von GS1, wie Gepir <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
+Ein Abgleich mit bei GS1 registrierten Artikelstammdaten über die Online Services von GS1, wie Gepir <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
 
 ==== Verbesserungspotential durch Certified by GS1
 
 Eine Überprüfung der Idente ist nur online möglich und die Korrektheit der Daten wird nur über das Vertrauen in die Transportverschlüsselung <<tls>> bei der Abfrage und die Identität des Servers, der die Daten bereit stellt, gesichert. Die Daten selbst sind in den aktuellen Konzepten nicht authentifiziert und es gibt keinen direkten Link zum Herausgeber.
 
-Die Umsetzung von "Certified by GS1" versetzt den Basisnummer-Inhaber in die Lage selbst Zertifikate für die von ihm erstellten Idente und Masterdaten zu signieren. Diese können über beliebige Kanäle weitergegeben werden, wie bisher über zentrale Repositories, aber auch direkt an die relevanten Partner, ohne dass Dritte Einsicht erhalten oder ein zentraler Angriffspunkt entsteht.  Die Gültigkeit der Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von GS1, kann uneingeschränkt und offline überprüft werden.
+Die Umsetzung von "Certified by GS1" versetzt den Basisnummerinhaber in die Lage selbst Zertifikate für die von ihm erstellten Idente und Masterdaten zu signieren. Diese können über beliebige Kanäle weitergegeben werden, wie bisher über zentrale Repositories, aber auch direkt an die relevanten Partner, ohne dass Dritte Einsicht erhalten oder ein zentraler Angriffspunkt entsteht.  Die Gültigkeit der Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von GS1, kann uneingeschränkt und offline überprüft werden.
 
 Durch die digitale Signatur und die entsprechenden Zertifikate wird vor allem die Integrität der Daten unabhängig vom Übertragungskanal sichergestellt. Der Überprüfer kann somit darauf vertrauen, dass ein Ident vom authorisierten Basisnummern-Inhaber vergeben wurde und damit ein legitimes GS1 Ident ist. Eine direkte Signatur der Masterdaten durch den legitimen Herausgeber bietet bestmöglichen Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
@@ -974,7 +972,7 @@ Vertrauenswürdige Daten zu Unternehmen sind für digitale Handelsbeziehungen eb
 Ein konkreter Use Case basierend auf Unternehmensstammdaten ist das Supplier Onboarding. Will ein Hersteller einen neuen Zulieferer in seine Systeme aufnehmen, 
 so ist dies je nach Industriezweig typischerweise mit erheblichem Aufwand verbunden, worunter die Flexibilität der Handelsbeziehungen leidet. Während für bestimmte Hersteller spezifische Audits möglicherweise unumgänglich und gewünscht sind, ließe sich ein erheblicher Teil der papierbasierten Prüfung von Unternehmensdaten, Zulassungen und klassischen standardisierten Zertifizierungen, auf Basis einer Vertrauensinfrastruktur digitalisieren und automatisieren.
 
-Bei der Vergabe eines GS1 Company Prefix (GCP) und damit eines Nummernkreises an ein Unternehmen vergibt die GS1 auch eine (Party) GLN zur Identifikation des Unternehmens selbst und erfasst Daten zum Unternehmen wie Name, Rechtsform, Hauptsitz, u.a.
+Bei der Vergabe eines GS1 Company Prefix (GCP) und damit eines Nummernkreises an ein Unternehmen, vergibt GS1 auch eine (Party) GLN zur Identifikation des Unternehmens selbst und erfasst Daten zum Unternehmen wie Name, Rechtsform, Hauptsitz, u.a.
 
 ==== Verbesserungspotential durch Certified by GS1
 Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Daten, wie diese z.B. bei der LEI-Vergabe durch GS1 Germany aktuell bereits stattfindet, kann GS1 die Echtheit solcher Unternehmensstammdaten zertifizieren. Die Vorlage vertrauenswürdig zertifizierter Daten erspart den Vertragspartnern dieses Unternehmens künftig, diese Überprüfung selbst durchführen zu müssen und ermöglicht so schneller und einfacher mit dem Unternehmen in eine Rechtsbeziehung zu treten. 
@@ -984,7 +982,7 @@ Basierend auf einer kritischen Überprüfung der vom Unternehmen angegebenen Dat
 === Industrie 4.0 - Microgrids 
 ==== Problemstellung
 
-EKU Power Drives entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Dabei liegt der Fokus auf ortsveränderliche bzw. mobile Anlagen. Also Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
+EKU Power Drives entwickelt gemeinsam mit seinen Kunden intelligente Automatisierungslösungen, mit deren Hilfe energieintensive technische Prozesse effizienter gestaltet werden können. Die Ressourcen werden gezielt für den eigentlichen Prozess eingesetzt und der Ressourceneinsatz für nicht prozessrelevante Vorgänge wird weitestgehend eliminiert. Dabei liegt der Fokus auf ortsveränderlichen bzw. mobilen Anlagen. Also Systeme, die nicht an einem festen Ort installiert arbeiten, sondern bei denen
 regelmäßige Standortwechsel und Rekonfiguration zum normalen Betrieb gehören.
 
 Eine der wesentlichen Herausforderungen in diesen Systemen ist die ständige Anpassung an veränderte Umgebungsbedingungen. Zeitintensive, manuelle Konfigurationsarbeit muss hierbei durch den konsequenten Einsatz von intelligenter, vernetzter Automatisierungstechnik vermieden werden, um die Akzeptanz und Praxistauglichkeit der Systeme nicht zu gefährden. Der Betrieb eines solchen Microgrids bringt allerdings einige Herausforderungen mit sich. Da die Zahl der daran angebundenen Anlagen im Vergleich zum
@@ -1015,8 +1013,7 @@ image::demo-screenshots/3-outage.png[]
 
 Neben den statischen Informationen über die Anlage entstehen während ihres Betriebs weitere Daten, die für
 andere Teilnehmer im Netzwerk interessant sein können. So z.B. aktuelle Leistungsaufnahme / -Abgabe, ggf. vorhergesehene Leistungsaufnahme im nächsten Zeitschritt, Verschleißanzeige, Fehlerzustände, Zeit bis zur nächsten Wartung. 
-
-Diese Informationen entstehen erst während des Betriebs und verändern sich - abhängig von der jeweiligen Anwendung - z.B. im Bereich von einigen 10ms.
+Diese Informationen verändern sich - abhängig von der jeweiligen Anwendung - z.B. im Bereich von einigen 10ms.
 
 [[eku-dynamic]]
 .Die Nutzung dynamischer Daten wird als Use Case präsentiert
@@ -1045,7 +1042,7 @@ image::demo-screenshots/7-certified-dynamic.png[]
 Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Businessmodelle, in denen nicht mehr die Geräte oder Maschinen direkt verkauft oder auf Zeit verliehen
 werden, sondern der Nutzen, den der Anwender durch diese erzielt, direkt bepreist wird. In solchen "Pay per Use" oder "as a Service" Modellen werden alle nötigen Voraussetzungen, wie Maschinen und Betriebsmittel, die der Nutzer braucht um den gewünschten Nutzen zu erzielen, zur Verfügung gestellt. Wichtig ist bei den zugrundelegenden Business Modellen immer, eine präzise und vor allem eine für alle beteiligten vertrauenswürdige Messung der Parameter (KPIs), auf denen die Berechnung der Kosten eines solchen Service beruht.
 
-Aufgrund der eingesetzten Sensorik und automatisierten Datenübertragung und Abwicklung, ggF. bis in die Abrechnung, handelt es sich hier um IoT Use Cases, die ein hohes Maß an Sicherheit verlangen um eine Chance auf Akzeptanz am Markt zu haben. Dieser Use Case kann als ein Spezialfall der in <<sec_eku-dynamic>> thematisierten Übertragung dynamischer Daten in einem allgemeineren Kontext gesehen werden. Haben die zur Berechnung der KPIs eingesetzten Sensoren, z.B. Watt-Meter zur Messung der vom Generator erzeugten Leistung, eine ID Certified by GS1, so kann der entsprechende auf dem Gerät hinterlegte private Schlüssel zur Signatur der Daten genutzt werden. Die Überprüfung der korrekten Funktion des Sensors, etwa durch eine zertifizierte Eichung, kann ebenfalls über an die Certified ID gebundene digitale Zertifikate abgebildet werden. Auf diese Art und Weise werden die Daten eines Sensor manipulationssicher und vertrauenswürdig und können als Berechnungsgrundlage für den Preis in einem Pay per Use Modell dienen.
+Aufgrund der eingesetzten Sensorik und automatisierten Datenübertragung und Abwicklung, ggf. bis in die Abrechnung, handelt es sich hier um IoT Use Cases, die ein hohes Maß an Sicherheit verlangen um eine Chance auf Akzeptanz am Markt zu haben. Dieser Use Case kann als ein Spezialfall der in <<sec_eku-dynamic>> thematisierten Übertragung dynamischer Daten in einem allgemeineren Kontext gesehen werden. Haben die zur Berechnung der KPIs eingesetzten Sensoren, z.B. Watt-Meter zur Messung der vom Generator erzeugten Leistung, eine _Certified by GS1_ ID, so kann der entsprechende auf dem Gerät hinterlegte private Schlüssel zur Signatur der Daten genutzt werden. Die Überprüfung der korrekten Funktion des Sensors, etwa durch eine zertifizierte Eichung, kann ebenfalls über an die Certified ID gebundenen digitalen Zertifikate abgebildet werden. Auf diese Art und Weise werden die Daten eines Sensor manipulationssicher und vertrauenswürdig und können als Berechnungsgrundlage für den Preis in einem Pay per Use Modell dienen.
 
 [[eku-pay-per-use]]
 .Auch der Pay per Use Anwendungsfall wird in der Demo thematisiert
@@ -1054,7 +1051,7 @@ image::demo-screenshots/8-pay-per-use.png[]
 [[EKU-PD]]
 
 ==== Interaktive Demonstration
-Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verständlich darzustellen, wurde eine interaktive online Demonstration des Use Cases entwickelt. Die in diesem Abschnitt gezeigten Bilder, stammen aus diesem Demonstrator. Die Demonstration ist unter <<online-demo>> öffentlich zugänglich.
+Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verständlich darzustellen, wurde eine interaktive Online Demonstration des Use Cases entwickelt. Die in diesem Abschnitt gezeigten Bilder, stammen aus diesem Demonstrator. Die Demonstration ist unter <<online-demo>> öffentlich zugänglich.
 
 
 
@@ -1064,7 +1061,7 @@ Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verstä
 [[sec_conclusion]]
 == Fazit
 
-Im Projekt _Certified by GS1_ wurde aufgezeigt, wie die GS1
+Im Projekt _Certified by GS1_ wurde aufgezeigt, wie GS1
 die eigene Stellung als vertrauenswürdige und neutrale
 Organisation nutzen kann, um unternehmens- und branchenübergreifend
 einsetzbare eindeutige Identifikationsnummern und Stammdaten zu den
@@ -1078,7 +1075,7 @@ signieren können.
 
 USP der Certified by GS1 Lösung, im Vergleich zu ähnlichen
 Entwicklungen etwa bei der GLEIF, ist, dass die Kunden von GS1 als
-Intermediäre selbst Zertifizierte Identifikationsschlüssel erstellen
+Intermediäre selbst zertifizierte Identifikationsschlüssel erstellen
 können und so die volle Hoheit über ihre Idente und Zertifikate
 behalten, ähnlich wie dies bereits heute der Regelfall für GS1
 Identifikationsnummern ist. Auf diese Art und Weise bleibt das GS1
@@ -1102,8 +1099,8 @@ Als weiteres Ergebnis des Projektes hat sich klar herausgestellt, dass
 von GS1 *zertifizierte Stammdaten* großes Potential haben. GS1 könnte,
 ähnlich wie bereits heute bei der LEI Vergabe, gewisse
 Unternehmensstammdaten überprüfen und die
-Vertrauenswürdigkeit der überprüften Daten anschließen digital
-Bescheinigen. Auf Basis der erhöhten Vertrauenswürdigkeit solcher
+Vertrauenswürdigkeit der überprüften Daten anschließend digital
+bescheinigen. Auf Basis der erhöhten Vertrauenswürdigkeit solcher
 Stammdaten oder auch klassischer Zertifikate, die von GS1 überprüft
 und digital signiert wurden, lassen sich viele Prozesse vereinfachen,
 da die Prüfung im folgenden digital und automatisiert erfolgen
@@ -1114,7 +1111,7 @@ Allein die
 Übertragung der bestehenden Identifikationsnummern in die SSI Welt
 stellt eine natürliche
 Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
-GS1 dar und sicher die Zukunftsfähigkeit. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
+GS1 dar und sichert die Zukunftsfähigkeit. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
 vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
 
 
@@ -1123,7 +1120,7 @@ vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
 Die im Rahmen des Projektes durchgeführten Umfragen per Fragebogen und
 direkten Interviews zeichnen ein klares Bild des aktuellen Stands der
 Umsetzung von Industrie 4.0 Konzepten und Ideen bei den befragten
-Partner im Industrie 4.0 Umfeld. Cloud-Lösungen und offene Netzwerke
+Partnern im Industrie 4.0 Umfeld. Cloud-Lösungen und offene Netzwerke
 im Sinne eines echten _Internet_ of Things nehmen bei den befragten
 Unternehmen und deren Kunden aktuell noch keinen großen Stellenwert
 ein. Lokale Netzwerke werden bevorzugt und Standards zur
@@ -1137,12 +1134,12 @@ auseinander zu setzen. Im Ausblick sehen alle Befragten aber die
 Wichtigkeit der digitalen Idente und Zertifikate und sprechen sich für
 die Certified by GS1 Idee aus. Eine einfache Integration in bestehende
 Herstellungsprozesse und Anwendungen wird hierbei als essentiell für
-die Industrielle Anwendung gesehen.
+die industrielle Anwendung gesehen.
 
 In einzelnen konkreten Use Cases, in denen eine regelmäßige oder gar
-kontinuierliche dynamische umkonfiguration des Maschinenparks erfolgt,
+kontinuierliche dynamische Umkonfiguration des Maschinenparks erfolgt,
 ist der Bedarf heute schon akuter und eine baldige Umsetzung
-denkbar. Für ein Konkretes Anwendungsbeispiel sei auf <<sec_eku>> verwiesen.
+denkbar. Für ein konkretes Anwendungsbeispiel sei auf <<sec_eku>> verwiesen.
 
 
 
@@ -1153,19 +1150,19 @@ denkbar. Für ein Konkretes Anwendungsbeispiel sei auf <<sec_eku>> verwiesen.
 
 Die in <<sec_ssi>> näher erläuterte auf SSI Technologie basierende
 dezentrale Vertrauensinfrastruktur befindet sich aktuell in einem für
-Anwender höchst interessanten Entwicklungsstadium. Die Technologischen
+Anwender höchst interessanten Entwicklungsstadium. Die technologischen
 Grundlagen sind größtenteils entwickelt und in ersten Großprojekten
 (namentlich Sovrin <<sovrin>>) produktiv erprobt worden. Das Thema
 wurde von der Politik als relevant erkannt und die Entwicklung wird
 zur Zeit auf breiter Front gefördert. Besonders interessant ist die
-Entwicklung in Europa, dass bei
-der zentralen PKI Infrastruktur die Chance verpasst hatte, wichtige
+Entwicklung in Europa: bei
+der zentralen PKI Infrastruktur wurde die Chance verpasst, wichtige
 Vertrauensinfrastrukturkomponenten rechtzeitig selbst
 aufzubauen. Dementsprechend beschäftigen sich aktuell eine Vielzahl
 von Projekten und Konsortien in verschiedenen technologischen und
 wirtschaftlichen Reifegraden mit dem Aufbau einer solchen
 Infrastruktur. Wie in <<sec_ssi_implementation>> beschrieben
-ist SSI Technologie sehr gut zur Implementierung der hier
+ist SSI Technologie zur Implementierung der hier
 vorgestellten Ideen geeignet, insbesondere bieten _Verifiable
 Credentials_ eine sehr gute Möglichkeit, die oben angesprochene
 Dezentralität des Identifikationsschlüssel-Systems Certified by GS1 zu
@@ -1174,16 +1171,16 @@ realisieren.
 Durch die eIDAS Verordnung der Europäischen Union, der Verordnung über elektronische Identifizierung und Vertrauensdienste, 
 wurde ein kompatibler europäischer Rahmen für die selbstsouveräne Identität geschaffen. 
 Das sogenannte European Self-Sovereign Identity Framework (ESSIF) 
-verwendet dezentrale Kennungen (DIDs) und die European Blockchain Services Infrastructure(EBSI). 
+verwendet dezentrale Idente (DIDs) und die European Blockchain Services Infrastructure(EBSI). 
 
 
 === Ausblick
 
 In diesem Projekt stand die konzeptionelle und technische Entwicklung
 der Certified by GS1 Ideen im Vordergrund, sowie die Untersuchung
-konkreter Use Cases und die Marktanalyse und Networking im IIoT Bereich.
+konkreter Use Cases, die Marktanalyse und Networking im IIoT Bereich.
 Die Entwicklung eines nachhaltigen Geschäftsmodells in enger Zusammenarbeit mit
-den anderen GS1 Mitgliedsorganisationen und GS1 Global und die
+anderen GS1 Mitgliedsorganisationen und GS1 Global und die
 Anwendung der entwickelten Lösungen in bestehenden Initiativen, insbesondere der Digital Signature
 Mission Specific Working Group der GS1, sind wichtige Schritte auf dem
 Weg zu einem MVP.
@@ -1191,21 +1188,21 @@ Weg zu einem MVP.
 
 Um durch die Implementierung von
 Identifikationsschlüsseln Certified by GS1 mittels SSI Technologie die
-technische Grundlage für konkrete Prototypische Anwendungen zu schaffen werden sich GS1 und das EECC in 2 Konsortien als um Förderung in der aktuellen Ausschreibung des Bundesministeriums für Wirtschaft
+technische Grundlage für konkrete prototypische Anwendungen zu schaffen, werden sich GS1 und das EECC in zwei Konsortien um Förderung in der aktuellen Ausschreibung des Bundesministeriums für Wirtschaft
 und Energie (BMWi) mit dem Titel
 https://www.digitale-technologien.de/DT/Navigation/DE/ProgrammeProjekte/AktuelleTechnologieprogramme/Sichere_Digitale_Identitaeten/sichere_digitale_ident.html[Schaufenster Sichere Digitale Identitäten]
 bewerben.
-Die beteiligung an zwei Konsortien mit verschiedenen Inhaltlichen
+Die Beteiligung an zwei Konsortien mit verschiedenen inhaltlichen
 Schwerpunkten und Use Cases in verschiedenen Branchen bietet die
 Möglichkeit, die Interoperabilität der entwickelten Lösung über die
-grenzen eines Konkreten SSI Netzwerkes hinaus sicherzustellen, wie sie
+Grenzen eines konkreten SSI Netzwerkes hinaus sicherzustellen, wie sie
 von einem GS1 Standard zu erwarten ist.
 
 
 Das 
 https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_ssi.html[Self Sovereign Identity für Deutschland]
 Konsortium hat neben Personen- auch Firmenidentifikation und Dinge im
-IoT Sinne im
+IoT Sinn im
 Blick. Während viele SSI Umsetzungen allein auf Personen fokussieren
 liegt gerade in der Anwendung der Technologie zur sicheren
 Identifizierung und Authentifizierung von juristischen Personen und
@@ -1220,7 +1217,7 @@ insbesondere auf SSI Technologie basierende Businessmodelle im Bereich
 der Datenökonomie entwickelt werden.
 Die Weiterentwicklung bestehender Treuekarten und Punktesysteme
 mittels SSI Technologie ermöglicht es Kundendaten in einer Detailtiefe
-und Qualität zu erschließen, wie dies sonst nur im online Handel
+und Qualität zu erschließen, wie dies sonst nur im Onlinehandel
 möglich ist. Gleichzeitig bietet die SSI Technologie die Möglichkeit
 den Kunden ihre Datenhoheit zurückzugeben und sie fair und transparent
 am Geschäft mit den eigenen Daten zu beteiligen. Die etablierten
