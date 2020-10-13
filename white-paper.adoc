@@ -215,12 +215,12 @@ Das Kernprodukt der GS1 Germany ist GS1 Complete. Hierbei handelt es sich
 um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird,
 in welchem dieser GTINs (Global Trade Item
 Number) und andere Idente vergeben kann. Es beinhaltet
-weiterhin Services und Publikationen zur Optimierung der
-Geschäftsprozesse.
+weiterhin umfangreiche Services und Publikationen zur Optimierung von
+Geschäftsprozessen.
 
 GS1 Idente sind wie folgt aufgebaut: Ausgehend von der Gesamtheit der GS1
 Organisationen und GS1 global erhalten die einzelnen Mitgliedsorganisationen
-(MOs) Nummernkreise, indem eine bestimmte Präfix einer MO zugeordnet wird. 
+(MOs) Nummernkreise, indem ein bestimmter Präfix einer MO zugeordnet wird. 
 Beispielsweise gehören alle GS1 Idente deren erste drei Ziffern im Bereich 400 bis 440 liegen zu
 GS1 Germany <<gs1-prefix>>. 
 Innerhalb des eigenen Nummernkreises (d.h. beginnend
