@@ -818,14 +818,6 @@ Verfügung steht.
 
 |===
 
-In <<tab_compare>> wurde weiterhin aufgenommen, dass GS1 Idente dafür
-prädestiniert sind, in AutoID Label eingebettet zu werden und dass die
-Vergabe von GS1 Identen einem klar regulierten System folgt.
-
-
-
-
-
 
 == GS1 als Vertrauensanker
 
