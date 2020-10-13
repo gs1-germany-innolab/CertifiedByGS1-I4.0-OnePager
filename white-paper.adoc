@@ -843,7 +843,7 @@ Abgeleitete identspezifische Zertifikate sind besonders im IoT Kontext interessa
 
 
 [[Certificates]]
-.Vertrauen in IDs certified by GS1 ermöglicht M2M authentifizierung und den Aufbau gesicherter Kommunikationskanäle
+.Vertrauen in IDs certified by GS1 ermöglicht M2M Authentifizierung und den Aufbau gesicherter Kommunikationskanäle
 image::Parts-Certified.png[]
 
 Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
@@ -878,7 +878,7 @@ Im Rahmen des Certified by GS1 Projektes wurde ein prototypisches
 Konzept zur Zertifizierung von GS1 Identen und assoziierten
 Masterdaten mittels SSI Technologie entwickelt. Dieses Konzept stellt
 eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
-Organisationen und mit den Partnern dar.
+Organisationen und den Partnern dar.
 
 Die in diesem Abschnitt verwendeten grundlegenden
 Begriffe, insbesondere DIDs und Verifiable Credentials, werden in
