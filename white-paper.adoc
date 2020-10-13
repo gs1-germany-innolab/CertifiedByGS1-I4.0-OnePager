@@ -1108,9 +1108,9 @@ image::demo-screenshots/1-intro.png[]
 
 ==== Existierende Lösungsansätze
 ===== Statische Informationen
-Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage charakterisieren. Dies können z.B. sein Hersteller, Modell, Nennleistung, uulässiger Leistungsbereich, Nennspannung, zulässiger Spannungsbereich, usw.
+Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage charakterisieren. Dies können z.B. sein Hersteller, Modell, Nennleistung, zulässiger Leistungsbereich, Nennspannung, zulässiger Spannungsbereich, usw.
 
-Alle diese Eigenschaften werden vom Hersteller der Anlage angegeben. Sie werden sich über ihre Lebensdauer hinweg nicht verändern (und wenn, dann ist diese Veränderung ebenso vorhersehbar). Üblicherweise werden derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. 
+Alle diese Eigenschaften werden vom Hersteller der Anlage angegeben. Sie werden sich über ihre Lebensdauer hinweg nicht verändern und wenn, dann ist diese Veränderung ebenso vorhersehbar. Üblicherweise werden derartige Angaben vom Hersteller auf einem Typenschild zusammengefasst. 
 
 [[eku-static]]
 .In der Demo wird die Nutzung statischer Daten, konkret eines digitalen Typenschildes, dargestellt
@@ -1125,7 +1125,7 @@ image::demo-screenshots/3-outage.png[]
 ===== Dynamische Informationen
 
 Neben den statischen Informationen über die Anlage entstehen während ihres Betriebs weitere Daten, die für
-andere Teilnehmer im Netzwerk interessant sein können. So z.B. aktuelle Leistungsaufnahme / -Abgabe, ggf. vorhergesehene Leistungsaufnahme im nächsten Zeitschritt, Verschleißanzeige, Fehlerzustände, Zeit bis zur nächsten Wartung. 
+andere Teilnehmer im Netzwerk interessant sein können. So z.B. aktuelle Leistungsaufnahme / -Abgabe, ggf. vorhergesehene Leistungsaufnahme im nächsten Zeitschritt, Verschleißanzeige, Fehlerzustände oder Zeit bis zur nächsten Wartung. 
 Diese Informationen verändern sich - abhängig von der jeweiligen Anwendung - z.B. im Bereich von einigen 10ms.
 
 [[eku-dynamic]]
@@ -1262,7 +1262,7 @@ Partnern im Industrie 4.0 Umfeld. Cloud-Lösungen und offene Netzwerke
 im Sinne eines echten _Internet_ of Things nehmen bei den befragten
 Unternehmen und deren Kunden aktuell noch keinen großen Stellenwert
 ein. Lokale Netzwerke werden bevorzugt und Standards zur
-unternehmensübergreifenden Kommunikation, wie OPC-UA, werden zwar in
+unternehmensübergreifenden Kommunikation, werden zwar in
 der Regel angeboten, aber selten nachgefragt.  Es wurde trotzdem
 allgemein die Relevanz von unternehmensübergreifend eindeutigen und
 vor allem sicheren Identifikationsnummern für Maschinen
@@ -1298,7 +1298,7 @@ der zentralen PKI Infrastruktur wurde die Chance verpasst, wichtige
 Vertrauensinfrastrukturkomponenten rechtzeitig selbst
 aufzubauen. Dementsprechend beschäftigen sich aktuell eine Vielzahl
 von Projekten und Konsortien in verschiedenen technologischen und
-wirtschaftlichen Reifegraden mit dem Aufbau einer solchen
+wirtschaftlichen Reifegraden mit dem Aufbau einer dezantralen
 Infrastruktur. Wie in <<sec_ssi_implementation>> beschrieben
 ist SSI Technologie zur Implementierung der hier
 vorgestellten Ideen geeignet, insbesondere bieten _Verifiable
