@@ -763,10 +763,10 @@ Eindeutigkeit der Idente sicherzustellen.
 Sowohl UUIDs als auch URNs, ebenso wie den heute
 verwendeten Identifikationsnummern der GS1 fehlt eine wichtige
 Eigenschaft:
-Die Möglichkeit der sicheren kryptographischen zu Verifikation der
-Echtheit und Authentitzität von Identifizierungsschlüsseln ist für viele
+Die Möglichkeit der sicheren und kryptographischen Überpürfung
+der Echtheit und Authentitzität von Identifizierungsschlüsseln. Dieses ist für viele
 Anwendungen essentiell und kann heute komplett digital sichergestellt
-werden, in so fern eine entsprechende Vertrauensinfrastruktur zur
+werden, so fern eine entsprechende Vertrauensinfrastruktur zur
 Verfügung steht.
 
 
