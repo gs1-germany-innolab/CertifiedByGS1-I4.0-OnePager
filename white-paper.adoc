@@ -489,8 +489,8 @@ unter anderem die GLN und die dazugehörige Firma aufgeführt.
 
 
 Diese Eigenschaften des analogen Zertifikates werden mit dem digitalen
-Zertifikat nicht nur digitalisiert, sondern mittels einer digitalen
-Signatur (siehe <<sec_digi_sig>>) wird die Echtheit des Zertifikates
+Zertifikat nicht nur digitalisiert, sondern  mittels einer digitalen
+Signatur (siehe <<sec_digi_sig>>) wird zusätzlich die Echtheit des Zertifikats
 kryptografisch abgesichert. Ein digitales Zertifikat ist damit
 deutlich schwerer zu fälschen als ein analoges. Voraussetzung ist, dass die
 Signatur auf einer hinreichend sicheren Vertrauensinfrastruktur
