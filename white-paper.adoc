@@ -67,7 +67,7 @@ Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
 Konzeptes zu verdeutlichen.
 
 
-Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und Minimum Viable Product (MVP), insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv testen und zur Marktreife führen zu können.
+Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und Minimum Viable Products (MVP), insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv testen und zur Marktreife führen zu können.
 
 Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln möchten,
 melden Sie sich gerne für Informationen zum aktuellen Stand bei den Autoren von
@@ -135,7 +135,7 @@ fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander
 _Certified by GS1_ kann so die Basis für eine Vertrauensinfrastruktur
 schaffen, wie sie z.B. für das Internet of Things (IoT) aber auch z.B. in klassischen B2B Prozessen wie dem
 Supplier Onboarding (siehe <<sec_onboarding>>) dringend benötigt
-wird, um Digitalisierung und Automatisierung nicht durch
+werden, um Digitalisierung und Automatisierung nicht durch
 Sicherheits- und Vertrauensfragen zu verhindern.
 
 
