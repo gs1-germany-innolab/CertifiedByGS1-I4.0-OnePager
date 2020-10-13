@@ -743,69 +743,77 @@ Aufgabe des Verzeichnisdienstes (Distributed Ledger) in SSI
 Netzwerken. 
 
 
+
+
 ==== Vergleiche mit anderen Identifikationsschemata
 
 DIDs vereinen wichtige Eigenschaften anderer Identifikationsschlüssel,
-insbesondere Dezentralität, Persistenz und globale Auflösbarkeit. 
+neben der globalen Eindeutigkeit sind das insbesondere dezentrale
+Vergabe, d.h. jeder Teilnehmer kann DIDs erzeugen, Persistenz und
+globale Auflösbarkeit, d.h. im Rahmen der SSI Infrastruktur kann das
+DID-Dokument und über die darin definierten Endpunkte weitere Daten,
+insbesondere Verifiable Credentials, abgerufen werden.
+
 
 Der Bedarf an global eindeutigen Identen, welche keine
 zentralisierten Registrierungsstelle benötigen, führte bereits in den
 1980er Jahren zur Entwicklung und Standardisierung der
 Universally Unique Identifiers (UUIDs, seltener auch Globally Unique
-Identifiers GUIDs genannt), siehe <<rfc-4122>>. UUIDs sind jedoch nicht
-global auflösbar, im Sinne, dass eine UUID keinerlei Informationen
-darüber trägt von wem/in welchem Rahmen oder zur Bezeichnung von was
+Identifiers GUIDs genannt), siehe <<rfc-4122>>. UUIDs fehlt jedoch
+eine globale Semantik, d.h. eine UUID trägt keinerlei Informationen
+darüber, von wem/in welchem Rahmen oder zur Bezeichnung von was
 sie erstellt wurde oder wo nähere Informationen abrufbar sind.
 
-Auch der Bedarf an persistenten, d.h. dauerhaft einer Entität
-zugewiesenen und unveränderlichen, Identen, welche gleichzeitig
-global auflösbar sind, besteht seit langem und wird z.B. durch URNs
-(Uniform Resource Names) bedient, siehe <<rfc-2141>>, <<rfc-8141>>. In
-ihrem Schema definieren URNs zumindest einen Kontext, der
-typischerweise Rückschlüsse darauf zulässt, in welchem Rahmen ein Ident
-vergeben wurde und ggf. auch welcher Natur das identifizierte Subjekt
-ist. Einige URN Schemata sind in einem engeren Sinne zu einer URL
-auflösbar, unter der Informationen zum konkreten Subjekt abgerufen
-werden können. Der GS1 Digital Link (bzgl. des standard Resolvers)
-stellt eine solche URL dar, die kanonisch mit einem GS1
-Identifikationsschlüssel im URN Format assoziiert werden kann.
-
-Die Namensräume (Schemata) der URNs benötigen eine zentrale
-Registrierungsstelle und auch die Vergabe der einzelnen
-Identifikationsschlüssel innerhalb eines Schemas ist, wie
-beim GS1 System, hierarchisch, wenn nicht gar zentral organisiert, um die
-Eindeutigkeit der Idente sicherzustellen. 
-
-Sowohl UUIDs als auch URNs, ebenso wie den heute
-verwendeten Identifikationsnummern der GS1 fehlt eine wichtige
-Eigenschaft:
-Die Möglichkeit der sicheren kryptographischen zu Verifikation der
-Echtheit und Authentitzität von Identifizierungsschlüsseln ist für viele
+Im Unterschied zu etablierten Identifikationssystemen wie der LEI
+Nummer oder dem GS1 System bieten DIDs vor allem die Möglichkeit der
+sicheren kryptographischen Verifikation der Echtheit und
+Authentitzität von Identifizierungsschlüsseln.  Dies ist für viele
 Anwendungen essentiell und kann heute komplett digital sichergestellt
-werden, in so fern eine entsprechende Vertrauensinfrastruktur zur
+werden, insofern eine entsprechende Vertrauensinfrastruktur zur
 Verfügung steht.
 
+Relevante Vorteile der LEI und des GS1 Systems gegenüber der DID sind
+die Etablierung dieser Idente in der unternehmensübergreifenden
+Kommunikation, für GS1 auch in Auto-ID Labels wie Barcodes oder RFID
+Tags, und die kontrollierte Vergabe dieser Idente. Über letztere kann
+sichergestellt werden, dass ein minimal Satz an verifizierten
+Stammdaten vorliegt und vor allem, dass z.B. eine GLN oder LEI auch
+legitim vergeben wurde.
 
 
+
+[[tab_compare]]
 .Eigenschaften von Identifikatoren
-[tab_compare, cols="<.<,^.<,^.<,^.<,^.<",options="header"]
+[cols="^.<,^.<,^.<,^.<,^.<",options="header"]
 |===
 |
 |DID
 |UUID
-|URN
-|GS1 (DigitalLink)
+|LEI
+|GS1 IDs
 
-|*Persistent*
+|*Global eindeutig*
 |icon:check[size=2x,role=green]
 |icon:check[size=2x,role=green]
 |icon:check[size=2x,role=green]
 |icon:check[size=2x,role=green]
 
-|*Global auflösbar (Unternehmens übergreifend)*
+|*Unternehmens übergreifende Semantik*
+|Per DID-Dokument
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+
+|*Stamm-/Metadaten online abrufbar*
 |icon:check[size=2x,role=green]
 |icon:times[size=2x,role=red]
-|Teilweise
+|icon:check[size=2x,role=green]
+|Falls veröffentlicht / freigegeben
+
+|*Für verschiedene Subjekte einsetzbar*
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+|icon:times[size=2x,role=red]
 |icon:check[size=2x,role=green]
 
 |*Kryptographisch verifizierbar*
@@ -814,16 +822,22 @@ Verfügung steht.
 |icon:times[size=2x,role=red]
 |icon:times[size=2x,role=red]
 
-|*Dezentral*
+|*Anwender kann eigene IDs erstellen*
 |icon:check[size=2x,role=green]
 |icon:check[size=2x,role=green]
-|Kaum
-|Hierarchisch
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
 
-|*Medien-übergreifend*
+|*Verwendung in Auto-ID etabliert*
+|icon:times[size=2x,role=red]
+|icon:times[size=2x,role=red]
 |icon:times[size=2x,role=red]
 |icon:check[size=2x,role=green]
+
+|*Etabliert in Unternehmensübergreifender Kommunikation*
 |icon:times[size=2x,role=red]
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
 |icon:check[size=2x,role=green]
 
 |*Kontrollierte Vergabe*
@@ -834,11 +848,19 @@ Verfügung steht.
 
 |===
 
-In <<tab_compare>> wurde weiterhin aufgenommen, dass GS1 Idente dafür
-prädestiniert sind, in AutoID Label eingebettet zu werden und dass die
-Vergabe von GS1 Identen einem klar regulierten System folgt.
 
 
+Die Kombination eines GS1 Idents als Verifiable Credential einer DID
+ergibt die einzigartige Möglichkeit, alle oben aufgeführten Vorteile
+in einer Lösung zu kombinieren, die das Beste aus allen Welten
+vereinigt. So ensteht ein Identifikationsschlüssel der kryptografisch
+abgesichert ist und zur sicheren digitalen authentifizierung genutzt
+werden kann, der aber gleichzeitig für eine Vielzahl von Entitäten
+vergeben werden kann, mit einer unternehmensübergreifend
+verständlichen Semantik. Auch die Dezentralität bleibt erhalten, in
+dem Sinne, dass GS1 Kunden selbst Identifikationsschlüssel Certified
+by GS1 in Ihrem Nummernkreis erzeugen und zertifizieren können, was
+z.B. bei einer LEI als Verifiable Credential nicht gegeben wäre.
 
 
 
