@@ -67,7 +67,7 @@ Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
 Konzeptes zu verdeutlichen.
 
 
-Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und Minimum Viable Products (MVP), insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv testen und zur Marktreife führen zu können.
+Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und Minimum Viable Product (MVP), insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv testen und zur Marktreife führen zu können.
 
 Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln möchten,
 melden Sie sich gerne für Informationen zum aktuellen Stand bei den Autoren von
@@ -135,7 +135,7 @@ fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander
 _Certified by GS1_ kann so die Basis für eine Vertrauensinfrastruktur
 schaffen, wie sie z.B. für das Internet of Things (IoT) aber auch z.B. in klassischen B2B Prozessen wie dem
 Supplier Onboarding (siehe <<sec_onboarding>>) dringend benötigt
-werden, um Digitalisierung und Automatisierung nicht durch
+wird, um Digitalisierung und Automatisierung nicht durch
 Sicherheits- und Vertrauensfragen zu verhindern.
 
 
@@ -316,7 +316,7 @@ hinterlegte Referenzdaten im Online-Datenpool der GLEIF
 abzufragen. Diese Referenzdaten sind mindestens der offizielle Name
 laut Registrierung des Rechtsträgers, Anschrift des Unternehmens, Land
 der Gründung, Ländercodes, sowie das Datum
-der ersten LEI-Zuweisung und der letzten Aktualisierung, ggF.
+der ersten LEI-Zuweisung und der letzten Aktualisierung, ggf.
 auch das Ablaufdatum, denn eine LEI muss jährlich verlängert werden.
 
 GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle 
@@ -334,7 +334,7 @@ weltweite Überschneidungsfreiheit gemeinsam. Zudem können die
 Referenzdaten der LEI- und auch der GS1 Complete Kunden durch das
 Unternehmen selbst verwaltet werden. 
 Man findet die Daten der beiden Idente in den jeweiligen
-Datenbanken, wie der LEI-Datenbank oder gepir. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
+Datenbanken, wie der LEI-Datenbank oder GEPIR. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
 vermindert Identitätsmissbrauch. Allerdings gibt es auch hier derzeit Unterschiede:
 Ein GS1 Complete Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
 Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollständig und korrekt zu veröffentlichen. 
@@ -489,8 +489,8 @@ unter anderem die GLN und die dazugehörige Firma aufgeführt.
 
 
 Diese Eigenschaften des analogen Zertifikates werden mit dem digitalen
-Zertifikat nicht nur digitalisiert, sondern mittels einer digitalen
-Signatur (siehe <<sec_digi_sig>>) wird die Echtheit des Zertifikates
+Zertifikat nicht nur digitalisiert, sondern  mittels einer digitalen
+Signatur (siehe <<sec_digi_sig>>) wird zusätzlich die Echtheit des Zertifikats
 kryptografisch abgesichert. Ein digitales Zertifikat ist damit
 deutlich schwerer zu fälschen als ein analoges. Voraussetzung ist, dass die
 Signatur auf einer hinreichend sicheren Vertrauensinfrastruktur
@@ -526,7 +526,7 @@ Zertifikate werden weiterhin genutzt, um z.B.:
 - zu bescheinigen, dass Software, Updates oder digitale Dokumente vom
   vorgeblichen Urheber stammen
 
-- Personenidentitäten zu bescheinigen, um, wie im Beispiels mit Alice
+- Personenidentitäten zu bescheinigen, um, wie im Beispiel mit Alice
   und Bob, eine direkte Mensch-zu-Mensch Kommunikation abzusichern,
   z.B. via e-Mail oder Messenger
   
@@ -603,7 +603,7 @@ Fähigkeiten ermöglichen eine solche Vertrauensinfrastruktur ohne
 zentrale Autoritätsinstanzen oder Single Points of Failure, etwa im
 Verzeichnisdienst.  Dezentralisierte Identitätsmanagementsysteme
 ermöglichen beliebigen Entitäten ihre eigenen Idente und verteilte
-Vertrauensanker zu erstellen und zu managen.  Dieses Design beseitigt
+Vertrauensanker zu erstellen und zu verwalten.  Dieses Design beseitigt
 sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für
 Identifikationsschlüssel als auch für Zertifikate (siehe
 <<sec_pki>>). Typischerweise kann hier jede Entität als ihre eigene
@@ -615,7 +615,7 @@ Root of Trust fungieren. Diese Architektur wird als DPKI
 Seit den frühen 90er Jahren kam mit der Entwicklung von PGP (Pretty
 Good Privacy) und den freien Varianten OpenPGP und GPG (Gnu Privacy
 Guard) ein neues Konzept einer Vertrauensinfrastruktur auf, welches
-nicht mehr hierarchischer organisiert ist, sondern komplett dezentral.
+nicht mehr hierarchisch organisiert ist, sondern komplett dezentral.
 Die
 Grundidee des Web of Trust ist, dass sich einzelne Parteien direkt
 gegenseitig vertrauen und z.B. nach Überprüfung der Personalausweise
@@ -652,12 +652,10 @@ Namensgebend für die Self Sovereign Identity (SSI) war die Motivation,
 natürlichen Personen die Kontrolle über ihre eigene digitale Identität
 zurückzugeben, anstatt die personenbezogenen Daten und Single Sign On
 Dienste unter zentraler Kontrolle weniger großer Plattformen
-amerikanischer Unternehmen nutzen zu müssen.  Während
-Personenidentifikation und die Ausstellung und Verwaltung
+amerikanischer Unternehmen nutzen zu müssen. Personenidentifikation und die Ausstellung und Verwaltung
 vertrauenswürdiger Fakten (sog. _Credentials_, siehe <<sec_vc>>) zu diesen Personen
-weiterhin den Kern vieler SSI Anwendungsfälle bilden, eignen sich die
-SSI Infrastrukturen auch, um die klassischen Probleme der
-Identifikation über Zertifikate und der Schlüsselverwaltung in
+bilden den Kern vieler SSI Anwendungsfälle. Die SSI Infrastrukturen eignet sich jedoach auch,
+um die klassischen Probleme der Identifikation über Zertifikate und der Schlüsselverwaltung in
 neuartiger dezentraler Weise zu lösen, unabhängig davon auf welche
 Entitäten sich die Idente beziehen.
 
@@ -678,20 +676,6 @@ basierte dezentrale PKI könnte eine ebenso große Bedeutung für die
 globale Sicherheit und den Datenschutz im virtuellen Raum erlangen,
 wie es einst die Entwicklung zentraler PKI für den verschlüsselten
 Netzwerkverkehr über das SSL/TLS-Protokolls [tls] hatte.
-
-
-Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen
-mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu
-zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der
-Automobilherstellung oder dem Bauwesen (BIM), verschlüsselte
-Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen
-hinterlegten Stammdaten. Auch der plattformübergreifende
-Austausch von service-bezogenen und werberelevanten Daten ohne die heute
-damit in Verbindung stehende Weitergabe von personenbezogenen Daten
-ist ein Anwendungsfall, der zwar auf Personenidentifikation beruht
-aber in Verbindung mit Handelswaren, etwa im online Handel, auch für GS1
-Idente interessant sein könnte.
-
 
 [[sec_did]]
 ==== Decentralized Identifiers (DIDs)
@@ -889,7 +873,7 @@ Abgeleitete identspezifische Zertifikate sind besonders im IoT Kontext interessa
 
 
 [[Certificates]]
-.Vertrauen in IDs certified by GS1 ermöglicht M2M authentifizierung und den Aufbau gesicherter Kommunikationskanäle
+.Vertrauen in IDs certified by GS1 ermöglicht M2M Authentifizierung und den Aufbau gesicherter Kommunikationskanäle
 image::Parts-Certified.png[]
 
 Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
@@ -924,7 +908,7 @@ Im Rahmen des Certified by GS1 Projektes wurde ein prototypisches
 Konzept zur Zertifizierung von GS1 Identen und assoziierten
 Masterdaten mittels SSI Technologie entwickelt. Dieses Konzept stellt
 eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
-Organisationen und mit den Partnern dar.
+Organisationen und den Partnern dar.
 
 Die in diesem Abschnitt verwendeten grundlegenden
 Begriffe, insbesondere DIDs und Verifiable Credentials, werden in
@@ -975,7 +959,7 @@ Die missbräuchliche Verwendung von GS1 Identen (wie z.B. GTIN) an sich ist u.A.
 
 ==== Existierende Lösungsansätze
 
-Ein Abgleich mit bei GS1 registrierten Artikelstammdaten über die Online Services von GS1, wie Gepir <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
+Ein Abgleich mit bei GS1 registrierten Artikelstammdaten über die Online Services von GS1, wie GEPIR <<gepir>> bzw. den GTIN Manager <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry) über den Verified by GS1 <<verified-by-gs1>> Service, kann hier Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher, dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde und zum anderen, dass die Artikelbeschreibung mit den hinterlegten Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach Service, im Batch per CSV/xls, manuell per Web-UI und/oder automatisiert per API möglich.
 
 ==== Verbesserungspotential durch Certified by GS1
 
@@ -1074,6 +1058,12 @@ image::demo-screenshots/8-pay-per-use.png[]
 
 ==== Interaktive Demonstration
 Um den in diesem Abschnitt vorgestellten Use Case anschaulich und leicht verständlich darzustellen, wurde eine interaktive Online Demonstration des Use Cases entwickelt. Die in diesem Abschnitt gezeigten Bilder, stammen aus diesem Demonstrator. Die Demonstration ist unter <<online-demo>> öffentlich zugänglich.
+
+In diesem Zusammenhang möchten wir uns besonders bei Kristian Binder
+und seinen Kollegen von EKU Power Drives bedanken, die uns mit Ihrer
+Expertise zu Seite gestanden haben. EKU Power Drives hat ihren Use Case sehr
+ausführlich erläutert und mit uns zum heutigen Stand entwickelt. Die detaillierten
+Inhalte wurden für den Demonstrator zur Verfügung gestellt, sodass dieser nun in vorliegender Form erprobbar ist.
 
 
 
@@ -1254,25 +1244,8 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 
 
 :!sectnums:
-== Danksagung
-
-Wir bedanken uns bei allen Kollegen, die Inhalte und Anregungen in
-Form von Text oder Feedback zu diesem Dokument beigesteuert haben,
-insbesondere bei
-Roger van Essen
-Dr. Ralph Tröger
-Christian Cybilla
-...
 
 
-Weiterhin bedanken wir uns bei allen Partnern, die uns mit Ihrer
-Expertise zu Seite gestanden haben, allen voran bei Kristian Binder
-und seinen Kollegen von EKU Power Drives, die ihren Use Case sehr
-ausführlich erläutert und mit uns entwickelt und sehr detaillierte
-Inhalte für den Demonstrator zur Verfügung gestellt haben.
-
-Interviewpartner
-...
 
 
 
