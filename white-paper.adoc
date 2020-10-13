@@ -526,7 +526,7 @@ Zertifikate werden weiterhin genutzt, um z.B.:
 - zu bescheinigen, dass Software, Updates oder digitale Dokumente vom
   vorgeblichen Urheber stammen
 
-- Personenidentitäten zu bescheinigen, um, wie im Beispiels mit Alice
+- Personenidentitäten zu bescheinigen, um, wie im Beispiel mit Alice
   und Bob, eine direkte Mensch-zu-Mensch Kommunikation abzusichern,
   z.B. via e-Mail oder Messenger
   
@@ -603,7 +603,7 @@ Fähigkeiten ermöglichen eine solche Vertrauensinfrastruktur ohne
 zentrale Autoritätsinstanzen oder Single Points of Failure, etwa im
 Verzeichnisdienst.  Dezentralisierte Identitätsmanagementsysteme
 ermöglichen beliebigen Entitäten ihre eigenen Idente und verteilte
-Vertrauensanker zu erstellen und zu managen.  Dieses Design beseitigt
+Vertrauensanker zu erstellen und zu verwalten.  Dieses Design beseitigt
 sowohl die Abhängigkeit von zentralisierten Registrierungsstellen für
 Identifikationsschlüssel als auch für Zertifikate (siehe
 <<sec_pki>>). Typischerweise kann hier jede Entität als ihre eigene
@@ -615,7 +615,7 @@ Root of Trust fungieren. Diese Architektur wird als DPKI
 Seit den frühen 90er Jahren kam mit der Entwicklung von PGP (Pretty
 Good Privacy) und den freien Varianten OpenPGP und GPG (Gnu Privacy
 Guard) ein neues Konzept einer Vertrauensinfrastruktur auf, welches
-nicht mehr hierarchischer organisiert ist, sondern komplett dezentral.
+nicht mehr hierarchisch organisiert ist, sondern komplett dezentral.
 Die
 Grundidee des Web of Trust ist, dass sich einzelne Parteien direkt
 gegenseitig vertrauen und z.B. nach Überprüfung der Personalausweise
@@ -652,12 +652,10 @@ Namensgebend für die Self Sovereign Identity (SSI) war die Motivation,
 natürlichen Personen die Kontrolle über ihre eigene digitale Identität
 zurückzugeben, anstatt die personenbezogenen Daten und Single Sign On
 Dienste unter zentraler Kontrolle weniger großer Plattformen
-amerikanischer Unternehmen nutzen zu müssen.  Während
-Personenidentifikation und die Ausstellung und Verwaltung
+amerikanischer Unternehmen nutzen zu müssen. Personenidentifikation und die Ausstellung und Verwaltung
 vertrauenswürdiger Fakten (sog. _Credentials_, siehe <<sec_vc>>) zu diesen Personen
-weiterhin den Kern vieler SSI Anwendungsfälle bilden, eignen sich die
-SSI Infrastrukturen auch, um die klassischen Probleme der
-Identifikation über Zertifikate und der Schlüsselverwaltung in
+bilden den Kern vieler SSI Anwendungsfälle. Die SSI Infrastrukturen eignet sich jedoach auch, 
+um die klassischen Probleme der Identifikation über Zertifikate und der Schlüsselverwaltung in
 neuartiger dezentraler Weise zu lösen, unabhängig davon auf welche
 Entitäten sich die Idente beziehen.
 
