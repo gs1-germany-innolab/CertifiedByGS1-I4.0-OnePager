@@ -474,6 +474,8 @@ sicherstellen.
 Für nähere Details zur Funktionsweise von Signaturalgorithmen wird auf
 die Literatur verwiesen <<sign>>.
 
+
+
 [[sec_certs]]
 ==== Digitale Zertifikate
 
@@ -572,6 +574,20 @@ Schlüssel auch wirklich zum Antragsteller gehören, bevor das Zertifikat
 ausgestellt wird. Nach einer positiven Überprüfung, wird der Zertifikatsantrag
 durch die Registrierungsstelle genehmigt und die Anfrage an die
 Zertifizierungsstelle weitergegeben. 
+
+Wird mit einem digitalen Zertifikat die Zugehörigkeit eines
+öffentlichen Schlüssels zu einer konkreten Person bescheinigt, so
+erhält die Person damit ein neues Authentifizierungsmerkmal, d.h. eine
+neue Möglichkeit um sich (digital) auszuweisen. Dies entspricht dem
+Vorgang, bei dem eine natürliche Person beim Einwohnermeldeamt
+vorspricht und ein Foto für einen neuen Personalausweis selbst
+mitbringt, siehe <<physical-id>>. Ist der Personalausweis mit diesem
+Foto ausgestellt, so kann die Person anhand des Fotos im Ausweis visuell
+identifiziert werden.
+Die Überprüfung, dass an dieser Stelle kein Unberechtigter eine
+falsches Authentifizierungsmerkmal einbringen kann, etwa einen public key oder ein
+Foto, was nicht zur identifizierten Person gehört, ist essentiell für
+die Sicherheit der Vertrauensinfrastruktur.
 
 Die *Zertifizierungsstelle* (Certificate Authority, CA, siehe auch <<ca>>)
 wiederum integriert die Daten und den öffentlichen Schlüssel des Antragsstellers
@@ -728,7 +744,7 @@ Netzwerken.
 
 
 
-
+[[sec_compare]]
 ==== Vergleiche mit anderen Identifikationsschemata
 
 DIDs vereinen wichtige Eigenschaften anderer Identifikationsschlüssel,
@@ -751,7 +767,7 @@ sie erstellt wurde oder wo nähere Informationen abrufbar sind.
 Im Unterschied zu etablierten Identifikationssystemen wie der LEI
 Nummer oder dem GS1 System bieten DIDs vor allem die Möglichkeit der
 sicheren kryptographischen Verifikation der Echtheit und
-Authentitzität von Identifizierungsschlüsseln.  Dies ist für viele
+Authentitzität von Identifikationsschlüsseln.  Dies ist für viele
 Anwendungen essentiell und kann heute komplett digital sichergestellt
 werden, insofern eine entsprechende Vertrauensinfrastruktur zur
 Verfügung steht.
@@ -851,28 +867,72 @@ z.B. bei einer LEI als Verifiable Credential nicht gegeben wäre.
 
 == GS1 als Vertrauensanker
 
-Das Vertrauen in Idente _certified by GS1_ funktioniert konzeptionell ähnlich wie bei klassischen Dokumenten. Auch wenn die entsprechenden Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell unabhängig von der Realisierung über DIDs oder klassische (zentrale) PKI Zertifikatsketten.
+Das Vertrauen in Idente _Certified by GS1_ funktioniert konzeptionell
+ähnlich wie bei klassischen Dokumenten. Auch wenn die entsprechenden
+Ideen aus dem DID/SSI Umfeld kommen, ist das Trust-Modell unabhängig
+von der Realisierung über DIDs oder klassische (zentrale) PKI
+Zertifikatsketten.
 
-=== Analoge Welt
+=== Vertrauen in Ausweisdokumente
 
-Das Vertrauen in die Identität z.B. einer realen Person kommt durch die Überprüfung (z.B. Abgleich des Fotos, Überprüfung von Kopierschutzmaßnahmen im Dokument, etc.) eines fälschungssicheren Ausweises ("Autorisierung") zustande. Hierbei vertraut der Prüfer zunächst einer Autorität hinter dem Aussteller, z.B. dem Staat als Auftraggeber der Bundesdruckerei. Diese bestätigt mit der Ausstellung des Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält das Dokument die nötigen Eigenschaften, um seine eigene Echtheit zu überprüfen und zusätzlich, dass der Inhaber derjenige ist, für den das Dokument ausgestellt wurde. So wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des Dokuments übertragen und die Autorisierung ist erfolgreich. Der Prozess wird in Bild 1  dargestellt.
+Das Vertrauen in die Identität einer Person kommt typischerweise durch
+die Überprüfung eines fälschungssicheren Ausweisdokuments
+("Authentifizierung") zustande. Hierbei vertraut der Prüfer zunächst
+einer Autorität hinter dem Aussteller, z.B. dem Staat als Auftraggeber
+der Bundesdruckerei. Diese bestätigt mit der Ausstellung des
+Dokumentes, dass der Inhaber legitim ist. Gleichzeitig enthält das
+Dokument die nötigen Eigenschaften, um seine eigene Echtheit
+überprüfbar zu machen (Kopierschutzmaßnahmen im Dokument) und Merkmale
+(z.B. Foto) zum Abgleich der Person mit dem Subjekt des Dokuments. So
+wird das Vertrauen des Prüfers, wiederum indirekt, auf den Inhaber des
+Dokuments übertragen und die Authentifizierung ist erfolgreich. Der
+Prozess wird in <<physical-id>> dargestellt.
 
-Abbildung 1: Vertrauen in klassische Ausweisdokumente
+[[physical-id]]
+.Vertrauen in klassische Ausweisdokumente
+image::Trust-in-classical-id.png[]
+
 
 === Certified By GS1 Trust Model
 
-Bei der Identvergabe teilt GS1 einem Unternehmen mit der Basisnummer ("Company Prefix") einen Namensraum zu, in welchem das Unternehmen dann selbst Idente vergeben kann. Parallel hierzu ermöglicht ein Unternehmenszertifikat mit Basisnummer _Certified By GS1_ dem Unternehmen selbst Zertifikate für die eigenen Idente zu erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt. 
+Bei der Identvergabe teilt GS1 einem Unternehmen mit der Basisnummer
+(GS1 Company Prefix, GCP) einen Namensraum (Nummernkreis) zu, in
+welchem das Unternehmen dann selbst Idente vergeben kann. Parallel
+hierzu ermöglicht ein Unternehmenszertifikat mit GCP _Certified By
+GS1_ dem Unternehmen selbst Zertifikate für die eigenen Idente zu
+erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
 
 [[Chain]]
 .Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
 image::Certificate-Chain.png[]
 
-Mit dem Unternehmenszertifikat kann die Echtheit der eigenen Identifikationsnummern fälschungssicher nachgewiesen und offline überprüft werden, d.h. es kann z.B. überprüft werden, dass eine SGTIN tatsächlich von dem Unternehmen erzeugt wurde, dem die zugehörige Basisnummer gehört, ohne das ein online Lookup in einer entsprechenden Datenbank nötig wäre. Auch Eigenschaften des mit dem Ident gekennzeichneten Assets können über die GS1 Standards beispielsweise in einen 2D Code wie den GS1 DataMatrix kodiert und deren Vertrauenswürdigkeit offline verifiziert werden.
+Mit dem Unternehmenszertifikat kann die Echtheit der eigenen
+Identifikationsnummern fälschungssicher nachgewiesen und offline
+überprüft werden, d.h. es kann z.B. überprüft werden, dass eine SGTIN
+tatsächlich von dem Unternehmen erzeugt wurde, dem die zugehörige
+Basisnummer gehört, ohne das ein online Lookup in einer entsprechenden
+Datenbank nötig wäre. Auch Eigenschaften des mit dem Ident
+gekennzeichneten Assets können über die GS1 Standards, beispielsweise
+in einen 2D Code wie der GS1 DataMatrix, kodiert und deren
+Vertrauenswürdigkeit offline verifiziert werden.
 
-Abgeleitete identspezifische Zertifikate sind besonders im IoT Kontext interessant, da Maschinen sich mit einer solchen ID _Certified By GS1_ selbst ausweisen könnten. Mittels etablierter kryptografischer Verfahren könnten Maschinen sich basierend auf dem _Certified by GS1_-System gegenseitig überprüfen und so eine gesicherte Verbindung untereinander oder auch über das Internet z.B. zu Cloud Diensten herstellen, wie in <<Certificates>> dargestellt. Wichtig ist hierbei, dass es prinzipiell keiner direkten Verbindung zwischen dem Fabrikbetreiber und GS1 bedarf.
+DIe abgeleiteten Zertifikate für serialisierte Idente sind besonders
+im IoT Kontext interessant, da Maschinen sich mit einem solchen
+Identifikationsschlüssel _Certified By GS1_ selbst ausweisen könnten
+und damit automatisiert authentifiziert werden können. Das bedeutet,
+dass mittels etablierter kryptografischer Verfahren Maschinen sich
+basierend auf dem _Certified by GS1_-System gegenseitig überprüfen und
+so eine gesicherte Verbindung untereinander oder auch über das
+Internet z.B. zu Cloud Diensten herstellen können, wie in
+<<pic_IoT_auth>> dargestellt. Ein Vorteil des Zertifikatsbasierten
+Systems ist, dass es prinzipiell keiner direkten Verbindung zwischen
+dem Überprüfer des zertifizierten Idents und GS1 bedarf. Wenn sich
+also z.B. eine neue Maschine in einer Fabrik nur einseitig
+authentifizieren muss, so muss der Fabrikbetreiber nicht GS1 Kunde
+sein.
 
 
-[[Certificates]]
+[[pic_IoT_auth]]
 .Vertrauen in IDs certified by GS1 ermöglicht M2M Authentifizierung und den Aufbau gesicherter Kommunikationskanäle
 image::Parts-Certified.png[]
 
@@ -884,64 +944,110 @@ können.
 
 === USP
 
-Anders als bei vergleichbaren Lösungen ermöglicht GS1 es einem Unternehmen, das
-Kunde für die Certified IDs wird, auf Basis einer initial von GS1 vergebenen
-zertifizierten GLN, die das Unternehmen selbst als legale Person
-identifiziert, eigenständig Idente, wie GIAIs für Assets, weitere (S)GLNs für
-z.B. Unternehmensteile, Niederlassungen oder Abteilungen und alle weiteren GS1
-Standardidente unabhängig von GS1 zu erzeugen. Für Unternehmen, die diese
-Unabhängigkeit nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs
-als Service anbieten.
+Wie in <<sec_gs1_ids>> dargestellt ermöglicht GS1 es einem Complete
+Kunden auf Basis der GCP zertifizierten selbst Identifikationsnummern
+in seinem Nummernkreis zu erzeugen.  Das _Certified by GS1_ Konzept,
+dass hier vorgestellt wird, sieht vor, dass der Inhaber einer
+zertifizierten GCP entsprechend als Intermediär selbst nicht nur
+Identifikationsschlüssel, sondern auch die zugehörigen Zertifikate
+selbst erstellen kann. Für Unternehmen, die diese Unabhängigkeit
+nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs
+natürlich auch als Service anbieten.
 
-=== Technische Realisierung
+Wie in <<sec_compare>> dargestellt führt gerade diese dezentralistät
+des GS1 Systems kombiniert mit einem dezentralen digitalen und
+kryptografisch abgesicherten Identifikationsplatform wie SSI zu einem
+Identifikationsschlüssel mit einmaligen Merkmalen.
 
-Im aktuellen Projekt wird die Realisierung der Certified IDs sowohl über
-klassische X.509 Zertifikatsketten (PKI) als auch über "Verifiable Credentials"
-im Rahmen einer SSI/DID Infrastruktur erprobt. Beide Ansätze ermöglichen die
-dezentrale Anwendung der Idente, ohne dass nach der initialen Vergabe der
-zertifizierten Basis GLN eine weitere Interaktion mit GS1 notwendig ist.
+Gerade in Bereichen, in denen ein Unternehmen eine große Anzahl
+zertifizierter Idente benötigt, oder verschiedene Dinge, Konzepte und
+juristische Personen identifizieren möchte, wird genau ein solch
+einmaliges System von Identen benötigt, wie es Certified by GS1 durch
+die kombination von SSI Technologie mit dem bestehenden GS1 System
+bieten kann. Anwendungsfälle sind hier insbesondere, wie in
+<<sec_use_cases>> ausführlich diskutiert, IoT Anwendungsszenarien,
+aber auch Dokumente wie Voucher und Gutscheine oder die Zertifizierung
+von Stammdaten.
 
-[[sec_ssi_implementation]]
-=== Implementierungskonzept mittels SSI Technologie
 
-Im Rahmen des Certified by GS1 Projektes wurde ein prototypisches
-Konzept zur Zertifizierung von GS1 Identen und assoziierten
-Masterdaten mittels SSI Technologie entwickelt. Dieses Konzept stellt
-eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
-Organisationen und den Partnern dar.
+
+=== Realisierung über X.509 im Vergleich zu Verifiable Credentials
 
 Die in diesem Abschnitt verwendeten grundlegenden
 Begriffe, insbesondere DIDs und Verifiable Credentials, werden in
-<<sec_ssi>> erläutert.
+<<sec_ssi>> eingeführt.
 
-==== DIDs
+Im Certified by GS1 Projekt wurde die Zertifizierung der
+Identifikationsschlüssel sowohl über klassische X.509
+Zertifikatsketten prototypisch umgesetzt als auch über Verifiable
+Credentials im Rahmen einer SSI Infrastruktur entwickelt. Beide
+Ansätze ermöglichen die dezentrale Anwendung der Idente, ohne dass
+nach der initialen Vergabe der zertifizierten GCP eine weitere
+Interaktion mit GS1 notwendig ist.
 
-*NAMENSKONFLIKT DES ABSCHNITTS!* 
-*GEHÖRT DAS NICHT ZU DEM BILD "Komponenten und Maschinen Certfied by GS1"*
+Die Realisierung auf basis von SSI Technologie bietet den großen
+Vorteil der automatischen Interoperabilität mit den anderen im
+gleichen Netzwerk realisierten Use Cases, so dass bei der geschickten
+Implementierung in einem oder mehreren aussichtsreichen Netzwerken
+eine deutlich erleichterte Markteinführung und schnellere Verbreitung
+zu erwarten ist.  Auch aus technischer Sicht ist das moderne und auf
+flexiblen Schemata beruhende Konzept der Verifiable Credentials
+attraktiver als das aus den 80ern Stammende x.509 Zertifikatsformat,
+das z.B. nicht als Datenformat für Stammdaten geeignet ist.
 
-In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
-Firmen, insbesondere GS1, eine eigene DID. Konkreten Dingen,
-etwa serialisierte Handelswaren oder IoT Devices, und auch abstrakten
-Konzepten wie einer Klasse von Waren oder Geräten können gemäß <<did-core>> DIDs
-zugeordnet werden.
-Indem eine Klasse von Gegenständen, etwa alle Sensoren einer
-bestimmten Baureihe eines bestimmten Herstellers, eine eigene DID
-erhalten, können dieser Klasse Eigenschaften als Verifiable Credentials (VC)
-attestiert werden. Insbesondere kann der Hersteller die GTIN der
-Klasse und Eigenschaften, die allen Instanzen gemein sind, wie Größe,
-Gewicht, Leistungsaufnahme, etc. als Verifiable Credentials
-veröffentlichen.
 
-==== Verifiable Credentials
+Das Konzept zur Zertifizierung von GS1 Identen und assoziierten
+Masterdaten mittels SSI Technologie, welches im Rahmen des Projektes
+bisher entwickelt wurde, stellt eine Arbeitsgrundlage zur weiteren
+Abstimmung zwischen den GS1 Organisationen und den Partnern dar. 
 
-Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP) zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde und damit berechtigt ist, Identifikationsnummern in einem gewissen Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN GS1 konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften sind als Verifiable Credentials überprüfbar.
 
-Der DID einer konkreten Produktinstanz kann nun eine SGTIN als serialisiertes Ident in Form eines VC zugewiesen werden. Wie in <<GS1SSI>> dargestellt wird die DID der zugehörigen GTIN als Issuer verwendet, sodass die Kette der Idente von der GCP der Company über die GTIN der Produktklasse bis zur SGTIN der konkreten Produktinstanz
-entsprechend als Kette von Verifiable Credentials, die sich die DIDs ausstellen, abgebildet wird.
+=== SSI Protokoll
 
-[[GS1SSI]]
-.Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DIDs
+[[pic_GS1SSI]]
+.Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DIDs<<
 image::certified-gs1-ids.png[]
+
+
+
+In dem hier vorgestellten Protokoll (siehe <<pic_GS1SSI>>) haben nicht nur die beteiligten
+Firmen, insbesondere GS1, eine eigene DID. Konkreten Dingen, etwa
+serialisierte Handelswaren oder IoT Devices, und auch abstrakten
+Konzepten, etwa einer Klasse von Waren oder Geräten, können gemäß
+<<did-core>> DIDs zugeordnet werden.  Indem eine Klasse von
+Gegenständen eine eigene DID erhältt, etwa alle Sensoren einer bestimmten Baureihe eines
+bestimmten Herstellers, können dieser Klasse
+Eigenschaften als Verifiable Credentials (VC) attestiert
+werden. Insbesondere kann der Hersteller die GTIN der Klasse und
+Eigenschaften, die allen Instanzen gemein sind (d.h. Stammdaten), wie Größe, Gewicht,
+Leistungsaufnahme, etc. als Verifiable Credentials veröffentlichen.
+
+Besonders interessant wird der Anwendungsfall, wenn klassische
+Zertifikate, etwa ein Bio Label für Lebensmittel oder Konformitäts
+Label für elektronische Geräte, ebensfalls von den Herausgebern der
+Zertifikate als Verifiable Credentials direkt für die Produktklasse
+ausgestellt werden können.
+
+
+Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable
+Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP)
+zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde
+und damit berechtigt ist, Identifikationsnummern in einem gewissen
+Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche
+Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN
+GS1 konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1
+Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und
+Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften
+sind als Verifiable Credentials überprüfbar.
+
+Der DID einer konkreten Produktinstanz kann nun eine SGTIN als
+serialisiertes Ident in Form eines VC zugewiesen werden. Wie in
+<<pic_GS1SSI>> dargestellt wird die DID der zugehörigen GTIN als
+Issuer verwendet, sodass die Kette der Idente von der GCP der Company
+über die GTIN der Produktklasse bis zur SGTIN der konkreten
+Produktinstanz entsprechend als Kette von Verifiable Credentials, die
+sich die DIDs ausstellen, abgebildet wird.
+
 
 
 
@@ -1127,6 +1233,25 @@ Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
 GS1 dar und sichert die Zukunftsfähigkeit. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
 vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
 
+
+Wie in <<sec_pki>> erläutert ist das Ausstellen von
+Authentifizierungsmerkmalen eine essentielle aber auch kritische
+Funktion in jeder Vertrauensinfrastruktur. GS1 muss hier zur
+Ausstellung von Identifikationsschlüsseln Certified by GS1
+einen neuen Prozess etablieren, um sicherzustellen, dass die DID, der
+eine GCP zugeordnet wird, wirklich dem entsprechenden Unternehmen
+gehört. Das richtige Sicherheitsniveau ist hier noch zu definieren.
+Denkbar wären viele Varianten von der reiner schriftlicher
+Benachrichtigung des Unternehmens um Gelegenheit zum Einspruch zu
+geben, über eine Vertragsunterzeichnung bis hin zu telefonischer oder
+gar persönlicher Rücksprache mit entsprechend Berechtigten. Diese
+Details sind mit Partnern zu erarbeiten und im Business Modell zu
+berücksichtigen.
+
+Neutralität und Vertrauenswürdigkeit der Registrierungsstelle sind für
+das Funktionieren einer jeden Vertrauensinfrastruktur absolut
+notwendig. An dieser Stelle bietet sich für GS1 die Möglichkeit,
+genau diese Eigenschaften gewinnbringend einzusetzen.
 
 === Stand der Industrie 4.0 Umsetzung
 
