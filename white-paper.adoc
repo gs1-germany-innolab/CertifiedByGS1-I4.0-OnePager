@@ -677,20 +677,6 @@ globale Sicherheit und den Datenschutz im virtuellen Raum erlangen,
 wie es einst die Entwicklung zentraler PKI für den verschlüsselten
 Netzwerkverkehr über das SSL/TLS-Protokolls [tls] hatte.
 
-
-Aufgrund der hohen Vielfalt an zu identifizierenden Entitäten umfassen
-mögliche Use Cases die unterschiedlichsten Anwendungsbereiche. Dazu
-zählen z.B. Online-Einkäufe, Identifikation von Baugruppen in der
-Automobilherstellung oder dem Bauwesen (BIM), verschlüsselte
-Datenhaltung bei Cloud-Dienstleistern oder der Zugang zu öffentlichen
-hinterlegten Stammdaten. Auch der plattformübergreifende
-Austausch von service-bezogenen und werberelevanten Daten ohne die heute
-damit in Verbindung stehende Weitergabe von personenbezogenen Daten
-ist ein Anwendungsfall, der zwar auf Personenidentifikation beruht
-aber in Verbindung mit Handelswaren, etwa im online Handel, auch für GS1
-Idente interessant sein könnte.
-
-
 [[sec_did]]
 ==== Decentralized Identifiers (DIDs)
 
