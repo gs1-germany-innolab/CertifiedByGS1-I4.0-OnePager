@@ -1,6 +1,6 @@
 = Certified By GS1 - White Paper
 Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v2.0.0 + {docdatetime}
+v2.0.1 + {docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
@@ -28,6 +28,7 @@ Copyright 2020 GS1 Germany GmbH, European EPC Competence Center GmbH
 Projektleitung: mailto:mayra.castellanos@gs1.de[Mayra Castellanos]
 
 Autoren: mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter]
+
 
 
 :!sectnums:
@@ -933,7 +934,7 @@ sein.
 
 [[pic_IoT_auth]]
 .Vertrauen in IDs certified by GS1 ermöglicht M2M Authentifizierung und den Aufbau gesicherter Kommunikationskanäle
-image::Parts-Certified.png[]
+image::Parts-Certified-no-header.png[]
 
 Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
 gängigen Verschlüsselung der Kommunikation über das Internet, ein gesicherter
@@ -1118,6 +1119,7 @@ image::demo-screenshots/2-rental.png[]
 [[eku-static-hacked]]
 .Der Problemfall manipulierter statischer Daten wird ebenfalls aufgezeigt
 image::demo-screenshots/3-outage.png[]
+
 
 
 [[sec_eku-dynamic]]
