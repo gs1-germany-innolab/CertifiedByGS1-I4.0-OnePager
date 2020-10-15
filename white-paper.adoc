@@ -347,6 +347,10 @@ Man muss jede vergebene LEI online nachverfolgen können.
 [[sec_symm]]
 ==== Symmetrische Verschlüsselung
 
+[[pic_symmetric]]
+.Symmetrische Verschlüsselung verwenden *den gleichen Schlüssel* zum ver- und entschlüsseln
+image::symmetric.png[pdfwidth=75%,align="center"]
+
 Kryptografische Systeme kann man in zwei unterschiedliche
 Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie.
 Die symmetrischen Verschlüsselungsverfahren reichen weit in die
@@ -382,8 +386,13 @@ Auch wenn Sender und Empfänger dieselbe Person sind, etwa bei der
 Verschlüsselung von (Teilen der) Festplatte, kommen moderne
 symmetrische Verschlüsselungsverfahren zum Einsatz.
 
+
 [[sec_asymm]]
 ==== Asymmetrische Verschlüsselung
+
+[[pic_asymmetric]]
+.Bei der asymmetrischen Verschlüsselung kommen *verschiedene* Schlüssel zum ver- und entschlüsseln zum Einsatz
+image::asymmetric.png[pdfwidth=75%,align="center"]
 
 Bei der asymmetrischen Verschlüsselung werden zwei verschiedene aber
 zusammenpassende Schlüssel zum Ver- und Entschlüsseln der Daten
@@ -547,6 +556,10 @@ Reihenfolge):
 [[sec_pki]]
 ==== Vertrauensinfrastruktur
 
+[[pic_pki]]
+.Die drei wesentlichen Funktionseinheiten einer PKI Infrastruktur: Registrierungsstelle, Zertifizierungsstelle und Verzeichnisdienst
+image::pki.png[pdfwidth=75%,align="center"]
+
 Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
 Schlüssel und entsprechende Zertifikate bilden die Grundlage für den
 Aufbau einer "Public Key Infrastructure" (PKI).
@@ -567,13 +580,17 @@ an zwischengeschaltete Autoritäten aus. So ergeben sich baumartige Vertrauensst
 In der PKI gibt es drei wesentliche Funktionen: eine Registrierungsstelle,
 eine Zertifizierungsstelle und den Verzeichnisdienst. 
 
-Die *Registrierungsstelle* erfasst und überprüft die Identität und ggfs. weitere
-Angaben des Antragstellers. Diese muss davon überzeugt sein, dass die
-persönlichen Daten und der i.d.R. vom Antragssteller bereitgestellte öffentliche
-Schlüssel auch wirklich zum Antragsteller gehören, bevor das Zertifikat
-ausgestellt wird. Nach einer positiven Überprüfung, wird der Zertifikatsantrag
-durch die Registrierungsstelle genehmigt und die Anfrage an die
-Zertifizierungsstelle weitergegeben. 
+Die *Registrierungsstelle* erfasst und überprüft die Identität und
+ggfs. weitere Angaben des Antragstellers. Diese muss davon überzeugt
+sein, dass die persönlichen Daten und der i.d.R. vom Antragssteller
+bereitgestellte öffentliche Schlüssel auch wirklich zum Antragsteller
+gehören, bevor das Zertifikat ausgestellt wird. Nach einer positiven
+Überprüfung, wird der Zertifikatsantrag durch die Registrierungsstelle
+genehmigt und die Anfrage an die Zertifizierungsstelle weitergegeben.
+Die Sicherheit der künftigen Authentifikationsfunktion des
+öffentlichen Schlüssels hängt entscheidend von der sicheren
+Überprüfung der Legitimität des Antrags bei der Registrierungsstelle
+ab.
 
 Wird mit einem digitalen Zertifikat die Zugehörigkeit eines
 öffentlichen Schlüssels zu einer konkreten Person bescheinigt, so
