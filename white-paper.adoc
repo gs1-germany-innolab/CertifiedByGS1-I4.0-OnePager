@@ -1,6 +1,6 @@
 = Certified By GS1 - White Paper
 Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v2.0.1 + {docdatetime}
+v2.0.2 + {docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
@@ -645,6 +645,10 @@ Root of Trust fungieren. Diese Architektur wird als DPKI
 
 ==== Web of Trust
 
+[[pic_wot]]
+.Direktes Vertrauen zwischen den Beteiligten kann indirekt übertragen werden um ein dezentrales Vertrauensnetzwerk zu erzeugen. Abbildung von https://en.wikipedia.org/wiki/File:Web_of_Trust-en.svg[Wikipedia].
+image::WOT.png[pdfwidth=75%,align="center"]
+
 Seit den frühen 90er Jahren kam mit der Entwicklung von PGP (Pretty
 Good Privacy) und den freien Varianten OpenPGP und GPG (Gnu Privacy
 Guard) ein neues Konzept einer Vertrauensinfrastruktur auf, welches
@@ -657,13 +661,16 @@ ausstellen und veröffentlichen. Vertrauen kann dann ähnlich wie in der
 realen Welt über direkte und indirekte Kontakte aufgebaut
 werden.
 
-Zum Beispiel kann Alice einen nicht direkt von ihr zertifizierten
-(d.h. ihr nicht bekannten) öffentlichen Schlüssel von Bob als
-vertrauenswürdig einstufen, wenn z.B. mindestens drei Personen denen
+Zum Beispiel kann Ingo einen nicht direkt von ihm zertifizierten
+(d.h. nicht bekannten) öffentlichen Schlüssel von Manuel als
+vertrauenswürdig einstufen, wenn z.B. mindestens zwei Personen denen
 Alice vertraut, Bobs schlüssel als vertrauenswürdig zertifiziert
-haben. Über die genauen Parameter können Teilnehmer im Web of Trust
+haben, siehe <<pic_wot>>. Über die genauen Parameter können Teilnehmer im Web of Trust
 gemäß ihrer individuellen Anforderungen eine striktere oder weniger
-restriktive Vererbung von Vertrauen jeweils individuell konfigurieren.
+restriktive Vererbung von Vertrauen jeweils individuell
+konfigurieren. In <<pic_wot>> wird die einfachste Form von
+Vertrauensübertrag über beliebig wenige/lange Pfade dargestellt.
+
 
 Im Bereich der e-Mail Signatur ist PGP eine Alternative zu
 S/MIME, das auf, in der Regel kostenpflichtigen oder
