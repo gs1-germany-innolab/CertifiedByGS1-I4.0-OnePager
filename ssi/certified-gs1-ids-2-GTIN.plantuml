@@ -1,0 +1,46 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+
+actor "did:...:Manufacturer" as Manufacturer
+entity "did:...:ItemClass" as gtin
+entity "did:...:Machine" as Machine
+
+
+group Ausstellung einer certified GTIN
+    Manufacturer -> gtin ** : Registriert
+    Manufacturer -> gtin : ISSUE
+    note right of Manufacturer
+        <b>GTIN Credential</b>
+        epc: urn:epc:idpat:sgtin:4047111.012345.*
+    end note
+
+    Manufacturer -> gtin : ISSUE
+
+    note right of Manufacturer
+        <b>Stammdaten der Klasse</b>
+        Z.B. Digitales Typenschild
+    end note
+
+end
+
+Manufacturer -> Machine ** : Herstellung physischer Machine + Registriert
+
+
+group Issue SGTIN
+    gtin -> Machine : ISSUE
+    note right of gtin
+        <b>SGTIN Credential</b>
+        epc: urn:epc:id:sgtin:4047111.012345.23
+    end note
+
+    gtin -> Machine : ISSUE
+    note right of gtin
+        <b>ILMD Stammdaten</b>
+        Manufacturing Date, Location,...
+    end note
+end
+
+
+
+@enduml

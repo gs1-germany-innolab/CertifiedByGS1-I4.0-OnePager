@@ -1,0 +1,34 @@
+@startuml
+skinparam responseMessageBelowArrow true
+
+actor "did:...:GS1" as GS1
+actor "did:...:Manufacturer" as Manufacturer
+entity "did:...:ItemClass" as gtin
+entity "did:...:Machine" as Machine
+actor User
+
+GS1 -> User: Initiales Vertrauen
+
+User -> Machine : REQUEST ID/Stammdaten
+Machine -> User : PRESENT <b>SGTIN</b>
+
+User -> gtin : REQUEST ID/Stammdaten
+gtin -> User : PRESENT <b>GTIN</b>
+
+
+
+User --> Manufacturer: REQUEST ID/Stammdaten
+Manufacturer --> User: PRESENT<b>GCP</b>
+
+== Die komplette Kette der Zertifikate GS1 -> GCP -> GTIN -> SGTIN authentifiziert die Echtheit der IDs ==
+== Die weitere Kommunikation ist authentifiziert ==
+
+Machine -> User: PRESENT <b>ILMD</b>
+gtin -> User: PRESENT <b>Stammdaten der Klasse</b>\nz.B. Digitales Typenschild
+Manufacturer -> User: PRESENT <b>Party GLN</b>, <b>Stammdaten</b>
+
+
+Machine -> User : Signierte dynamische Daten\nz.B. Messwerte
+
+
+@enduml

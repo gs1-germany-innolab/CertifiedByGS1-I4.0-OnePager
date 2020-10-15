@@ -162,8 +162,8 @@ und um die Sicherheits- und Authentifizierungsfunktion für die selbst
 erzeugten Idente erweitern.
 
 [[Chain-EECC]]
-.Die vergabe von Zertifikaten im Rahmen von Certified by GS1 folgt der Logik bei der Vergabe der GS1 Idente, siehe <<pic_id_tree>>
-image::Certificate-Chain-EECC.png[]
+.Die Vergabe von Zertifikaten im Rahmen von Certified by GS1 folgt der Logik bei der Vergabe der GS1 Idente, siehe <<pic_id_tree>>
+image::Certificate-Chain-EECC.png[pdfwidth=75%,align="center"]
 
 
 Im IoT benötigt jedes Gerät nicht nur ein serielles
@@ -890,7 +890,7 @@ Prozess wird in <<physical-id>> dargestellt.
 
 [[physical-id]]
 .Vertrauen in klassische Ausweisdokumente
-image::Trust-in-classical-id.png[]
+image::Trust-in-classical-id.png[pdfwidth=75%,align="center"]
 
 
 === Certified By GS1 Trust Model
@@ -933,7 +933,7 @@ sein.
 
 
 [[pic_IoT_auth]]
-.Vertrauen in IDs certified by GS1 ermöglicht M2M Authentifizierung und den Aufbau gesicherter Kommunikationskanäle
+.Vertrauen in IDs certified by GS1 ermöglicht automatische M2M Authentifizierung und den Aufbau gesicherter Kommunikationskanäle. Hersteller erzeugen als Intermediäre dezentral ihre eigenen IDs und Zertifikate.
 image::Parts-Certified-no-header.png[]
 
 Basierend auf digital zertifizierten Identitäten kann, genau wie bei der
@@ -1004,13 +1004,8 @@ Abstimmung zwischen den GS1 Organisationen und den Partnern dar.
 
 === SSI Protokoll
 
-[[pic_GS1SSI]]
-.Ablaufdiagramm für Ausgabe von Identen und Master Daten als Verifiable Credentials an entsprechende DIDs<<
-image::certified-gs1-ids.png[]
 
-
-
-In dem hier vorgestellten Protokoll (siehe <<pic_GS1SSI>>) haben nicht nur die beteiligten
+In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
 Firmen, insbesondere GS1, eine eigene DID. Konkreten Dingen, etwa
 serialisierte Handelswaren oder IoT Devices, und auch abstrakten
 Konzepten, etwa einer Klasse von Waren oder Geräten, können gemäß
@@ -1028,10 +1023,14 @@ für elektronische Geräte, ebensfalls von den Herausgebern der
 Zertifikate als Verifiable Credentials direkt für die Produktklasse
 ausgestellt werden können.
 
+[[pic_ssi_gcp]]
+.Ablaufdiagramm für das "On-Boarding" eines Unternehmens in das Certified System durch die Ausstellung einer GCP und optional der Zertifizierung von Stammdaten der (Party) GLN
+image::certified-gs1-ids-1-GCP.png[pdfwidth=50%, align="center"]
+
 
 Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable
 Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP)
-zuweist. Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde
+zuweist (siehe <<pic_ssi_gcp>>). Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde
 und damit berechtigt ist, Identifikationsnummern in einem gewissen
 Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche
 Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN
@@ -1040,9 +1039,13 @@ Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und
 Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften
 sind als Verifiable Credentials überprüfbar.
 
+[[pic_ssi_gtin]]
+.Ablaufdiagramm für die Erstellung zertifizierter Identifikationsschlüssel und Stammdaten als Verifiable Credentials durch Kunden *ohne* Beteiligung von GS1
+image::certified-gs1-ids-2-GTIN.png[pdfwidth=75%, align="center"]
+
 Der DID einer konkreten Produktinstanz kann nun eine SGTIN als
 serialisiertes Ident in Form eines VC zugewiesen werden. Wie in
-<<pic_GS1SSI>> dargestellt, wird die DID der zugehörigen GTIN als
+<<pic_ssi_gtin>> dargestellt, wird die DID der zugehörigen GTIN als
 Issuer verwendet, sodass die Kette der Idente von der GCP der Company
 über die GTIN der Produktklasse bis zur SGTIN der konkreten
 Produktinstanz entsprechend als Kette von Verifiable Credentials, die
@@ -1050,7 +1053,9 @@ sich die DIDs ausstellen, abgebildet wird.
 
 
 
-
+[[pic_ssi_verify]]
+.Ablaufdiagramm der Verifikation der Zertifikatskette
+image::certified-gs1-ids-3-Verification.png[]
 
 
 
