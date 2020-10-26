@@ -2,11 +2,15 @@
 
 # Certified by GS1: Konzepte
 
-In diesem Repository werden Konzepte im Rahmen des Certified By GS1 Projektes entwickelt.
+In diesem Repository werden Konzepte im Rahmen des Certified By GS1 Projektes entwickelt. Alle wesentlichen Ergebnisse sind
+zusammengefasst im
 
-- [One-Pager](https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/releases/latest/download/CertifiedByGs1-OnePager.pdf)
-- [Alle PDFs](https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/releases/latest)
+- **[White Paper](https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte/releases/latest/download/white-paper.pdf)**
 
+
+[Eine Interaktive Demonstration eines Anwendungsfalls wurde ebenfalls entwickelt.](https://github.com/gs1-germany-innolab/eku-pd-certified-by-gs1-demo)
+
+Die Dokumente in diesem Repository stellen Entwürfe und Arbeitspapiere dar und diese enthalten zunächst die Meinungen und Ansichten der Authoren. Es handelt sich nicht um Veröffentlichungen von GS1 Germany.
 
 ## License
 
