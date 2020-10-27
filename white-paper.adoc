@@ -1576,3 +1576,12 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
 - [[[x509]]] https://de.wikipedia.org/wiki/X.509
 
+[glossary]
+== Glossar
+
+[glossary]
+Zertifikat:: Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt, siehe <<sec_certs>>.
+
+rain::
+        water falling from the sky
+        
