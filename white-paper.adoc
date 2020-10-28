@@ -42,10 +42,10 @@ Besonderen wird eine vertrauenswürdige und sichere
 Identitätsinfrastruktur zur Identifizierung und Authentifizierung von
 natürlichen und juristischen Personen aber auch von Dingen
 benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt, um
-das bestehende System der GS1 Identifikationsnummern durch digitale
+das bestehende System der GS1 Idente durch digitale
 Zertifikate abzusichern und automatisch authentifizierbar zu machen. Es wird
 aufgezeigt, wie die Stellung der GS1 als vertrauenswürdige und neutrale Organisation
-zum Identitätsanbieters und Vertrauensankers in einer digitalen
+zum Identitätsanbieter und Vertrauensanker in einer digitalen
 Vertrauensinfrastruktur ausgebaut werden kann.
 
 
@@ -58,7 +58,7 @@ Identifikationsschlüssel um Sicherheits- und
 Authentifizierungsfunktionen, könnten _Certified by GS1_ Idente im
 IoT-Umfeld die unternehmensübergreifende eindeutige und sichere
 Identifikation von Maschinen untereinander sicherstellen. Für diese
-wichtige Voraussetzung eines echten _Internet_ of Things ist bisher
+wichtige Voraussetzung eines _Internet_ of Things ist bisher
 kein alternatives System etabliert.
 
 
@@ -100,13 +100,13 @@ werden, dass Daten ab dem Zeitpunkt der Signatur unverändert sind und
 vom angegebenen Urheber stammen. Eine essentielle *Voraussetzung*
 hierfür ist einerseits eine vertrauenswürdige Identitätsinfrastruktur,
 mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern
-zugeordnet werden und andererseits, dass diese privaten Schlüssel
+zugeordnet werden und andererseits, dass die privaten Schlüssel
 sicher geheim gehalten werden.
 
 
-Wie in <<sec_pki>> und <<sec_ssi>> beschrieben, kann ein
-vertrauenswürdiger Teilnehmer, d.h. beispielsweise eine Firma wie GS1,
-anderen Teilnehmern Zertifikate ausstellen. Hierbei handelt es sich
+Ein vertrauenswürdiger Teilnehmer, beispielsweise ein Unternehmen wie GS1, 
+kann anderen Teilnehmern Zertifikate ausstellen (siehe <<sec_pki>> und <<sec_ssi>>).
+Hierbei handelt es sich
 immer um unterschriebene Dokumente, in denen eine Zuordnung eines
 öffentlichen Schlüssels zu einem anderen Teilnehmer bescheinigt
 wird. Je nach konkretem Format können auch weitere Details im
@@ -118,7 +118,7 @@ Begriffe und Hintergründe für das weitere Verständnis der im Projekt _Certifi
 GS1_ entwickelten Konzepte, Praxisbeispiele und
 Demonstrationen.
 In <<sec_gs1_anchor>> werden die Konzepte für Identifikationsschlüssel
-certified by GS1 entwickelt und insbesondere in <<sec_ssi_proto>> ein SSI Protokoll
+certified by GS1 entwickelt und insbesondere in <<sec_ssi_proto>> ein Self Sovreign Identity Protokoll
 zur technischen Umsetzung der Konzepte dargestellt.
 <<sec_use_cases>> bietet Einblicke in die
 Anwendungsfälle, die im Rahmen des Projektes erarbeitet wurden und
@@ -130,23 +130,23 @@ hier vorgestellten Ideen.
 
 
 
-=== Warum Certified?
+=== Warum verlässliche Eindeutigkeit und ein Konzept wie _Certified by GS1_ wichtig sind?
 
-Bei jeder Form der Kommunikation, sei es B2B oder B2C, Machine to
-Machine oder unter menschlicher Beteiligung, analog oder digital,
+Bei jeder Form der Kommunikation, sei es B2B oder B2C, Machine-to-Machine 
+oder mit menschlicher Beteiligung, analog oder digital,
 ist es essentiell zu wissen, wer mit wem spricht und über welche
 Objekte. 
-GS1 ermöglicht seit 1974 die Vergabe von Identifikationsnummern um konkrete Dinge,
-Klassen, Orte, Handelspartner, uvm. eindeutig und unverwechselbar zu
+GS1 Germany, vormals CCG, ermöglicht seit 1974 die Vergabe von Identifikationsnummern um konkrete Dinge,
+Orte, Handelspartner, uvm. eindeutig und unverwechselbar zu
 identifizieren.  Während gängige Bezeichnungen, etwa die Abkürzung
-"EECC" mehrdeutig oder dem Partner unbekannt sein können, sind GS1
-Identifikationsnummern, wie die entsprechende (Party) GLN 4047111000006 eindeutig. Über
+"EECC", mehrdeutig oder dem Partner unbekannt sein können, sind GS1
+Identifikationsnummern, wie die entsprechend zugeordnete (Party) GLN 4047111000006 eindeutig. Über
 Services der GS1 wie <<gepir>> lässt sich zu einer unbekannten Identifikationsnummer z.B.
 herausfinden, dass mit der eben genannten Abkürzung "EECC" die "European EPC Competence Center GmbH"
 bezeichnet wird. 
 
-Gibt sich einer der Kommunikationspartner als 4047111000006 aus, ist
-also zumindest eindeutig, dass hiermit diese konkrete Firma gemeint
+Gibt sich einer der Kommunikationspartner mit der GLN als 4047111000006 aus, ist
+also zumindest eindeutig, dass hiermit dieses konkrete Unternehmen gemeint
 ist und nicht z.B. eine Person mit den Initialen "EECC". Die von GS1
 vergebenen Identifikationsnummern ermöglichen also eine eindeutige
 Zuordnung. Stand heute ist jedoch keine Authentifikation <<auth>>
@@ -173,8 +173,9 @@ Sicherheits- und Vertrauensfragen zu verhindern.
 
 
 [[sec_usp]]
-=== Warum GS1?
+=== Warum setzt sich GS1 Germany für sichere digitale Zertifikate ein?
 
+Sichere digitale Zertifikate sind ohne eine unabhängige Institution nicht zu ermöglichen.
 GS1 ist eine etablierte Institution, deren Kerngeschäft u.a. in der
 Vergabe von Nummernkreisen (Namensräumen) für Idente, insbesondere
 Geschäfts- und Produktidentifikationsnummern besteht. In diesem Sinne
@@ -184,7 +185,7 @@ Sicherheitsmerkmalen (Zertifikaten) zur Authentifizierung dieser
 Identifikationsnummern entwickelt. Hierbei entsprechen die
 entwickelten Zertifikatssysteme strukturell dem bestehenden
 Vergabesystem für Identifikationsnummern.  In <<sec_gs1_ids>> wird
-dieser Punkt detaillierter erläutert.
+dieser Aspekt detaillierter erläutert.
 
 
 GS1 vergibt (in der Regel) keine einzelnen Identifikationsnummern, sondern Kunden
@@ -205,17 +206,17 @@ Im IoT benötigt jedes Gerät nicht nur ein serielles
 Ident wie eine SGTIN oder GIAI, sondern auch die Möglichkeit sich
 individuell gegenüber anderen Geräten zu authentifizieren und mit
 diesen eine vertrauenswürdige und abhörsichere Verbindung aufzubauen. Hier
-stellt die Möglichkeit solche "Certified" Idente selbst erzeugen zu
-können einen großen Vorteil für den Hersteller dar, denn dieser Ansatz
+stellt die Möglichkeit, solche "Certified" Idente selbst erzeugen zu
+können, einen großen Vorteil für den Hersteller dar, denn dieser Ansatz
 ist mit geringerem Aufwand und Kosten verbunden als ein
 System, bei dem jedes Ident und die zugehörigen Sicherheitsmerkmale
 einzeln bei einer zentralen Plattform erworben werden müssen.
 
 
-Als not-for-profit Standarisierungsorganisation, erfüllt GS1 die Aufgabe
+Als Not-For-Profit Standardisierungsorganisation, erfüllt GS1 die Aufgabe
 globale Geschäftstandards zu entwickeln und zu pflegen. GS1 ist eine
 neutrale und vertrauenswürdige Organisation. Diese Rolle als
-Vertrauensanker und neutrale Platform ermöglicht es GS1, Partner und
+Vertrauensanker und neutrale Plattform ermöglicht es GS1, Partner und
 Konkurrenten zu gemeinsamen Projekten, insbesondere im Bereich der
 Standardisierung, zusammen zu bringen.
 Dies prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikatsinfrastruktur, 
@@ -247,22 +248,18 @@ unbekannte Themen.
 [[sec_gs1_ids]]
 ==== GS1 Idente
 
-Das Kernprodukt der GS1 Germany ist GS1 Complete. Hierbei handelt es sich
-um ein Leistungspaket mit dem Kunden ein Nummernkreis zugeteilt wird,
-in welchem dieser GTINs (Global Trade Item
-Number) und andere Idente vergeben kann. Es beinhaltet
-weiterhin Services und Publikationen zur Optimierung der
-Geschäftsprozesse.
+Kerndienstleistung von GS1 ist es, seinen Kunden einen Nummernkreis zuzuteilen,
+in welchem dieser GTINs (Global Trade Item Number) und andere Idente vergeben kann. 
 
 GS1 Idente sind wie folgt aufgebaut (siehe <<pic_id_tree>>): Ausgehend von der Gesamtheit der GS1
 Organisationen und GS1 Global Office erhalten die einzelnen Mitgliedsorganisationen
-(MOs) Nummernkreise, indem eine bestimmte Präfix einer MO zugeordnet wird. 
-Beispielsweise gehören alle GS1 Idente deren erste drei Ziffern im Bereich 400 bis 440 liegen zu
-GS1 Germany <<gs1-prefix>>. 
+(MOs) Nummernkreise, indem ein bestimmter Präfix einer MO zugeordnet wird. 
+Beispielsweise sind alle GS1 Idente deren erste drei Ziffern im Bereich 400 bis 440 liegen
+GS1 Germany zugeordnet <<gs1-prefix>>. 
 Innerhalb des eigenen Nummernkreises (d.h. beginnend
 mit der eigenen GS1 Präfix) vergeben die MOs an Firmenkunden einen GS1 Company Prefix (GCP) und
 damit den Kreis der Nummern beginnend mit ebendiesem. Zur Verdeutlichung: alle
-GS1 Idente beginnend mit 4047111 gehören zum Nummernkreis des EECC. 
+GS1 Idente beginnend mit 4047111 sind als Nummernkreis dem EECC zugeordnet. 
 Die Firmen können nun entsprechend der Spezifikationen für GS1 Idente eigenständig Identifikationsnummern
 für z.B. Warenkategorien oder individuelle Waren, aber auch für Standorte, Warensendungen, Coupons, uvm.
 (siehe <<gen-spec>>) vergeben. 
@@ -272,7 +269,7 @@ am Anfang der Nummer, gefolgt vom frei verfügbaren Namensraum und beendet mit e
 
 Die Art des Idents wird über den sogenannten Application Identifier
 (AI) kodiert, z.B. 414 für die GLN. Entsprechend stellt (414) 4047111000006 (254) 01 
-ein Beispiel für eine GLN mit Erweiterungskomponente dar, mit der das EECC einen spezifischeren Ort, etwa den
+ein Beispiel für eine GLN (414) mit Erweiterungskomponente (254) dar, mit der das EECC einen spezifischeren Ort, etwa den
 Posteingang des Hauptsitzes, bezeichnen könnte. Eine sog. Party GLN
 kann Parteien wie juristische Personen (Firmen) aber auch Funktionen oder
 Rollen, wie Abteilungen oder Ämter, identifizieren. 
@@ -285,11 +282,11 @@ image::example-gln.png[]
 Diese Baumstruktur aus
 viele-zu-einem Zuordnungen, sprich von serialisierten Identen zu Klassenidenten zu
 Companies zu MOs, existiert in entsprechender Form (teilweise ohne die Klassenebene) 
-für praktisch alle GS1 Idente und ist in <<pic_id_tree>> schematisch
+für alle GS1 Idente und ist in <<pic_id_tree>> schematisch
 dargestellt. 
 Dies stellt einen wichtigen Unterschied zu Systemen dar, in denen
-nur einzelne Idente vergeben werden, etwa bei der LEI (nachfolgend erläutert), da GS1 Complete Kunden
-die Möglichkeit erhalten, selbst als intermediäre Vergabestelle eigene Idente zu
+nur einzelne Idente vergeben werden, etwa bei der LEI (nachfolgend erläutert), da GS1 Kunden,
+je nach Leistungsmodell, die Möglichkeit erhalten, selbst als intermediäre Vergabestelle eigene Idente zu
 vergeben.  Die über die GCP festgelegten Nummernkreise stellen zudem
 sicher, dass jede Nummer nur einmal vergeben werden kann, solange der
 Kunde gemäß den Regeln des GS1 Systems nicht eigene Nummern mehrfach
@@ -305,12 +302,14 @@ image::GS1-ID-Tree.png[]
 
 
 Eine Authentifikation der Idente durch GS1 ist bisher nicht allgemein
-gegeben. Eine besondere Identitätsprüfung der Antragsteller für GS1
-Complete erfolgt aktuell in der Regel nicht und ist auch nicht von
-Nöten. Sollte jemand illegitim im Namen des EECC eine weitere GCP mit
-den original Firmendaten beantragen, so würde hierdurch dem EECC zwar
-ohne dessen Kenntnis ein weiterer Nummernkreis zugeordnet, aber
-dadurch kein Schaden entstehen. Dies ändert sich grundlegend, wenn
+gegeben. Der Antragsteller ist verpflichtet auf den Vertragsunterlagen wahrheitsgemäße Angaben zu tätigen.
+Daher erfolgt eine besondere Identitätsprüfung der Antragsteller für GS1
+Complete aktuell in der Regel nicht explizit. 
+Es wäre demnach theoretisch möglich, dass jemand illegitim im Namen des EECC 
+eine weitere GCP mit den original Firmendaten beantragt. Dadurch könnte dem EECC zwar
+ohne dessen Kenntnis ein weiterer Nummernkreis zugeordnet werden, der jedoch nur bestehen bleibt, wenn das EECC
+die ebenfalls zugesandte Rechnung begleicht. In der Realität ein nicht sinnvolles und bisher nicht eingetretenes Szenario. 
+Dies würde sich grundlegend ändern, wenn
 beim Antrag ein neues Authentifizierungsmerkmal, z.B. ein öffentlicher
 Schlüssel, registriert wird. Nun wird es wichtig, die Legitimität des
 Antrages bzw. die Berechtigung des Antragstellers zu überprüfen, um
@@ -319,9 +318,9 @@ registrierten Merkmals im Namen der Firma handeln kann.
 
 Ein Missbrauch einzelner Idente erfolgt dagegen durchaus aktuell in
 einigen Fällen z.B. hinsichtlich GTINs. Unternehmen, die keine GS1
-Kunden sind, nutzen Nummernkombinationen entsprechend dem GS1
-Nummernsystem, um Produkte online anbieten zu können.  Dieser
-GTIN-Missbrauch wird GS1-intern durch Mitarbeiter verfolgt und
+Kunden sind, geben Nummernkombinationen entsprechend dem GS1
+Nummernsystem als eigene GTINs aus, um Produkte online anbieten zu können.  
+Dieser GTIN-Missbrauch wird durch GS1 Mitarbeiter verfolgt und
 unterbunden. Eine teil-automatisierte Lösung, die in diesem Bereich
 entwickelt wird, ist der Service „Verified by GS1“, welcher in
 <<sec_verified_by_gs1>> zusammen mit der Problemstellung genauer
@@ -330,10 +329,10 @@ Echtheit und Herkunft überprüfen, die im Vorfeld durch die Hersteller
 in die GS1 Registry eingepflegt wurden.
 
 
-==== LEI
+==== LEI (Legal Entity Identifier)
 
-GS1 vergibt zudem bereits heute Idente zusammen mit von GS1
-überprüften Stammdaten, außerhalb des eigenen Nummernsystems, im
+Einige der GS1 MOs vergeben zudem bereits heute Idente zusammen mit von GS1
+überprüften Unternehmensstammdaten, außerhalb des eigenen Nummernsystems, im
 Rahmen der LEI-Vergabe.  Eine solche Überprüfung der hinterlegten
 Stammdaten bildet eine interessante Erweiterung des Konzepts der
 reinen Zertifizierung von Identifikationsschlüsseln. Damit eine
@@ -349,15 +348,15 @@ aufbauen kann.  In diesem Abschnitt wird die LEI allgemein erläutert,
 da sie in den folgenden Abschnitten u.a. mit den Identen aus dem
 GS1-System verglichen wird.
 
-Der Legal Entity Identifier, LEI, ist ein 20-stelliger Code, der
+Der LEI ist ein 20-stelliger Code, der
 Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich
 um juristische Personen handeln, Einzelpersonen können keine LEI
 erhalten.  Der LEI wurde nach der Finanzkrise durch den G20 Gipfel
-eingeführt, um mehr Sicherheit und Transparenz bei Finanzgeschäften zu
+beschlossen, um mehr Sicherheit und Transparenz bei Finanzgeschäften zu
 bieten und gilt weltweit. Der LEI ist bei gewissen Finanzgeschäften
 verpflichtend und ermöglicht es, hinterlegte Referenzdaten im
-Online-Datenpool der GLEIF abzufragen. Diese Referenzdaten sind
-mindestens der offizielle Name laut Registrierung des Rechtsträgers,
+Online-Datenpool der GLEIF (Global Legal Entity Identifier Foundation) abzufragen. 
+Diese Referenzdaten sind mindestens der offizielle Name laut Registrierung des Rechtsträgers,
 Anschrift des Unternehmens, Land der Gründung, Ländercodes, sowie das
 Datum der ersten LEI-Zuweisung und der letzten Aktualisierung, ggf.
 auch das Ablaufdatum, denn eine LEI muss jährlich verlängert werden.
@@ -373,13 +372,13 @@ Dienstleister um LEIs zu vergeben.
 
 Vergleicht man nun die LEI mit einem GS1-eigenen Ident, wie der GLN,
 sind beiden demnach die Eindeutigkeit und 
-weltweite Überschneidungsfreiheit gemeinsam. Zudem können die
-Referenzdaten der LEI- und auch der GS1 Complete Kunden durch das
+weltweite Überschneidungsfreiheit gemein. Zudem können die
+Referenzdaten der LEI- und auch der GS1 Kunden durch das
 Unternehmen selbst verwaltet werden. 
 Man findet die Daten der beiden Idente in den jeweiligen
 Datenbanken, wie der LEI-Datenbank oder GEPIR. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
 vermindert Identitätsmissbrauch. Allerdings gibt es auch hier derzeit Unterschiede:
-Ein GS1 Complete Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
+Ein GS1 Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
 Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollständig und korrekt zu veröffentlichen. 
 Man muss jede vergebene LEI online nachverfolgen können.
 
@@ -396,15 +395,6 @@ image::symmetric.png[pdfwidth=75%,align="center"]
 
 Kryptografische Systeme kann man in zwei unterschiedliche
 Hauptbereiche einteilen: symmetrische und asymmetrische Kryptographie.
-Die symmetrischen Verschlüsselungsverfahren reichen weit in die
-Menschheitsgeschichte zurück. Schon 600v. Chr. setzten
-hebräische Gelehrte einen einfachen Zeichenaustauschalgorithmus mit
-dem Namen Atbash-Verschlüsselung ein. Die Caesar-Verschlüsslung ist
-wahrscheinlich die bekannteste symmetrische Verschlüsselung. Diese
-geht auf den römischen Feldherrn Gaius Julius Caesar zurück. Er
-benutzte diese zur Geheimhaltung seiner militärischen
-Korrespondenz.
-
 Die konzeptionelle Funktionsweise der symmetrischen Verschlüsselung
 ist recht einfach. Es gibt nur einen Schlüssel. Dieser stellt ein nur
 den Kommunikationspartnern bekanntes Geheimnis dar und wird für die Ver- wie auch für die Entschlüsselung
@@ -444,19 +434,6 @@ asymmetrischen Verfahren als öffentlich bezeichnet, da dieser keine
 Rückschlüsse auf den privaten Schlüssel zulässt. Der für die
 Entschlüsselung verwendete private Schlüssel muss natürlich geheim
 gehalten werden, um unerwünschtes lesen der Daten zu verhindern.
-
-Die ersten (geheimen) Entwicklungen asymmetrischer Verfahren fanden beim
-britischen Geheimdienst zu Anfang der 1970er Jahre statt und wurden
-erst in den 1990er Jahren veröffentlicht. In einer ersten
-öffentlichen Bekanntgabe wurde das Prinzip der asymmetrischen
-Verschlüsselung dann 1976 von den beiden Kryptographen Whitfeld Diffie
-und Martin Hellman in ihrem Aufsatz "New Directions in
-Cryptography" veröffentlicht. In diesem Aufsatz führen die Autoren
-das Prinzip der asymmetrischen Kryptographie ein. Rivest, Shamir und
-Adleman entwickelten 1978 das nach Ihnen als RSA benannte asymmetrische
-Verschlüsselungsverfahren, basierend auf zahlentheoretischen
-Algorithmen und Komplexitätsüberlegungen, das teilweise bis heute
-verwendet wird.
 
 Die Funktionsweise einer asymmetrischen Verschlüsselung lässt sich wie
 folgt erklären: Jeder Teilnehmer erzeugt ein Schlüsselpaar aus
@@ -670,7 +647,7 @@ angesehen werden kann, etwa nach einem Cyber Angriff.
 
 
 
-=== Entwicklung von SSI als Dezentrale Zertifikate und Schlüsselinfrastruktur
+=== Entwicklung von SSI als Dezentrale Zertifikate- und Schlüsselinfrastruktur
 
 In einem dezentralen Identitätsmanagementsystem können die Entitäten
 (Personen, Organisationen, Dinge, etc.) die Vertrauensanker für den
@@ -735,7 +712,7 @@ technischen Möglichkeiten weiterentwickelt.
 [[sec_ssi]]
 ==== SSI
 
-Namensgebend für die Self Sovereign Identity (SSI) war die Motivation,
+Namensgebend für den Ansatz der Self Sovereign Identity (SSI) war die Motivation,
 natürlichen Personen die Kontrolle über ihre eigene digitale Identität
 zurückzugeben, anstatt die personenbezogenen Daten und Single Sign On-Dienste 
 unter zentraler Kontrolle weniger großer Plattformen
@@ -819,11 +796,13 @@ Netzwerken.
 ==== Vergleiche mit anderen Identifikationsschemata
 
 DIDs vereinen wichtige Eigenschaften anderer Identifikationsschlüssel.
-Neben der globalen Eindeutigkeit sind das insbesondere dezentrale
-Vergabe, d.h. jeder Teilnehmer kann DIDs erzeugen, Persistenz und
-globale Auflösbarkeit, d.h. im Rahmen der SSI Infrastruktur kann das
+Neben der globalen Eindeutigkeit sind das insbesondere 
+
+- dezentrale Vergabe (d.h. jeder Teilnehmer kann DIDs erzeugen) 
+- Persistenz und
+- globale Auflösbarkeit (d.h. im Rahmen der SSI Infrastruktur kann das
 DID-Dokument und über die darin definierten Endpunkte weitere Daten,
-insbesondere Verifiable Credentials, abgerufen werden.
+insbesondere Verifiable Credentials, abgerufen werden).
 
 
 Der Bedarf an global eindeutigen Identen, welche keine
@@ -845,7 +824,7 @@ Verfügung steht.
 
 Relevante Vorteile der LEI und des GS1 Systems gegenüber der DID sind
 die Etablierung dieser Idente in der unternehmensübergreifenden
-Kommunikation, für GS1 auch in Auto-ID Labels wie Barcodes oder RFID
+Kommunikation, für GS1 auch in Technologien wie Barcodes oder RFID
 Tags, und die kontrollierte Vergabe dieser Idente. Über letztere kann
 sichergestellt werden, dass ein minimaler Satz an verifizierten
 Stammdaten vorliegt und vor allem, dass z.B. eine GLN oder LEI auch
