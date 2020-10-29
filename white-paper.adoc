@@ -1114,7 +1114,7 @@ image::certified-gs1-ids-3-Verification.png[]
 == Anwendungsfälle
 
 [[sec_verified_by_gs1]]
-=== Validierung/ Verifizierung von Identen
+=== Validierung/ Verifizierung von Identen: Vermeidung von GTIN Missbrauch
 
 ==== Problemstellung
 
@@ -1126,9 +1126,9 @@ Ein Abgleich mit bei GS1 registrierten Artikelstammdaten über die
 Online Services von GS1, wie GEPIR <<gepir>> bzw. den GTIN Manager
 <<gtin-manager>> oder auch die Datenbank von GS1 Global (GS1 Registry)
 über den Verified by GS1 <<verified-by-gs1>> Service, kann hier
-Abhilfe schaffen. Eine solche Online-Abfrage stellt zum einen sicher,
+Abhilfe schaffen. Eine solche Online-Abfrage stellt zum Einen sicher,
 dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde
-und zum anderen, dass die Artikelbeschreibung mit den hinterlegten
+und zum Anderen, dass die Artikelbeschreibung mit den hinterlegten
 Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach
 Service, im Batch per Datei upload, manuell per Web-UI und/oder
 automatisiert per API möglich.
@@ -1137,12 +1137,12 @@ automatisiert per API möglich.
 
 Eine Überprüfung der Idente ist nur online möglich und die Korrektheit der Daten wird nur über das Vertrauen in die Transportverschlüsselung <<tls>> bei der Abfrage und die Identität des Servers, der die Daten bereit stellt, gesichert. Die Daten selbst sind in den aktuellen Konzepten nicht authentifiziert und es gibt keinen direkten Link zum Herausgeber.
 
-Die Umsetzung von _Certified by GS1_ versetzt den Basisnummerninhaber in die Lage selbst Zertifikate für die von ihm erstellten Idente und Masterdaten zu signieren. Diese können über beliebige Kanäle weitergegeben werden, wie bisher über zentrale Repositories, aber auch direkt an die relevanten Partner, ohne dass Dritte Einsicht erhalten oder ein zentraler Angriffspunkt entsteht.  Die Gültigkeit der Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von GS1, kann uneingeschränkt und offline überprüft werden.
+Die Umsetzung von _Certified by GS1_ versetzt den Basisnummerninhaber in die Lage selbst Zertifikate für die von ihm erstellten Idente und Stammdaten zu signieren. Diese können über beliebige Kanäle weitergegeben werden, wie bisher über zentrale Repositories, aber auch direkt an die relevanten Partner, ohne dass Dritte Einsicht erhalten oder ein zentraler Angriffspunkt entsteht.  Die Gültigkeit der Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von GS1, kann uneingeschränkt und offline überprüft werden.
 
-Durch die digitale Signatur und die entsprechenden Zertifikate wird vor allem die Integrität der Daten unabhängig vom Übertragungskanal sichergestellt. Der Überprüfer kann somit darauf vertrauen, dass ein Ident vom authorisierten Basisnummerninhaber vergeben wurde und damit ein legitimes GS1 Ident ist. Eine direkte Signatur der Masterdaten durch den legitimen Herausgeber bietet bestmöglichen Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
+Durch die digitale Signatur und die entsprechenden Zertifikate wird vor allem die Integrität der Daten unabhängig vom Übertragungskanal sichergestellt. Der Überprüfer kann somit darauf vertrauen, dass ein Ident vom authorisierten Basisnummerninhaber vergeben wurde und damit ein legitimes GS1 Ident ist. Eine direkte Signatur der Stammdaten durch den legitimen Herausgeber bietet bestmöglichen Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
 
-=== Validierung/ Verifizierung von Unternehmen
+=== Validierung/ Verifizierung von Unternehmen: Sichere Handelsbeziehungen
 
 [[sec_onboarding]]
 ==== Problemstellung
@@ -1169,10 +1169,10 @@ Vertrauensinfrastruktur digitalisieren und automatisieren.
 
 ==== Existierende Lösungsansätze
 
-Gerade im bereich des Supplier Onboardings gibt es Platformen, die als
+Gerade im Bereich des Supplier Onboardings gibt es Platformen, die als
 Intermediär anbieten die Unternehmensstammdaten
 sicher/vertrauenswürdig zu verwalten und beim Onboarding an den neuen
-Kunden weiterzugeben. Die Marktwirtschaftlichen Nachteile solcher
+Kunden weiterzugeben. Die marktwirtschaftlichen Nachteile solcher
 Platformen, die über kurz oder lang durch Netzwerkeffekte entweder ein
 Monopol entwickeln oder aussterben, sind hinreichend bekannt.
 
@@ -1193,13 +1193,13 @@ künftig, diese Überprüfung selbst durchführen zu müssen und ermöglicht
 so schneller und einfacher mit dem Unternehmen in eine Rechtsbeziehung
 zu treten.
 
-In einem Analogen Prozess könnten auch andere Stammdaten Zertifiziert
+In einem analogen Prozess könnten auch andere Stammdaten zertifiziert
 und bestehende Zertifikate (etwa basierend auf der Einhaltung
 relevanter Normen) digitalisiert werden.
 
 
 [[sec_eku]]
-=== Industrie 4.0 - Wandelbare Anlagen am Beispiel von Microgrids 
+=== Industrie 4.0: Konfiguration und Regelung von vernetzten Maschinen
 
 [[EKU-PD]]
 ==== Interaktive Demonstration
@@ -1212,7 +1212,7 @@ ist unter <<online-demo>> öffentlich zugänglich.
 
 In diesem Zusammenhang möchten wir uns besonders bei Kristian Binder
 und seinen Kollegen von EKU Power Drives bedanken, die uns mit Ihrer
-Expertise zu Seite gestanden haben. EKU Power Drives hat ihren Use
+Expertise zur Seite gestanden haben. EKU Power Drives haben ihren Use
 Case sehr ausführlich erläutert und mit uns zum heutigen Stand
 entwickelt. 
 
@@ -1280,8 +1280,8 @@ Anwendung - z.B. im Bereich von einigen 10ms (siehe <<eku-dynamic>>).
 .Die Nutzung dynamischer Daten wird als Use Case präsentiert
 image::demo-screenshots/5-dynamic.png[pdfwidth=75%,align="center"]
 
-Fälschung der dynamischen Daten im laufenden Betrieb durch einen cyber
-Angriff auf die Anlage kann ähnlich fatale Folgen haben, wie falsche
+Fälschung der dynamischen Daten im laufenden Betrieb durch einen Cyber-Angriff 
+auf die Anlage kann ähnlich fatale Folgen haben, wie falsche
 statische Daten (siehe <<eku-dynamic-hacked>>).
 
 [[eku-dynamic-hacked]]
@@ -1309,7 +1309,7 @@ Großes Potential, insbesondere in Bezug auf Nachhaltigkeit, haben moderne Busin
 werden, sondern der Nutzen, den der Anwender durch diese erzielt, direkt bepreist wird. In solchen "Pay per Use" oder "as a Service" Modellen werden alle nötigen Voraussetzungen, wie Maschinen und Betriebsmittel, die der Nutzer braucht um den gewünschten Nutzen zu erzielen, zur Verfügung gestellt. Wichtig ist bei den zugrundelegenden Business Modellen immer, eine präzise und vor allem eine für alle beteiligten vertrauenswürdige Messung der Parameter (KPIs), auf denen die Berechnung der Kosten eines solchen Service beruht.
 
 Aufgrund der eingesetzten Sensorik und automatisierten Datenübertragung und Abwicklung, ggf. bis in die Abrechnung, handelt es sich hier um IoT Use Cases, die ein hohes Maß an Sicherheit verlangen um eine Chance auf Akzeptanz am Markt zu haben. Dieser Use Case kann als ein Spezialfall der in <<sec_eku-dynamic>> thematisierten Übertragung dynamischer Daten in einem allgemeineren Kontext gesehen werden. Haben die zur Berechnung der KPIs eingesetzten Sensoren, z.B. Watt-Meter zur Messung der vom Generator erzeugten Leistung, eine _Certified by GS1_ ID, so kann der entsprechende auf dem Gerät hinterlegte private Schlüssel zur Signatur der Daten genutzt werden. 
-Die Überprüfung der korrekten Funktion des Sensors, etwa durch eine zertifizierte Eichung, kann ebenfalls über an die Certified ID gebundenen digitalen Zertifikate abgebildet werden. Auf diese Art und Weise werden die Daten eines Sensor manipulationssicher und vertrauenswürdig und können als Berechnungsgrundlage für den Preis in einem Pay per Use Modell dienen.
+Die Überprüfung der korrekten Funktion des Sensors, etwa durch eine zertifizierte Eichung, kann ebenfalls über an die Certified ID gebundenen digitalen Zertifikate abgebildet werden. Auf diese Art und Weise werden die Daten eines Sensors manipulationssicher und vertrauenswürdig und können als Berechnungsgrundlage für den Preis in einem Pay per Use Modell dienen.
 
 [[eku-pay-per-use]]
 .Auch der Pay per Use Anwendungsfall wird in der Demo thematisiert
