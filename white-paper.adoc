@@ -31,7 +31,6 @@ Projektleitung: mailto:mayra.castellanos@gs1.de[Mayra Castellanos]
 Autoren: mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter]
 
 
-
 :!sectnums:
 [[sec_executive]]
 == Management Summary
@@ -948,7 +947,7 @@ image::Trust-in-classical-id.png[pdfwidth=75%,align="center"]
 === Certified By GS1 Trust Model
 
 Bei der Identvergabe teilt GS1 einem Unternehmen mit der Basisnummer
-(GS1 Company Prefix, GCP) einen Namensraum (Nummernkreis) zu, in
+(GS1 Company Prefix, GCP) einen Nummernkreis zu, in
 welchem das Unternehmen dann selbst Idente vergeben kann. Parallel
 hierzu ermöglicht ein Unternehmenszertifikat mit GCP _Certified By
 GS1_ dem Unternehmen selbst Zertifikate für die eigenen Idente zu
@@ -994,7 +993,7 @@ Kommunikationskanal aufgebaut werden. So können z.B. Messdaten oder
 Steuerbefehle übertragen werden, ohne dass diese von Dritten gefälscht werden
 können.
 
-=== USP
+=== Kundennutzen
 
 Wie in <<sec_gs1_ids>> dargestellt, ermöglicht GS1 es einem Complete
 Kunden auf Basis des zertifizierten GCP selbst Identifikationsnummern
@@ -1004,7 +1003,7 @@ zertifizierten GCP entsprechend als Intermediär selbst nicht nur
 Identifikationsschlüssel, sondern auch die zugehörigen Zertifikate
 selbst erstellen kann. Für Unternehmen, die diese Unabhängigkeit
 nicht benötigen, kann GS1 die Erstellung weiterer Certified IDs
-natürlich auch als Service anbieten.
+natürlich auch als Service anbieten, wie z.B. bei One-Off Keys (bspw. GLN Typ 1).
 
 Wie in <<sec_compare>> dargestellt führt gerade diese Dezentralität
 des GS1 Systems kombiniert mit einer dezentralen digitalen und
@@ -1039,8 +1038,8 @@ Interaktion mit GS1 notwendig ist.
 
 Die Realisierung auf Basis von SSI Technologie bietet den großen
 Vorteil der automatischen Interoperabilität mit den anderen im
-gleichen Netzwerk realisierten Use Cases, so dass bei der geschickten
-Implementierung in einem oder mehreren aussichtsreichen Netzwerken
+gleichen Netzwerk realisierten Use Cases, so dass bei der 
+Implementierung in einem oder mehreren Netzwerken
 eine deutlich erleichterte Markteinführung und schnellere Verbreitung
 zu erwarten ist.  Auch aus technischer Sicht ist das moderne und auf
 flexiblen Schemata beruhende Konzept der Verifiable Credentials
@@ -1049,9 +1048,9 @@ das z.B. nicht als Datenformat für Stammdaten geeignet ist.
 
 
 Das Konzept zur Zertifizierung von GS1 Identen und assoziierten
-Masterdaten mittels SSI Technologie, welches im Rahmen des Projektes
+Stammdaten mittels SSI Technologie, welches im Rahmen des Projektes
 bisher entwickelt wurde, stellt eine Arbeitsgrundlage zur weiteren
-Abstimmung zwischen den GS1 Organisationen und den Partnern dar. 
+Abstimmung zwischen den GS1 Organisationen und den beteiligten Partnern dar. 
 
 [[sec_ssi_proto]]
 === SSI Protokoll
@@ -1081,10 +1080,10 @@ image::certified-gs1-ids-1-GCP.png[pdfwidth=50%, align="center"]
 
 
 Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable
-Credential (VC) ausgestellt, das ihm eine GS1 Company Prefix (GCP)
+Credential (VC) ausgestellt, das ihm eine GS1 Basisnummer
 zuweist (siehe <<pic_ssi_gcp>>). Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde
 und damit berechtigt ist, Identifikationsnummern in einem gewissen
-Nummernkreis (beginnend mit der GCP) zu vergeben. Eine erfolgreiche
+Nummernkreis (auf Basis dieses GCPs) zu vergeben. Eine erfolgreiche
 Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN
 GS1 konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1
 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und
@@ -1098,7 +1097,7 @@ image::certified-gs1-ids-2-GTIN.png[pdfwidth=75%, align="center"]
 Der DID einer konkreten Produktinstanz kann nun eine SGTIN als
 serialisiertes Ident in Form eines VC zugewiesen werden. Wie in
 <<pic_ssi_gtin>> dargestellt, wird die DID der zugehörigen GTIN als
-Issuer verwendet, sodass die Kette der Idente von der GCP der Company
+Issuer verwendet, sodass die Kette der Idente von der GCP der Firma
 über die GTIN der Produktklasse bis zur SGTIN der konkreten
 Produktinstanz entsprechend als Kette von Verifiable Credentials, die
 sich die DIDs ausstellen, abgebildet wird.
@@ -1335,7 +1334,7 @@ Infrastruktur werden, in der Firmen auch Stammdaten direkt mit dem
 jeweiligen Identifikationsschlüssel sichern und vertrauenswürdig
 signieren können.
 
-USP der _Certified by GS1_ Lösung, im Vergleich zu ähnlichen
+Der Kundennutzen der _Certified by GS1_ Lösung, im Vergleich zu ähnlichen
 Entwicklungen etwa bei der GLEIF, ist, dass die Kunden von GS1 als
 Intermediäre selbst zertifizierte Identifikationsschlüssel erstellen
 können und so die volle Hoheit über ihre Idente und Zertifikate
