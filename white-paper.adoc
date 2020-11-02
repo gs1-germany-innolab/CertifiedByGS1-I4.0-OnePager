@@ -216,7 +216,7 @@ Standardisierung, zusammen.
 Dies prädestiniert GS1 auch zum Vertrauensanker einer digitalen Zertifikatsinfrastruktur, 
 insbesondere wenn diese auf der Authentifizierung der
 GS1-eigenen Idente beruht. 
-Dieser sogenannte Vertrauensanker wird in Zusammenhang <<sec_gs1_anchor>> noch weiter verdeutlicht.
+Dieser sogenannte Vertrauensanker wird in Zusammenhang mit <<sec_gs1_anchor>> noch weiter verdeutlicht.
 
 Des weiteren ist GS1 bereits heute in vielen Branchen Dreh- und
 Angelpunkt für die mit den Identen assoziierten Stammdaten. Die
