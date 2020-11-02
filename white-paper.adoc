@@ -105,11 +105,7 @@ sicher geheim gehalten werden.
 
 Ein vertrauenswürdiger Teilnehmer, beispielsweise ein Unternehmen wie GS1, 
 kann anderen Teilnehmern Zertifikate ausstellen (siehe <<sec_pki>> und <<sec_ssi>>).
-Hierbei handelt es sich
-immer um unterschriebene Dokumente, in denen eine Zuordnung eines
-öffentlichen Schlüssels zu einem anderen Teilnehmer bescheinigt
-wird. Je nach konkretem Format können auch weitere Details im
-Zertifikat eingetragen und damit beglaubigt werden.
+
 
 
 In <<sec_intro>> erhalten Sie einen Überblick über wichtige
@@ -151,7 +147,7 @@ vergebenen Identifikationsnummern ermöglichen also eine eindeutige
 Zuordnung. Stand heute ist jedoch keine Authentifikation <<auth>>
 dieser Daten möglich. Es kann nicht überprüft werden, ob der
 Kommunikationspartner derjenige ist, der er zu sein vorgibt.  Ob es
-sich aber bei einer Ziffernfolge um eine legitime GS1 Identifikationsnummer
+sich aber bei einer Ziffernfolge um eine *legitime* GS1 Identifikationsnummer
 oder nur eine Ziffernkombination im GS1-Format handelt, ist unter
 Umständen nicht leicht herauszufinden. Dieses Problem und existierende
 Lösungsansätze werden in <<sec_verified_by_gs1>> behandelt.
@@ -164,11 +160,12 @@ die hier vorgestellten Konzepte den mit den
 Identifikationsnummern bezeichneten Firmen oder Dingen sich zweifelsfrei und
 fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander aufzubauen.
 
-_Certified by GS1_ kann so die Basis für eine Vertrauensinfrastruktur
-schaffen, wie sie z.B. für das Internet of Things (IoT) aber auch z.B. in klassischen B2B Prozessen wie dem
-Supplier Onboarding (siehe <<sec_onboarding>>) dringend benötigt
-wird, um Digitalisierung und Automatisierung nicht durch
-Sicherheits- und Vertrauensfragen zu verhindern.
+Die _Certified by GS1_ Konzepte können so die Basis für eine
+Vertrauensinfrastruktur (im Sinne einer PKI) schaffen, wie sie für das Internet
+of Things (IoT) aber auch in klassischen B2B Prozessen wie z.B. dem Supplier
+Onboarding (siehe <<sec_onboarding>>) dringend benötigt wird, um Digitalisierung
+und Automatisierung nicht durch Sicherheits- und Vertrauensfragen zu behindern.
+Für die Abgrenzung zu bestehenden Lösungen ohne Zertifikatsinfrastruktur aber mit ähnlicher Zielsetzung siehe <<sec_verified_by_gs1>>.
 
 
 [[sec_usp]]
@@ -275,7 +272,7 @@ Rollen, wie Abteilungen oder Ämter, identifizieren.
 
 
 [[GLN_Aufbau]]
-.Aufbau einer GLN
+.Aufbau einer GLN aus Basisnummer (GCP), Individueller Nummernteil und Prüfziffer
 image::example-gln.png[]
 
 Diese Baumstruktur aus
@@ -294,7 +291,7 @@ ist grundsätzlich eine eindeutige Zuordnung aller Idente möglich.
 
 
 [[pic_id_tree]]
-.Hierarchie der Nummernkreise der GS1
+.Hierarchie der Nummernkreise der GS1 am Beispiel der GCP des EECC
 image::GS1-ID-Tree.png[]
 
 
@@ -389,7 +386,7 @@ Man muss jede vergebene LEI online nachverfolgen können.
 ==== Symmetrische Verschlüsselung
 
 [[pic_symmetric]]
-.Symmetrische Verschlüsselung verwenden *den gleichen Schlüssel* zum ver- und entschlüsseln. Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.
+.Symmetrische Verschlüsselung verwendet *den gleichen Schlüssel* zum ver- und entschlüsseln. (Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.)
 image::symmetric.png[pdfwidth=75%,align="center"]
 
 Kryptografische Systeme kann man in zwei unterschiedliche
@@ -423,7 +420,7 @@ symmetrische Verschlüsselungsverfahren zum Einsatz.
 ==== Asymmetrische Verschlüsselung
 
 [[pic_asymmetric]]
-.Bei der asymmetrischen Verschlüsselung kommen *verschiedene* Schlüssel zum ver- und entschlüsseln zum Einsatz. Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.
+.Bei der asymmetrischen Verschlüsselung kommen *verschiedene* Schlüssel zum ver- und entschlüsseln zum Einsatz. (Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.)
 image::asymmetric.png[pdfwidth=75%,align="center"]
 
 Bei der asymmetrischen Verschlüsselung werden zwei verschiedene aber
@@ -508,6 +505,11 @@ die Literatur verwiesen <<sign>>.
 [[sec_certs]]
 ==== Digitale Zertifikate
 
+Zertifikate sind unterschriebene Dokumente, in denen eine Zuordnung eines
+öffentlichen Schlüssels zu einem anderen Teilnehmer bescheinigt
+wird. Je nach konkretem Format können auch weitere Details im
+Zertifikat eingetragen und damit beglaubigt werden.
+
 Unter einem "Zertifikat" im klassischen Sinne versteht man eine Bescheinigung
 oder Urkunde, die bestimmte Informationen zu einem Unternehmen,
 einer Person oder Sache "zertifiziert". Ein Zertifikat hat immer einen
@@ -577,7 +579,7 @@ Reihenfolge):
 ==== Vertrauensinfrastruktur
 
 [[pic_pki]]
-.Die drei wesentlichen Funktionseinheiten einer PKI Infrastruktur: Registrierungsstelle, Zertifizierungsstelle und Verzeichnisdienst. Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.
+.Die drei wesentlichen Funktionseinheiten einer PKI Infrastruktur: DIe Registrierungsstelle prüft die legitimität des Antrags, die Zertifizierungsstelle verwahrt den eigenen Schlüssel hoch sicher und signiert damit die ausgestellten Zertifikate und der Verzeichnisdienst veröffentlicht Zertifikate und verwaltet die Rückruflisten. (Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.)
 image::pki.png[pdfwidth=75%,align="center"]
 
 Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
@@ -666,7 +668,7 @@ Root of Trust fungieren. Diese Architektur wird als DPKI
 ==== Web of Trust
 
 [[pic_wot]]
-.Direktes Vertrauen zwischen den Beteiligten kann indirekt übertragen werden um ein dezentrales Vertrauensnetzwerk zu erzeugen. Abbildung von https://en.wikipedia.org/wiki/File:Web_of_Trust-en.svg[Wikipedia].
+.Web of Trust: Direktes Vertrauen zwischen den Beteiligten kann indirekt übertragen werden um ein dezentrales Vertrauensnetzwerk zu erzeugen. Abbildung von https://en.wikipedia.org/wiki/File:Web_of_Trust-en.svg[Wikipedia].
 image::WOT.png[pdfwidth=75%,align="center"]
 
 Seit den frühen 90er Jahren kam mit der Entwicklung von PGP (Pretty
@@ -940,7 +942,7 @@ Dokuments übertragen und die Authentifizierung ist erfolgreich. Der
 Prozess wird in <<physical-id>> dargestellt.
 
 [[physical-id]]
-.Vertrauen in klassische Ausweisdokumente
+.Das Vertrauen in klassische Ausweisdokumente beruht auf dem Vertrauen in die Authorität hinter der Zertifizierungsstelle(n), die korrekte Arbeit der Registrierungsstelle(n) und in die Regeln, die dem System zugrunde liegen. (Verwendung von Logos/Wappen als Referenz auf die Entitäten ohne deren Billigung der dargestellten Inhalte.)
 image::Trust-in-classical-id.png[pdfwidth=75%,align="center"]
 
 
@@ -954,7 +956,7 @@ GS1_ dem Unternehmen selbst Zertifikate für die eigenen Idente zu
 erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
 
 [[Chain]]
-.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat überprüft werden
+.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat automatisiert überprüft werden.
 image::Certificate-Chain.png[]
 
 Mit dem Unternehmenszertifikat kann die Echtheit der eigenen
@@ -1142,9 +1144,10 @@ Die Umsetzung von _Certified by GS1_ versetzt den Basisnummerninhaber in die Lag
 Durch die digitale Signatur und die entsprechenden Zertifikate wird vor allem die Integrität der Daten unabhängig vom Übertragungskanal sichergestellt. Der Überprüfer kann somit darauf vertrauen, dass ein Ident vom authorisierten Basisnummerninhaber vergeben wurde und damit ein legitimes GS1 Ident ist. Eine direkte Signatur der Stammdaten durch den legitimen Herausgeber bietet bestmöglichen Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
 
-=== Validierung/ Verifizierung von Unternehmen: Sichere Handelsbeziehungen
 
 [[sec_onboarding]]
+=== Validierung/ Verifizierung von Unternehmen: Sichere Handelsbeziehungen
+
 ==== Problemstellung
 
 Vertrauenswürdige Daten zu Unternehmen sind für digitale
@@ -1565,6 +1568,9 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 
 [glossary]
 Zertifikat:: Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt, siehe <<sec_certs>>.
+
+Certified by GS1::
+        Wird sowohl als Name des abgeschlossenen F&E Projekts als auch für die entwickelten Konzepte verwende.
 
 rain::
         water falling from the sky
