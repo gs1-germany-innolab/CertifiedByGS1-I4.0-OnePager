@@ -1323,19 +1323,19 @@ image::demo-screenshots/8-pay-per-use.png[pdfwidth=75%,align="center"]
 == Fazit
 
 Im Projekt _Certified by GS1_ wurde aufgezeigt, wie GS1
-die eigene Stellung als vertrauenswürdige und neutrale
-Organisation nutzen kann, um unternehmens- und branchenübergreifend
-einsetzbare eindeutige Identifikationsnummern und Stammdaten zu den
-bezeichneten Entitäten weiterzuentwickeln. Durch die Vergabe digitaler
-Zertifikate, welche direkt beweisen, dass die zertifizierten
-Identifikationsnummern gültig sind und korrekt nach den Regeln des GS1
-Systems erzeugt wurden, kann GS1 zum Vertrauensanker einer
-Infrastruktur werden, in der Firmen auch Stammdaten direkt mit dem
-jeweiligen Identifikationsschlüssel sichern und vertrauenswürdig
-signieren können.
+Identifikationsschlüssel und Stammdaten durch Zertifikate erweitert
+werden können, um das bestehende unternehmens- und
+branchenübergreifende System authentifizierbar zu machen.  Durch die
+Vergabe digitaler Zertifikate, welche direkt beweisen, dass die
+zertifizierten Identifikationsnummern gültig sind und korrekt nach den
+Regeln des GS1 Systems erzeugt wurden, kann GS1 als vertrauenswürdige
+und neutrale Organisation zum Vertrauensanker einer Infrastruktur
+werden, in der Firmen auch Stammdaten direkt mit dem jeweiligen
+Identifikationsschlüssel sichern und vertrauenswürdig signieren
+können.
 
-Der Kundennutzen der _Certified by GS1_ Lösung, im Vergleich zu ähnlichen
-Entwicklungen etwa bei der GLEIF, ist, dass die Kunden von GS1 als
+Der einzigartige Vorteil der _Certified by GS1_ Lösung im Vergleich zu ähnlichen
+Entwicklungen ist, dass die Kunden von GS1 als
 Intermediäre selbst zertifizierte Identifikationsschlüssel erstellen
 können und so die volle Hoheit über ihre Idente und Zertifikate
 behalten, ähnlich wie dies bereits heute der Regelfall für GS1
@@ -1357,8 +1357,9 @@ heute im (I)IoT fehlt, aber zumindest mittelfristig, insbesondere zur Realisieru
 der Industrie 4.0 Zukunftszenarien, dringend benötigt wird. 
 
 Als weiteres Ergebnis des Projektes hat sich klar herausgestellt, dass
-von GS1 *zertifizierte Stammdaten* großes Potential haben. GS1 könnte,
-ähnlich wie bereits heute bei der LEI Vergabe, gewisse
+von GS1 *zertifizierte Stammdaten* und die *digitale beglaubigung
+bestehender Zertifikate* großes Potential haben. GS1 könnte
+z.B., ähnlich wie bereits heute bei der LEI Vergabe, gewisse
 Unternehmensstammdaten überprüfen und die
 Vertrauenswürdigkeit der überprüften Daten anschließend digital
 bescheinigen. Auf Basis der erhöhten Vertrauenswürdigkeit solcher
@@ -1368,34 +1369,24 @@ da die Prüfung im folgenden digital und automatisiert erfolgen
 kann. Ein konkretes Beispiel wurde in <<sec_onboarding>> dargestellt.
 
 
-Allein die
-Übertragung der bestehenden Identifikationsnummern in die SSI Welt
-stellt eine natürliche
-Weiterentwicklung der bestehenden Geschäftsmodelle und Kompetenzen von
-GS1 dar und sichert die Zukunftsfähigkeit. Gleiches gilt für die Zertifizierung von Stammdaten, für deren
-vertrauenswürdige Bereitstellung GS1 aktuell bereits Services anbietet.
+Allein die Übertragung der bestehenden Identifikationsnummern in die
+SSI Welt stellt eine natürliche Weiterentwicklung des etablierten
+Systems der GS1 Identifikationssschlüssel dar und sichert die
+Zukunftsfähigkeit dieser Idente, gerade im IoT Zeitalter. Gleiches
+gilt für die Zertifizierung von Stammdaten, für deren
+vertrauenswürdige Bereitstellung GS1 und die Tochterunternehmen
+aktuell bereits Services anbietet, ohne jedoch bisher digitale
+Zertifikate anzubieten.
 
 
-Wie in <<sec_pki>> erläutert, ist das Ausstellen von
-Authentifizierungsmerkmalen eine essentielle aber auch kritische
-Funktion in jeder Vertrauensinfrastruktur. GS1 muss hier zur
-Ausstellung von Identifikationsschlüsseln _Certified by GS1_
-einen neuen Prozess etablieren, um sicherzustellen, dass die DID, der
-eine GCP zugeordnet wird, wirklich dem entsprechenden Unternehmen
-gehört. Das richtige Sicherheitsniveau ist hier noch zu definieren.
-Denkbar wären viele Varianten, von einer schriftlichen
-Benachrichtigung des Unternehmens um Gelegenheit zum Einspruch zu
-geben, über eine Vertragsunterzeichnung bis hin zu telefonischer oder
-gar persönlicher Rücksprache mit entsprechend berechtigten Personen. Diese
-Details sind mit Partnern zu erarbeiten und im Business Modell zu
-berücksichtigen.
 
 Neutralität und Vertrauenswürdigkeit der Registrierungsstelle sind für
 das Funktionieren einer jeden Vertrauensinfrastruktur absolut
-notwendig. An dieser Stelle bietet sich für GS1 die Möglichkeit,
-genau diese Eigenschaften gewinnbringend einzusetzen.
+notwendig. Für das GS1 System ist GS1 selbst der natürliche
+Vertrauensanker um diese Funktion zu erfüllen.
 
-=== Stand der Industrie 4.0 Umsetzung
+
+=== Fazit aus der Kundenbefragung
 
 Die im Rahmen des Projektes durchgeführten Umfragen per Fragebogen und
 direkten Interviews zeichnen ein klares Bild des aktuellen Stands der
@@ -1425,10 +1416,24 @@ denkbar. Für ein konkretes Anwendungsbeispiel sei auf <<sec_eku>> verwiesen.
 
 
 
-=== Umsetzung mittels SSI Technologie
+=== Umsetzung
+
+Wie in <<sec_pki>> erläutert, ist das Ausstellen von
+Authentifizierungsmerkmalen eine essentielle aber auch kritische
+Funktion in jeder Vertrauensinfrastruktur. GS1 muss hier zur
+Ausstellung von Identifikationsschlüsseln _Certified by GS1_
+einen neuen Prozess etablieren, um sicherzustellen, dass die DID, der
+eine GCP zugeordnet wird, wirklich dem entsprechenden Unternehmen
+gehört. Das richtige Sicherheitsniveau ist hier noch zu definieren.
+Denkbar wären viele Varianten, von einer schriftlichen
+Benachrichtigung des Unternehmens um Gelegenheit zum Einspruch zu
+geben, über eine Vertragsunterzeichnung bis hin zu telefonischer oder
+gar persönlicher Rücksprache mit entsprechend berechtigten Personen. Diese
+Details sind mit Partnern zu erarbeiten und im Business Modell zu
+berücksichtigen.
 
 
-Die in <<sec_ssi>> näher erläuterte, auf SSI Technologie basierende
+Die in <<sec_ssi>> näher erläuterte, auf *SSI Technologie* basierende
 dezentrale Vertrauensinfrastruktur befindet sich aktuell in einem für
 Anwender höchst interessanten Entwicklungsstadium. Die technologischen
 Grundlagen sind größtenteils entwickelt und in ersten Großprojekten
@@ -1454,18 +1459,19 @@ Das sogenannte European Self-Sovereign Identity Framework (ESSIF)
 verwendet dezentrale Idente (DIDs) und die European Blockchain Services Infrastructure(EBSI). 
 
 
+
+
 === Ausblick
 
 In diesem Projekt stand die konzeptionelle und technische Entwicklung
-der _Certified by GS1_ Ideen im Vordergrund, sowie die Untersuchung
-konkreter Use Cases, die Marktanalyse und Networking im IIoT Bereich.
-Die Entwicklung eines nachhaltigen Geschäftsmodells in enger
-Zusammenarbeit mit anderen GS1 Mitgliedsorganisationen und GS1 Global
-und die Anwendung der entwickelten Lösungen in bestehenden
-Initiativen, insbesondere in Verbindung mit den Signatur-Standards,
-die zur Zeit in der Digital Signature Mission Specific Working Group
-der GS1 entwickelt werden, sind wichtige Schritte auf dem Weg zu einem
-MVP.
+der _Certified by GS1_ Ideen im Vordergrund, welche in Absprache und
+unter Einbeziehung möglichst vieler interessierter Partner erfolgte.
+Auf dem Weg zu einem MVP sind noch wichtige Schritte zu gehen. In der
+Rolle als Vermittler von Interessen sucht GS1 hierzu weitere Partner,
+um eine Lösung basierend auf einem möglichst breiten Konsens zu
+entwickeln. Wenn Sie diese spannenden Themen gemeinsam mit uns weiter
+entwickeln möchten, wenden Sie sich gerne für Informationen zum
+aktuellen Stand an die Autoren!
 
 
 Um durch die Implementierung von
@@ -1531,7 +1537,7 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 - [[[gleif]]] GLEIF https://www.gleif.org/ und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
-- [[[gen-specs]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications/
+- [[[gen-specs]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications/
 - [[[idp]]] https://en.wikipedia.org/wiki/Identity_provider
 - [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
 - [[[online-demo]]]  https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
