@@ -48,10 +48,10 @@ zum Identitätsanbieter und Vertrauensanker in einer digitalen
 Vertrauensinfrastruktur ausgebaut werden kann.
 
 
-In vielen Anwendungsfällen insbesondere im Machine-To-Machine (M2M)
+In bestimmten Anwendungsfällen, insbesondere im Machine-To-Machine (M2M)
 Bereich, ebenso aber auch in B2B und B2C Prozessen, wird eine
-weitgehende Automatisierung von Abläufen dadurch verhindert, dass
-Kommunikationspartner nicht sicher automatisch authentifiziert werden
+weitgehende Automatisierung von Abläufen dadurch erschwert, manchmal auch verhindert, 
+dass Kommunikationspartner nicht sicher automatisch authentifiziert werden
 können. Durch eine Erweiterung der bestehenden GS1
 Identifikationsschlüssel um Sicherheits- und
 Authentifizierungsfunktionen, könnten _Certified by GS1_ Idente im
@@ -74,7 +74,7 @@ Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
 Konzeptes zu verdeutlichen.
 
 
-Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und Minimum Viable Product (MVP), insbesondere zu tragfähigen Business Modellen, um diese mit Partnern produktiv testen und zur Marktreife führen zu können.
+Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und möglichst auch einem Minimum Viable Product (MVP). Tragfähige Business Modelle, um diese mit Partnern produktiv testen und zur Marktreife führen zu können, wären entsprechend der Erkenntnisse aus diesem Projekt erstrebenswert.
 
 Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln
 möchten, wenden Sie sich gerne für Informationen zum aktuellen Stand
@@ -101,7 +101,6 @@ hierfür ist einerseits eine vertrauenswürdige Identitätsinfrastruktur,
 mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern
 zugeordnet werden und andererseits, dass die privaten Schlüssel
 sicher geheim gehalten werden.
-
 
 Ein vertrauenswürdiger Teilnehmer, beispielsweise ein Unternehmen wie GS1, 
 kann anderen Teilnehmern Zertifikate ausstellen (siehe <<sec_pki>> und <<sec_ssi>>).
@@ -152,7 +151,7 @@ oder nur eine Ziffernkombination im GS1-Format handelt, ist unter
 Umständen nicht leicht herauszufinden. Dieses Problem und existierende
 Lösungsansätze werden in <<sec_verified_by_gs1>> behandelt.
 
-Im Projekt _Certified by GS1_ wird untersucht, wie klassische und
+Im Projekt, das _Certified by GS1_ als Konzept entwickelt, wird untersucht, wie klassische und
 moderne Konzepte aus dem Bereich der Digitalen Signatur und Digitaler
 Zertifikate genutzt werden können, um die Authentizität von GS1 Identifikationsnummern und damit
 zusammenhängenden Stammdaten beweisbar zu machen.  Außerdem ermöglichen
@@ -163,7 +162,7 @@ fälschungssicher auszuweisen und gesicherte Kommunikationskanäle untereinander
 Die _Certified by GS1_ Konzepte können so die Basis für eine
 Vertrauensinfrastruktur (im Sinne einer PKI) schaffen, wie sie für das Internet
 of Things (IoT) aber auch in klassischen B2B Prozessen wie z.B. dem Supplier
-Onboarding (siehe <<sec_onboarding>>) dringend benötigt wird, um Digitalisierung
+Onboarding (siehe <<sec_onboarding>>) dringend benötigt werden, um Digitalisierung
 und Automatisierung nicht durch Sicherheits- und Vertrauensfragen zu behindern.
 Für die Abgrenzung zu bestehenden Lösungen ohne Zertifikatsinfrastruktur aber mit ähnlicher Zielsetzung siehe <<sec_verified_by_gs1>>.
 
@@ -211,13 +210,13 @@ einzeln bei einer zentralen Plattform erworben werden müssen.
 
 Als Not-For-Profit Standardisierungsorganisation, erfüllt GS1 die Aufgabe
 globale Geschäftstandards zu entwickeln und zu pflegen. GS1 ist eine
-neutrale und vertrauenswürdige Organisation. Diese Rolle als
-Vertrauensanker und neutrale Plattform ermöglicht es GS1, Partner und
-Konkurrenten zu gemeinsamen Projekten, insbesondere im Bereich der
-Standardisierung, zusammen zu bringen.
-Dies prädestiniert GS1 zum Vertrauensanker einer digitalen Zertifikatsinfrastruktur, 
+neutrale und vertrauenswürdige Organisation. Als neutrale Plattform bringt GS1
+jederzeit Partner und Konkurrenten zu gemeinsamen Projekten, insbesondere im Bereich der
+Standardisierung, zusammen.
+Dies prädestiniert GS1 auch zum Vertrauensanker einer digitalen Zertifikatsinfrastruktur, 
 insbesondere wenn diese auf der Authentifizierung der
 GS1-eigenen Idente beruht. 
+Dieser sogenannte Vertrauensanker wird in Zusammenhang <<sec_gs1_anchor>> noch weiter verdeutlicht.
 
 Des weiteren ist GS1 bereits heute in vielen Branchen Dreh- und
 Angelpunkt für die mit den Identen assoziierten Stammdaten. Die
