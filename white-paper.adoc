@@ -646,7 +646,6 @@ oder weil, im schlimmsten Fall, der private Schlüssel nicht mehr als sicher
 angesehen werden kann, etwa nach einem Cyber Angriff.
 
 
-
 === Entwicklung von SSI als Dezentrale Zertifikate- und Schlüsselinfrastruktur
 
 In einem dezentralen Identitätsmanagementsystem können die Entitäten
@@ -1089,10 +1088,8 @@ zuweist (siehe <<pic_ssi_gcp>>). Hiermit bestätigt GS1, dass diese Firma in der
 und damit berechtigt ist, Identifikationsnummern in einem gewissen
 Nummernkreis (auf Basis dieses GCPs) zu vergeben. 
 
-Eine erfolgreiche
-Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN
-GS1 konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1
-Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und
+Eine erfolgreiche Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN
+vom Hersteller legitim vergeben wurde. Die Vertrauenswürdigkeit und
 Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften
 sind als Verifiable Credentials überprüfbar.
 
