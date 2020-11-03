@@ -12,7 +12,7 @@ group Ausstellung einer certified GTIN
     Manufacturer -> gtin : ISSUE
     note right of Manufacturer
         <b>GTIN Credential</b>
-        epc: urn:epc:idpat:sgtin:4047111.012345.*
+        urn:epc:idpat:sgtin:4047111.012345.*
     end note
 
     Manufacturer -> gtin : ISSUE
@@ -31,7 +31,7 @@ group Issue SGTIN
     gtin -> Machine : ISSUE
     note right of gtin
         <b>SGTIN Credential</b>
-        epc: urn:epc:id:sgtin:4047111.012345.23
+        urn:epc:id:sgtin:4047111.012345.23
     end note
 
     gtin -> Machine : ISSUE
