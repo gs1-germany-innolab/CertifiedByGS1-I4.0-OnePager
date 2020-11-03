@@ -1076,7 +1076,10 @@ Online Services von GS1, wie GEPIR <<gepir>> bzw. den GTIN Manager
 Abhilfe schaffen. Eine solche Online-Abfrage stellt zum Einen sicher,
 dass das Ident tatsächlich vom berechtigten GS1 Kunden vergeben wurde
 und zum Anderen, dass die Artikelbeschreibung mit den hinterlegten
-Stammdaten in Einklang steht. Diese Überprüfung ist aktuell, je nach
+Stammdaten in Einklang steht. 
+Artikelstammdaten können, z.B. über Atrify in einen weltweiten Verbund von Datenpools dem GDSN „Global Data Synchronization Network“, eingespielt werden. 
+Dadurch können die Daten vom Einzel- und Onlinehandel, aber auch von Apps abgerufen werden. 
+Diese Überprüfung ist aktuell, je nach
 Service, im Batch per Datei upload, manuell per Web-UI und/oder
 automatisiert per API möglich.
 
