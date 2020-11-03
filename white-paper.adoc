@@ -280,7 +280,7 @@ Companies zu MOs, existiert in entsprechender Form (teilweise ohne die Klasseneb
 für alle GS1 Idente und ist in <<pic_id_tree>> schematisch
 dargestellt. 
 Dies stellt einen wichtigen Unterschied zu Systemen dar, in denen
-nur einzelne Idente vergeben werden, etwa bei der LEI (nachfolgend erläutert), da GS1 Kunden,
+nur einzelne Idente vergeben werden, da GS1 Kunden,
 je nach Leistungsmodell, die Möglichkeit erhalten, selbst als intermediäre Vergabestelle eigene Idente zu
 vergeben.  Die über die GCP festgelegten Nummernkreise stellen zudem
 sicher, dass jede Nummer nur einmal vergeben werden kann, solange der
@@ -322,62 +322,6 @@ entwickelt wird, ist der Service „Verified by GS1“, welcher in
 beleuchtet wird. Hier können Online-Portale und Händler GTINs auf ihre
 Echtheit und Herkunft überprüfen, die im Vorfeld durch die Hersteller
 in die GS1 Registry eingepflegt wurden.
-
-
-==== LEI (Legal Entity Identifier)
-
-Einige der GS1 MOs vergeben zudem bereits heute Idente zusammen mit von GS1
-überprüften Unternehmensstammdaten, außerhalb des eigenen Nummernsystems, im
-Rahmen der LEI-Vergabe.  Eine solche Überprüfung der hinterlegten
-Stammdaten bildet eine interessante Erweiterung des Konzepts der
-reinen Zertifizierung von Identifikationsschlüsseln. Damit eine
-Vertrauensinfrastruktur aufgebaut werden kann, muss eine Überprüfung
-der Partner statt finden, bevor Zertifikate ausgestellt werden
-können. Es liegt also nahe, die im Rahmen dieser Überprüfung
-gesicherten Fakten dem Unternehmen mittels digitalem Zertifikat zu
-bescheinigen.
-
-Für die LEI Vergabe erfolgt eine solche Überprüfung der beantragenden
-Unternehmen bereits, so dass GS1 hier auf bestehenden Prozessen
-aufbauen kann.  In diesem Abschnitt wird die LEI allgemein erläutert,
-da sie in den folgenden Abschnitten u.a. mit den Identen aus dem
-GS1-System verglichen wird.
-
-Der LEI ist ein 20-stelliger Code, der
-Teilnehmer am Finanzmarkt eindeutig identifiziert. Hier muss es sich
-um juristische Personen handeln, Einzelpersonen können keine LEI
-erhalten.  Der LEI wurde nach der Finanzkrise durch den G20 Gipfel
-beschlossen, um mehr Sicherheit und Transparenz bei Finanzgeschäften zu
-bieten und gilt weltweit. Der LEI ist bei gewissen Finanzgeschäften
-verpflichtend und ermöglicht es, hinterlegte Referenzdaten im
-Online-Datenpool der GLEIF (Global Legal Entity Identifier Foundation) abzufragen. 
-Diese Referenzdaten sind mindestens der offizielle Name laut Registrierung des Rechtsträgers,
-Anschrift des Unternehmens, Land der Gründung, Ländercodes, sowie das
-Datum der ersten LEI-Zuweisung und der letzten Aktualisierung, ggf.
-auch das Ablaufdatum, denn eine LEI muss jährlich verlängert werden.
-
-GS1 Global (GS1 AISBL, Brüssel) ist eine offizielle Vergabestelle 
-(Local Operating Unit, LOU) für
-Legal Entity Identifier (LEI) des GLEIF (Global Legal Entity
-Identifier Foundation) <<gleif>>. GS1 Germany ist Vertriebspartner von
-GS1 Global, ein sogenannter Registration Agent (RA) und agiert als
-Dienstleister um LEIs zu vergeben.
-
-
-
-Vergleicht man nun die LEI mit einem GS1-eigenen Ident, wie der GLN,
-sind beiden demnach die Eindeutigkeit und 
-weltweite Überschneidungsfreiheit gemein. Zudem können die
-Referenzdaten der LEI- und auch der GS1 Kunden durch das
-Unternehmen selbst verwaltet werden. 
-Man findet die Daten der beiden Idente in den jeweiligen
-Datenbanken, wie der LEI-Datenbank oder GEPIR. Dies ermöglicht Sicherheit für alle Geschäftsprozesse und
-vermindert Identitätsmissbrauch. Allerdings gibt es auch hier derzeit Unterschiede:
-Ein GS1 Kunde hat jederzeit die Möglichkeit der Veröffentlichung seiner Daten zu widersprechen.
-Dies ist für einen LEI-Kunden nicht möglich. Dessen Daten sind stets vollständig und korrekt zu veröffentlichen. 
-Man muss jede vergebene LEI online nachverfolgen können.
-
-
 
 
 
@@ -646,7 +590,7 @@ oder weil, im schlimmsten Fall, der private Schlüssel nicht mehr als sicher
 angesehen werden kann, etwa nach einem Cyber Angriff.
 
 
-=== Entwicklung von SSI als Dezentrale Zertifikate- und Schlüsselinfrastruktur
+=== SSI als Dezentrale Zertifikate- und Schlüsselinfrastruktur
 
 In einem dezentralen Identitätsmanagementsystem können die Entitäten
 (Personen, Organisationen, Dinge, etc.) die Vertrauensanker für den
@@ -813,20 +757,21 @@ eine globale Semantik, d.h. eine UUID trägt keinerlei Informationen
 darüber, von wem/in welchem Rahmen oder zur Bezeichnung von was
 sie erstellt wurde oder wo nähere Informationen abrufbar sind.
 
-Im Unterschied zu etablierten Identifikationssystemen wie der LEI
-oder dem GS1 System bieten DIDs vor allem die Möglichkeit der
+Im Unterschied zu etablierten Identifikationssystemen wie dem GS1 System 
+bieten DIDs vor allem die Möglichkeit der
 sicheren kryptographischen Verifikation der Echtheit und
 Authentitzität von Identifikationsschlüsseln.  Dies ist für viele
-Anwendungen essentiell und kann heute komplett digital sichergestellt
+Anwendungen, z.B. im Bereich Smart Factory oder Authentifizierung von Maschinen, essentiell 
+und kann heute komplett digital sichergestellt
 werden, insofern eine entsprechende Vertrauensinfrastruktur zur
-Verfügung steht.
+Verfügung steht. Die Relevanz wird in <<[[sec_eku]]>> nochmals verdeutlicht.
 
-Relevante Vorteile der LEI und des GS1 Systems gegenüber der DID sind
+Relevante Vorteile des GS1 Systems gegenüber der DID sind
 die Etablierung dieser Idente in der unternehmensübergreifenden
 Kommunikation, für GS1 auch in Technologien wie Barcodes oder RFID
 Tags, und die kontrollierte Vergabe dieser Idente. Über letztere kann
 sichergestellt werden, dass ein minimaler Satz an verifizierten
-Stammdaten vorliegt und vor allem, dass z.B. eine GLN oder LEI auch
+Stammdaten vorliegt und vor allem, dass z.B. eine GLN auch
 legitim vergeben wurden.
 
 
@@ -908,8 +853,7 @@ werden kann. Gleichzeitig kann er aber auch für eine Vielzahl von Entitäten
 mit einer unternehmensübergreifend verständlichen Semantik vergeben werden. 
 Auch die Dezentralität bleibt erhalten, in
 dem Sinne, dass GS1 Kunden selbst Identifikationsschlüssel _Certified
-by GS1_ in ihrem Nummernkreis erzeugen und zertifizieren können. Dies wäre
-bei einer LEI als Verifiable Credential nicht gegeben.
+by GS1_ in ihrem Nummernkreis erzeugen und zertifizieren können. 
 Zentral bleibt das System in dem Sinne, dass die GCP bei GS1 erworben
 werden muss und in diesem Rahmen die Legitimitätsprüfung vorgenommen
 und so die Sicherheit gewährleistet werden kann.
@@ -1189,8 +1133,7 @@ zur Identifikation des Unternehmens selbst und erfasst Daten zum
 Unternehmen wie Name, Rechtsform, Hauptsitz, u.a.
 
 Basierend auf einer kritischen Überprüfung der vom Unternehmen
-angegebenen Daten, wie diese z.B. bei der LEI-Vergabe durch GS1
-Germany aktuell bereits stattfindet, kann GS1 die Echtheit solcher
+angegebenen Daten kann GS1 die Echtheit solcher
 Unternehmensstammdaten zertifizieren. Die Vorlage vertrauenswürdig
 zertifizierter Daten erspart den Vertragspartnern dieses Unternehmens
 künftig, diese Überprüfung selbst durchführen zu müssen und ermöglicht
@@ -1363,8 +1306,7 @@ der Industrie 4.0 Zukunftszenarien, dringend benötigt wird.
 Als weiteres Ergebnis des Projektes hat sich klar herausgestellt, dass
 von GS1 *zertifizierte Stammdaten* und die *digitale beglaubigung
 bestehender Zertifikate* großes Potential haben. GS1 könnte
-z.B., ähnlich wie bereits heute bei der LEI Vergabe, gewisse
-Unternehmensstammdaten überprüfen und die
+z.B. gewisse Unternehmensstammdaten überprüfen und die
 Vertrauenswürdigkeit der überprüften Daten anschließend digital
 bescheinigen. Auf Basis der erhöhten Vertrauenswürdigkeit solcher
 Stammdaten oder auch klassischer Zertifikate, die von GS1 überprüft
@@ -1538,12 +1480,10 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 - [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
 - [[[gen-spec]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
-- [[[gleif]]] GLEIF https://www.gleif.org/ und LEI https://www.gleif.org/de/about-lei/introducing-the-legal-entity-identifier-lei
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
 - [[[gen-specs]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications/
 - [[[idp]]] https://en.wikipedia.org/wiki/Identity_provider
-- [[[lei]]] Lei verstehen https://www.lei.direct/de/lei-verstehen/
 - [[[online-demo]]]  https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
 - [[[pgp-cert]]] https://de.wikipedia.org/wiki/OpenPGP#Aufbau_der_Zertifikate
 - [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
