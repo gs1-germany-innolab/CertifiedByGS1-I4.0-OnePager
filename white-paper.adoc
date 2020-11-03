@@ -714,16 +714,14 @@ technischen Möglichkeiten weiterentwickelt.
 
 Namensgebend für den Ansatz der Self Sovereign Identity (SSI) war die Motivation,
 natürlichen Personen die Kontrolle über ihre eigene digitale Identität
-zurückzugeben. Beispielsweise sollten nicht weiter nur die personenbezogenen Daten und Single Sign On-Dienste 
+zurückzugeben, anstatt die personenbezogenen Daten und Single Sign On-Dienste 
 unter zentraler Kontrolle weniger großer Plattformen
-amerikanischer Unternehmen genutzt werden müssen. 
-Personenidentifikation und die Ausstellung und Verwaltung
+amerikanischer Unternehmen nutzen zu müssen. Personenidentifikation und die Ausstellung und Verwaltung
 vertrauenswürdiger Fakten (sog. _Credentials_, siehe <<sec_vc>>) zu diesen Personen
 bilden den Kern vieler SSI Anwendungsfälle. Die SSI Infrastruktur eignet sich jedoch auch,
 um die klassischen Probleme der Identifikation über Zertifikate und der Schlüsselverwaltung in
 neuartiger dezentraler Weise zu lösen, unabhängig davon auf welche
-Entitäten sich die Idente beziehen. In diesem Kontext ist anzumerken, dass es sich bei SSI
-nicht um eine eigene Technologie handelt, sondern um ein auf verschiedenen Säulen basierendes Konzept.
+Entitäten sich die Idente beziehen.
 
 In einer SSI-basierten Vertrauensinfrastruktur hat der Verwalter einer
 Identität die volle Kontrolle über die Leseberechtigungen an allen
@@ -733,7 +731,7 @@ identifiziert wird, siehe <<sec_did>>.
 Als Verzeichnisdienst (siehe <<sec_pki>>) kann in SSI Netzwerken eine
 Block Chain (Distributed Ledger) eingesetzt werden. Dies ist
 allerdings nach den entsprechenden Standards des W3C kein
-Wesensmerkmal des SSI Konzeptes.
+Wesensmerkmal der SSI Technologie.
 
 
 Entwicklung und Aufbau einer dezentralisierten Public Key
@@ -968,7 +966,10 @@ Basisnummer gehört, ohne das ein Online-Lookup in einer entsprechenden
 Datenbank nötig wäre. Auch Eigenschaften des mit dem Ident
 gekennzeichneten Assets können über die GS1 Standards, beispielsweise
 in einen 2D Code wie der GS1 DataMatrix, kodiert und deren
-Vertrauenswürdigkeit offline verifiziert werden.
+Vertrauenswürdigkeit offline verifiziert werden. 
+Dieses dient jedoch nicht als Kopierschutz für das Auto-ID Label. 
+Wie eine Verfikation erfolgen kann, wird im Ablaufdiagram Kapitel <<sec_ssi_proto>> dargestellt.
+
 
 Die abgeleiteten Zertifikate für serialisierte Idente sind besonders
 im IoT Kontext interessant, da Maschinen sich mit einem solchen
@@ -1086,7 +1087,9 @@ Dem Hersteller, d.h. der DID der Firma, wird von GS1 ein Verifiable
 Credential (VC) ausgestellt, das ihm eine GS1 Basisnummer
 zuweist (siehe <<pic_ssi_gcp>>). Hiermit bestätigt GS1, dass diese Firma in der Tat GS1 Kunde
 und damit berechtigt ist, Identifikationsnummern in einem gewissen
-Nummernkreis (auf Basis dieses GCPs) zu vergeben. Eine erfolgreiche
+Nummernkreis (auf Basis dieses GCPs) zu vergeben. 
+
+Eine erfolgreiche
 Überprüfung des GTIN VC und des GCP VC stellt sicher, dass die GTIN
 GS1 konform d.h. nach dem Standardregelwerk, den "Allgemeinen GS1
 Spezifikationen", vergeben wurde. Die Vertrauenswürdigkeit und
