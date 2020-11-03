@@ -625,14 +625,16 @@ technischen Möglichkeiten weiterentwickelt.
 
 Namensgebend für den Ansatz der Self Sovereign Identity (SSI) war die Motivation,
 natürlichen Personen die Kontrolle über ihre eigene digitale Identität
-zurückzugeben, anstatt die personenbezogenen Daten und Single Sign On-Dienste 
+zurückzugeben. Beispielsweise sollten nicht weiter nur die personenbezogenen Daten und Single Sign On-Dienste 
 unter zentraler Kontrolle weniger großer Plattformen
-amerikanischer Unternehmen nutzen zu müssen. Personenidentifikation und die Ausstellung und Verwaltung
+amerikanischer Unternehmen genutzt werden müssen. 
+Personenidentifikation und die Ausstellung und Verwaltung
 vertrauenswürdiger Fakten (sog. _Credentials_, siehe <<sec_vc>>) zu diesen Personen
 bilden den Kern vieler SSI Anwendungsfälle. Die SSI Infrastruktur eignet sich jedoch auch,
 um die klassischen Probleme der Identifikation über Zertifikate und der Schlüsselverwaltung in
 neuartiger dezentraler Weise zu lösen, unabhängig davon auf welche
-Entitäten sich die Idente beziehen.
+Entitäten sich die Idente beziehen. In diesem Kontext ist anzumerken, dass es sich bei SSI
+nicht um eine eigene Technologie handelt, sondern um ein auf verschiedenen Säulen basierendes Konzept.
 
 In einer SSI-basierten Vertrauensinfrastruktur hat der Verwalter einer
 Identität die volle Kontrolle über die Leseberechtigungen an allen
@@ -642,7 +644,7 @@ identifiziert wird, siehe <<sec_did>>.
 Als Verzeichnisdienst (siehe <<sec_pki>>) kann in SSI Netzwerken eine
 Block Chain (Distributed Ledger) eingesetzt werden. Dies ist
 allerdings nach den entsprechenden Standards des W3C kein
-Wesensmerkmal der SSI Technologie.
+Wesensmerkmal des SSI Konzeptes.
 
 
 Entwicklung und Aufbau einer dezentralisierten Public Key
