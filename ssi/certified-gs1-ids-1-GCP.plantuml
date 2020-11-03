@@ -15,7 +15,7 @@ group Ausstellungsprozess der GCP
     Manufacturer -> Manufacturer : ISSUE
     note right of GS1
         <b>Party GLN Credential</b>
-        epc: urn:epc:id:pgln:4047111.00000
+        urn:epc:id:pgln:4047111.00000
     end note
 end
 
