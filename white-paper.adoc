@@ -25,61 +25,29 @@ Copyright 2020 GS1 Germany GmbH, European EPC Competence Center GmbH
 
 Draft-Version: {revnumber}
 
-
-Projektleitung: mailto:mayra.castellanos@gs1.de[Mayra Castellanos]
-
-Autoren: mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter]
-
+Autoren: mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter], mailto:mayra.castellanos@gs1.de[Mayra Castellanos]
 
 :!sectnums:
 [[sec_executive]]
 == Management Summary
 
-Zur Beantwortung von dringenden Sicherheitsfragen im Rahmen der
-Digitalisierung im Allgemeinen und dem Internet of Things (IoT) im
-Besonderen wird eine vertrauenswürdige und sichere
-Identitätsinfrastruktur zur Identifizierung und Authentifizierung von
-natürlichen und juristischen Personen aber auch von Dingen
-benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt, um
-das bestehende System der GS1 Idente durch digitale
-Zertifikate abzusichern und automatisch authentifizierbar zu machen. Es wird
-aufgezeigt, wie die Stellung der GS1 als vertrauenswürdige und neutrale Organisation
-zum Identitätsanbieter und Vertrauensanker in einer digitalen
-Vertrauensinfrastruktur ausgebaut werden kann.
+Soziale und geschäftliche Beziehungen sind zur Identifizierung und Authentifizierung anderer Parteien stark auf Identitätsnachweise angewiesen. Sie tragen dazu bei, die mit menschlichen Interaktionen verbundenen Risiken anzugehen und das Vertrauen zwischen den interagierenden Parteien zu stärken.
 
+In der physischen Welt gibt es bereits seit Anfang des 19. Jahrhunderts Identitätssysteme wie Personalausweise. Im Zuge der Digitalisierung werden immer mehr soziale und wirtschaftliche Interaktionen von der physischen in die digitale Welt verlagert. Dabei ist die Fähigkeit, eine vertrauensvolle Beziehung zwischen den interagierenden Parteien im digitalen Raum aufzubauen, ein entscheidender Faktor, um Geschäfte zu ermöglichen. 
 
-In bestimmten Anwendungsfällen, insbesondere im Machine-To-Machine (M2M)
-Bereich, ebenso aber auch in B2B und B2C Prozessen, wird eine
-weitgehende Automatisierung von Abläufen dadurch erschwert, manchmal auch verhindert, 
-dass Kommunikationspartner nicht sicher automatisch authentifiziert werden
-können. Durch eine Erweiterung der bestehenden GS1
-Identifikationsschlüssel um Sicherheits- und
-Authentifizierungsfunktionen, könnten _Certified by GS1_ Idente im
-IoT-Umfeld die unternehmensübergreifende eindeutige und sichere
-Identifikation von Maschinen untereinander sicherstellen. Für diese
-wichtige Voraussetzung eines _Internet_ of Things ist bisher
-kein alternatives System etabliert.
+Folglich werden digitale Identitäten immer wichtiger. In ähnlicher Weise gewinnen digitale Identitäten nicht nur für die digitale, sondern auch für die physische Welt an Bedeutung, da sie bereits heute physische Ausweise wie Kunden- und Kreditkarten ersetzen. Darüber hinaus verschmilzt die digitale Welt mit dem Aufkommen des IoTs, zunehmend mit der physischen Welt. Dadurch erhöht sich die Anzahl der angeschlossenen Geräte sowie der digitalen Authentifizierungspunkte in der physischen Welt.
 
+Da das Internet ohne eine standardisierte, explizite Möglichkeit zur Identifizierung von Personen oder Organisationen aufgebaut wurde, um den Anforderungen des Identitätsmanagements gerecht zu werden, sind eine Vielzahl von Lösungen entstanden. Dazu gehören benutzerdefiniertes Identitätsmanagement Implementierungen, die meist auf Benutzernamen und Passwörtern, Passwortmanagern und Identitätsidentifizierungsdiensten basieren.
 
-Die _Certified by GS1_ Konzepte wurden durch Kundenumfragen und –interviews mit
-Partnern aus verschiedenen Branchen abgestimmt und unter Betrachtung von
-klassischen und modernen technologischen Umsetzungsmöglichkeiten digitaler
-Signaturen und Zertifikate erarbeitet. Insbesondere die Blockchain-basierte SSI
-(Self Sovereign Identity) Technologie, die sich aktuell rasant entwickelt und
-verbreitet, bietet eine historische Chance, Entwicklungen im Bereich digitaler
-Identitäten mitzugestalten. Im Rahmen von _Certified by GS1_ wurden nicht nur
-abstrakte Konzepte und Möglichkeiten zu deren konkreter technischer Umsetzung
-erarbeitet. In Zusammenarbeit mit externen Partnern wurden mehrere
-Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
-Konzeptes zu verdeutlichen.
+Das Kerngeschäft von GS1 ist die Entwicklung von Standards, die Interoperabilität und Digitalisierung zwischen Unternehmen, Produkte und Dinge, ermöglichen. Der Bedarf an sicherem Identitätsmanagement und sicheren Infrastrukturen, insbesondere mit der schnellen Verbreitung des IoTs, war der Haupttreiber um das Projekt Certified by GS1 zu starten.
 
+Certified by GS1 hat Konzepte entwickelt, um das bestehende System der GS1 Idente durch digitale Zertifikate abzusichern und automatisch authentifizierbar zu machen. Es wird aufgezeigt, wie die Stellung der GS1 als vertrauenswürdige und neutrale Organisation zum Identitätsanbieter und Vertrauensanker in einer digitalen Vertrauensinfrastruktur ausgebaut werden kann.
 
-Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und möglichst auch einem Minimum Viable Product (MVP). Tragfähige Business Modelle, um diese mit Partnern produktiv testen und zur Marktreife führen zu können, wären entsprechend der Erkenntnisse aus diesem Projekt erstrebenswert.
+In bestimmten Anwendungsfällen, insbesondere im Machine-To-Machine (M2M) Bereich, ebenso aber auch in B2B und B2C Prozessen, wird eine weitgehende Automatisierung von Abläufen dadurch erschwert, manchmal auch verhindert, dass Kommunikationspartner nicht sicher automatisch authentifiziert werden können. Durch eine Erweiterung der bestehenden GS1 Identifikationsschlüssel um Sicherheits- und Authentifizierungsfunktionen, könnten Certified by GS1 Idente im IoT-Umfeld die unternehmensübergreifende eindeutige und sichere Identifikation von Maschinen untereinander sicherstellen. Für diese wichtige Voraussetzung eines Internet of Things ist bisher kein alternatives System etabliert.
 
-Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln
-möchten, wenden Sie sich gerne für Informationen zum aktuellen Stand
-an die Autoren!
+Die Certified by GS1 Konzepte wurden durch Kundenumfragen und –interviews mit Partnern aus verschiedenen Branchen abgestimmt und unter Betrachtung von klassischen und modernen technologischen Umsetzungsmöglichkeiten digitaler Signaturen und Zertifikate erarbeitet. Insbesondere die Blockchain-basierte SSI (Self Sovereign Identity) Technologie, die sich aktuell rasant entwickelt und verbreitet, bietet eine historische Chance, Entwicklungen im Bereich digitaler Identitäten mitzugestalten. Im Rahmen von Certified by GS1 wurden nicht nur abstrakte Konzepte und Möglichkeiten zu deren konkreter technischer Umsetzung erarbeitet. In Zusammenarbeit mit externen Partnern wurden mehrere Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des Konzeptes zu verdeutlichen.
 
+Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln möchten, wenden Sie sich gerne für Informationen zum aktuellen Stand an die Autoren!
 
 <<<
 
