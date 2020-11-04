@@ -27,6 +27,7 @@ Draft-Version: {revnumber}
 
 Autoren: mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter], mailto:mayra.castellanos@gs1.de[Mayra Castellanos]
 
+
 :!sectnums:
 [[sec_executive]]
 == Management Summary
