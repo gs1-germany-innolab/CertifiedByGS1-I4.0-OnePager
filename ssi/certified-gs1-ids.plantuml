@@ -18,7 +18,7 @@ group Issue Certified Base Number
     Manufacturer -> Manufacturer : ISSUE
     note right of GS1
         <b>PGLN Credential</b>
-        epc: urn:epc:id:pgln:4047111.00000
+        urn:epc:id:pgln:4047111.00000
     end note
 
     GS1 -> Manufacturer : ISSUE
@@ -37,7 +37,7 @@ group Issue GTIN + Masterdata
     Manufacturer -> gtin : ISSUE
     note right of Manufacturer
         <b>GTIN Credential</b>
-        epc: urn:epc:idpat:sgtin:4047111.012345.*
+        urn:epc:idpat:sgtin:4047111.012345.*
     end note
     Manufacturer -> gtin : ISSUE
     note right of Manufacturer
