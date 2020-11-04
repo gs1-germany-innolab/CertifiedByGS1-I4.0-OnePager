@@ -1,6 +1,6 @@
 = Certified By GS1 - White Paper
 Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v2.0.2 + {docdatetime}
+v2.1.0 + {docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
@@ -1158,15 +1158,17 @@ Eine der wesentlichen Herausforderungen in diesen Systemen ist die ständige Anp
 image::demo-screenshots/1-intro.png[pdfwidth=75%,align="center"]
 
 ====  Statische Informationen
-Alle an das Microgrid angeschlossenen Anlagen haben wesentliche technische Eigenschaften, welche die Anlage charakterisieren. Dies können z.B. Hersteller, Modell, Nennleistung, zulässiger Leistungsbereich, Nennspannung, zulässiger Spannungsbereich, usw. sein.
 
-Alle diese Eigenschaften werden vom Hersteller der Anlage
-angegeben. Sie werden sich über ihre Lebensdauer hinweg nicht
-verändern und wenn, dann ist diese Veränderung ebenso
-vorhersehbar. Üblicherweise werden derartige Angaben vom Hersteller
-auf einem Typenschild zusammengefasst. Ein digitales Typenschild dient
-im aktuellem Anwendungsfall als Datenbasis, um Maschinen passend zu
-den aktuellen dynamischen Anforderungen anzumieten (siehe <<eku-static>>).
+Alle an das Microgrid angeschlossenen Maschinen haben charakteristische technische
+Eigenschaften. Dies können z.B. Hersteller,
+Modell, Nennleistung, zulässiger Leistungsbereich, Nennspannung, zulässiger
+Spannungsbereich, usw. sein.
+Alle diese Eigenschaften werden vom Hersteller der Anlage angegeben. Sie ändern
+sich über ihre Lebensdauer hinweg nicht oder nur in vorhersehbarer Weise.
+Üblicherweise werden derartige Angaben vom Hersteller auf einem Typenschild
+zusammengefasst. Ein digitales Typenschild dient im aktuellem Anwendungsfall als
+Datenbasis, um Maschinen passend zu den aktuellen dynamischen Anforderungen
+anzumieten (siehe <<eku-static>>).
 
 [[eku-static]]
 .In der Demo wird die Nutzung statischer Daten, konkret eines digitalen Typenschildes, dargestellt
