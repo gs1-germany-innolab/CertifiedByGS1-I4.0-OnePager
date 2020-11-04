@@ -1483,11 +1483,18 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 == Glossar
 
 [glossary]
-Zertifikat:: Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt, siehe <<sec_certs>>.
 
 Certified by GS1::
-        Wird sowohl als Name des abgeschlossenen F&E Projekts als auch für die entwickelten Konzepte verwende.
+Wird sowohl als Name des abgeschlossenen F&E Projekts als auch für die entwickelten Konzepte verwendet.
 
-rain::
-        water falling from the sky
-        
+DID::
+Ein Decentralized Identifier (DID) ist eine Art Idente, der eine überprüfbare, dezentralisierte digitale Identität ermöglicht.
+
+LEI::
+Der LEI (Legal Entity Identifier) dient zur eindeutigen weltweiten Identifizierung eines Teilnehmers am Finanzmarkt.
+
+SSI::
+Self-sovereign identity (SSI) erlaubt es einer Person (oder einer Organisation) eine digitale Identität zu erzeugen und vollständig zu kontrollieren, ohne dass es der Erlaubnis eines Vermittlers oder einer zentralen Behörde bedarf. 
+
+Zertifikat:: 
+Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt, siehe <<sec_certs>>.
