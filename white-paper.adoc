@@ -25,7 +25,7 @@ Copyright 2020 GS1 Germany GmbH, European EPC Competence Center GmbH
 
 Draft-Version: {revnumber}
 
-Autoren: mailto:mayra.castellanos@gs1.de[Mayra Castellanos], mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter], 
+Autoren: mailto:mayra.castellanos@gs1.de[Mayra Castellanos], mailto:anna.klapper@gs1.de[Anna Klapper], mailto:sebastian.schmittner@eecc.de[Dr. Sebastian Schmittner], mailto:roman.winter@gs1.de[Roman Winter]
 
 :!sectnums:
 [[sec_executive]]
