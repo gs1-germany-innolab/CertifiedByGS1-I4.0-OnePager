@@ -401,6 +401,9 @@ Man-in-the-middle-Angriffs, der in <<sec_mitm>> erläutert wird.
 [[sec_mitm]]
 ==== Man in the Middle
 
+.Eve fängt die Kommunikation zwischen Alice und Bob ab. So kann er Alice seinen eigenen öffentlichen Schlüssel als den von Bob unterschieben und Bob ebenfalls den eigenen im Namen von Alice. Ab diesem Zeitpunkt glauben Alice und Bob sicher und authentifiziert zu kommunizieren, aber in wirklichkeit schlüsselt Eve alle Nachrichten um und kann diese nicht nur mitlesen sonder sogar verändern, ohne dass der Betrug auffällt.
+image::mim.png[pdfwidth=75%,align="center"]
+
 Bei dem Man-in-the-middle-Angriff versendet eine dritte Person seinen
 öffentlichen Schlüssel unter falschem Namen.
 Will etwa Alice an Bob eine verschlüsselte Nachricht schreiben und
