@@ -694,6 +694,10 @@ Netzwerkverkehr über das SSL/TLS-Protokolls [tls] hatte.
 [[sec_did]]
 ==== Decentralized Identifiers (DIDs)
 
+[[pic_did]]
+.Übersicht über die mit einer DID direkt assoziierten Begriffe
+image::did_architecture_overview.png[pdfwidth=95%,align="center"]
+
 Decentralized Identifiers (DIDs) sind Idente, die, wie der Name
 bereits andeutet, nicht zentral vergeben werden, sondern von jedem
 Teilnehmer an einer entsprechenden Infrastruktur selbst erzeugt werden
@@ -728,6 +732,11 @@ Infrastructure dar.
 
 [[sec_vc]]
 ==== Verifiable Credentials
+
+
+[[pic_ssi]]
+.Übersicht über die Ausgabe (Issueing) und Verfikation von Verifiable Credentials
+image::ecosystem.png[pdfwidth=95%,align="center"]
 
 Die im Rahmen von SSI Vertrauensinfrastruktren ausgestellten
 Zertifikate werden als Verifiable Credentials <<vc-data-model>> bezeichnet und über
