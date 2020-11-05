@@ -257,18 +257,18 @@ Organisationen und GS1 Global Office erhalten die einzelnen Mitgliedsorganisatio
 Beispielsweise sind alle GS1 Idente deren erste drei Ziffern im Bereich 400 bis 440 liegen
 GS1 Germany zugeordnet <<gs1-prefix>>. 
 Innerhalb des eigenen Nummernkreises (d.h. beginnend
-mit der eigenen GS1 Präfix) vergeben die MOs an Firmenkunden einen GS1 Company Prefix (GCP) und
+mit der eigenen GS1 Präfix) vergeben die MOs an Firmenkunden einen GS1 Company Prefix ([red]#GCP#) und
 damit den Kreis der Nummern beginnend mit ebendiesem. Zur Verdeutlichung: alle
-GS1 Idente beginnend mit 4047111 sind als Nummernkreis dem EECC zugeordnet. 
+GS1 Idente beginnend mit [red]#4047111# sind als Nummernkreis dem EECC zugeordnet. 
 Die Firmen können nun entsprechend der Spezifikationen für GS1 Idente eigenständig Identifikationsnummern
 für z.B. Warenkategorien oder individuelle Waren, aber auch für Standorte, Warensendungen, Coupons, uvm.
 (siehe <<gen-spec>>) vergeben. 
-Beispielsweise bezeichnet die GLN (Global Location Number) 4047111000006
-den Unternehmenshauptsitz des EECC. Hier steht entsprechend wieder das gleiche GCP
-am Anfang der Nummer, gefolgt vom frei verfügbaren Namensraum und beendet mit einer Prüfziffer.
+Beispielsweise bezeichnet die GLN (Global Location Number) [red]#4047111# [yellow]#00000# [green]#6#
+den Unternehmenshauptsitz des EECC. Hier steht entsprechend wieder das gleiche [red]#GCP#
+am Anfang der Nummer, gefolgt vom [yellow]#frei verfügbaren Namensraum# und beendet mit einer [green]#Prüfziffer#.
 
 Die Art des Idents wird über den sogenannten Application Identifier
-(AI) kodiert, z.B. 414 für die GLN. Entsprechend stellt (414) 4047111000006 (254) 01 
+(AI) kodiert, z.B. 414 für die GLN. Entsprechend stellt (414) [red]#4047111# [yellow]#00000# [green]#6# (254) [blue]#01# 
 ein Beispiel für eine GLN (414) mit Erweiterungskomponente (254) dar, mit der das EECC einen spezifischeren Ort, etwa den
 Posteingang des Hauptsitzes, bezeichnen könnte. Eine sog. Party GLN
 kann Parteien wie juristische Personen (Firmen) aber auch Funktionen oder
@@ -1165,7 +1165,7 @@ relevanter Normen) digitalisiert werden.
 [[sec_eku]]
 === Industrie 4.0: Konfiguration und Regelung von vernetzten Maschinen
 
-[[EKU-PD]]
+[[sec_demo]]
 ==== Interaktive Demonstration
 
 Um den in diesem Abschnitt vorgestellten Use Case anschaulich und
