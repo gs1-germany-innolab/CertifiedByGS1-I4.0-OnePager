@@ -536,17 +536,28 @@ image::pki.png[pdfwidth=75%,align="center"]
 Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
 Schlüssel und entsprechende Zertifikate bilden die Grundlage für den
 Aufbau einer "Public Key Infrastructure" (PKI).
-Wie in <<Chain-EECC>> dargestellt kann prinzipiell jeder vertrauenswürdige
-Teilnehmer den Kreis der ebenso vertrauenswürdigen Teilnehmer an der
-Vertrauensinfrastruktur erweitern, indem ersterer dem neuen Teilnehmer ein entsprechendes Zertifikat
-ausstellt.
 
-Bei der klassischen, d.h. weitgehend zentralen, 
-Schlüssel- und Zertifikate Infrastruktur, die
-z.B. bei der Absicherung der Kommunikation über das Internet mittels
-Transportverschlüsselung <<tls>> zum Einsatz kommt, stellen eine oder einige
-wenige zentrale Autoritäten, denen initial vertraut wird, Zertifikate
-an zwischengeschaltete Autoritäten aus. So ergeben sich baumartige Vertrauensstrukturen.
+Die Grundidee einer PKI Infrastruktur ist, dass Alice, sobald sie sich selbst
+durch ein Zertifikat ausweisen kann, den Kreis der vertrauenswürdigen Teilnehmer
+erweitern kann, in dem sie Bob ein Zertifikat ausstellt, welches sie mit ihrem
+privaten Schlüssel unterschreibt. Bob kann nun seinerseits Charly, nachdem er
+dessen Identität überprüft hat, ein Zertifikat ausstellen, dass die
+authentizität seines Schlüssels bescheinigt, d.h. die zugehörigkeit des
+Schlüssels zur vorgeblichen Entität. Auf diese Art entsteht eine Kette von
+Zertifikaten bei denen jeweils das nächste Zertifikat mit dem jeweiligen private
+key unterschrieben wird. In <<sec_web_of_trust>> wird das PGP system erläutert,
+in dem jeder Teilnehmer, d.h. jeder Zertifikatsinhaber, auch selbs neue
+Zertifikate ausstellt, bzw. neue Unterschriften zu bestehenden Zertifikaten
+hinzufügt um so eine dezentrale Vertrauensinfrastruktur aufzubauen. 
+
+Bei der klassischen, d.h. weitgehend zentralen, Schlüssel- und Zertifikate
+Infrastruktur hingegen, die z.B. bei der Absicherung der Kommunikation über das
+Internet mittels Transportverschlüsselung <<tls>> zum Einsatz kommt, stellen
+eine oder einige wenige zentrale Autoritäten, denen initial vertraut wird,
+Zertifikate an zwischengeschaltete Autoritäten aus. Auch hier entstehen
+Zertifikatsketten, oder genauer baumartige Vertrauensstrukturen. Anders als im
+Web of Trust sind diese aber hirarschich Organisiert und nicht alle Teilnehmer,
+d.h. Zertifikatsinhaber, haben das recht selbst neue Zertifikate auszustellen.
 
 
 
@@ -615,6 +626,7 @@ Identifikationsschlüssel als auch für Zertifikate (siehe
 Root of Trust fungieren. Diese Architektur wird als DPKI
 (dezentralisierte PKI) bezeichnet.
 
+[[sec_web_of_trust]]
 ==== Web of Trust
 
 [[pic_wot]]
@@ -1603,3 +1615,6 @@ Stammdaten Qualität Service der GS1.
 
 Digitales Zertifikat:: 
 Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt, siehe <<sec_certs>>.
+
+Zertifikatskette::
+Wird mit einem zertifizierter Schlüssel ein neues Zertifikat ausgestellt, d.h. die echtheit eines weiteren Schlüsselpaars bescheinigt, so entsteht eine Kette digitaler Zertifikate. Siehe <<sec_pki>>.
