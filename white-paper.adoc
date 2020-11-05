@@ -753,8 +753,8 @@ legitim vergeben wurden.
 |
 |DID
 |UUID
-|LEI
 |GS1 IDs
+|certified GS1 IDs
 
 |*Global eindeutig*
 |icon:check[size=2x,role=green]
@@ -771,31 +771,26 @@ legitim vergeben wurden.
 |*Stamm-/Metadaten online abrufbar*
 |icon:check[size=2x,role=green]
 |icon:times[size=2x,role=red]
-|icon:check[size=2x,role=green]
 |Falls veröffentlicht / freigegeben
+|icon:check[size=2x,role=green]
 
-|*Für verschiedene Subjekte einsetzbar*
-|icon:check[size=2x,role=green]
-|icon:check[size=2x,role=green]
-|icon:times[size=2x,role=red]
-|icon:check[size=2x,role=green]
 
 |*Kryptographisch verifizierbar*
 |icon:check[size=2x,role=green]
 |icon:times[size=2x,role=red]
 |icon:times[size=2x,role=red]
-|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=red]
 
 |*Anwender kann eigene IDs erstellen*
 |icon:check[size=2x,role=green]
 |icon:check[size=2x,role=green]
-|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=red]
 |icon:check[size=2x,role=green]
 
 |*Verwendung in Auto-ID etabliert*
 |icon:times[size=2x,role=red]
 |icon:times[size=2x,role=red]
-|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=red]
 |icon:check[size=2x,role=green]
 
 |*Etabliert in unternehmensübergreifender Kommunikation*
@@ -953,7 +948,7 @@ Ansätze ermöglichen die dezentrale Anwendung der Idente, ohne dass
 nach der initialen Vergabe der zertifizierten GCP eine weitere
 Interaktion mit GS1 notwendig ist.
 
-Die Realisierung auf Basis von SSI Technologie bietet den großen
+Die Realisierung auf Basis von SSI Technologien bietet den großen
 Vorteil der automatischen Interoperabilität mit den anderen im
 gleichen Netzwerk realisierten Use Cases, so dass bei der 
 Implementierung in einem oder mehreren Netzwerken
@@ -1090,11 +1085,11 @@ Vertrauensinfrastruktur digitalisieren und automatisieren.
 
 ==== Existierende Lösungsansätze
 
-Gerade im Bereich des Supplier Onboardings gibt es Platformen, die als
+Gerade im Bereich des Supplier Onboardings gibt es Plattformen, die als
 Intermediär anbieten die Unternehmensstammdaten
 sicher/vertrauenswürdig zu verwalten und beim Onboarding an den neuen
 Kunden weiterzugeben. Die marktwirtschaftlichen Nachteile solcher
-Platformen, die über kurz oder lang durch Netzwerkeffekte entweder ein
+Plattformen, die über kurz oder lang durch Netzwerkeffekte entweder ein
 Monopol entwickeln oder aussterben, sind hinreichend bekannt.
 
 
@@ -1408,29 +1403,19 @@ Grenzen eines konkreten SSI Netzwerkes hinaus sicherzustellen, wie sie
 von einem GS1 Standard zu erwarten ist.
 
 
-Das 
+Dabei hat das 
 https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_ssi.html[Self Sovereign Identity für Deutschland]
-Konsortium hat neben Personen- auch Firmenidentifikation und Dinge im
-IoT Sinn im
-Blick. Während viele SSI Umsetzungen allein auf Personen fokussieren,
-liegt gerade in der Anwendung der Technologie zur sicheren
-Identifizierung und Authentifizierung von juristischen Personen und
-Dingen, insbesondere im IoT Kontext, eine große Chance für GS1. Hier
-ist die Technologie in hinreichendem Reifegrad verfügbar und es sind
-noch keine starken Konkurrenten am Markt etabliert.
-
-Im
+Konsortium neben Personen- auch Firmenidentifikation und Dinge im
+IoT Sinn im Blick und verwendet die SSI Ansätze
+zur sicheren Identifizierung und Authentifizierung von juristischen
+Personen und Dingen. 
+Dem gegen über steht das
 https://www.digitale-technologien.de/DT/Redaktion/DE/Standardartikel/SchaufensterSichereDigIdentProjekte/sdi-projekt_id-ideal.html[ID-Ideal]
-Konsortium der Schaufensterregion um die Hochschule Mittweida sollen
-insbesondere auf SSI Technologie basierende Businessmodelle im Bereich
-der Datenökonomie entwickelt werden.
-Die Weiterentwicklung bestehender Treuekarten und Punktesysteme
-mittels SSI Technologie ermöglicht es Kundendaten in einer Detailtiefe
-und Qualität zu erschließen, wie dies sonst nur im Onlinehandel
-möglich ist. Gleichzeitig bietet die SSI Technologie die Möglichkeit
-den Kunden ihre Datenhoheit zurückzugeben und sie fair und transparent
-am Geschäft mit den eigenen Daten zu beteiligen. Die etablierten
-Identifikationsnummern von GS1 im Handel werden hierbei eine wichtige Rolle spielen.
+Konsortium der Schaufensterregion um die Hochschule Mittweida, welches
+insbesondere auf SSI Konzepten basierende Businessmodelle im Bereich
+der Datenökonomie entwickeln soll.
+Der Fokus liegt auf der Weiterentwicklung bestehender Treuekarten und Punktesysteme 
+mittels SSI Konzepten. 
 
 
 Auf Basis der in den Forschungsprojekten auszuarbeitenden
