@@ -70,12 +70,7 @@ Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
 Konzeptes zu verdeutlichen.
 
 
-Die in- und externen Projektbeteiligten empfehlen eine Weiterentwicklung der im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und möglichst auch einem Minimum Viable Product (MVP). Tragfähige Business Modelle, um diese mit Partnern produktiv testen und zur Marktreife führen zu können, wären entsprechend der Erkenntnisse aus diesem Projekt erstrebenswert.
-
-Wenn Sie diese spannenden Themen gemeinsam mit uns weiter entwickeln
-möchten, wenden Sie sich gerne für Informationen zum aktuellen Stand
-an die Autoren!
-
+Auf Empfehlung der in- und externen Projektbeteiligten werden die im Projekt erarbeiteten Konzepte und Demonstrationen zu Prototypen und möglichst auch einem Minimum Viable Product (MVP) weiterentwickelt werden. mailto:Certified@gs1.de[Wenn Sie teil dieser spannenden Entwicklung sein möchten kontaktieren Sie uns gerne unter Certified@gs1.de.]
 
 
 <<<
@@ -86,9 +81,6 @@ toc::[]
 :sectnums:
 [[sec_intro]]
 == Einführung
-
-
-
 
 
 Soziale und geschäftliche Beziehungen sind in hohem Maße auf Identitätsnachweise angewiesen, um andere Parteien zu identifizieren und zu authentifizieren. Sie tragen dazu bei, die mit verschiedenen Arten von Interaktionen verbundenen Risiken anzugehen und das Vertrauen zwischen den interagierenden Parteien zu stärken.
@@ -1430,9 +1422,9 @@ unter Einbeziehung möglichst vieler interessierter Partner erfolgte.
 Auf dem Weg zu einem MVP sind noch wichtige Schritte zu gehen. In der
 Rolle als Vermittler von Interessen sucht GS1 hierzu weitere Partner,
 um eine Lösung basierend auf einem möglichst breiten Konsens zu
-entwickeln. Wenn Sie diese spannenden Themen gemeinsam mit uns weiter
-entwickeln möchten, wenden Sie sich gerne für Informationen zum
-aktuellen Stand an die Autoren!
+entwickeln.
+mailto:Certified@gs1.de[Wenn Sie teil dieser spannenden Entwicklung sein möchten kontaktieren Sie uns gerne unter Certified@gs1.de.]
+
 
 
 Um durch die Implementierung von
