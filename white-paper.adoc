@@ -1101,7 +1101,15 @@ automatisiert per API möglich.
 
 Eine Überprüfung der Idente ist nur online möglich und die Korrektheit der Daten wird nur über das Vertrauen in die Transportverschlüsselung <<tls>> bei der Abfrage und die Identität des Servers, der die Daten bereit stellt, gesichert. Die Daten selbst sind in den aktuellen Konzepten nicht authentifiziert und es gibt keinen direkten Link zum Herausgeber.
 
-Die Umsetzung von _Certified by GS1_ versetzt den Basisnummerninhaber in die Lage selbst Zertifikate für die von ihm erstellten Idente und Stammdaten zu signieren. Diese können über beliebige Kanäle weitergegeben werden, wie bisher über zentrale Repositories, aber auch direkt an die relevanten Partner, ohne dass Dritte Einsicht erhalten oder ein zentraler Angriffspunkt entsteht.  Die Gültigkeit der Zertifikatskette, basierend auf dem Vertrauensanker (Zertifikat) von GS1, kann uneingeschränkt und offline überprüft werden.
+Die Umsetzung von _Certified by GS1_ versetzt den Basisnummerninhaber in die
+Lage selbst Zertifikate für die von ihm erstellten Idente und Stammdaten zu
+signieren. Diese können über beliebige Kanäle weitergegeben werden, wie bisher
+über zentrale Repositories, aber auch direkt an die relevanten Partner, ohne
+dass Dritte Einsicht erhalten oder ein zentraler Angriffspunkt entsteht. Auch
+die Fälle, in denen das GS1 System weitere Intermediäre vorsieht, lassen sich in
+gleicherweise über Zertifikatsketten mit entsprechend mehr Gliedern abbilden.
+Die Gültigkeit der Zertifikatskette, basierend auf dem Vertrauensanker
+(Zertifikat) von GS1, kann uneingeschränkt und offline überprüft werden.
 
 Durch die digitale Signatur und die entsprechenden Zertifikate wird vor allem die Integrität der Daten unabhängig vom Übertragungskanal sichergestellt. Der Überprüfer kann somit darauf vertrauen, dass ein Ident vom authorisierten Basisnummerninhaber vergeben wurde und damit ein legitimes GS1 Ident ist. Eine direkte Signatur der Stammdaten durch den legitimen Herausgeber bietet bestmöglichen Schutz vor beabsichtigter oder unbeabsichtigter Veränderung der Daten auf dem Weg zum Empfänger und ermöglicht so eine sichere dezentrale Kommunikation.
 
