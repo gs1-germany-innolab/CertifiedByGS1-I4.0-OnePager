@@ -909,7 +909,7 @@ GS1_ dem Unternehmen selbst Zertifikate für die eigenen Idente zu
 erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
 
 [[Chain]]
-.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat automatisiert überprüft werden.
+.Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat automatisiert offline überprüft werden.
 image::Certificate-Chain.png[]
 
 Mit dem Unternehmenszertifikat kann die Echtheit der eigenen
@@ -1049,7 +1049,7 @@ Integrität der direkt vom Hersteller beglaubigten Produkteigenschaften
 sind als Verifiable Credentials überprüfbar.
 
 [[pic_ssi_gtin]]
-.Ablaufdiagramm für die Erstellung zertifizierter Identifikationsschlüssel und Stammdaten als Verifiable Credentials durch Kunden *ohne* Beteiligung von GS1
+.Ablaufdiagramm für die Erstellung zertifizierter Identifikationsschlüssel und Stammdaten als Verifiable Credentials durch Kunden *ohne* direkte Beteiligung von GS1
 image::certified-gs1-ids-2-GTIN.png[pdfwidth=75%, align="center"]
 
 Der DID einer konkreten Produktinstanz kann nun eine SGTIN als
@@ -1063,7 +1063,7 @@ sich die DIDs ausstellen, abgebildet wird.
 
 
 [[pic_ssi_verify]]
-.Ablaufdiagramm der Verifikation der Zertifikatskette
+.Ablaufdiagramm der Verifikation der Zertifikatskette und aller Stammdaten, falls der User initial nur GS1 kennt/vertraut. Sind intermediäre Zertifikate bekannt oder am Ort der überprüfung direkt verfügbar, so können die entsprechenden SSI Anfragen (REQUESTs) übersprungen werden. Die Echtheit der Daten kann unabhängig von einer online abfrage anhand der Signaturen überprüft werden.
 image::certified-gs1-ids-3-Verification.png[]
 
 
@@ -1223,7 +1223,7 @@ Ungenauigkeiten können im schlimmsten Fall den Ausfall der gesamten
 Anlage nach sich ziehen (siehe <<eku-static-hacked>>).
 
 [[eku-static-hacked]]
-.Der Problemfall manipulierter statischer Daten wird ebenfalls aufgezeigt
+.Der Problemfall manipulierter statischer Daten wird aufgezeigt
 image::demo-screenshots/3-outage.png[pdfwidth=75%,align="center"]
 
 
@@ -1248,7 +1248,7 @@ auf die Anlage kann ähnlich fatale Folgen haben, wie falsche
 statische Daten (siehe <<eku-dynamic-hacked>>).
 
 [[eku-dynamic-hacked]]
-.Manipulierte Daten werden problematisiert
+.Manipulierte dynamische Daten werden problematisiert
 image::demo-screenshots/6-hacked.png[pdfwidth=75%,align="center"]
 
 
