@@ -679,7 +679,7 @@ Namensgebend für den Ansatz der Self Sovereign Identity (SSI) war die Motivatio
 natürlichen Personen die Kontrolle über ihre eigene digitale Identität
 zurückzugeben. Beispielsweise sollten nicht weiter nur die personenbezogenen Daten und Single Sign On-Dienste 
 unter zentraler Kontrolle weniger großer Plattformen
-amerikanischer Unternehmen genutzt werden müssen. 
+genutzt werden müssen. 
 Personenidentifikation und die Ausstellung und Verwaltung
 vertrauenswürdiger Fakten (sog. _Credentials_, siehe <<sec_vc>>) zu diesen Personen
 bilden den Kern vieler SSI Anwendungsfälle. Die SSI Infrastruktur eignet sich jedoch auch,
