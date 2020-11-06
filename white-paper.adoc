@@ -83,15 +83,15 @@ toc::[]
 == Einführung
 
 
-Soziale und geschäftliche Beziehungen sind in hohem Maße auf Identitätsnachweise angewiesen, um andere Parteien zu identifizieren und zu authentifizieren. Sie tragen dazu bei, die mit verschiedenen Arten von Interaktionen verbundenen Risiken anzugehen und das Vertrauen zwischen den interagierenden Parteien zu stärken.
+Soziale und geschäftliche Beziehungen sind auf Identitätsnachweise angewiesen, um andere Parteien zu identifizieren und zu authentifizieren. Sie tragen dazu bei, die mit verschiedenen Arten von Interaktionen verbundenen Risiken zu verkleinern und das Vertrauen zwischen den interagierenden Parteien zu stärken.
 
-In der physischen Welt gibt es bereits seit Anfang des 19. Jahrhunderts Identitätssysteme wie Personalausweise. Im Zuge der Digitalisierung werden immer mehr soziale und wirtschaftliche Interaktionen von der physischen in die digitale Welt verlagert. Dabei ist die Fähigkeit, eine vertrauensvolle Beziehung zwischen den interagierenden Parteien im digitalen Raum aufzubauen, ein entscheidender Faktor, um Geschäfte zu ermöglichen. 
+In der physischen Welt wird dies bereits seit Anfang des 19. Jahrhunderts durch Identitätssysteme wie z.B. den Personalausweis unterstützt. Im Zuge der Digitalisierung werden jedoch immer mehr soziale und wirtschaftliche Interaktionen von der physischen in die digitale Welt verlagert. In dieser Welt helfen physische Identitätssysteme nicht in gleichem Maße, aber die Fähigkeit, eine vertrauensvolle Beziehung zwischen den interagierenden Parteien im digitalen Raum aufzubauen, ist ebenso entscheidend, um Geschäfte zu ermöglichen. 
 
-Folglich werden digitale Identitäten immer wichtiger. In ähnlicher Weise gewinnen digitale Identitäten nicht nur für die digitale, sondern auch für die physische Welt an Bedeutung, da sie bereits heute physische Ausweise wie Kunden- und Kreditkarten ersetzen. Darüber hinaus verschmilzt die digitale Welt mit dem Aufkommen des IoTs, zunehmend mit der physischen Welt. Dadurch erhöht sich die Anzahl der angeschlossenen Geräte sowie der digitalen Authentifizierungspunkte in der physischen Welt.
+In diesem Zusammenhang werden sichere digitale Identitäten immer wichtiger. Die Relevanz der digitalen Identitäten gilt dabei nicht nur für die digitale, sondern auch für die physische Welt, da sie bereits heute physische Ausweise wie Kunden- und Kreditkarten ersetzen. Darüber hinaus verschmilzt die digitale Welt mit dem Aufkommen des IoTs, zunehmend mit der physischen Welt. Dadurch erhöht sich die Anzahl der angeschlossenen Geräte sowie der digitalen Authentifizierungspunkte in der physischen Welt.
 
-Da das Internet ohne eine standardisierte, explizite Möglichkeit zur Identifizierung von Personen oder Organisationen aufgebaut wurde, um den Anforderungen des Identitätsmanagements gerecht zu werden, sind eine Vielzahl von Lösungen entstanden. Dazu gehören benutzerdefiniertes Identitätsmanagement Implementierungen, die meist auf Benutzernamen und Passwörtern, Passwortmanagern und Identitätsidentifizierungsdiensten basieren.
+Das Internet wurde ohne eine standardisierte, explizite Möglichkeit zur Identifizierung von Personen oder Organisationen aufgebaut wurde und somit entstand eine Vielzahl von Lösungen, um den Anforderungen des Identitätsmanagements gerecht zu werden.
 
-Das Kerngeschäft von GS1 ist die Entwicklung von Standards, die Interoperabilität und Digitalisierung zwischen Unternehmen, Produkte und Dinge, ermöglichen. Der Bedarf an sicherem Identitätsmanagement und sicheren Infrastrukturen, insbesondere mit der schnellen Verbreitung des IoTs, war der Haupttreiber um das Projekt _Certified by GS1_ zu starten.
+Das Kerngeschäft von GS1 ist die Entwicklung von Standards, die die Interoperabilität und Digitalisierung zwischen Unternehmen, Produkten und Dingen, ermöglichen. Der Bedarf an standardisiertem sicheren Identitätsmanagement und sicheren Infrastrukturen, insbesondere mit der schnellen Verbreitung des IoTs, war folglich der Haupttreiber um das Projekt _Certified by GS1_ zu starten.
 
 
 
