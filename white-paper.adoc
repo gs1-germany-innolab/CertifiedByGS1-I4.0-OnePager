@@ -608,8 +608,8 @@ ungültig geworden sind. Dies geschieht etwa weil eingetragene Daten nicht mehr 
 oder weil, im schlimmsten Fall, der private Schlüssel nicht mehr als sicher
 angesehen werden kann, etwa nach einem Cyber Angriff.
 
-
-=== SSI als Dezentrale Zertifikate- und Schlüsselinfrastruktur
+[[sec_sov]]
+=== Selv-Sovereign Identity (SSI) als Dezentrale Zertifikate- und Schlüsselinfrastruktur
 
 In einem dezentralen Identitätsmanagementsystem können die Entitäten
 (Personen, Organisationen, Dinge, etc.) die Vertrauensanker für den
@@ -998,9 +998,8 @@ von Stammdaten.
 
 === Realisierung über X.509 im Vergleich zu Verifiable Credentials
 
-Die in diesem Abschnitt verwendeten grundlegenden
-Begriffe, insbesondere DIDs und Verifiable Credentials, werden in
-<<sec_ssi>> eingeführt.
+Die in diesem Abschnitt verwendeten Begriffe, insbesondere DIDs und Verifiable Credentials, werden in
+<<sec_sov>> eingeführt.
 
 Im _Certified by GS1_ Projekt wurde die Zertifizierung der
 Identifikationsschlüssel sowohl über klassische X.509
@@ -1010,24 +1009,83 @@ Ansätze ermöglichen die dezentrale Anwendung der Idente, ohne dass
 nach der initialen Vergabe der zertifizierten GCP eine weitere
 Interaktion mit GS1 notwendig ist.
 
-Die Realisierung auf Basis von SSI Technologien bietet den großen
-Vorteil der automatischen Interoperabilität mit den anderen im
-gleichen Netzwerk realisierten Use Cases, so dass bei der 
-Implementierung in einem oder mehreren Netzwerken
-eine deutlich erleichterte Markteinführung und schnellere Verbreitung
-zu erwarten ist.  Auch aus technischer Sicht ist das moderne und auf
-flexiblen Schemata beruhende Konzept der Verifiable Credentials
-attraktiver als das aus den 80ern stammende x.509 Zertifikatsformat,
-das z.B. nicht als Datenformat für Stammdaten geeignet ist.
+Ein Vorteil bei der Nutzung klassischer Zertifikate ist die unabhängigkeit von
+einem konkreten SSI Netzwerk. Dies bedeutet aber, dass die gesamte
+Vertrauensinfrastruktur von GS1 selbst aufgebaut un betrieben werden muss.
+Insbesondere Resolver und Verzeichnisdienstfunktionalitäten müssen hier zentral
+bereitgestellt, oder ein Konzept für deren dezentrale Umsetzung entwickelt
+werden.
 
+Ein Vorteil bei der Nutzung von SSI Technologie ist, dass die für das
+_Certified by GS1_ System benötigten Zertifikate als Verifiable Credentials viel
+leichter in bestehnde SSI Lösungen integriert werden können, da nur ein Teil der
+nötigen Infrastrukturvon GS1 bereitgestellt werden muss. Insbesondere der
+Verzeichnisdiesnt (siehe <<sec_pki>>) und auch die Erzeugung von Schlüsselpaaren
+über DIDs sind im Rahmen der SSI Struktur bereits vorhanden/geregelt und müssen
+nicht neu implementiert werden. 
 
-Das Konzept zur Zertifizierung von GS1 Identen und assoziierten
-Stammdaten mittels SSI Technologie, welches im Rahmen des Projektes
-bisher entwickelt wurde, stellt eine Arbeitsgrundlage zur weiteren
-Abstimmung zwischen den GS1 Organisationen und den beteiligten Partnern dar. 
+Die Realisierung auf Basis von SSI Technologien bietet den Vorteil der
+automatischen Interoperabilität mit anderen auf SSI Basis realisierten Use
+Cases, so dass bei der Implementierung in einem oder mehreren Netzwerken eine
+deutlich erleichterte Markteinführung und schnellere Verbreitung zu erwarten
+ist. Auch aus technischer Sicht ist das moderne und auf flexiblen Schemata
+beruhende Konzept der Verifiable Credentials attraktiver als das aus den 80ern
+stammende x.509 Zertifikatsformat, das z.B. nicht als Datenformat für Stammdaten
+geeignet ist, sondern sich mit seinem fixen Schema an der <<ldap>> Syntax
+orientiert. Über ein Schema für Verifiable Credentials lassen sich die
+bestehenden Datenmodelle für Stammdaten leicht in die SSI Welt übertragen.
+
+[[tab_compare]]
+.Eigenschaften von Identifikatoren
+[cols="^.<,^.<,^.<",options="header"]
+|===
+|
+|X.509 Zertifikate (klassische PKI)
+|Verifiable Credentials (SSI)
+
+|*Dezentrale Zertifizierung*
+|icon:check[size=2x,role=green]
+|icon:check[size=2x,role=green]
+
+|*Rückgriff auf bestehende Registrierungs-/Zertifizierungsstellen*
+|icon:times[size=2x,role=red]
+|icon:times[size=2x,role=red]
+
+|*Rückgriff auf bestehende Resolver/Verzeichnisdienste*
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+
+|*Flexibles Zertifikate Schema*
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+
+|*Interoperabilitäte mit X.509 ANwendungen (z.B. <<smime>>)*
+|icon:check[size=2x,role=green]
+|icon:times[size=2x,role=red]
+
+|*Interoperabilitäte mit SSI Anwendungen (z.B. Personenidente)*
+|icon:times[size=2x,role=red]
+|icon:check[size=2x,role=green]
+
+|*Eteblierter Standard*
+|icon:plus[size=2x,role=green] icon:plus[size=2x,role=green] icon:plus[size=2x,role=green]
+|icon:plus[size=2x,role=green]
+
+|*Entwicklungspotential (Standardisierung, Forschungsprojekte, etc.)*
+|icon:times[size=2x,role=red]
+|icon:plus[size=2x,role=green] icon:plus[size=2x,role=green] icon:plus[size=2x,role=green]
+
+|===
 
 [[sec_ssi_proto]]
 === SSI Protokoll
+
+Es muss betont werden, dass  das Konzept zur Zertifizierung von GS1 Identen und
+assoziierten Stammdaten mittels SSI Technologie, welches im Rahmen des Projektes
+entwickelt wurde, eine Arbeitsgrundlage zur weiteren Abstimmung zwischen den GS1
+Organisationen und den beteiligten Partnern darstellt. Bei den hier
+vorgestellten Konzepten handelt es sich nicht um Standards oder in der
+Standardisierung befindliche Entwürfe.
 
 
 In dem hier vorgestellten Protokoll haben nicht nur die beteiligten
@@ -1514,12 +1572,14 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
 - [[[gen-specs]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications/
 - [[[idp]]] https://en.wikipedia.org/wiki/Identity_provider
+- [[[ldap]]] https://de.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 - [[[online-demo]]]  https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
 - [[[pgp-cert]]] https://de.wikipedia.org/wiki/OpenPGP#Aufbau_der_Zertifikate
 - [[[pki]]] https://de.wikipedia.org/wiki/Public-Key-Infrastruktur
 - [[[rfc-2141]]] IETF RFC 2141 https://tools.ietf.org/html/rfc2141
 - [[[rfc-4122]]] Open Software Foundation und IETF RFC 4122 https://www.rfc-editor.org/info/rfc4122
 - [[[rfc-8141]]] RFC 8141 https://www.rfc-editor.org/info/rfc8141
+- [[[smime]]] https://de.wikipedia.org/wiki/S/MIME
 - [[[sign]]] https://de.wikipedia.org/wiki/Digitale_Signatur ,  https://en.wikipedia.org/wiki/Digital_signature , https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 - [[[sovrin]]] https://sovrin.org/
 - [[[ssi]]] https://hpd.de/artikel/self-sovereign-identities-helfen-internet-reparieren-17150
