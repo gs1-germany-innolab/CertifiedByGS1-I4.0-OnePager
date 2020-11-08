@@ -660,7 +660,7 @@ Zertifikatsketten zum Ziel gibt und diese nicht zu lang sind.
 
 
 Im Bereich der e-Mail Signatur ist PGP eine Alternative zu
-S/MIME, das auf, in der Regel kostenpflichtigen oder
+S/MIME ([[smime]]), das auf, in der Regel kostenpflichtigen oder
 unternehmensinternen, X.509 Zertifikaten von zentralen
 Vertrauensanbietern beruht. Aufgrund mangelnder Unterstützung des
 PGP Standards durch die Anbieter der relevanten e-Mail-Clients, vor allem
@@ -1656,7 +1656,7 @@ Self-sovereign identity (SSI) erlaubt es einer Person (oder einer Organisation) 
 Schlüssel::
 Als Schlüssel wird in der Kryptologie eine Information bezeichnet, die einen kryptographischen Algorithmus parametrisiert und ihn so steuert.
 
-SGTIN:
+SGTIN::
 Serialisierte GTIN (Global Trade Item Number).
 
 Stammdaten::
