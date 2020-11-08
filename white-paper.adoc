@@ -717,33 +717,34 @@ Decentralized Identifiers (DIDs) sind Idente, die, wie der Name
 bereits andeutet, nicht zentral vergeben werden, sondern von jedem
 Teilnehmer an einer entsprechenden Infrastruktur selbst erzeugt werden
 können.  DIDs können Personen, Organisationen, Dinge, Datenmodelle,
-oder abstrakte Entitäten identifizieren, wobei die mit der DID
+oder sonstige konkrete oder abstrakte Entitäten identifizieren, wobei die mit der DID
 identifizierte Entität als _Subjekt_ der DID bezeichnet wird.  Die
-Kontrolle über eine DID kann von einem Verwalter ausgeübt werden,
-z.B. von einem entsprechend befugten Mitarbeiter, falls das Subjekt
-eine juristische Person ist, oder dem Hersteller, falls das Subjekt
+Kontrolle über eine DID wird vom sog. _Controller_ ausgeübt. Ist das Subjekt eine natürliche Person so kann diese selbst souveräner Controller iherer eigenen DID sein.
+Controller kann aber auch z.B. ein entsprechend befugten Mitarbeiter sein, falls das Subjekt
+eine juristische Person ist, oder der Hersteller/Urheber, falls das Subjekt
 ein Ding oder Konzept ist.
 
 Technisch betrachtet ist eine DID eine URN, die neben dem Schema "did"
-und der eindeutigen Identifikationsnummer auch eine Referenz auf die
+und des eindeutigen Identifikationsschlüssels auch eine Referenz auf die
 zugrundeliegende konkrete Vertrauensinfrastruktur enthält, im Rahmen
 derer die DID erstellt wurde und genutzt werden kann. Beispielsweise
 bezeichnet die DID `did:idu:HX74LKTfWUxnnUAE935u1P` die Identität von
 GS1 Germany als Steward im ID-Union (Test-)Netzwerk von SSI für
 Deutschland. Hier bezeichnet "idu" die sog. DID-Methode mit deren
 Kenntnis das zur DID zugehörige DID-Dokument aus dem entsprechenden
-Verzeichnis abgerufen werden kann.
+Verzeichnis mittels eines _Resolver_ Dienstes abgerufen werden kann.
 
 Im DID-Dokument sind Datensätze zum Subjekt enthalten, insbesondere
-Methoden, mit denen das Subjekt sich als DID Inhaber authentifizieren
-kann. In der Regel sind dies Public Keys, möglich sind aber auch
-z.B. pseudonymisierte Biometriedaten. Darüber hinaus können
+Methoden, mit denen das Subjekt als DID Inhaber authentifizieren werden
+kann. In der Regel sind dies Public Keys. Die authentifizierung besteht dann aus einem Nachweis, dass der zu authentifizierende den passenden privaten Schlüssel besitzt. 
+Mittels einse solchen authentifizierungs Protokolls können sich u.A. Maschinen untereinander automatisch sicher authentifizieren.
+Möglich sind aber auch andere Authentifizierungsmerkmale
+z.B. pseudonymisierte Biometriedaten für Personen. Darüber hinaus können
 Service-Endpunkte im DID-Dokument definiert werden, die eine
 gesicherte Interaktion mit dem DID-Subjekt ermöglichen.
 
 DIDs stellen die Kernkomponente einer gänzlich neuen Ebene von
 dezentralisierter digitaler Identität im Rahmen einer neuen Public Key
-Infrastructure dar. 
 
 [[sec_vc]]
 ==== Verifiable Credentials
