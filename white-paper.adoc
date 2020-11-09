@@ -1606,16 +1606,16 @@ Certified by GS1::
 Wird sowohl als Name des abgeschlossenen F&E Projekts als auch für die entwickelten Konzepte verwendet.
 
 DID::
-Ein Decentralized Identifier (DID) ist eine Art Ident, der eine überprüfbare, dezentralisierte digitale Identität ermöglicht.
+Ein Decentralized Identifier (DID) ist ein weltweites Ident, der eine überprüfbare, dezentralisierte digitale Identität ermöglicht.
 
 Digitale Signatur::
-ist ein mathematisches Schema zur Verifizierung der Authentizität von digitalen Nachrichten oder Dokumenten. 
+Ist ein mathematisches Schema zur Verifizierung der Authentizität von digitalen Nachrichten oder Dokumenten. 
 
 EECC::
 Der europäischen Marktführer für Lösungen und Services rund um den Electronic Product Code (EPC) und deren vernetzte Informationssysteme (EPCIS)
 
 EPC (Electronic Product Code)::
-Der Electronic Product Code (EPC) ist ein Identifikationsschema für die universelle Identifikation physischer Objekte mittels RFID-Tags.
+Der Electronic Product Code (EPC) ist ein Identifikationsschema für die universelle Identifikation physischer Objekte mittels RF Tags.
 
 EPC Tag oder RFID Tag::
 Ein Tag, der auf den Standards von EPCglobal basiert und den Electronic Product Code enthält.
@@ -1627,7 +1627,7 @@ GDSN::
 Mit dem Global Data Synchronisation Network (GDSN) werden Produktstammdaten global zwischen Herstellern und Händlern ausgetauscht. Dabei müssen die Daten nur in einen einzigen Datenpool eingestellt werden. Das GDSN basiert auf GS1 Standards und verbindet weltweit 30 zertifizierte Datenpools, an die fast 25.000 Unternehmen angeschlossen sind.
 
 GEPIR::
-Die Global Electronic Party Information Registry (GEPIR) ist eine Schnittstelle für Web-Browser und Protokolle zur Verbindung zwischen den Datenbanken der nationalen GS1 Mitgliedsorganisationen.
+Die Global Electronic Party Information Registry (GEPIR) ist eine Schnittstelle für Web-Browser und Protokolle zur Verbindung zwischen den Datenbanken der nationalen GS1 Mitgliedsorganisationen, um Unternehmensinformationen für einen gesuchten GS1 Identifikationsschlüssel oder auch für einzeln vergebene GS1 Identifikationsnummern zu liefern. 
 
 GLN::
 Die Global Location Number (GLN) wird zur Identifikation einer physischen Lokation oder Firma/­­Organisation verwendet.
@@ -1636,7 +1636,7 @@ GPC::
 Der von GS1 gemeinsam mit Anwendern geschaffene Global Product Classification (GPC) Standard hilft Handelspartnern, Produkte überall auf der Welt auf die gleiche Weise zu gruppieren. Der Standard ist klar und international verständlich.
 
 GS1::
-GS1, mit Sitz in Brüssel, Belgien, und Princeton, USA, ist die Dachorganisation, die das GS1 System betreut.
+GS1 hat seinen Hauptsitz in Brüssel, Belgien und Princeton, USA, und ist die Organisation, die das GS1 System verwaltet. GS1 ist die Dachorganisation, deren Mitglieder die nationalen GS1 Mitgliedsorganisationen sind.
 
 GTIN (Global Trade Item Number)::
 Die GTIN wird zur Identifikation einer Handelseinheit verwendet.
@@ -1645,7 +1645,7 @@ Identifikationsschlüssel::
 Ein Schlüssel, dessen Wert jede Entität einer Entitätsmenge eindeutig identifiziert.
 
 IoT (Internet of Things)::
- ist ein Sammelbegriff für Technologien einer globalen Infrastruktur der Informationsgesellschaften, die es ermöglicht, physische und virtuelle Gegenstände miteinander zu vernetzen und sie durch Informations- und Kommunikationstechniken zusammenarbeiten zu lassen.
+ist ein Sammelbegriff für Technologien einer globalen Infrastruktur der Informationsgesellschaften, die es ermöglicht, physische und virtuelle Gegenstände miteinander zu vernetzen und sie durch Informations- und Kommunikationstechniken zusammenarbeiten zu lassen.
 
 PKI (Public Key Infrastructure)::
 Mit PKI bezeichnet man in der Kryptologie ein System, das digitale Zertifikate ausstellen, verteilen und prüfen kann.
@@ -1672,7 +1672,7 @@ Verifiable Credential (VC)::
 ist ein manipulationssicherer Berechtigungsnachweis, dessen Urheberschaft kryptografisch verifiziert werden kann.
 
 Verified by GS1::
-Stammdaten Qualität Service der GS1.
+"Verified by GS1" ist eine globale Lösung, die es Einzelhändlern und Marktplätzen ermöglicht, die Identität eines Produkts und markenbezogene Produktdaten durch Abfrage der GS1 Registry-Plattform zu überprüfen.
 
 Digitales Zertifikat:: 
 Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt, siehe <<sec_certs>>.
