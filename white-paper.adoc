@@ -1566,12 +1566,17 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 - [[[auth]]] https://de.wikipedia.org/wiki/Authentifizierung
 - [[[ca]]] https://de.wikipedia.org/wiki/Zertifizierungsstelle vor allem aber https://en.wikipedia.org/wiki/Certificate_authority
 - [[[did-core]]] Decentralized Identifiers (DIDs) v1.0 https://www.w3.org/TR/did-core/
+- [[[eecc]]] https://www.eecc.info/
 - [[[gen-spec]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications
 - [[[gepir]]] https://www.gs1-germany.de/gepir-datenbank/ ( https://www.gepir.de/ )
+- [[[glossar]]] GS1 Glossar https://www.gs1.at/glossar#S
 - [[[gs1-prefix]]]  https://www.gs1.org/standards/id-keys/company-prefix
 - [[[gtin-manager]]] https://www.gs1-germany.de/serviceverzeichnis/gtin-manager/
 - [[[gen-specs]]] https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications/
 - [[[idp]]] https://en.wikipedia.org/wiki/Identity_provider
+- [[[id_key]]] https://www.computerlexikon.com/begriff-identifikationsschl%C3%BCssel
+- [[[iot]]] https://de.wikipedia.org/wiki/Internet_der_Dinge
+- [[[key]]] https://en.wikipedia.org/wiki/Key_(cryptography)
 - [[[ldap]]] https://de.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 - [[[online-demo]]]  https://gs1-germany-innolab.github.io/eku-pd-certified-by-gs1-demo/
 - [[[pgp-cert]]] https://de.wikipedia.org/wiki/OpenPGP#Aufbau_der_Zertifikate
@@ -1589,9 +1594,11 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 - [[[szenarien-i40]]] Fortschreibung der Anwendungsszenarien der Plattform Industrie 4.0 https://www.plattform-i40.de/PI40/Redaktion/DE/Downloads/Publikation/fortschreibung-anwendungsszenarien.html
 - [[[tls]]] https://de.wikipedia.org/wiki/Transport_Layer_Security
 - [[[trust-over-ip]]] https://trustoverip.org/
+- [[[uuid]]] https://en.wikipedia.org/wiki/Universally_unique_identifier
 - [[[vc-data-model]]] Verifiable Credentials Data Model 1.0 https://www.w3.org/TR/vc-data-model/
 - [[[vdma-i40]]] Leitfaden Industrie 4.0 (VDMA - Forum Industrie 4.0) https://industrie40.vdma.org/viewer/-/v2article/render/15540546
 - [[[verified-by-gs1]]] https://www.gs1-germany.de/serviceverzeichnis/verified-by-gs1/
+- [[[verifiable-credentials]]] https://www.w3.org/TR/vc-data-model/
 - [[[x509]]] https://de.wikipedia.org/wiki/X.509
 
 [glossary]
@@ -1600,13 +1607,13 @@ umgesetzt werden, insbesondere die in <<sec_use_cases>> vorgestellten.
 [glossary]
 
 Barcode::
-Ein Barcode ist ein Symbol, das Daten in ein maschinenlesbares Muster von parallel angrenzenden, in der Breite variierenden, dunklen Strichen und hellen Lücken verschlüsselt.
+Ein Barcode ist ein Symbol, das Daten in ein maschinenlesbares Muster von parallel angrenzenden, in der Breite variierenden, dunklen Strichen und hellen Lücken verschlüsselt. Siehe <<glossar>>.
 
 Certified by GS1::
-Wird sowohl als Name des abgeschlossenen F&E Projekts als auch für die entwickelten Konzepte verwendet.
+Wird sowohl als Name des abgeschlossenen F&E Projekts als auch für die entwickelten Konzepte verwendet. 
 
 DID::
-Ein Decentralized Identifier (DID) ist ein weltweites Ident, der eine überprüfbare, dezentralisierte digitale Identität ermöglicht.
+Ein Decentralized Identifier (DID) ist ein weltweites Ident, der eine überprüfbare, dezentralisierte digitale Identität ermöglicht. Siehe <<did-core>>.
 
 Digitale Signatur::
 Ist ein mathematisches Schema zur Verifizierung der Authentizität von digitalen Nachrichten oder Dokumenten. Siehe <<sec_digi_sig>>.
@@ -1615,61 +1622,64 @@ Digitales Zertifikat::
 Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt. Siehe <<sec_certs>>.
 
 EECC::
-Der europäischen Marktführer für Lösungen und Services rund um den Electronic Product Code (EPC) und deren vernetzte Informationssysteme (EPCIS)
+Der europäischen Marktführer für Lösungen und Services rund um den Electronic Product Code (EPC) und deren vernetzte Informationssysteme (EPCIS). Siehe <<eecc>>.
 
 EPC (Electronic Product Code)::
-Der Electronic Product Code (EPC) ist ein Identifikationsschema für die universelle Identifikation physischer Objekte mittels RF Tags.
+Der Electronic Product Code (EPC) ist ein Identifikationsschema für die universelle Identifikation physischer Objekte mittels RF Tags. Siehe <<glossar>>.
 
 EPC Tag oder RFID Tag::
-Ein Tag, der auf den Standards von EPCglobal basiert und den Electronic Product Code enthält.
+Ein Tag, der auf den Standards von EPCglobal basiert und den Electronic Product Code enthält. Siehe <<glossar>>.
 
 GDSN::
-Mit dem Global Data Synchronisation Network (GDSN) werden Produktstammdaten global zwischen Herstellern und Händlern ausgetauscht. Dabei müssen die Daten nur in einen einzigen Datenpool eingestellt werden. Das GDSN basiert auf GS1 Standards und verbindet weltweit 30 zertifizierte Datenpools, an die fast 25.000 Unternehmen angeschlossen sind.
+Mit dem Global Data Synchronisation Network (GDSN) werden Produktstammdaten global zwischen Herstellern und Händlern ausgetauscht. Dabei müssen die Daten nur in einen einzigen Datenpool eingestellt werden. Das GDSN basiert auf GS1 Standards und verbindet weltweit 30 zertifizierte Datenpools, an die fast 25.000 Unternehmen angeschlossen sind. Siehe <<glossar>>.
 
 GEPIR::
-Die Global Electronic Party Information Registry (GEPIR) ist eine Schnittstelle für Web-Browser und Protokolle zur Verbindung zwischen den Datenbanken der nationalen GS1 Mitgliedsorganisationen, um Unternehmensinformationen für einen gesuchten GS1 Identifikationsschlüssel oder auch für einzeln vergebene GS1 Identifikationsnummern zu liefern. 
+Die Global Electronic Party Information Registry (GEPIR) ist eine Schnittstelle für Web-Browser und Protokolle zur Verbindung zwischen den Datenbanken der nationalen GS1 Mitgliedsorganisationen, um Unternehmensinformationen für einen gesuchten GS1 Identifikationsschlüssel oder auch für einzeln vergebene GS1 Identifikationsnummern zu liefern.  Siehe <<glossar>>.
 
 GLN::
-Die Global Location Number (GLN) wird zur Identifikation einer physischen Lokation oder Firma/­­Organisation verwendet.
+Die Global Location Number (GLN) wird zur Identifikation einer physischen Lokation oder Firma/­­Organisation verwendet. Siehe <<glossar>>.
 
 GPC::
-Der von GS1 gemeinsam mit Anwendern geschaffene Global Product Classification (GPC) Standard hilft Handelspartnern, Produkte überall auf der Welt auf die gleiche Weise zu gruppieren. Der Standard ist klar und international verständlich.
+Der von GS1 gemeinsam mit Anwendern geschaffene Global Product Classification (GPC) Standard hilft Handelspartnern, Produkte überall auf der Welt auf die gleiche Weise zu gruppieren. Der Standard ist klar und international verständlich. Siehe <<glossar>>.
 
 GS1::
-GS1 hat seinen Hauptsitz in Brüssel, Belgien und Princeton, USA, und ist die Organisation, die das GS1 System verwaltet. GS1 ist die Dachorganisation, deren Mitglieder die nationalen GS1 Mitgliedsorganisationen sind.
+GS1 hat seinen Hauptsitz in Brüssel, Belgien und Princeton, USA, und ist die Organisation, die das GS1 System verwaltet. GS1 ist die Dachorganisation, deren Mitglieder die nationalen GS1 Mitgliedsorganisationen sind. Siehe <<glossar>>.
 
 GTIN (Global Trade Item Number)::
-Die GTIN wird zur Identifikation einer Handelseinheit verwendet.
+Die GTIN wird zur Identifikation einer Handelseinheit verwendet. Siehe <<glossar>>.
 
 Identifikationsschlüssel::
-Ein Schlüssel, dessen Wert jede Entität einer Entitätsmenge eindeutig identifiziert.
+Ein Schlüssel, dessen Wert jede Entität einer Entitätsmenge eindeutig identifiziert. Siehe <<id_key>>.
 
 IoT (Internet of Things)::
-ist ein Sammelbegriff für Technologien einer globalen Infrastruktur der Informationsgesellschaften, die es ermöglicht, physische und virtuelle Gegenstände miteinander zu vernetzen und sie durch Informations- und Kommunikationstechniken zusammenarbeiten zu lassen.
+ist ein Sammelbegriff für Technologien einer globalen Infrastruktur der Informationsgesellschaften, die es ermöglicht, physische und virtuelle Gegenstände miteinander zu vernetzen und sie durch Informations- und Kommunikationstechniken zusammenarbeiten zu lassen. Siehe <<iot>>.
 
 PKI (Public Key Infrastructure)::
-Mit PKI bezeichnet man in der Kryptologie ein System, das digitale Zertifikate ausstellen, verteilen und prüfen kann.
+Mit PKI bezeichnet man in der Kryptologie ein System, das digitale Zertifikate ausstellen, verteilen und prüfen kann. Siehe <<pki>>.
 
 SSI::
-Self-sovereign identity (SSI) erlaubt es einer Person (oder einer Organisation) eine digitale Identität zu erzeugen und vollständig zu kontrollieren, ohne dass es der Erlaubnis eines Vermittlers oder einer zentralen Behörde bedarf. Siehe <<sec_sov>>
+Self-sovereign identity (SSI) erlaubt es einer Person (oder einer Organisation) eine digitale Identität zu erzeugen und vollständig zu kontrollieren, ohne dass es der Erlaubnis eines Vermittlers oder einer zentralen Behörde bedarf. Siehe <<sec_sov>>.
 
 Schlüssel::
-Als Schlüssel wird in der Kryptologie eine Information bezeichnet, die einen kryptographischen Algorithmus parametrisiert und ihn so steuert.
+Als Schlüssel wird in der Kryptologie eine Information bezeichnet, die einen kryptographischen Algorithmus parametrisiert und ihn so steuert. Siehe <<key>>.
 
 SGTIN::
-Serialisierte GTIN (Global Trade Item Number).
+Serialisierte GTIN (Global Trade Item Number). Siehe <<glossar>>.
 
 Stammdaten::
-Stammdaten (engl. master data) sind Daten, die Grundinformationen über betrieblich relevante Objekte enthalten.
+Stammdaten (engl. master data) sind Daten, die Grundinformationen über betrieblich relevante Objekte enthalten. Siehe <<glossar>>.
 
 UUID (Universally Unique Identifier)::
-ist eine 128-Bit-Zahl, welche zur Identifikation von Informationen in Computersystemen verwendet wird.
+ist eine 128-Bit-Zahl, welche zur Identifikation von Informationen in Computersystemen verwendet wird. Siehe <<uuid>>.
 
 Verifiable Credential (VC)::
-ist ein manipulationssicherer Berechtigungsnachweis, dessen Urheberschaft kryptografisch verifiziert werden kann.
+ist ein manipulationssicherer Berechtigungsnachweis, dessen Urheberschaft kryptografisch verifiziert werden kann. Siehe <<verifiable-credentials>>.
 
 Verified by GS1::
-"Verified by GS1" ist eine globale Lösung, die es Einzelhändlern und Marktplätzen ermöglicht, die Identität eines Produkts und markenbezogene Produktdaten durch Abfrage der GS1 Registry-Plattform zu überprüfen.
+"Verified by GS1" ist eine globale Lösung, die es Einzelhändlern und Marktplätzen ermöglicht, die Identität eines Produkts und markenbezogene Produktdaten durch Abfrage der GS1 Registry-Plattform zu überprüfen. Siehe <<verified-by-gs1>>.
+
+X.509::
+ist ein ITU-T-Standard für eine Public-Key-Infrastruktur zum Erstellen digitaler Zertifikate. Siehe <<X509>>
 
 Zertifikatskette::
 Wird mit einem zertifizierter Schlüssel ein neues Zertifikat ausgestellt, d.h. die echtheit eines weiteren Schlüsselpaars bescheinigt, so entsteht eine Kette digitaler Zertifikate. Siehe <<sec_pki>>.
