@@ -117,7 +117,7 @@ Begriffe und Hintergründe für das weitere Verständnis der im Projekt _Certifi
 GS1_ entwickelten Konzepte, Praxisbeispiele und
 Demonstrationen.
 In <<sec_gs1_anchor>> werden die Konzepte für Identifikationsschlüssel
-certified by GS1 entwickelt und insbesondere in <<sec_ssi_proto>> ein Self Sovreign Identity Protokoll
+certified by GS1 entwickelt und insbesondere in <<sec_ssi_proto>> ein Self Sovereign Identity Protokoll
 zur technischen Umsetzung der Konzepte dargestellt.
 <<sec_use_cases>> bietet Einblicke in die
 Anwendungsfälle, die im Rahmen des Projektes erarbeitet wurden und
