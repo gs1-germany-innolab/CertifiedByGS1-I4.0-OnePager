@@ -91,7 +91,7 @@ In diesem Zusammenhang werden sichere digitale Identitäten immer wichtiger. Die
 
 Das Internet wurde ohne eine standardisierte, explizite Möglichkeit zur Identifizierung von Personen oder Organisationen aufgebaut  und somit entstand eine Vielzahl von Lösungen, um den Anforderungen des Identitätsmanagements gerecht zu werden.
 
-Das Kerngeschäft von GS1 ist die Entwicklung von Standards, die die Interoperabilität und Digitalisierung zwischen Unternehmen, Produkten und Dingen, ermöglichen. Der Bedarf an standardisiertem sicheren Identitätsmanagement und sicheren Infrastrukturen, insbesondere mit der schnellen Verbreitung des IoTs, war folglich der Haupttreiber um das Projekt _Certified by GS1_ zu starten.
+Der Kernfokus von GS1 liegt in der Entwicklung von Standards, die die Interoperabilität und Digitalisierung zwischen Unternehmen, Produkten und Dingen, ermöglichen. Der Bedarf an standardisiertem sicheren Identitätsmanagement und sicheren Infrastrukturen, insbesondere mit der schnellen Verbreitung des IoTs, war folglich der Haupttreiber um das Projekt _Certified by GS1_ zu starten.
 
 
 
@@ -1609,7 +1609,10 @@ DID::
 Ein Decentralized Identifier (DID) ist ein weltweites Ident, der eine überprüfbare, dezentralisierte digitale Identität ermöglicht.
 
 Digitale Signatur::
-Ist ein mathematisches Schema zur Verifizierung der Authentizität von digitalen Nachrichten oder Dokumenten. 
+Ist ein mathematisches Schema zur Verifizierung der Authentizität von digitalen Nachrichten oder Dokumenten. Siehe <<sec_digi_sig>>.
+
+Digitales Zertifikat:: 
+Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt. Siehe <<sec_certs>>.
 
 EECC::
 Der europäischen Marktführer für Lösungen und Services rund um den Electronic Product Code (EPC) und deren vernetzte Informationssysteme (EPCIS)
@@ -1651,7 +1654,7 @@ PKI (Public Key Infrastructure)::
 Mit PKI bezeichnet man in der Kryptologie ein System, das digitale Zertifikate ausstellen, verteilen und prüfen kann.
 
 SSI::
-Self-sovereign identity (SSI) erlaubt es einer Person (oder einer Organisation) eine digitale Identität zu erzeugen und vollständig zu kontrollieren, ohne dass es der Erlaubnis eines Vermittlers oder einer zentralen Behörde bedarf. 
+Self-sovereign identity (SSI) erlaubt es einer Person (oder einer Organisation) eine digitale Identität zu erzeugen und vollständig zu kontrollieren, ohne dass es der Erlaubnis eines Vermittlers oder einer zentralen Behörde bedarf. Siehe <<sec_sov>>
 
 Schlüssel::
 Als Schlüssel wird in der Kryptologie eine Information bezeichnet, die einen kryptographischen Algorithmus parametrisiert und ihn so steuert.
@@ -1673,9 +1676,6 @@ ist ein manipulationssicherer Berechtigungsnachweis, dessen Urheberschaft krypto
 
 Verified by GS1::
 "Verified by GS1" ist eine globale Lösung, die es Einzelhändlern und Marktplätzen ermöglicht, die Identität eines Produkts und markenbezogene Produktdaten durch Abfrage der GS1 Registry-Plattform zu überprüfen.
-
-Digitales Zertifikat:: 
-Ein vom Aussteller digital unterschriebenes Dokument, was einer Entität (Subjekt) gewisse Eigenschaften bescheinigt, siehe <<sec_certs>>.
 
 Zertifikatskette::
 Wird mit einem zertifizierter Schlüssel ein neues Zertifikat ausgestellt, d.h. die echtheit eines weiteren Schlüsselpaars bescheinigt, so entsteht eine Kette digitaler Zertifikate. Siehe <<sec_pki>>.
