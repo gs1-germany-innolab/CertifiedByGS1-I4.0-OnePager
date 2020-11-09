@@ -51,7 +51,7 @@ dass Kommunikationspartner nicht sicher automatisch authentifiziert werden
 können. Durch eine Erweiterung der bestehenden GS1
 Identifikationsschlüssel um Sicherheits- und
 Authentifizierungsfunktionen, könnten _Certified by GS1_ Idente im
-IoT-Umfeld die unternehmensübergreifende eindeutige und sichere
+IoT-Umfeld die unternehmensübergreifende, eindeutige und sichere
 Identifikation von Maschinen untereinander sicherstellen. Für diese
 wichtige Voraussetzung eines _Internet_ of Things ist bisher
 kein alternatives System etabliert.
@@ -106,9 +106,8 @@ hierfür ist einerseits eine vertrauenswürdige Identitätsinfrastruktur,
 mit deren Hilfe die öffentlichen Schlüssel eindeutig den Urhebern
 zugeordnet werden und andererseits, dass die privaten Schlüssel
 sicher geheim gehalten werden.
-
 Ein vertrauenswürdiger Teilnehmer, beispielsweise ein Unternehmen wie GS1, 
-kann anderen Teilnehmern Zertifikate ausstellen (siehe <<sec_pki>> und <<sec_ssi>>).
+kann dann anderen Teilnehmern Zertifikate ausstellen (siehe <<sec_pki>> und <<sec_ssi>>).
 
 
 
