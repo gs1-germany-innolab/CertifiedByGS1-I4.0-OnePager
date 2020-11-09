@@ -1623,9 +1623,6 @@ Der Electronic Product Code (EPC) ist ein Identifikationsschema für die univers
 EPC Tag oder RFID Tag::
 Ein Tag, der auf den Standards von EPCglobal basiert und den Electronic Product Code enthält.
 
-GCP (Global Company Prefix)::
-Die (Global Company Prefix (GS1 Basisnummer) ist Teil der internationalen GS1 Standardnummerierungsstruktur und wird von den lokalen GS1 Organisationen vergeben.
-
 GDSN::
 Mit dem Global Data Synchronisation Network (GDSN) werden Produktstammdaten global zwischen Herstellern und Händlern ausgetauscht. Dabei müssen die Daten nur in einen einzigen Datenpool eingestellt werden. Das GDSN basiert auf GS1 Standards und verbindet weltweit 30 zertifizierte Datenpools, an die fast 25.000 Unternehmen angeschlossen sind.
 
@@ -1667,9 +1664,6 @@ Stammdaten (engl. master data) sind Daten, die Grundinformationen über betriebl
 
 UUID (Universally Unique Identifier)::
 ist eine 128-Bit-Zahl, welche zur Identifikation von Informationen in Computersystemen verwendet wird.
-
-VDMA (Verband Deutscher Maschinen- und Anlagenbau e. V.)::
-ist mit rund 3300 Mitgliedern Europas größter Industrieverband mit Hauptsitz in Frankfurt am Main.
 
 Verifiable Credential (VC)::
 ist ein manipulationssicherer Berechtigungsnachweis, dessen Urheberschaft kryptografisch verifiziert werden kann.
