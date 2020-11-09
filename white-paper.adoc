@@ -1,6 +1,6 @@
 = Certified By GS1 - White Paper
 Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v3.0.0 + {docdatetime}
+v3.0.1 + {docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
