@@ -1034,8 +1034,8 @@ geeignet ist, sondern sich mit seinem fixen Schema an der <<ldap>> Syntax
 orientiert. Über ein Schema für Verifiable Credentials lassen sich die
 bestehenden Datenmodelle für Stammdaten leicht in die SSI Welt übertragen.
 
-[[tab_compare]]
-.Eigenschaften von Identifikatoren
+[[tab_VC_X]]
+.Vergleich von X.509 Zertifikaten mit Verifiable Credentials
 [cols="^.<,^.<,^.<",options="header"]
 |===
 |
