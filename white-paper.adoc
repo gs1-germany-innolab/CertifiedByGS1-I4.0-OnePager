@@ -400,7 +400,7 @@ Man-in-the-middle-Angriffs, der in <<sec_mitm>> erläutert wird.
 [[sec_mitm]]
 ==== Man in the Middle
 
-.Eve fängt die Kommunikation zwischen Alice und Bob ab. So kann er Alice seinen eigenen öffentlichen Schlüssel als den von Bob unterschieben und Bob ebenfalls den eigenen im Namen von Alice. Ab diesem Zeitpunkt glauben Alice und Bob sicher und authentifiziert zu kommunizieren, aber in wirklichkeit schlüsselt Eve alle Nachrichten um und kann diese nicht nur mitlesen sonder sogar verändern, ohne dass der Betrug auffällt.
+.Eve fängt die Kommunikation zwischen Alice und Bob ab. So kann Eve Alice seinen eigenen öffentlichen Schlüssel als den von Bob unterschieben. GLeichzeitig übergibt Eve Bob ebenfalls den eigenen Schlüssel im Namen von Alice. Ab diesem Zeitpunkt glauben Alice und Bob sicher und authentifiziert zu kommunizieren, aber in Wirklichkeit schlüsselt Eve alle Nachrichten um und kann diese nicht nur mitlesen sondern sogar verändern, ohne dass der Betrug auffällt.
 image::mim.png[pdfwidth=75%,align="center"]
 
 Bei dem Man-in-the-middle-Angriff versendet eine dritte Person seinen
@@ -529,7 +529,7 @@ Reihenfolge):
 ==== Vertrauensinfrastruktur
 
 [[pic_pki]]
-.Die drei wesentlichen Funktionseinheiten einer PKI Infrastruktur: DIe Registrierungsstelle prüft die legitimität des Antrags, die Zertifizierungsstelle verwahrt den eigenen Schlüssel hoch sicher und signiert damit die ausgestellten Zertifikate und der Verzeichnisdienst veröffentlicht Zertifikate und verwaltet die Rückruflisten. (Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.)
+.Die drei wesentlichen Funktionseinheiten einer PKI Infrastruktur: Die Registrierungsstelle prüft die Legitimität des Antrags, die Zertifizierungsstelle verwahrt den eigenen Schlüssel sicher und signiert damit die ausgestellten Zertifikate, der Verzeichnisdienst veröffentlicht Zertifikate und verwaltet die Rückruflisten. (Die Abbildung stammt aus einer Vorlesung der TU Darmstadt.)
 image::pki.png[pdfwidth=75%,align="center"]
 
 Die in <<sec_asymm>> und <<sec_certs>> beschriebenen öffentlichen
@@ -629,7 +629,7 @@ Root of Trust fungieren. Diese Architektur wird als DPKI
 ==== Web of Trust
 
 [[pic_wot]]
-.Web of Trust: Direktes Vertrauen zwischen den Beteiligten kann indirekt übertragen werden um ein dezentrales Vertrauensnetzwerk zu erzeugen. Abbildung von https://en.wikipedia.org/wiki/File:Web_of_Trust-en.svg[Wikipedia].
+.Web of Trust: Direktes Vertrauen zwischen den Beteiligten kann indirekt übertragen werden, um ein dezentrales Vertrauensnetzwerk zu erzeugen. Abbildung von https://en.wikipedia.org/wiki/File:Web_of_Trust-en.svg[Wikipedia].
 image::WOT.png[pdfwidth=75%,align="center"]
 
 Seit den frühen 90er Jahren kam mit der Entwicklung von PGP (Pretty
@@ -646,14 +646,14 @@ werden.
 
 Zum Beispiel kann Ingo (siehe <<pic_wot>>) einen nicht direkt von ihm zertifizierten
 (d.h. nicht bekannten) öffentlichen Schlüssel von Susi als
-vertrauenswürdig einstufen, wenn es eine Zertifikatskette aus gehend
-von ihm selbst aus gibt, die Susis Schlüssel als vertrauenswürdig
+vertrauenswürdig einstufen, wenn es eine Zertifikatskette 
+von ihm selbst ausgehend gibt, die Susis Schlüssel als vertrauenswürdig
 zertifiziert.
 Über die genauen Parameter können Teilnehmer im Web of Trust
 gemäß ihrer individuellen Anforderungen eine striktere oder weniger
 restriktive Vererbung von Vertrauen jeweils individuell
 konfigurieren. In <<pic_wot>> wird die einfachste Form von
-Vertrauensübertrag über beliebig wenige/lange Pfade dargestellt, es
+Vertrauensübertrag über beliebig wenige/lange Pfade dargestellt. Es
 ist aber möglich (und gängig) zu fordern, dass es mehrere unabhängige
 Zertifikatsketten zum Ziel gibt und diese nicht zu lang sind.
 
@@ -719,7 +719,7 @@ können.  DIDs können Personen, Organisationen, Dinge, Datenmodelle,
 oder sonstige konkrete oder abstrakte Entitäten identifizieren, wobei die mit der DID
 identifizierte Entität als _Subjekt_ der DID bezeichnet wird.  Die
 Kontrolle über eine DID wird vom sog. _Controller_ ausgeübt. Ist das Subjekt eine natürliche Person so kann diese selbst souveräner Controller iherer eigenen DID sein.
-Controller kann aber auch z.B. ein entsprechend befugten Mitarbeiter sein, falls das Subjekt
+Controller kann aber auch z.B. ein entsprechend befugter Mitarbeiter sein, falls das Subjekt
 eine juristische Person ist, oder der Hersteller/Urheber, falls das Subjekt
 ein Ding oder Konzept ist.
 
@@ -1136,7 +1136,7 @@ sich die DIDs ausstellen, abgebildet wird.
 
 
 [[pic_ssi_verify]]
-.Ablaufdiagramm der Verifikation der Zertifikatskette und aller Stammdaten, falls der User initial nur GS1 kennt/vertraut. Sind intermediäre Zertifikate bekannt oder am Ort der überprüfung direkt verfügbar, so können die entsprechenden SSI Anfragen (REQUESTs) übersprungen werden. Die Echtheit der Daten kann unabhängig von einer online abfrage anhand der Signaturen überprüft werden.
+.Ablaufdiagramm der Verifikation der Zertifikatskette und aller Stammdaten, falls der User initial nur GS1 kennt/vertraut. Sind intermediäre Zertifikate bekannt oder am Ort der Überprüfung direkt verfügbar, so können die entsprechenden SSI Anfragen (REQUESTs) übersprungen werden. Die Echtheit der Daten kann unabhängig von einer Onlineabfrage anhand der Signaturen überprüft werden.
 image::certified-gs1-ids-3-Verification.png[]
 
 
@@ -1513,7 +1513,7 @@ Auf dem Weg zu einem MVP sind noch wichtige Schritte zu gehen. In der
 Rolle als Vermittler von Interessen sucht GS1 hierzu weitere Partner,
 um eine Lösung basierend auf einem möglichst breiten Konsens zu
 entwickeln.
-mailto:Certified@gs1.de[Wenn Sie teil dieser spannenden Entwicklung sein möchten kontaktieren Sie uns gerne unter Certified@gs1.de.]
+mailto:Certified@gs1.de[Wenn Sie teil dieser spannenden Entwicklung sein möchten, kontaktieren Sie uns gerne unter Certified@gs1.de.]
 
 
 
