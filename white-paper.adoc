@@ -190,7 +190,7 @@ dieser Aspekt detaillierter erläutert.
 GS1 vergibt (in der Regel) keine einzelnen Identifikationsnummern, sondern Kunden
 erwerben das Recht, selbst eine bestimmte Menge von
 Identifikationsnummern zu vergeben.
-Dieses Sytem wird im Rahmen von _Certified by GS1_ auch für die 
+Dieses System wird im Rahmen von _Certified by GS1_ auch für die 
 Sicherheitsmerkmale und damit die authentifizierten Idente umgesetzt. Ein Kunde kann so die
 bisherigen Prozesse zur Vergabe von Identen strukturell beibehalten
 und um die Sicherheits- und Authentifizierungsfunktion für die selbst
@@ -206,7 +206,7 @@ Ident wie eine SGTIN oder GIAI, sondern auch die Möglichkeit sich
 individuell gegenüber anderen Geräten zu authentifizieren und mit
 diesen eine vertrauenswürdige und abhörsichere Verbindung aufzubauen. Hier
 stellt die Möglichkeit, solche "Certified" Idente selbst erzeugen zu
-können, einen großen Vorteil für den Hersteller dar, denn dieser Ansatz
+können, einen großen Vorteil für den Hersteller dar. Dieser Ansatz
 ist mit geringerem Aufwand und Kosten verbunden als ein
 System, bei dem jedes Ident und die zugehörigen Sicherheitsmerkmale
 einzeln bei einer zentralen Plattform erworben werden müssen.
