@@ -57,6 +57,22 @@ wichtige Voraussetzung eines _Internet_ of Things ist bisher
 kein alternatives System etabliert.
 
 
+Im Rahmen der Vergabe der GS1 Basisnummer (Global Company Prefix, GCP) wird die
+Legitimität des Antrags, bzw. des Antragsstellers aktuell nicht überprüft. Dies
+ist auch nicht nötig und würde keinen Mehrwert bringen. Um eine Vertrauensbasis
+für ein System von Certified by GS1 Identen zu schaffen muss ein
+Registrierungsprozess etabliert werden, der die Legitimität des Antrags
+überprüft. Im Unterschied zum bestehenden Prozess wir bei Certified nicht nur
+ein Nummernkreis einer Firma zugeordnet. Das zur GCP gehörende digitale
+Zertifikat etabliert die Zugehörigkeit eines privaten Schlüssels als
+Autorisierungsmerkmal zu einer Firma. Vertrauen in das System und die Echtheit
+von zertifizierten Identen basiert darauf, dass diese initiale Überprüfung der
+Identität der Firma sicher erfolgt. Dann, und nur dann, kann bei nach
+erfolgreicher Überprüfung der digitalen Signatur, z.B. einer Certified GTIN, der
+Prüfer sicher sein, dass der Identifikationsschlüssel in der Tat legitim von der
+Firma erstellt wurde, welcher der Nummernkreis gehört.
+
+
 Die _Certified by GS1_ Konzepte wurden durch Kundenumfragen und –interviews mit
 Partnern aus verschiedenen Branchen abgestimmt und unter Betrachtung von
 klassischen und modernen technologischen Umsetzungsmöglichkeiten digitaler
@@ -68,6 +84,7 @@ abstrakte Konzepte und Möglichkeiten zu deren konkreter technischer Umsetzung
 erarbeitet. In Zusammenarbeit mit externen Partnern wurden mehrere
 Use Cases ausformuliert, um die Vielzahl von Anwendungsmöglichkeiten des
 Konzeptes zu verdeutlichen.
+
 
 
 Auf Empfehlung der in- und externen Projektbeteiligten werden die im Projekt erarbeiteten Konzepte und Demonstrationen, zu Prototypen und möglichst auch zu einem Minimum Viable Product (MVP) weiterentwickelt. Sie können uns dabei unterstützen und Teil dieser spannenden Entwicklung sein! Erfahren Sie alles über das Konzept auf den nachfolgenden Seiten und mailto:Certified@gs1.de[kontaktieren Sie uns gerne mit Fragen und Anregungen oder Beteiligungswünschen].
@@ -625,6 +642,7 @@ Identifikationsschlüssel als auch für Zertifikate (siehe
 Root of Trust fungieren. Diese Architektur wird als DPKI
 (dezentralisierte PKI) bezeichnet.
 
+
 [[sec_web_of_trust]]
 ==== Web of Trust
 
@@ -923,9 +941,24 @@ hierzu ermöglicht ein Unternehmenszertifikat mit GCP _Certified By
 GS1_ dem Unternehmen selbst Zertifikate für die eigenen Idente zu
 erstellen. Diese grundlegende Idee ist in <<Chain>> dargestellt.
 
+
 [[Chain]]
 .Die Vertrauenswürdigkeit von Zertifikatsketten kann ausgehend vom Wurzelzertifikat automatisiert offline überprüft werden.
 image::Certificate-Chain.png[]
+
+
+Grundlage der Vertrauensprüfung ist die Prüfung des Antrags auf eine _certified_
+GCP. Wenn aktuell jemand z.B. im Namen des EECC eine neue GCP beantragt (und
+bezahlt), so wird dem EECC eine solche zugeteilt. Dadurch kann das EECC im
+folgenden Identifikationsnummern, z.B. GTINs, in einem neuen Nummernkreis
+vergeben. Ob eine GTIN im Nummernkreis des EECC tatsächlich legitim vom EECC
+selbst vergeben wurde, oder lediglich syntaktisch korrekt von einem Dritten
+erstellt wurde, lässt sich alleine anhand des Identifikationsschlüssels nicht
+überprüfen. D.h. ist eine Überprüfung der Legitimität des Antrags auf eine GCP,
+d.h. einen Nummernkreis, aktuell nicht notwendig. Ganz anders ist bei der
+Vergabe einer _certified_ GCP die Überprüfung der legitimität des Antrags die
+Basis für das Vertrauen in das hier vorgestellte Certified by GS1 System.
+
 
 Mit dem Unternehmenszertifikat kann die Echtheit der eigenen
 Identifikationsnummern fälschungssicher nachgewiesen und offline
