@@ -1,6 +1,6 @@
-= Certified By GS1 - White Paper
+= Certified By GS1
 Anna Klapper <anna.klapper@gs1.de>; Dr. Sebastian Schmittner <sebastian.schmittner@eecc.de>; Roman Winter <roman.winter@gs1.de>
-v3.0.1 + {docdatetime}
+v3.1.0 + {docdatetime}
 :doctype: article
 :homepage: https://github.com/gs1-germany-innolab/CertifiedByGS1-Konzepte
 :toc: macro
@@ -31,46 +31,42 @@ Autoren: mailto:mayra.castellanos@gs1.de[Mayra Castellanos], mailto:anna.klapper
 [[sec_executive]]
 == Management Summary
 
-Zur Beantwortung von dringenden Sicherheitsfragen im Rahmen der
-Digitalisierung im Allgemeinen und dem Internet of Things (IoT) im
-Besonderen wird eine vertrauenswürdige und sichere
-Identitätsinfrastruktur zur Identifizierung und Authentifizierung von
-natürlichen und juristischen Personen aber auch von Dingen
-benötigt. Das Projekt _Certified by GS1_ hat Konzepte entwickelt, um
-das bestehende System der GS1 Idente durch digitale
-Zertifikate abzusichern und automatisch authentifizierbar zu machen. Es wird
-aufgezeigt, wie die Stellung der GS1 als vertrauenswürdige und neutrale Organisation
-zum Identitätsanbieter und Vertrauensanker in einer digitalen
-Vertrauensinfrastruktur ausgebaut werden kann.
+Im Rahmen der Digitalisierung im Allgemeinen und dem Internet of Things (IoT) im
+Besonderen sind Sicherheitsprobleme, insbesondere im Bereich der sicheren
+Identifikation, ein wesentliches Hindernis bei der Umsetzung interessanter
+Anwendungsfälle. Gerade in den Industrie 4.0 Zukunfts-Szenarien, z.B. bei der
+wandelbaren Fabrik, ist eine sichere Identifikation der Maschinen untereinander
+eine essenzielle Voraussetzung für das korrekte Funktionieren und zum Schutz vor
+Fälschungen. Um diese Herausforderungen zu lösen, wird unter anderem eine
+vertrauenswürdige und sichere Identitätsinfrastruktur zur Authentifizierung von
+Maschinen untereinander benötigt. Auch um Produktpiraterie und -fälschung zu
+verhindern sind sichere Idente ein wichtiger Baustein.  
+Im Rahmen des Projektes _Certified by GS1_ wurden Konzepte entwickelt, um das
+bestehende System der GS1 Idente durch digitale Zertifikate abzusichern und so
+automatisch authentifizierbar zu machen. Es wird aufgezeigt, wie die Stellung
+der GS1 als vertrauenswürdige und neutrale not-for-profit Organisation zum
+Identitätsanbieter und Vertrauensanker in einer digitalen
+Vertrauensinfrastruktur ausgebaut werden kann, die im Rahmen verschiedener
+Projekte auf Nationaler, vor allem aber internationaler Ebene aktuell entwickelt
+und etabliert wird. 
 
 
 In bestimmten Anwendungsfällen, insbesondere im Machine-To-Machine (M2M)
-Bereich, ebenso aber auch in B2B und B2C Prozessen, wird eine
-weitgehende Automatisierung von Abläufen dadurch erschwert, manchmal auch verhindert, 
-dass Kommunikationspartner nicht sicher automatisch authentifiziert werden
-können. Durch eine Erweiterung der bestehenden GS1
-Identifikationsschlüssel um Sicherheits- und
-Authentifizierungsfunktionen, könnten _Certified by GS1_ Idente im
-IoT-Umfeld die unternehmensübergreifende, eindeutige und sichere
-Identifikation von Maschinen untereinander sicherstellen. Für diese
-wichtige Voraussetzung eines _Internet_ of Things ist bisher
-kein alternatives System etabliert.
-
-
-Im Rahmen der Vergabe der GS1 Basisnummer (Global Company Prefix, GCP) wird die
-Legitimität des Antrags, bzw. des Antragsstellers aktuell nicht überprüft. Dies
-ist auch nicht nötig und würde keinen Mehrwert bringen. Um eine Vertrauensbasis
-für ein System von Certified by GS1 Identen zu schaffen muss ein
-Registrierungsprozess etabliert werden, der die Legitimität des Antrags
-überprüft. Im Unterschied zum bestehenden Prozess wir bei Certified nicht nur
-ein Nummernkreis einer Firma zugeordnet. Das zur GCP gehörende digitale
-Zertifikat etabliert die Zugehörigkeit eines privaten Schlüssels als
-Autorisierungsmerkmal zu einer Firma. Vertrauen in das System und die Echtheit
-von zertifizierten Identen basiert darauf, dass diese initiale Überprüfung der
-Identität der Firma sicher erfolgt. Dann, und nur dann, kann bei nach
-erfolgreicher Überprüfung der digitalen Signatur, z.B. einer Certified GTIN, der
-Prüfer sicher sein, dass der Identifikationsschlüssel in der Tat legitim von der
-Firma erstellt wurde, welcher der Nummernkreis gehört.
+Bereich, ebenso aber auch in B2B und B2C Prozessen, wird eine weitgehende
+Automatisierung von Abläufen dadurch erschwert, manchmal auch verhindert, dass
+Kommunikationspartner nicht sicher automatisch authentifiziert werden können.
+Durch eine Erweiterung der bestehenden GS1 Identifikationsschlüssel um
+Sicherheits- und Authentifizierungsfunktionen, könnten _Certified by GS1_ Idente
+im IoT-Umfeld die unternehmensübergreifende, eindeutige und sichere
+Identifikation von Maschinen untereinander sicherstellen. Für diese wichtige
+Voraussetzung eines _Internet_ of Things ist bisher kein alternatives System
+etabliert. Über diese neuen Anwendungsfälle hinaus gibt es aber auch in gerade
+den Bereichen, in denen GS1 Idente bereits heute weit verbreitet sind,
+erhebliches Potential für zertifizierte Idente. Beim Stammdaten austausch zu
+Wahren oder Unternehmen profitieren alle beteiligten von der zusätzlichen
+Sicherheit die eine digitale Signatur bietet und im Kampf gegen Produktfälschung
+können signierte und damit sicher authentische Idente einen wichtigen Beitrag
+liefern.
 
 
 Die _Certified by GS1_ Konzepte wurden durch Kundenumfragen und –interviews mit
@@ -87,7 +83,45 @@ Konzeptes zu verdeutlichen.
 
 
 
-Auf Empfehlung der in- und externen Projektbeteiligten werden die im Projekt erarbeiteten Konzepte und Demonstrationen, zu Prototypen und möglichst auch zu einem Minimum Viable Product (MVP) weiterentwickelt. Sie können uns dabei unterstützen und Teil dieser spannenden Entwicklung sein! Erfahren Sie alles über das Konzept auf den nachfolgenden Seiten und mailto:Certified@gs1.de[kontaktieren Sie uns gerne mit Fragen und Anregungen oder Beteiligungswünschen].
+[[Layers]]
+.Vereinfachtes Schichten-Modell der SSI Technologie
+image::CertifiedLayers.png[pdfwidth=95%,align="center"]
+
+
+
+Ein wichtiger Baustein in jeder Vertrauensinfrastruktur ist die authentische und
+sichere Verknüpfung von realen und digitalen Entitäten. Die Registrierung
+digital zertifizierter Idente stellt neue Anforderungen an den Vergabeprozess.
+Im Rahmen der Vergabe der GS1 Basisnummer (Global Company Prefix, GCP) wird die
+Legitimität des Antrags, bzw. des Antragsstellers aktuell nicht aufwändig
+überprüft. Dies ist auch nicht nötig und würde keinen Mehrwert bringen. Um eine
+Vertrauensbasis für ein System *zertifizierter* GS1 Identen zu schaffen muss
+jedoch ein Registrierungsprozess etabliert werden, der die Legitimität des
+Antrags überprüft. Im Unterschied zum bestehenden Prozess wir bei der vergabe
+einer Certified GCP nicht nur ein Nummernkreis einer Firma zugeordnet. Das zur
+GCP gehörende digitale Zertifikat etabliert die Zugehörigkeit eines privaten
+Schlüssels als Autorisierungsmerkmal zu einer Firma. Vertrauen in das System und
+die Echtheit von zertifizierten Identen basiert darauf, dass diese initiale
+Überprüfung der Identität der Firma sicher erfolgt. Dann, und nur dann, kann bei
+nach erfolgreicher Überprüfung der digitalen Signatur, z.B. einer Certified
+GTIN, der Prüfer sicher sein, dass der Identifikationsschlüssel in der Tat
+legitim von der Firma erstellt wurde, welcher der Nummernkreis gehört. Die in
+diesem Projekt untersuchte SSI Technologie stellt hier nicht nur die Technische
+Möglichkeit zur Umsetzung der Certified Idente bereit. Ein hinreichend sicher
+etabliertes SSI Netzwerk könnte diese Registrierungsfunktion für einen Certified
+Antrag bereitstellen und so eine schnelle Umsetzung der hier vorgestellten Ideen
+ermöglichen.
+
+
+
+Auf Empfehlung der in- und externen Projektbeteiligten werden die im Projekt
+erarbeiteten Konzepte und Demonstrationen, zu Prototypen und möglichst auch zu
+einem Minimum Viable Product (MVP) weiterentwickelt. Sie können uns dabei
+unterstützen und Teil dieser spannenden Entwicklung sein! Erfahren Sie alles
+über das Konzept auf den nachfolgenden Seiten und
+mailto:Certified@gs1.de[kontaktieren Sie uns gerne mit Fragen und Anregungen
+oder Beteiligungswünschen].
+
 
 
 <<<
@@ -145,7 +179,7 @@ hier vorgestellten Ideen.
 
 
 
-=== Warum verlässliche Eindeutigkeit und ein Konzept wie _Certified by GS1_ wichtig sind?
+=== Zertifikate zur Absicherung von Identen
 
 Bei jeder Form der Kommunikation, sei es B2B oder B2C, Machine-to-Machine 
 oder mit menschlicher Beteiligung, analog oder digital,
@@ -189,7 +223,7 @@ Für die Abgrenzung zu bestehenden Lösungen ohne Zertifikatsinfrastruktur aber 
 
 
 [[sec_usp]]
-=== Warum setzt sich GS1 Germany für sichere digitale Zertifikate ein?
+=== GS1 Germany als AUssteller
 
 Sichere digitale Zertifikate sind ohne eine unabhängige Institution nicht zu ermöglichen.
 GS1 ist eine etablierte Institution, deren Kerngeschäft u.a. in der
